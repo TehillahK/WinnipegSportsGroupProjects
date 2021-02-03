@@ -26,7 +26,7 @@ application is something that they can enjoy before and after the lockdown and t
 former Winnipeggers to stay in touch by talking about the sport they love.
 
 ### How will Winnipeg Sports App be successful?
-The application is considered a success based on the following criteria. First, we want a million users worldwide in the first year that the application becomes available 
+The application is considered a success based on three criteria. First, we want a million users worldwide in the first year that the application becomes available 
 to users and generate a 10 million dollars revenue within the same year. Secondly, we intend on receiving feedback from users who will complete a digital survey and compare 
 their ease of accessing information about Winnipeg sports teams now to how they retrieved such information before our application was available to them. To conclude, we will
 compare the number of views Winnipeg games have had before and after our application became available to users. If any one of the criteria shows a significant improvement, without 
