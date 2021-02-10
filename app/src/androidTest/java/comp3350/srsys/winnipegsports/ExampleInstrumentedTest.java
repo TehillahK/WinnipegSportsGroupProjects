@@ -1,4 +1,4 @@
-package comp3350.winSport.winnipegsports;
+package comp3350.srsys.winnipegsports;
 
 import android.content.Context;
 
