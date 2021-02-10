@@ -1,4 +1,4 @@
-package comp3350.srsys.winnipegsports;
+package comp3350.winSport.winnipegsports;
 
 import org.junit.Test;
 
