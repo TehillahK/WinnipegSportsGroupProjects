@@ -1,8 +1,10 @@
-package com.example.winnipegsports;
+package comp3350.srsys.winnipegsports.presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.winnipegsports.R;
 
 public class MainActivity extends AppCompatActivity {
 

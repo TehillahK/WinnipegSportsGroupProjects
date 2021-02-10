@@ -1,4 +1,4 @@
-package com.example.winnipegsports;
+package comp3350.srsys.winnipegsports;
 
 import android.content.Context;
 
