@@ -1,3 +1,4 @@
+package comp3350.winSport.objects;
 
 public class Player {
 
@@ -43,6 +44,6 @@ public class Player {
     }
 
     public String toString() {
-        return "Player: [" + number + "] " + name + ", " + position;
+        return "comp3350.winSport.objects.Player: [" + number + "] " + name + ", " + position;
     }
 }

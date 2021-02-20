@@ -39,7 +39,7 @@
 
             <TextView
                 android:id="@+id/team_name"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:layout_below="@+id/league_logo"
                 android:text="@string/team_name"
                 android:layout_marginLeft="24dp"

@@ -1,3 +1,5 @@
+package comp3350.winSport.objects;
+
 import java.util.ArrayList;
 
 public class Period {
@@ -9,15 +11,15 @@ public class Period {
     public Period() {
         ID = 0;
         score = 0;
-        playerGoals = new ArrayList<Player>();
-        timeGoals = new ArrayList<String>();
+        playerGoals = new ArrayList<>();
+        timeGoals = new ArrayList<>();
     }
 
     public Period(int n, int sc) {
         ID = n;
         score = sc;
-        playerGoals = new ArrayList<Player>();
-        timeGoals = new ArrayList<String>();
+        playerGoals = new ArrayList<>();
+        timeGoals = new ArrayList<>();
     }
 
     public void addGoal(Player p, String time) {
@@ -69,10 +71,10 @@ public class Period {
         if(playerGoals.size() > 0) {
             for(int i = 0; i < playerGoals.size(); i++)
                 players = players + "   " + playerGoals.get(i).getName() + " (" + timeGoals.get(i) + " " + period + ")\n";
-            return "Period #" + ID + "\nGoals:\n" + players + "Score: " + score + "\n";
+            return "comp3350.winSport.objects.Period #" + ID + "\nGoals:\n" + players + "Score: " + score + "\n";
         }
         else
-            return "Period #" + ID + "\n" + "Score: " + score + "\n";
+            return "comp3350.winSport.objects.Period #" + ID + "\n" + "Score: " + score + "\n";
     }
 
 }

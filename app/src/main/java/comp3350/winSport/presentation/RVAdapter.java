@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.objects.Game;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.GameViewHolder> {
 
@@ -28,18 +29,18 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.GameViewHolder> {
     @Override
     public GameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.current_card, parent, false);
-        GameViewHolder gvh = new GameViewHolder(v);
-        return gvh;
+        return new GameViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
-        holder.gameLeague.setText(games.get(position).leagueName);
-        holder.gameTeam.setText(games.get(position).teamName);
-        holder.gameScore.setText(games.get(position).gameScore);
-        holder.gameStart.setText(games.get(position).startGame);
-        holder.gameLeaguePhoto.setImageResource(games.get(position).leagueID);
-        holder.gameTeamPhoto.setImageResource(games.get(position).gameID);
+        holder.gameLeague.setText(games.get(position).getGameLeague().getName());
+        holder.gameTeam.setText(games.get(position).getTeam1().getName() + " Vs.\n" +
+                games.get(position).getTeam2().getName());
+        holder.gameScore.setText(games.get(position).getGameScore());
+        holder.gameStart.setText(games.get(position).getGameDate());
+        holder.gameLeaguePhoto.setImageResource(games.get(position).getLeagueID());
+        holder.gameTeamPhoto.setImageResource(games.get(position).getGamePicID());
     }
 
     @Override

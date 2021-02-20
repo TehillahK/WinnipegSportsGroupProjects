@@ -1,8 +1,34 @@
+package comp3350.winSport.persistence;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
-public class GameData {
+import comp3350.winSport.objects.Game;
+import comp3350.winSport.objects.League;
+import comp3350.winSport.objects.Period;
+import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.Team;
 
-    public static void main(String[] args) {
+public class GameData implements GamePersistance {
+
+    private Game g1;
+    private Game g2;
+    private Game g3;
+    private Game g4;
+
+    public GameData() {
+
+        g1 = null;
+        g2 = null;
+        g3 = null;
+        g4 = null;
+
+        initData();
+
+    }
+
+    public void initData() {
 
         Player p1 = new Player("Mark Scheifele", 55, "Position1");
         Player p2 = new Player("Kyle Connor", 81, "Position1");
@@ -289,13 +315,25 @@ public class GameData {
         game2Periods.add(game2p3);
 
 
-        Game g1 = new Game(1, "Stanley Cup Playoffs", league1, t1, t2, "Feb 26, 2021", "Rogers Place", game1Periods, "4-3");
-        Game g2 = new Game(2, "Stanley Cup Playoffs", league2, t3, t4, "Feb 26, 2021", "Scotiabank Arena", game2Periods, "6-5");
+        g1 = new Game(1, "Stanley Cup Playoffs", league1, t1, t2, "Feb 26, 2021", "Rogers Place", game1Periods, "4 - 3");
+        g2 = new Game(2, "Stanley Cup Playoffs", league2, t3, t4, "Feb 26, 2021", "Scotiabank Arena", game2Periods, "6 - 5");
+        g3 = new Game(3, "Stanley Cup Playoffs", league1, t5, t6, "Feb 27, 2021", "Rogers Place", game1Periods, "7 - 3");
+        g4 = new Game(4, "Stanley Cup Playoffs", league2, t1, t6, "Feb 27, 2021", "Scotiabank Arena", game2Periods, "9 - 5");
 
-
-        System.out.println(g1.toString());
-        System.out.println(g2.toString());
+//        System.out.println(g1.toString());
+//        System.out.println(g2.toString());
 
     }
 
+    @Override
+    public List<Game> getGamesSequential() {
+
+        List<Game> games = new ArrayList<Game>();
+        games.add(g1);
+        games.add(g2);
+        games.add(g3);
+        games.add(g4);
+
+        return games;
+    }
 }

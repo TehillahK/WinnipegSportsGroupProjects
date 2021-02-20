@@ -1,4 +1,8 @@
+package comp3350.winSport.objects;
+
 import java.util.ArrayList;
+
+import comp3350.winSport.objects.Player;
 
 public class Team {
 
@@ -7,7 +11,7 @@ public class Team {
 
     public Team() {
         name = "Uknown";
-        players = new ArrayList<Player>();
+        players = new ArrayList<>();
     }
 
     public Team(String n, ArrayList<Player> pl) {

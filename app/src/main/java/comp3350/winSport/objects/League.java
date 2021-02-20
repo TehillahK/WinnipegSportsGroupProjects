@@ -1,3 +1,4 @@
+package comp3350.winSport.objects;
 
 public class League {
 
@@ -31,7 +32,7 @@ public class League {
     }
 
     public String toString() {
-        return "League: [" + ID + "] " + name;
+        return "comp3350.winSport.objects.League: [" + ID + "] " + name;
     }
 
 }
