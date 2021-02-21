@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Winnipeg Sports</string>
+    <string name="card_team_logo">team logo</string>
+    <string name="league_name">LEAGUE NAME</string>
+    <string name="team_name">TEAM NAME</string>
+    <string name="display_score">0 - 0</string>
+    <string name="display_time">2 hours ago</string>
+    <string name="something">Something</string>
+    <string name="_26">#26</string>
+    <string name="rw">RW</string>
+    <string name="home_team">Home Team</string>
+
 </resources>
