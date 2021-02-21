@@ -1,7 +1,5 @@
 package comp3350.winSport.objects;
 
-import androidx.annotation.RecentlyNonNull;
-
 import comp3350.winSport.R;
 
 public class Player {
