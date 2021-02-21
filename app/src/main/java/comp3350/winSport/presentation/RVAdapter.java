@@ -53,6 +53,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.GameViewHolder> {
         super.onAttachedToRecyclerView(recyclerView);
     }
 
+
+
     public static class GameViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView gameLeague;

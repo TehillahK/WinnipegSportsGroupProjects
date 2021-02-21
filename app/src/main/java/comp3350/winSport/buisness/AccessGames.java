@@ -27,5 +27,10 @@ public class AccessGames {
         return Collections.unmodifiableList(games);
     }
 
+    public Game getSingleGame() {
+        game = gamePersistance.getSingleGame();
+        return game;
+    }
+
 
 }

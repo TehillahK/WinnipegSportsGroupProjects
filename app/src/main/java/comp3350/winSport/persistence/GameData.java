@@ -51,7 +51,7 @@ public class GameData implements GamePersistance {
         Player p19 = new Player("Kristian Vesalainen", 93, "Position1");
 
 
-        ArrayList<Player> team1 = new ArrayList<Player>();
+        ArrayList<Player> team1 = new ArrayList<>();
         team1.add(p1);
         team1.add(p2);
         team1.add(p3);
@@ -92,7 +92,7 @@ public class GameData implements GamePersistance {
         Player p37 = new Player("Jimmy Vesey", 26, "Position1");
 
 
-        ArrayList<Player> team2 = new ArrayList<Player>();
+        ArrayList<Player> team2 = new ArrayList<>();
         team2.add(p20);
         team2.add(p21);
         team2.add(p22);
@@ -134,7 +134,7 @@ public class GameData implements GamePersistance {
         Player p57 = new Player("Nikita Zaitsev", 22, "Position1");
 
 
-        ArrayList<Player> team3 = new ArrayList<Player>();
+        ArrayList<Player> team3 = new ArrayList<>();
         team3.add(p39);
         team3.add(p40);
         team3.add(p41);
@@ -177,7 +177,7 @@ public class GameData implements GamePersistance {
         Player p76 = new Player("Mike Smith", 41, "Position1");
         Player p77 = new Player("Kyle Turris", 8, "Position1");
 
-        ArrayList<Player> team4 = new ArrayList<Player>();
+        ArrayList<Player> team4 = new ArrayList<>();
         team4.add(p58);
         team4.add(p59);
         team4.add(p60);
@@ -220,7 +220,7 @@ public class GameData implements GamePersistance {
         Player p96 = new Player("Juuso Välimäki", 6, "Position1");
 
 
-        ArrayList<Player> team5 = new ArrayList<Player>();
+        ArrayList<Player> team5 = new ArrayList<>();
         team5.add(p78);
         team5.add(p79);
         team5.add(p80);
@@ -261,7 +261,7 @@ public class GameData implements GamePersistance {
         Player p115 = new Player("Shea Weber", 6, "Position1");
 
 
-        ArrayList<Player> team6 = new ArrayList<Player>();
+        ArrayList<Player> team6 = new ArrayList<>();
         team6.add(p96);
         team6.add(p97);
         team6.add(p98);
@@ -298,7 +298,7 @@ public class GameData implements GamePersistance {
         game1p2.addGoal(p2, "13:12");
         game1p2.addGoal(p6, "19:44");
         Period game1p3 = new Period(3, 4);
-        ArrayList<Period> game1Periods = new ArrayList<Period>();
+        ArrayList<Period> game1Periods = new ArrayList<>();
         game1Periods.add(game1p1);
         game1Periods.add(game1p2);
         game1Periods.add(game1p3);
@@ -309,7 +309,7 @@ public class GameData implements GamePersistance {
         game2p1.addGoal(p17, "11:11");
         Period game2p2 = new Period(2, 2);
         Period game2p3 = new Period(3, 3);
-        ArrayList<Period> game2Periods = new ArrayList<Period>();
+        ArrayList<Period> game2Periods = new ArrayList<>();
         game2Periods.add(game2p1);
         game2Periods.add(game2p2);
         game2Periods.add(game2p3);
@@ -328,7 +328,7 @@ public class GameData implements GamePersistance {
     @Override
     public List<Game> getGamesSequential() {
 
-        List<Game> games = new ArrayList<Game>();
+        List<Game> games = new ArrayList<>();
         games.add(g1);
         games.add(g2);
         games.add(g3);
@@ -336,4 +336,10 @@ public class GameData implements GamePersistance {
 
         return games;
     }
+
+    @Override
+    public Game getSingleGame() {
+        return this.g1;
+    }
+
 }
