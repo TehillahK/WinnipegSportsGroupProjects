@@ -31,3 +31,7 @@ to users and generate a 10 million dollars revenue within the same year. Secondl
 their ease of accessing information about Winnipeg sports teams now to how they retrieved such information before our application was available to them. To conclude, we will
 compare the number of views Winnipeg games have had before and after our application became available to users. If any one of the criteria shows a significant improvement, without 
 a statistically significant reduction in the other two, the application will be considered a success.
+
+# Iteration 1
+## Group Worksheet
+Link to group worksheet here. 
