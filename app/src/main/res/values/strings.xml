@@ -19,5 +19,7 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="potential_player_image">Potential Player Image</string>
+    <string name="winnipeg_sports_app" />
+    <string name="by_group_6" />
 
 </resources>
