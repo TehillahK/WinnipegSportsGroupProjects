@@ -36,10 +36,6 @@ public class Team {
     }
 
     public String toString() {
-        String s1 = name + "\nPlayers: \n";
-        String s2 = "";
-        for(int i = 0; i < players.size(); i++)
-            s2 = s2 + "  " + players.get(i).toString() + "\n";
-        return s1 + s2;
+       return this.name;
     }
 }

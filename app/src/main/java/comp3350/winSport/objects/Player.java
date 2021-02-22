@@ -20,13 +20,13 @@ public class Player {
         this.teamName = "LFKAJDFLKJ";
     }
 
-    public Player(String nme, int num, String pos) {
+    public Player(String nme, int num, String pos,String teamName) {
         name = nme;
         number = num;
         position = pos;
         shot = "L";
         playerPic = R.drawable.headshot;
-        this.teamName = "ALKFJ";
+        this.teamName = teamName;
     }
 
     public String getName() {
