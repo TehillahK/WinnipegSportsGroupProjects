@@ -1,6 +1,6 @@
  # Winnipeg Sports App Architecture
 
-
+```
                           +---------------------------------------------------------------------------+
                           |                                                                           |
                           | +-------------------------+  +----------------+                           |
@@ -41,12 +41,15 @@ Presentation Layer        | +-----------+-----^-------+  +-----+---^------+     
        Data Layer         |                 +-------v-----+------+         +---------------+          |
                           |                 | Database storing a |         |Goal is to pull|          |
                           |                 | list of live games |         |this data from |          |
-                          |                 | and team info.     +<--------+  APIs (TBD)   |          |
+                          |                 | and team info.     +<--------+     APIs      |          |
                           |                 | (Fake as of I1)    |         |               |          |
                           |                 +--------------------+         +---------------+          |
                           |                                                                           |
                           |                                                                           |
                           +---------------------------------------------------------------------------+
+```
+
+
 
  * The sketch is a general, high-level visual flow of how we want things to work inside our application.
 
