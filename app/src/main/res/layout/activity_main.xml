@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".presentation.MainActivity">
 
     <include
@@ -17,7 +18,7 @@
         android:padding="40dp"
         android:layout_marginTop="48dp"
         android:layout_marginStart="48dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/currently_playing"
         android:layout_below="@+id/toolbar"
         android:gravity="center"
@@ -32,7 +33,7 @@
         android:padding="40dp"
         android:layout_marginTop="48dp"
         android:layout_marginStart="48dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/team_rosters"
         android:layout_below="@+id/currentlyPlayingMenu"
         android:gravity="center"
@@ -46,7 +47,7 @@
         android:padding="40dp"
         android:layout_marginTop="48dp"
         android:layout_marginStart="48dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/comming_soon"
         android:layout_below="@+id/teamRostersMenu"
         android:gravity="center"

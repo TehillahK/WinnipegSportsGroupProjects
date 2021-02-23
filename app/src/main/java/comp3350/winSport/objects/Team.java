@@ -8,15 +8,21 @@ public class Team {
 
     private String name;
     private ArrayList<Player> players;
+    private int teamID;
 
     public Team() {
-        name = "Uknown";
+        name = "Unknown";
         players = new ArrayList<>();
     }
 
-    public Team(String n, ArrayList<Player> pl) {
+    public Team(String n, ArrayList<Player> pl, int teamID) {
         name = n;
         players = pl;
+        this.teamID = teamID;
+    }
+
+    public int getTeamID() {
+        return teamID;
     }
 
     public String getName() {

@@ -29,8 +29,6 @@ public class RosterActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String value = ((Intent) intent).getStringExtra("TeamName");
 
-
-
         // ENABLE ACTION BAR
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

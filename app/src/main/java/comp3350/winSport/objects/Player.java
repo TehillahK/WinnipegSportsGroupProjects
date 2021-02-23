@@ -10,6 +10,7 @@ public class Player {
     private String shot;
     private int playerPic;
     private String teamName;
+    private int teamPic;
 
     public Player() {
         name = "Unknown";
@@ -18,15 +19,17 @@ public class Player {
         shot = "L";
         playerPic = R.drawable.headshot;
         this.teamName = "LFKAJDFLKJ";
+        this.teamPic = 0;
     }
 
-    public Player(String nme, int num, String pos,String teamName) {
+    public Player(String nme, int num, String pos,String teamName,int picID) {
         name = nme;
         number = num;
         position = pos;
         shot = "L";
         playerPic = R.drawable.headshot;
         this.teamName = teamName;
+        this.teamPic = picID;
     }
 
     public String getName() {
@@ -50,6 +53,8 @@ public class Player {
     public int getPic() {return this.playerPic;}
 
     public String getTeam() {return this.teamName;}
+
+    public int getTeamPic() {return this.teamPic;}
 
     public void setNumber(int num) {
         number = num;

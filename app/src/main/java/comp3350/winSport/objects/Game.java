@@ -116,14 +116,6 @@ public class Game {
         gameLeague = new League(ID, name);
     }
 
-    public void setTeam1(String name, ArrayList<Player> players) {
-        team1 = new Team(name, players);
-    }
-
-    public void setTeam2(String name, ArrayList<Player> players) {
-        team2 = new Team(name, players);
-    }
-
     public void setGameDate(String date) {
         gameDate = date;
     }

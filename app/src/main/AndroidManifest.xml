@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WinnipegSports">
         <activity android:name=".presentation.Teams" />
-
         <activity android:name=".presentation.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,6 +6,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="light_purp">#D7C5F6</color>
+    <color name="light_purp">#000050</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey1">#808080</color>
+    <color name="grey2">#696969</color>
+    <color name="grey3">#778899</color>
+    <color name="grey4">#708090</color>
+    <color name="red">#C63838</color>
+
 </resources>

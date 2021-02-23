@@ -61,8 +61,8 @@ public class PlayerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
             PlayerHeaderViewHolder itemViewHolder = (PlayerHeaderViewHolder) holder;
 
-            itemViewHolder.team_name.setText(players.get(position).getTeam());
-            itemViewHolder.team_pic.setImageResource(R.drawable.jets);
+            itemViewHolder.team_name.setText(players.get(position+1).getTeam());
+            itemViewHolder.team_pic.setImageResource(players.get(position+1).getTeamPic());
         }
     }
 

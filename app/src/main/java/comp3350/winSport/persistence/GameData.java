@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import comp3350.winSport.R;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.League;
 import comp3350.winSport.objects.Period;
@@ -39,25 +40,25 @@ public class GameData implements GamePersistance {
 
     public void initData() {
 
-        Player p1 = new Player("Mark Scheifele", 55, "Position1","Winnipeg Jets");
-        Player p2 = new Player("Kyle Connor", 81, "Position1","Winnipeg Jets");
-        Player p3 = new Player("Neal Pionk", 4, "Position1","Winnipeg Jets");
-        Player p4 = new Player("Blake Wheeler", 26, "Position1","Winnipeg Jets");
-        Player p5 = new Player("Mason Appleton", 22, "Position1","Winnipeg Jets");
-        Player p6 = new Player("Nickolaj Ehlers", 27, "Position1","Winnipeg Jets");
-        Player p7 = new Player("Adam Lowry", 17, "Position1","Winnipeg Jets");
-        Player p8 = new Player("Josh Morrissey", 44, "Position1","Winnipeg Jets");
-        Player p9 = new Player("Mathieu Perreault", 85, "Position1","Winnipeg Jets");
-        Player p10 = new Player("Paul Stastny", 25, "Position1","Winnipeg Jets");
-        Player p11 = new Player("Nathan Beaulieu", 88, "Position1","Winnipeg Jets");
-        Player p12 = new Player("Andrew Copp", 9, "Position1","Winnipeg Jets");
-        Player p13 = new Player("Dylan DeMelo", 2, "Position1","Winnipeg Jets");
-        Player p14 = new Player("Derek Forbort", 24, "Position1","Winnipeg Jets");
-        Player p15 = new Player("Jansen Harkins", 12, "Position1","Winnipeg Jets");
-        Player p16 = new Player("Connor Hellebuyck", 1, "Position1","Winnipeg Jets");
-        Player p17 = new Player("Trevor Lewis", 23, "Position1","Winnipeg Jets");
-        Player p18 = new Player("Tucker Poolman", 3, "Position1","Winnipeg Jets");
-        Player p19 = new Player("Kristian Vesalainen", 93, "Position1","Winnipeg Jets");
+        Player p1 = new Player("Mark Scheifele", 55, "Centerman","Winnipeg Jets", R.drawable.jets);
+        Player p2 = new Player("Kyle Connor", 81, "Left Wing","Winnipeg Jets", R.drawable.jets);
+        Player p3 = new Player("Neal Pionk", 4, "Defenseman","Winnipeg Jets", R.drawable.jets);
+        Player p4 = new Player("Blake Wheeler(C)", 26, "Right wing","Winnipeg Jets", R.drawable.jets);
+        Player p5 = new Player("Mason Appleton", 22, "Right wing","Winnipeg Jets", R.drawable.jets);
+        Player p6 = new Player("Nickolaj Ehlers", 27, "Right wing","Winnipeg Jets", R.drawable.jets);
+        Player p7 = new Player("Adam Lowry", 17, "Centerman","Winnipeg Jets", R.drawable.jets);
+        Player p8 = new Player("Josh Morrissey", 44, "Defenseman","Winnipeg Jets", R.drawable.jets);
+        Player p9 = new Player("Mathieu Perreault", 85, "Left wing","Winnipeg Jets", R.drawable.jets);
+        Player p10 = new Player("Paul Stastny", 25, "Centerman","Winnipeg Jets", R.drawable.jets);
+        Player p11 = new Player("Nathan Beaulieu", 88, "Defensemen","Winnipeg Jets", R.drawable.jets);
+        Player p12 = new Player("Andrew Copp", 9, "Left wing","Winnipeg Jets", R.drawable.jets);
+        Player p13 = new Player("Dylan DeMelo", 2, "Defenseman","Winnipeg Jets", R.drawable.jets);
+        Player p14 = new Player("Derek Forbort", 24, "Defenseman","Winnipeg Jets", R.drawable.jets);
+        Player p15 = new Player("Jansen Harkins", 12, "Centerman","Winnipeg Jets", R.drawable.jets);
+        Player p16 = new Player("Connor Hellebuyck", 1, "Goaltender","Winnipeg Jets", R.drawable.jets);
+        Player p17 = new Player("Trevor Lewis", 23, "Right wing","Winnipeg Jets", R.drawable.jets);
+        Player p18 = new Player("Tucker Poolman", 3, "Defenseman","Winnipeg Jets", R.drawable.jets);
+        Player p19 = new Player("Kristian Vesalainen", 93, "Left wing","Winnipeg Jets", R.drawable.jets);
 
 
         ArrayList<Player> team1 = new ArrayList<>();
@@ -81,24 +82,24 @@ public class GameData implements GamePersistance {
         team1.add(p18);
         team1.add(p19);
 
-        Player p20 = new Player("Auston Matthews", 34, "Position1","Toronto Maple Leafs");
-        Player p21 = new Player("Joe Thornton", 97, "Position1","Toronto Maple Leafs");
-        Player p22 = new Player("Travis Boyd", 72, "Position1","Toronto Maple Leafs");
-        Player p23 = new Player("T. J. Brodie", 78, "Position1","Toronto Maple Leafs");
-        Player p24 = new Player("Pierre Engvall", 47, "Position1","Toronto Maple Leafs");
-        Player p25 = new Player("Alexander Kerfoot", 15, "Position1","Toronto Maple Leafs");
-        Player p26 = new Player("Mitch Marner", 16, "Position1","Toronto Maple Leafs");
-        Player p27 = new Player("Morgan Rielly", 44, "Position1","Toronto Maple Leafs");
-        Player p28 = new Player("Jason Spezza", 19, "Position1","Toronto Maple Leafs");
-        Player p29 = new Player("John Tavares", 91, "Position1","Toronto Maple Leafs");
-        Player p30 = new Player("Frederik Andersen", 31, "Position1","Toronto Maple Leafs");
-        Player p31 = new Player("Zach Bogosian", 22, "Position1","Toronto Maple Leafs");
-        Player p32 = new Player("Travis Dermott", 23, "Position1","Toronto Maple Leafs");
-        Player p33 = new Player("Justin Holl", 3, "Position1","Toronto Maple Leafs");
-        Player p34 = new Player("Zach Hyman", 11, "Position1","Toronto Maple Leafs");
-        Player p35 = new Player("Jake Muzzin", 8, "Position1","Toronto Maple Leafs");
-        Player p36 = new Player("William Nylander", 88, "Position1","Toronto Maple Leafs");
-        Player p37 = new Player("Jimmy Vesey", 26, "Position1","Toronto Maple Leafs");
+        Player p20 = new Player("Auston Matthews", 34, "Centerman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p21 = new Player("Joe Thornton", 97, "Left wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p22 = new Player("Travis Boyd", 72, "Right wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p23 = new Player("T. J. Brodie", 78, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p24 = new Player("Pierre Engvall", 47, "Right wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p25 = new Player("Alexander Kerfoot", 15, "Centerman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p26 = new Player("Mitch Marner", 16, "Right wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p27 = new Player("Morgan Rielly", 44, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p28 = new Player("Jason Spezza", 19, "Centerman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p29 = new Player("John Tavares", 91, "Centerman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p30 = new Player("Frederik Andersen", 31, "Goaltender","Toronto Maple Leafs",R.drawable.leafs);
+        Player p31 = new Player("Zach Bogosian", 22, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p32 = new Player("Travis Dermott", 23, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p33 = new Player("Justin Holl", 3, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p34 = new Player("Zach Hyman", 11, "Left wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p35 = new Player("Jake Muzzin", 8, "Defenseman","Toronto Maple Leafs",R.drawable.leafs);
+        Player p36 = new Player("William Nylander", 88, "Left wing","Toronto Maple Leafs",R.drawable.leafs);
+        Player p37 = new Player("Jimmy Vesey", 26, "Right wing","Toronto Maple Leafs",R.drawable.leafs);
 
 
         ArrayList<Player> team2 = new ArrayList<>();
@@ -122,25 +123,25 @@ public class GameData implements GamePersistance {
         team2.add(p37);
 
 
-        Player p39 = new Player("Connor Brown", 28, "Position1","Ottawa Senators");
-        Player p40 = new Player("Thomas Chabot", 72, "Position1","Ottawa Senators");
-        Player p41 = new Player("Evgenii Dadonov", 63, "Position1","Ottawa Senators");
-        Player p42 = new Player("Nick Paul", 13, "Position1","Ottawa Senators");
-        Player p43 = new Player("Drake Batherson", 19, "Position1","Ottawa Senators");
-        Player p44 = new Player("Josh Norris", 9, "Position1","Ottawa Senators");
-        Player p45 = new Player("Tim Stützle", 18, "Position1","Ottawa Senators");
-        Player p46 = new Player("Chris Tierney", 71, "Position1","Ottawa Senators");
-        Player p47 = new Player("Brady Tkachuk", 7, "Position1","Ottawa Senators");
-        Player p48 = new Player("Austin Watson", 16, "Position1","Ottawa Senators");
-        Player p49 = new Player("Colin White", 36, "Position1","Ottawa Senators");
-        Player p50 = new Player("Artyom Zub", 2, "Position1","Ottawa Senators");
-        Player p51 = new Player("Artem Anisimov", 51, "Position1","Ottawa Senators");
-        Player p52 = new Player("Erik Gudbranson", 44, "Position1","Ottawa Senators");
-        Player p53 = new Player("Mark Högberg", 1, "Position1","Ottawa Senators");
-        Player p54 = new Player("Mike Reilly", 5, "Position1","Ottawa Senators");
-        Player p55 = new Player("Derek Stepan", 21, "Position1","Ottawa Senators");
-        Player p56 = new Player("Christian Wolanin", 24, "Position1","Ottawa Senators");
-        Player p57 = new Player("Nikita Zaitsev", 22, "Position1","Ottawa Senators");
+        Player p39 = new Player("Connor Brown", 28, "Right wing","Ottawa Senators",R.drawable.ottawa);
+        Player p40 = new Player("Thomas Chabot", 72, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p41 = new Player("Evgenii Dadonov", 63, "Right wing","Ottawa Senators",R.drawable.ottawa);
+        Player p42 = new Player("Nick Paul", 13, "Left wing","Ottawa Senators",R.drawable.ottawa);
+        Player p43 = new Player("Drake Batherson", 19, "Right wing","Ottawa Senators",R.drawable.ottawa);
+        Player p44 = new Player("Josh Norris", 9, "Centerman","Ottawa Senators",R.drawable.ottawa);
+        Player p45 = new Player("Tim Stützle", 18, "Left wing","Ottawa Senators",R.drawable.ottawa);
+        Player p46 = new Player("Chris Tierney", 71, "Centerman","Ottawa Senators",R.drawable.ottawa);
+        Player p47 = new Player("Brady Tkachuk", 7, "Left wing","Ottawa Senators",R.drawable.ottawa);
+        Player p48 = new Player("Austin Watson", 16, "Right wing","Ottawa Senators",R.drawable.ottawa);
+        Player p49 = new Player("Colin White", 36, "Centerman","Ottawa Senators",R.drawable.ottawa);
+        Player p50 = new Player("Artyom Zub", 2, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p51 = new Player("Artem Anisimov", 51, "Centerman","Ottawa Senators",R.drawable.ottawa);
+        Player p52 = new Player("Erik Gudbranson", 44, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p53 = new Player("Mark Högberg", 1, "Goaltender","Ottawa Senators",R.drawable.ottawa);
+        Player p54 = new Player("Mike Reilly", 5, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p55 = new Player("Derek Stepan", 21, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p56 = new Player("Christian Wolanin", 24, "Defenseman","Ottawa Senators",R.drawable.ottawa);
+        Player p57 = new Player("Nikita Zaitsev", 22, "Defenseman","Ottawa Senators",R.drawable.ottawa);
 
 
         ArrayList<Player> team3 = new ArrayList<>();
@@ -165,26 +166,26 @@ public class GameData implements GamePersistance {
         team3.add(p57);
 
 
-        Player p58 = new Player("Tyson Barrie", 22, "Position1","Edmonton Oilers");
-        Player p59 = new Player("Evan Bouchard", 75, "Position1","Edmonton Oilers");
-        Player p60 = new Player("Alex Chiasson", 39, "Position1","Edmonton Oilers");
-        Player p61 = new Player("Connor McDavid", 97, "Position1","Edmonton Oilers");
-        Player p62 = new Player("Ryan Nugent-Hopkins", 93, "Position1","Edmonton Oilers");
-        Player p63 = new Player("Tyler Ennis", 63, "Position1","Edmonton Oilers");
-        Player p64 = new Player("Darnel Nurse", 25, "Position1","Edmonton Oilers");
-        Player p65 = new Player("Jesse Puljujärvi", 13, "Position1","Edmonton Oilers");
-        Player p66 = new Player("Delvin Shore", 14, "Position1","Edmonton Oilers");
-        Player p67 = new Player("Kailer Yamamoto", 56, "Position1","Edmonton Oilers");
-        Player p68 = new Player("Josh Archibald", 15, "Position1","Edmonton Oilers");
-        Player p69 = new Player("Leon Draisaitl", 29, "Position1","Edmonton Oilers");
-        Player p70 = new Player("Dominik Kahun", 21, "Position1","Edmonton Oilers");
-        Player p71 = new Player("Jujhar Khaira", 16, "Position1","Edmonton Oilers");
-        Player p72 = new Player("Slater Koekkoek", 20, "Position1","Edmonton Oilers");
-        Player p73 = new Player("Mikko Koskinen", 19, "Position1","Edmonton Oilers");
-        Player p74 = new Player("William Lagesson", 84, "Position1","Edmonton Oilers");
-        Player p75 = new Player("Adam Larson", 6, "Position1","Edmonton Oilers");
-        Player p76 = new Player("Mike Smith", 41, "Position1","Edmonton Oilers");
-        Player p77 = new Player("Kyle Turris", 8, "Position1","Edmonton Oilers");
+        Player p58 = new Player("Tyson Barrie", 22, "Defenseman","Edmonton Oilers",R.drawable.oilers);
+        Player p59 = new Player("Evan Bouchard", 75, "Defenseman","Edmonton Oilers",R.drawable.oilers);
+        Player p60 = new Player("Alex Chiasson", 39, "Right wing","Edmonton Oilers",R.drawable.oilers);
+        Player p61 = new Player("Connor McDavid", 97, "Centerman","Edmonton Oilers",R.drawable.oilers);
+        Player p62 = new Player("Ryan Nugent-Hopkins", 93, "Left wing","Edmonton Oilers",R.drawable.oilers);
+        Player p63 = new Player("Tyler Ennis", 63, "Left wing","Edmonton Oilers",R.drawable.oilers);
+        Player p64 = new Player("Darnel Nurse", 25, "Defenseman","Edmonton Oilers",R.drawable.oilers);
+        Player p65 = new Player("Jesse Puljujärvi", 13, "Right wing","Edmonton Oilers",R.drawable.oilers);
+        Player p66 = new Player("Delvin Shore", 14, "Left wing","Edmonton Oilers",R.drawable.oilers);
+        Player p67 = new Player("Kailer Yamamoto", 56, "Right wing","Edmonton Oilers",R.drawable.oilers);
+        Player p68 = new Player("Josh Archibald", 15, "Right wing","Edmonton Oilers",R.drawable.oilers);
+        Player p69 = new Player("Leon Draisaitl", 29, "Centerman","Edmonton Oilers",R.drawable.oilers);
+        Player p70 = new Player("Dominik Kahun", 21, "Left wing","Edmonton Oilers",R.drawable.oilers);
+        Player p71 = new Player("Jujhar Khaira", 16, "Centerman","Edmonton Oilers",R.drawable.oilers);
+        Player p72 = new Player("Slater Koekkoek", 20, "Defenseman","Edmonton Oilers",R.drawable.oilers);
+        Player p73 = new Player("Mikko Koskinen", 19, "Goaltender","Edmonton Oilers",R.drawable.oilers);
+        Player p74 = new Player("William Lagesson", 84, "Goaltender","Edmonton Oilers",R.drawable.oilers);
+        Player p75 = new Player("Adam Larson", 6, "Defenseman","Edmonton Oilers",R.drawable.oilers);
+        Player p76 = new Player("Mike Smith", 41, "Goaltender","Edmonton Oilers",R.drawable.oilers);
+        Player p77 = new Player("Kyle Turris", 8, "Centerman","Edmonton Oilers",R.drawable.oilers);
 
         ArrayList<Player> team4 = new ArrayList<>();
         team4.add(p58);
@@ -208,25 +209,25 @@ public class GameData implements GamePersistance {
         team4.add(p76);
         team4.add(p77);
 
-        Player p78 = new Player("Rasmus Anderson", 4, "Position1","Calgary Flames");
-        Player p79 = new Player("Elias Lindholm", 28, "Position1","Calgary Flames");
-        Player p80 = new Player("Dillon Dube", 29, "Position1","Calgary Flames");
-        Player p81 = new Player("Johnny Gaudreau", 13, "Position1","Calgary Flames");
-        Player p82 = new Player("Milan Lucic", 17, "Position1","Calgary Flames");
-        Player p83 = new Player("Connor Mackey", 3, "Position1","Calgary Flames");
-        Player p84 = new Player("Sean Monahan", 23, "Position1","Calgary Flames");
-        Player p85 = new Player("Sam Bennett", 93, "Position1","Calgary Flames");
-        Player p86 = new Player("Byron Froese", 38, "Position1","Calgary Flames");
-        Player p87 = new Player("Mark Giordano", 5, "Position1","Calgary Flames");
-        Player p88 = new Player("Noah Hanifin", 55, "Position1","Calgary Flames");
-        Player p89 = new Player("Andrew Mangiapane", 88, "Position1","Calgary Flames");
-        Player p90 = new Player("Jacob Markström", 25, "Position1","Calgary Flames");
-        Player p91 = new Player("Jokaim Nordström", 20, "Position1","Calgary Flames");
-        Player p92 = new Player("Buddy Robinson", 53, "Position1","Calgary Flames");
-        Player p93 = new Player("Dominik Simon", 81, "Position1","Calgary Flames");
-        Player p94 = new Player("Christopher Tanev", 8, "Position1","Calgary Flames");
-        Player p95 = new Player("Matthew Tkatchuk", 19, "Position1","Calgary Flames");
-        Player p96 = new Player("Juuso Välimäki", 6, "Position1","Calgary Flames");
+        Player p78 = new Player("Rasmus Anderson", 4, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p79 = new Player("Elias Lindholm", 28, "Centerman","Calgary Flames",R.drawable.calgary_flames);
+        Player p80 = new Player("Dillon Dube", 29, "Centerman","Calgary Flames",R.drawable.calgary_flames);
+        Player p81 = new Player("Johnny Gaudreau", 13, "Left wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p82 = new Player("Milan Lucic", 17, "Left wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p83 = new Player("Connor Mackey", 3, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p84 = new Player("Sean Monahan", 23, "Centerman","Calgary Flames",R.drawable.calgary_flames);
+        Player p85 = new Player("Sam Bennett", 93, "Left wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p86 = new Player("Byron Froese", 38, "Centerman","Calgary Flames",R.drawable.calgary_flames);
+        Player p87 = new Player("Mark Giordano", 5, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p88 = new Player("Noah Hanifin", 55, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p89 = new Player("Andrew Mangiapane", 88, "Left wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p90 = new Player("Jacob Markström", 25, "Goaltender","Calgary Flames",R.drawable.calgary_flames);
+        Player p91 = new Player("Jokaim Nordström", 20, "Left wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p92 = new Player("Buddy Robinson", 53, "Right wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p93 = new Player("Dominik Simon", 81, "Right wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p94 = new Player("Christopher Tanev", 8, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p95 = new Player("Matthew Tkatchuk", 19, "Right wing","Calgary Flames",R.drawable.calgary_flames);
+        Player p96 = new Player("Juuso Välimäki", 6, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
 
 
         ArrayList<Player> team5 = new ArrayList<>();
@@ -248,30 +249,31 @@ public class GameData implements GamePersistance {
         team5.add(p93);
         team5.add(p94);
         team5.add(p95);
+        team5.add(p96);
 
-        Player p97 = new Player("Brendan Gallagher", 11, "Position1","Montreal Canadiens");
-        Player p98 = new Player("Tyler Toffoli", 73, "Position1","Montreal Canadiens");
-        Player p99 = new Player("Phillip Danault", 24, "Position1","Montreal Canadiens");
-        Player p100 = new Player("Jeff Petry", 26, "Position1","Montreal Canadiens");
-        Player p101 = new Player("Josh Anderson", 17, "Position1","Montreal Canadiens");
-        Player p102 = new Player("Joel Armia", 40, "Position1","Montreal Canadiens");
-        Player p103= new Player("Paul Byron", 41, "Position1","Montreal Canadiens");
-        Player p104 = new Player("Ben Chiarot", 8, "Position1","Montreal Canadiens");
-        Player p105 = new Player("Jonathan Drouin", 92, "Position1","Montreal Canadiens");
-        Player p106= new Player("Joel Edmundson", 44, "Position1","Montreal Canadiens");
-        Player p107 = new Player("Jake Evans", 71, "Position1","Montreal Canadiens");
-        Player p108 = new Player("Jesperi Kotkaniemi", 15, "Position1","Montreal Canadiens");
-        Player p109 = new Player("Arturri Lehkonen", 62, "Position1","Montreal Canadiens");
-        Player p110 = new Player("Victor Mete", 53, "Position1","Montreal Canadiens");
-        Player p111 = new Player("Corey Perry", 94, "Position1","Montreal Canadiens");
-        Player p112 = new Player("Carey Price", 81, "Position1","Montreal Canadiens");
-        Player p113 = new Player("Alexander Romanov", 27, "Position1","Montreal Canadiens");
-        Player p114 = new Player("Nick Suzuki", 14, "Position1","Montreal Canadiens");
-        Player p115 = new Player("Shea Weber", 6, "Position1","Montreal Canadiens");
+
+        Player p97 = new Player("Brendan Gallagher", 11, "Right wing","Montreal Canadiens",R.drawable.montreal);
+        Player p98 = new Player("Tyler Toffoli", 73, "Left wing","Montreal Canadiens",R.drawable.montreal);
+        Player p99 = new Player("Phillip Danault", 24, "Centerman","Montreal Canadiens",R.drawable.montreal);
+        Player p100 = new Player("Jeff Petry", 26, "Defenseman","Montreal Canadiens",R.drawable.montreal);
+        Player p101 = new Player("Josh Anderson", 17, "Right wing","Montreal Canadiens",R.drawable.montreal);
+        Player p102 = new Player("Joel Armia", 40, "Left wing","Montreal Canadiens",R.drawable.montreal);
+        Player p103= new Player("Paul Byron", 41, "Left wing","Montreal Canadiens",R.drawable.montreal);
+        Player p104 = new Player("Ben Chiarot", 8, "Defenseman","Montreal Canadiens",R.drawable.montreal);
+        Player p105 = new Player("Jonathan Drouin", 92, "Left wing","Montreal Canadiens",R.drawable.montreal);
+        Player p106= new Player("Joel Edmundson", 44, "Defenseman","Montreal Canadiens",R.drawable.montreal);
+        Player p107 = new Player("Jake Evans", 71, "Centerman","Montreal Canadiens",R.drawable.montreal);
+        Player p108 = new Player("Jesperi Kotkaniemi", 15, "Centerman","Montreal Canadiens",R.drawable.montreal);
+        Player p109 = new Player("Arturri Lehkonen", 62, "Left wing","Montreal Canadiens",R.drawable.montreal);
+        Player p110 = new Player("Victor Mete", 53, "Defenseman","Montreal Canadiens",R.drawable.montreal);
+        Player p111 = new Player("Corey Perry", 94, "Right wing","Montreal Canadiens",R.drawable.montreal);
+        Player p112 = new Player("Carey Price", 81, "Goaltender","Montreal Canadiens",R.drawable.montreal);
+        Player p113 = new Player("Alexander Romanov", 27, "Defenseman","Montreal Canadiens",R.drawable.montreal);
+        Player p114 = new Player("Nick Suzuki", 14, "Centerman","Montreal Canadiens",R.drawable.montreal);
+        Player p115 = new Player("Shea Weber", 6, "Defenseman","Montreal Canadiens",R.drawable.montreal);
 
 
         ArrayList<Player> team6 = new ArrayList<>();
-        team6.add(p96);
         team6.add(p97);
         team6.add(p98);
         team6.add(p99);
@@ -290,17 +292,18 @@ public class GameData implements GamePersistance {
         team6.add(p112);
         team6.add(p113);
         team6.add(p114);
+        team6.add(p115);
 
 
         League league1 = new League(1, "NHL");
         League league2 = new League(2, "NHL");
 
-        t1 = new Team("Winnipeg Jets", team1);
-        t2 = new Team("Toronto Maple Leafs", team2);
-        t3 = new Team("Ottawa Senators", team3);
-        t4 = new Team("Edmonton Oilers", team4);
-        t5 = new Team("Calgary Flames", team5);
-        t6 = new Team("Montreal Canadiens", team6);
+        t1 = new Team("Winnipeg Jets", team1, R.drawable.jets);
+        t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs);
+        t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa);
+        t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers);
+        t5 = new Team("Calgary Flames", team5,R.drawable.calgary_flames);
+        t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal);
 
         Period game1p1 = new Period(1, 3);
         Period game1p2 = new Period(2, 5);
