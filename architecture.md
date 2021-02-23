@@ -53,7 +53,7 @@ Presentation Layer        | +-----------+-----^-------+  +-----+---^------+     
 
  * The sketch is a general, high-level visual flow of how we want things to work inside our application.
 
- ## Packages and Major Soure Code Files
+ ## Packages and Major Source Code Files
  * comp3350.winSport.buisness
     * The logic layer. Files in this package connects what is presented in the presentation layer, with information retrieved in the data layer.
     * Handles calculations, list creation, and how data will be viewed once it arrives in the presentation layer.
