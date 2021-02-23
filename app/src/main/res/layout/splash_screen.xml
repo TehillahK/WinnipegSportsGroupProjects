@@ -6,30 +6,9 @@
     >
 
     <ImageView
-        android:layout_width="90sp"
-        android:layout_height="90sp"
         android:id="@+id/splash_logo"
-        android:src="@mipmap/ic_launcher"
-        />
-
-    <TextView
-
-        android:layout_width="199dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="12dp"
-        android:layout_toEndOf="@id/splash_logo"
-        android:text="@string/winnipeg_sports_app"
-        android:textSize="20sp"
-        android:id="@+id/app_name"
-        android:textColor="@color/black"
-        />
-    <TextView
-        android:layout_width="199dp"
-        android:layout_height="49dp"
-        android:text="@string/by_group_6"
-        android:textColor="@color/teal_700"
-       android:layout_marginTop="20dp"
-        android:layout_alignEnd="@id/app_name"
-        />
+        android:layout_width="372dp"
+        android:layout_height="418dp"
+        android:src="@drawable/app_logo_w_text" />
 
 </RelativeLayout>
