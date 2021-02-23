@@ -6,4 +6,5 @@ import comp3350.winSport.objects.Game;
 
 public interface GamePersistance {
     List<Game> getGamesSequential();
+    Game getSingleGame();
 }

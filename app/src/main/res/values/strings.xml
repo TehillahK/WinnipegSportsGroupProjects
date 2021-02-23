@@ -5,5 +5,21 @@
     <string name="team_name">TEAM NAME</string>
     <string name="display_score">0 - 0</string>
     <string name="display_time">2 hours ago</string>
+    <string name="something">Something</string>
+    <string name="_26">#26</string>
+    <string name="rw">RW</string>
+    <string name="home_team">Home Team</string>
+    <string name="currently_playing">Currently Playing</string>
+    <string name="comming_soon">Coming Soon</string>
+    <string name="team_rosters">Team Rosters</string>
+    <string name="title_activity_teams">teams</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="potential_player_image">Potential Player Image</string>
+    <string name="winnipeg_sports_app" />
+    <string name="by_group_6" />
 
 </resources>
