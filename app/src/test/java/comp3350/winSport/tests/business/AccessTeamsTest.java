@@ -53,20 +53,45 @@ public class AccessTeamsTest {
 
     @Test
     public void getTeamByName(){
+
+        String input1 = "Winnipeg Jets";
+        String input2 = "Toronto Maple Leafs";
+        String input3 = "Blue Bombers";
+        String input4 = "Toronto Leafs";
+        String input5 = "293802948039";
+        String input6 = "";
+
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 3: Get Team By Name");
         System.out.print("\n---------------------------------------");
-        assertTrue("Winnipeg Jets".equals(accessTeams.getTeamByName("Winnipeg Jets").getName()));
-        assertTrue("Toronto Maple Leafs".equals(accessTeams.getTeamByName("Toronto Maple Leafs").getName()));
+        System.out.print("\nIf assertion errors happen, this test has failed.");
+        System.out.print("\nIf test print all output until 'END', and then all tests have passed.");
+        System.out.print("\nChecking if " + input1 + " is in the team list. Expectation: true");
+        assertTrue(input1.equals(accessTeams.getTeamByName(input1).getName()));
+        System.out.print("\nPass");
+        System.out.print("\nChecking if " + input2 + " is in the team list. Expectation: true");
+        assertTrue(input2.equals(accessTeams.getTeamByName(input2).getName()));
+        System.out.print("\nPass");
 
         //If these have assert errors, it means that AccessTeams is returning something
         //when it shouldn't.
         //Original value of a team is null, so if the passed string is not on the list,
         //it should stay null.
-        assertNull(accessTeams.getTeamByName("Blue Bombers"));
-        assertNull(accessTeams.getTeamByName("Toronto Leafs"));
-        assertNull(accessTeams.getTeamByName("293802948039"));
+        System.out.print("\nNow checking for miscellaneous inputs.");
+        System.out.print("\nNone of the following is in the list. List should not return anything.");
+        System.out.print("\nIf an assertion error occurs, then the list has returned something it shouldn't have.");
+        System.out.print("\nSearching for " + input3 +  "...");
+        assertNull(accessTeams.getTeamByName(input3));
+        System.out.print("\nPass");
+        System.out.print("\nSearching for " + input4 + "...");
+        assertNull(accessTeams.getTeamByName(input4));
+        System.out.print("\nPass");
+        System.out.print("\nSearching for " + input5 + "...");
+        assertNull(accessTeams.getTeamByName(input5));
+        System.out.print("\nPass");
+        System.out.print("\nSearching for " + input6 + "...");
         assertNull(accessTeams.getTeamByName(""));
+        System.out.print("\nPass");
     }
 
 }
