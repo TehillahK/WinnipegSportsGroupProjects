@@ -9,14 +9,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.buisness.AccessTeams;
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.persistence.TeamPersistance;
 
 public class Teams extends AppCompatActivity {
 

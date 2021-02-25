@@ -1,6 +1,5 @@
 package comp3350.winSport.persistence;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,7 @@ import comp3350.winSport.objects.Period;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 
-public class GameData implements GamePersistance {
+public class IGameData implements IGame {
 
     private Game g1;
     private Game g2;
@@ -27,7 +26,7 @@ public class GameData implements GamePersistance {
 
 
 
-    public GameData() {
+    public IGameData() {
 
         g1 = null;
         g2 = null;

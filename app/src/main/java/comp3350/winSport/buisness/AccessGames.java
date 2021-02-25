@@ -1,36 +1,34 @@
 package comp3350.winSport.buisness;
 
-import android.renderscript.ScriptIntrinsicYuvToRGB;
-
 import java.util.Collections;
 import java.util.List;
 
 import comp3350.winSport.objects.Game;
-import comp3350.winSport.persistence.GameData;
-import comp3350.winSport.persistence.GamePersistance;
+import comp3350.winSport.persistence.IGameData;
+import comp3350.winSport.persistence.IGame;
 
 public class AccessGames {
 
-    private GamePersistance gamePersistance;
+    private IGame IGame;
     private List<Game> games;
     private Game game;
     private int currentGame;
 
     public AccessGames() {
 
-        gamePersistance  = new GameData();
+        IGame = new IGameData();
         games = null;
         game = null;
         currentGame = 0;
     }
 
     public List<Game> getGames() {
-        games = gamePersistance.getGamesSequential();
+        games = IGame.getGamesSequential();
         return Collections.unmodifiableList(games);
     }
 
     public Game getSingleGame() {
-        game = gamePersistance.getSingleGame();
+        game = IGame.getSingleGame();
         return game;
     }
 

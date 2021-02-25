@@ -15,6 +15,7 @@ import comp3350.winSport.buisness.AccessGames;
 import comp3350.winSport.buisness.AccessTeams;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Team;
+import comp3350.winSport.persistence.InvalidNameException;
 
 public class RosterActivity extends AppCompatActivity {
 
@@ -36,16 +37,24 @@ public class RosterActivity extends AppCompatActivity {
 
         // RECYCLER VIEW DATA
         accessTeams = new AccessTeams();
-        team = accessTeams.getTeamByName(value);
 
+        try {
+            team = accessTeams.getTeamByName(value);
+        } catch (InvalidNameException e) {
+            team = null;
+            // should prob log error
+            // should prob figure out how to log
+        }
         // Initialize Recycler view and Linear layout Manager
         RecyclerView rv = findViewById(R.id.player_rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
-        // Activate Layout manager and RecyclerView
-        rv.setLayoutManager(llm);
-        PlayerAdapter adapter = new PlayerAdapter(team.getPlayers());
-        rv.setAdapter(adapter);
-
+        // A Dev task for the future should be to develop a screen to display if teams is null.
+        if (team != null) {
+            // Activate Layout manager and RecyclerView
+            rv.setLayoutManager(llm);
+            PlayerAdapter adapter = new PlayerAdapter(team.getPlayers());
+            rv.setAdapter(adapter);
+        }
     }
 }
