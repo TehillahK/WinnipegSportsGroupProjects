@@ -84,7 +84,7 @@ public class Game {
     }
 
     public String getGameLocation() {
-        return getGameLocation();
+        return gameLocation;
     }
 
     public ArrayList<Period> getGamePeriods() {
@@ -150,5 +150,30 @@ public class Game {
                 + "comp3350.winSport.objects.Team 1: " + team1.toString() + "\ncomp3350.winSport.objects.Team 2: " + team2.toString() + "------------------------------------\n"
                 + per + "------------------------------------";
         return res;
+    }
+
+    //-------------------------------
+    // viewGame()
+    //
+    // PURPOSE : For testing data. Command-line friendly version
+    //           that prints out a single game information.
+    //           Information printed is relevant to the user. A way to check if
+    //           functions in AccessGames is actually outputting something meaningful.
+    // PARAMETERS:
+    //     None.
+    //
+    // Returns: None.
+    //
+    // ------------------------------
+    public void viewGame(){
+        System.out.print("\n\nGAME INFORMATION");
+        System.out.print("\nGame ID: " + this.getGameID());
+        System.out.print("\nGame Name: " + this.getGameName());
+        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nGame Date: " + this.getGameDate());
+        System.out.print("\nTeam 1: " + this.getTeam1().getName());
+        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nLocation: "+ this.getGameLocation());
+        System.out.print("\nScore: " + this.getGameScore());
     }
 }
