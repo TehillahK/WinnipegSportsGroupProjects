@@ -1,4 +1,4 @@
-package comp3350.winSport.persistence;
+package comp3350.winSport.objects;
 
 public class InvalidNameException extends Exception{
     public InvalidNameException(String errorMessage) {

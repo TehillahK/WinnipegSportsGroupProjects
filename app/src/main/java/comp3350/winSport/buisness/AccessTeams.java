@@ -3,7 +3,7 @@ package comp3350.winSport.buisness;
 import java.util.List;
 
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.persistence.InvalidNameException;
+import comp3350.winSport.objects.InvalidNameException;
 import comp3350.winSport.persistence.ITeamData;
 import comp3350.winSport.persistence.ITeam;
 

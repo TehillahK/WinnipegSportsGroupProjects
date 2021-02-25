@@ -8,14 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.util.List;
-
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessGames;
 import comp3350.winSport.buisness.AccessTeams;
-import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.persistence.InvalidNameException;
+import comp3350.winSport.objects.InvalidNameException;
 
 public class RosterActivity extends AppCompatActivity {
 

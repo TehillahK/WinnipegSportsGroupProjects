@@ -2,6 +2,7 @@ package comp3350.winSport.persistence;
 
 import java.util.List;
 
+import comp3350.winSport.objects.InvalidNameException;
 import comp3350.winSport.objects.Team;
 
 public class ITeamData implements ITeam {
@@ -23,7 +24,7 @@ public class ITeamData implements ITeam {
 
 
     @Override
-    public Team getTeamByName(String name) throws InvalidNameException{
+    public Team getTeamByName(String name) throws InvalidNameException {
 
         if (name.matches("([a-zA-Z]|\\s)*")) {
             List<Team> teams = gData.GetTeams();
