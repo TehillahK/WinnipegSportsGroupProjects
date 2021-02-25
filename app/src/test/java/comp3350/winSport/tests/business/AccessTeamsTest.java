@@ -63,10 +63,10 @@ public class AccessTeamsTest {
         //when it shouldn't.
         //Original value of a team is null, so if the passed string is not on the list,
         //it should stay null.
-        assertNull(accessTeams.getTeamByName("Blue Bombers").getName());
-        assertNull(accessTeams.getTeamByName("Toronto Leafs").getName());
-        assertNull(accessTeams.getTeamByName("293802948039").getName());
-        assertNull(accessTeams.getTeamByName("").getName());
+        assertNull(accessTeams.getTeamByName("Blue Bombers"));
+        assertNull(accessTeams.getTeamByName("Toronto Leafs"));
+        assertNull(accessTeams.getTeamByName("293802948039"));
+        assertNull(accessTeams.getTeamByName(""));
     }
 
 }

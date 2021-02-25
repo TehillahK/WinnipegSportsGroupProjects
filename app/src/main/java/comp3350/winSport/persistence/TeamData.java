@@ -22,13 +22,12 @@ public class TeamData implements TeamPersistance {
     public Team getTeamByName(String name) {
 
         List<Team> teams = gData.GetTeams();
-        Team findMe;
 
         for (Team curr : teams) {
             if (curr.getName().equals(name))
                 return curr;
         }
 
-        return teams.get(0);
+        return null;
     }
 }
