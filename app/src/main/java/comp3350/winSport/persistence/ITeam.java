@@ -2,7 +2,7 @@ package comp3350.winSport.persistence;
 
 import java.util.List;
 
-import comp3350.winSport.objects.InvalidNameException;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.objects.Team;
 
 public interface ITeam {

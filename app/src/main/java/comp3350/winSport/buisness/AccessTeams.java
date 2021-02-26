@@ -3,8 +3,8 @@ package comp3350.winSport.buisness;
 import java.util.List;
 
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.objects.InvalidNameException;
-import comp3350.winSport.persistence.ITeamData;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.persistence.TeamData;
 import comp3350.winSport.persistence.ITeam;
 
 public class AccessTeams {
@@ -16,7 +16,7 @@ public class AccessTeams {
 
     public AccessTeams() {
 
-        ITeam = new ITeamData();
+        ITeam = new TeamData();
         teams = null;
         team = null;
         currentTeam = 0;

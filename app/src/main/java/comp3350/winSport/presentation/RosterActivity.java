@@ -11,7 +11,7 @@ import android.os.Bundle;
 import comp3350.winSport.R;
 import comp3350.winSport.buisness.AccessTeams;
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.objects.InvalidNameException;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 
 public class RosterActivity extends AppCompatActivity {
 
@@ -24,13 +24,16 @@ public class RosterActivity extends AppCompatActivity {
         setContentView(R.layout.team_list);
 
         Intent intent = getIntent();
-        String value = ((Intent) intent).getStringExtra("TeamName");
+        String value = (intent).getStringExtra("TeamName");
 
         // ENABLE ACTION BAR
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Roster");
-
+        try {
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle("Roster");
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         // RECYCLER VIEW DATA
         accessTeams = new AccessTeams();
 
@@ -49,7 +52,7 @@ public class RosterActivity extends AppCompatActivity {
         if (team != null) {
             // Activate Layout manager and RecyclerView
             rv.setLayoutManager(llm);
-            PlayerAdapter adapter = new PlayerAdapter(team.getPlayers());
+            RosterAdapter adapter = new RosterAdapter(team.getPlayers());
             rv.setAdapter(adapter);
         }
     }

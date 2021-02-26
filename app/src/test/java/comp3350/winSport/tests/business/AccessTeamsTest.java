@@ -1,14 +1,10 @@
 package comp3350.winSport.tests.business;
 
-import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ListIterator;
 
 import comp3350.winSport.buisness.AccessTeams;
-import comp3350.winSport.objects.Game;
-import comp3350.winSport.objects.InvalidNameException;
 import comp3350.winSport.objects.Team;
 
 import static org.junit.Assert.assertFalse;

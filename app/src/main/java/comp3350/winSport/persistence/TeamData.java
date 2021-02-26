@@ -2,12 +2,12 @@ package comp3350.winSport.persistence;
 
 import java.util.List;
 
-import comp3350.winSport.objects.InvalidNameException;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.objects.Team;
 
-public class ITeamData implements ITeam {
+public class TeamData implements ITeam {
 
-    IGameData gData = new IGameData();
+    GameData gData = new GameData();
 
     @Override
     public List<Team> getTeams() {

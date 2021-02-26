@@ -10,18 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Game;
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.GameViewHolder> {
+public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameViewHolder> {
 
     List<Game> games; // declare games List
 
-    RVAdapter(List<Game> games) { // constructor initalizing games list.
+    CurrentAdapter(List<Game> games) { // constructor initalizing games list.
         this.games = games;
     }
 

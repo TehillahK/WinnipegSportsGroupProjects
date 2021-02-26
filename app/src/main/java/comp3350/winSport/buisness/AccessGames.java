@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 import comp3350.winSport.objects.Game;
-import comp3350.winSport.persistence.IGameData;
+import comp3350.winSport.persistence.GameData;
 import comp3350.winSport.persistence.IGame;
 
 public class AccessGames {
@@ -16,7 +16,7 @@ public class AccessGames {
 
     public AccessGames() {
 
-        IGame = new IGameData();
+        IGame = new GameData();
         games = null;
         game = null;
         currentGame = 0;
@@ -31,7 +31,5 @@ public class AccessGames {
         game = IGame.getSingleGame();
         return game;
     }
-
-
 
 }

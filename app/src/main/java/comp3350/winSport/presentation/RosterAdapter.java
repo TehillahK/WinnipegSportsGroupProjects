@@ -19,14 +19,14 @@ import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 
-public class PlayerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
 
     List<Player> players; // declare games List
 
-    PlayerAdapter(List<Player> players) { // constructor initalizing games list.
+    RosterAdapter(List<Player> players) { // constructor initalizing games list.
         this.players = players;
     }
 

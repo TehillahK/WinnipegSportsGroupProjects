@@ -10,7 +10,7 @@ import comp3350.winSport.objects.Period;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 
-public class IGameData implements IGame {
+public class GameData implements IGame {
 
     private Game g1;
     private Game g2;
@@ -26,7 +26,7 @@ public class IGameData implements IGame {
 
 
 
-    public IGameData() {
+    public GameData() {
 
         g1 = null;
         g2 = null;
@@ -312,7 +312,7 @@ public class IGameData implements IGame {
             game1p2.addGoal(p6, "19:44");
         }
         catch(Exception InvalidNameException){
-            System.out.print(InvalidNameException);
+            System.out.print(InvalidNameException.toString());
         }
 
         Period game1p3 = new Period(3, 4);
@@ -329,7 +329,7 @@ public class IGameData implements IGame {
             game2p1.addGoal(p17, "11:11");
         }
         catch(Exception InvalidNameException){
-            System.out.print(InvalidNameException);
+            System.out.print(InvalidNameException.toString());
         }
 
 

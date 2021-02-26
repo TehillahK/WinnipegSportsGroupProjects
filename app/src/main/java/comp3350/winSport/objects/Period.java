@@ -2,6 +2,8 @@ package comp3350.winSport.objects;
 
 import java.util.ArrayList;
 
+import comp3350.winSport.objects.exceptions.InvalidTimeException;
+
 public class Period {
     private int ID;
     private int score;
@@ -22,7 +24,7 @@ public class Period {
         timeGoals = new ArrayList<>();
     }
 
-    public void addGoal(Player p, String time) throws InvalidTimeException{
+    public void addGoal(Player p, String time) throws InvalidTimeException {
         if(time.matches("^\\d{2}:\\d{2}$")){
             playerGoals.add(p);
             timeGoals.add(time);

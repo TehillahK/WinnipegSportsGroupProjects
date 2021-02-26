@@ -6,9 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
@@ -26,10 +24,13 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currently_playing);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Currently Playing");
-
+        try {
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle("Currently Playing");
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         accessGames = new AccessGames();
 
         games = accessGames.getGames();
@@ -38,7 +39,7 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
-        RVAdapter adapter = new RVAdapter(games);
+        CurrentAdapter adapter = new CurrentAdapter(games);
         rv.setAdapter(adapter);
 
     }
