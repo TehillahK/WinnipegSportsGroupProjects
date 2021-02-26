@@ -6,6 +6,7 @@
 * [Iteration 1](#iteration-1)
     * [Branching Strategy](#branching-strategy)
     * [Group Worksheet](#group-worksheet)
+* [Our Team](#our-team)
 
 ---
 
@@ -40,3 +41,10 @@ Our branching strategy is called [git-flow](https://nvie.com/posts/a-successful-
 ### Group Worksheet
 
 Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/iteration_1_worksheet.md).
+
+## Our Team
+- Kehinde Elukanle (@Kehinde)
+- Tehillah Kangamba (@Tehillah)
+- Keshav Modun (@KeshavModun)
+- Colin Waugh (@ColinWaugh)
+- Charina Duenas (@duenasc)
