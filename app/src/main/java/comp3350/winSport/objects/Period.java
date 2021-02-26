@@ -22,9 +22,15 @@ public class Period {
         timeGoals = new ArrayList<>();
     }
 
-    public void addGoal(Player p, String time) {
-        playerGoals.add(p);
-        timeGoals.add(time);
+    public void addGoal(Player p, String time) throws InvalidTimeException{
+        if(time.matches("^\\d{2}:\\d{2}$")){
+            playerGoals.add(p);
+            timeGoals.add(time);
+        }
+        else{
+            throw new InvalidTimeException("Please use time format in 00:00");
+        }
+
     }
 
     public ArrayList<Player> getPlayerGoals() {
@@ -75,6 +81,12 @@ public class Period {
         }
         else
             return "comp3350.winSport.objects.Period #" + ID + "\n" + "Score: " + score + "\n";
+    }
+
+    public void viewPeriodObject(){
+        System.out.print("\nPERIOD OBJECT");
+        System.out.print("\nID: " + this.getID());
+        System.out.print("\nScore: " + this.getScore() + "\n");
     }
 
 }

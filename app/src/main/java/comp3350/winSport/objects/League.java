@@ -35,4 +35,10 @@ public class League {
         return "comp3350.winSport.objects.League: [" + ID + "] " + name;
     }
 
+    public void viewLeagueObject(){
+        System.out.print("\nLEAGUE OBJECT");
+        System.out.print("\nGame ID: " + getID());
+        System.out.print("\nLeague Name: " + getName());
+    }
+
 }

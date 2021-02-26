@@ -1,6 +1,5 @@
 package comp3350.winSport.tests.business;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ListIterator;
@@ -51,7 +50,7 @@ public class AccessGamesTest {
 
     @Test
     public void listGames(){
-        System.out.print("\n------------------Access Games Test---------------------");
+        System.out.print("\n------------------AccessGames Test---------------------");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 2: List of Games");
         System.out.print("\n---------------------------------------");
@@ -74,8 +73,6 @@ public class AccessGamesTest {
             assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague().getName()));
 
         }
-
-        System.out.print("\nFinished testing AccessGames.");
     }
 
 }

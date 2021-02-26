@@ -69,6 +69,8 @@ public class AccessTeamsTest {
 
         System.out.print("\ngetTeamByName() should throw an exception if there are numeric characters in the string.\n");
 
+        int counter = 0;
+
         try{
             System.out.print("\nInput: " + input1);
             accessTeams.getTeamByName(input1);
@@ -76,6 +78,7 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
         try{
@@ -85,6 +88,7 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
         try{
@@ -94,6 +98,7 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
         try{
@@ -103,6 +108,7 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
         try{
@@ -112,6 +118,7 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
         try{
@@ -121,15 +128,20 @@ public class AccessTeamsTest {
         }
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
+            counter++;
         }
 
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nExpected: 6");
+        System.out.print("\nExceptions thrown: " + counter);
+        System.out.print("\n---------------------------------------");
 
     }
 
     @Test
     public void testTeamNotOnList(){
 
-        System.out.print("\n------------------Access Teams Test---------------------");
+        System.out.print("\n------------------AccessTeams Test---------------------");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 4: getTeamByName() -- Part 2");
         System.out.print("\n---------------------------------------");

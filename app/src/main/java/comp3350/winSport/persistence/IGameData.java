@@ -306,8 +306,15 @@ public class IGameData implements IGame {
 
         Period game1p1 = new Period(1, 3);
         Period game1p2 = new Period(2, 5);
-        game1p2.addGoal(p2, "13:12");
-        game1p2.addGoal(p6, "19:44");
+
+        try{
+            game1p2.addGoal(p2, "13:12");
+            game1p2.addGoal(p6, "19:44");
+        }
+        catch(Exception InvalidNameException){
+            System.out.print(InvalidNameException);
+        }
+
         Period game1p3 = new Period(3, 4);
         ArrayList<Period> game1Periods = new ArrayList<>();
         game1Periods.add(game1p1);
@@ -315,9 +322,17 @@ public class IGameData implements IGame {
         game1Periods.add(game1p3);
 
         Period game2p1 = new Period(1, 6);
-        game2p1.addGoal(p12, "09:05");
-        game2p1.addGoal(p13, "16:07");
-        game2p1.addGoal(p17, "11:11");
+
+        try{
+            game2p1.addGoal(p12, "09:05");
+            game2p1.addGoal(p13, "16:07");
+            game2p1.addGoal(p17, "11:11");
+        }
+        catch(Exception InvalidNameException){
+            System.out.print(InvalidNameException);
+        }
+
+
         Period game2p2 = new Period(2, 2);
         Period game2p3 = new Period(3, 3);
         ArrayList<Period> game2Periods = new ArrayList<>();

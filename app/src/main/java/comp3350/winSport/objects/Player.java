@@ -67,4 +67,13 @@ public class Player {
     public String toString() {
         return "comp3350.winSport.objects.Player: [" + number + "] " + name + ", " + position;
     }
+
+    public void viewPlayerObject(){
+        System.out.print("\nPLAYER OBJECT");
+        System.out.print("\nName: " + getName());
+        System.out.print("\nNumber: " + getNumber());
+        System.out.print("\nPosition: " + getPosition());
+        System.out.print("\nTeam: " + getTeam());
+        System.out.print("\nPic ID: " + getTeamPic());
+    }
 }

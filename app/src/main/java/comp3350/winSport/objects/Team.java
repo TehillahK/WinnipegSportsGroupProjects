@@ -45,4 +45,12 @@ public class Team {
        return this.name;
     }
 
+    public void viewTeamObject(){
+        System.out.print("\nTEAM OBJECT");
+        System.out.print("\nName: " + getName());
+        System.out.print("\nPlayers: " + getPlayers());
+        System.out.print("\nTeam ID: " + getTeamID());
+
+    }
+
 }

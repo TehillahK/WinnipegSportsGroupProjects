@@ -144,11 +144,11 @@ public class Game {
         for(int i = 0; i < 2; i++)
             per = per + periods.get(i).toString() + "\n";
         per += periods.get(2).toString();
-        String res = "------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
+        String res = "\n------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
                 + "comp3350.winSport.objects.Game date: " + gameDate + "\n"
                 + "comp3350.winSport.objects.Game location: " + gameLocation + "\ncomp3350.winSport.objects.Game score: " + gameScore + "\n------------------------------------\n"
-                + "comp3350.winSport.objects.Team 1: " + team1.toString() + "\ncomp3350.winSport.objects.Team 2: " + team2.toString() + "------------------------------------\n"
-                + per + "------------------------------------";
+                + "comp3350.winSport.objects.Team 1: " + team1.toString() + "\ncomp3350.winSport.objects.Team 2: " + team2.toString() + "\n------------------------------------\n"
+                + per + "\n------------------------------------\n";
         return res;
     }
 
@@ -175,5 +175,29 @@ public class Game {
         System.out.print("\nTeam 2: " + this.getTeam2().getName());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
+    }
+
+    //-------------------------------
+    // viewGame()
+    //
+    // PURPOSE : For testing data. Command-line friendly version
+    //           that prints out the variables found in the constructor.
+    // PARAMETERS:
+    //     None.
+    //
+    // Returns: None.
+    //
+    // ------------------------------
+    public void viewGameObject(){
+        System.out.print("\n\nGAME OBJECT");
+        System.out.print("\nGame ID: " + this.getGameID());
+        System.out.print("\nGame Name: " + this.getGameName());
+        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nGame Date: " + this.getGameDate());
+        System.out.print("\nTeam 1: " + this.getTeam1().getName());
+        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nLocation: "+ this.getGameLocation());
+        System.out.print("\nScore: " + this.getGameScore());
+        System.out.print("\nPeriods: " + this.getGamePeriods().get(0).toString());
     }
 }
