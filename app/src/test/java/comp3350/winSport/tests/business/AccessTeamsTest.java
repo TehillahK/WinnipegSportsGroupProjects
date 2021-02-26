@@ -8,12 +8,14 @@ import java.util.ListIterator;
 
 import comp3350.winSport.buisness.AccessTeams;
 import comp3350.winSport.objects.Game;
+import comp3350.winSport.objects.InvalidNameException;
 import comp3350.winSport.objects.Team;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class AccessTeamsTest {
 
@@ -25,8 +27,7 @@ public class AccessTeamsTest {
     }
 
     @Test
-    public void listTeams(){
-        System.out.print("\n------------------Access Teams Test---------------------");
+    public void testListTeams(){
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Listing Teams");
         System.out.print("\n---------------------------------------");
@@ -42,56 +43,109 @@ public class AccessTeamsTest {
     }
 
     @Test
-    public void getTeam(){
+    public void testGetTeam(){
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 2: View a Team");
         System.out.print("\n---------------------------------------");
+        System.out.print("\nTests if getSingleGame() has successfully fetched a team from the data layer.");
         System.out.print("\n" + accessTeams.getSingleGame().getName());
         assertTrue("Winnipeg Jets".equals(accessTeams.getSingleGame().getName()));
 
     }
 
     @Test
-    public void getTeamByName(){
-
-        String input1 = "Winnipeg Jets";
-        String input2 = "Toronto Maple Leafs";
-        String input3 = "Blue Bombers";
-        String input4 = "Toronto Leafs";
-        String input5 = "293802948039";
-        String input6 = "";
+    public void testTeamByNameException(){
 
         System.out.print("\n---------------------------------------");
-        System.out.print("\nTest 3: Get Team By Name");
+        System.out.print("\nTest 3: getTeamByName() -- Part 1");
         System.out.print("\n---------------------------------------");
-        System.out.print("\nIf assertion errors happen, this test has failed.");
-        System.out.print("\nIf test print all output until 'END', and then all tests have passed.");
-        System.out.print("\nChecking if " + input1 + " is in the team list. Expectation: true");
-        assertTrue(input1.equals(accessTeams.getTeamByName(input1).getName()));
-        System.out.print("\nPass");
-        System.out.print("\nChecking if " + input2 + " is in the team list. Expectation: true");
-        assertTrue(input2.equals(accessTeams.getTeamByName(input2).getName()));
-        System.out.print("\nPass");
 
-        //If these have assert errors, it means that AccessTeams is returning something
-        //when it shouldn't.
-        //Original value of a team is null, so if the passed string is not on the list,
-        //it should stay null.
-        System.out.print("\nNow checking for miscellaneous inputs.");
-        System.out.print("\nNone of the following is in the list. List should not return anything.");
-        System.out.print("\nIf an assertion error occurs, then the list has returned something it shouldn't have.");
-        System.out.print("\nSearching for " + input3 +  "...");
-        assertNull(accessTeams.getTeamByName(input3));
-        System.out.print("\nPass");
-        System.out.print("\nSearching for " + input4 + "...");
-        assertNull(accessTeams.getTeamByName(input4));
-        System.out.print("\nPass");
-        System.out.print("\nSearching for " + input5 + "...");
-        assertNull(accessTeams.getTeamByName(input5));
-        System.out.print("\nPass");
-        System.out.print("\nSearching for " + input6 + "...");
-        assertNull(accessTeams.getTeamByName(""));
-        System.out.print("\nPass");
+        String input1 = "39803498034";
+        String input2 = "Winnipeg Jets 45";
+        String input3 = "";
+        String input4 = "            ";
+        String input5 = "Winnipeg              Jets";
+        String input6 = " Winnipeg Jets    ";
+
+        System.out.print("\ngetTeamByName() should throw an exception if there are numeric characters in the string.\n");
+
+        try{
+            System.out.print("\nInput: " + input1);
+            accessTeams.getTeamByName(input1);
+            fail("\nMethod did not throw an exception.\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+        try{
+            System.out.print("\nInput: " + input2);
+            accessTeams.getTeamByName(input2);
+            fail("\nMethod did not throw an exception\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+        try{
+            System.out.print("\nInput: (empty)");
+            accessTeams.getTeamByName(input3);
+            fail("\nMethod did not throw an exception\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+        try{
+            System.out.print("\nInput: (whitespace)");
+            accessTeams.getTeamByName(input4);
+            fail("\nMethod did not throw an exception\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+        try{
+            System.out.print("\nInput: " + input5);
+            accessTeams.getTeamByName(input5);
+            fail("\nMethod did not throw an exception\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+        try{
+            System.out.print("\nInput: " + input6);
+            accessTeams.getTeamByName(input6);
+            fail("\nMethod did not throw an exception\n");
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
+
+
+    }
+
+    @Test
+    public void testTeamNotOnList(){
+
+        System.out.print("\n------------------Access Teams Test---------------------");
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nTest 4: getTeamByName() -- Part 2");
+        System.out.print("\n---------------------------------------");
+
+        System.out.print("\nEnsures that nothing or null is returned if a team not on the list is passed.");
+
+        String input1 = "Winnipeg Blue Bombers";
+
+        try{
+            System.out.print("\nInput: " + input1);
+            accessTeams.getTeamByName(input1);
+            assertNull(null); //should return null if not found.
+        }
+        catch (Exception InvalidNameException){
+            System.out.print("\nMethod threw an exception.\n");
+        }
     }
 
 }

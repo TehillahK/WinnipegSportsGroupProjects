@@ -26,17 +26,20 @@ public class ITeamData implements ITeam {
     @Override
     public Team getTeamByName(String name) throws InvalidNameException {
 
-        if (name.matches("([a-zA-Z]|\\s)*")) {
+        if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
             List<Team> teams = gData.GetTeams();
 
             for (Team curr : teams) {
                 if (curr.getName().equals(name))
                     return curr;
             }
+
+            //If team is not in the list...
+            System.out.print("\nTeam not found.");
             return null;
         }
         else {
-            throw new InvalidNameException("please pass a numeric team name");
+            throw new InvalidNameException("please pass a team name with letters only");
         }
     }
 }
