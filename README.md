@@ -2,7 +2,7 @@
 
 ## Contents
 * [Iteration 0](#iteration-0)
-    * [Vision Statement](#vision-statment)
+    * [Vision Statement](#vision-statment)<!-- @IGNORE PREVIOUS: anchor -->
 * [Iteration 1](#iteration-1)
     * [Branching Strategy](#branching-strategy)
     * [Group Worksheet](#group-worksheet)
