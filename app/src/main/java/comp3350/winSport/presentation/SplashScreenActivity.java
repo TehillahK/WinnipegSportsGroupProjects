@@ -59,7 +59,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             Main.setDBPathName(dataDirectory.toString() + "/" + Main.getDBPathName());
 
         } catch (final IOException ioe) {
-            Messages.warning(this, "Unable to access application data: " + ioe.getMessage());
+            System.out.println("hello this isntt workibf");
         }
     }
 
