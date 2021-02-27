@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import comp3350.winSport.R;
+import comp3350.winSport.application.Main;
 
 import android.content.Context;
 

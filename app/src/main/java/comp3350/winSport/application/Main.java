@@ -2,7 +2,7 @@ package comp3350.winSport.application;
 
 public class Main
 {
-    private static String dbName="SC";
+    private static String dbName="db";
 
     public static void main(String[] args)
     {
