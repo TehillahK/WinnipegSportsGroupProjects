@@ -25,6 +25,8 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
+        copyDatabaseToDevice();
+
         Handler handler=new Handler();
 
         handler.postDelayed(

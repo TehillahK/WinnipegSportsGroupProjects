@@ -42,7 +42,7 @@ public class Team {
     }
 
     public String toString() {
-       return this.name;
+       return this.name + " " + this.teamID;
     }
 
     public void viewTeamObject(){

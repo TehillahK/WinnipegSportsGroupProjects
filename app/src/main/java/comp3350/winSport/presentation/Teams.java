@@ -31,7 +31,7 @@ public class Teams extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Teams");
 
-        ArrayAdapter adapter = new ArrayAdapter<Team>(this,R.layout.team_item,teams);
+        ArrayAdapter adapter = new ArrayAdapter<>(this,R.layout.team_item,teams);
 
         ListView listView = findViewById(R.id.list_view);
 
