@@ -10,11 +10,11 @@ public class Main
         app/src/main/assets/db/WS.script
         C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\assets\db\WS.script
      */
-    public static void main(String[] args)
-    {
-//        CLI.run();
-        System.out.println("All done");
-    }
+//    public static void main(String[] args)
+//    {
+////        CLI.run();
+//        System.out.println("All done");
+//    }
 
     public static void setDBPathName(final String name) {
         try {

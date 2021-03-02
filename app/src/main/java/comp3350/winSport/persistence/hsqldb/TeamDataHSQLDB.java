@@ -28,7 +28,7 @@ public class TeamDataHSQLDB implements ITeam {
 
     private Team fromResultSet(final ResultSet rs) throws SQLException {
         final int teamID = Integer.parseInt(rs.getString("TEAMID"));
-        final String teamName = rs.getString("name");
+        final String teamName = rs.getString("NAME");
         ArrayList<Player> players = new ArrayList<>();
         players.add(new Player());
         players.add(new Player());
@@ -56,7 +56,7 @@ public class TeamDataHSQLDB implements ITeam {
             e.printStackTrace();
         }
 
-        return null;
+        return teams;
     }
 
     @Override
