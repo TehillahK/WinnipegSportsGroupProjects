@@ -5,7 +5,9 @@
     * [Vision Statement](#vision-statment)<!-- @IGNORE PREVIOUS: anchor -->
 * [Iteration 1](#iteration-1)
     * [Branching Strategy](#branching-strategy)
+    * [Architecture](#architecture)
     * [Group Worksheet](#group-worksheet)
+* [Our Team](#our-team)
 
 ---
 
@@ -35,7 +37,19 @@ to users and generate a 10 million dollars revenue within the same year. Secondl
 
 ### Branching Strategy
 
-Our branching strategy is called git-flow. We made another branch off the master branch called develop, this is the branch we agree to commit reviewed and approved changes into. Members are to create a unique branch for the part of the feature they are working on, and this how we, as members of the team, will work on each feature implementation. Once a team member is positive with recent changes made on their branch, their branch is then reviewed by the team or a team member. If we are positive it meets the requirements as described in our dev task or user stories, then the team member can create a merge request and merge to develop branch. Once our changes in the develop branch are fully ready for production, then we merge the develop branch to master branch for release.
+Our branching strategy is called [git-flow](https://nvie.com/posts/a-successful-git-branching-model/). We made another branch off the master branch called develop, this is the branch we agree to commit reviewed and approved changes into. Members are to create a unique branch for the part of the feature they are working on, and this how we, as members of the team, will work on each feature implementation. Once a team member is positive with recent changes made on their branch, their branch is then reviewed by the team or a team member. If we are positive it meets the requirements as described in our dev task or user stories, then the team member can create a merge request and merge to develop branch. Once our changes in the develop branch are fully ready for production, then we merge the develop branch to master branch for release.
+
+### Architecture
+
+Our `architecture.md` file [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md).
 
 ### Group Worksheet
-Link to group worksheet here. 
+
+Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/iteration_1_worksheet.md).
+
+## Our Team
+- Kehinde Elukanle (@Kehinde)
+- Tehillah Kangamba (@Tehillah)
+- Keshav Modun (@KeshavModun)
+- Colin Waugh (@ColinWaugh)
+- Charina Duenas (@duenasc)
