@@ -14,14 +14,11 @@ public class TeamData implements ITeam {
         return gData.GetTeams();
     }
 
-
     // just returns winnipeg jets if only 1 team is required.
     @Override
     public Team getSingleTeam() {
         return getTeams().get(0);
     }
-
-
 
     @Override
     public Team getTeamByName(String name) throws InvalidNameException {

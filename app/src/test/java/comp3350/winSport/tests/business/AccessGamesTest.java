@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.ListIterator;
 
-import comp3350.winSport.buisness.AccessGames;
+import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 
 import static org.junit.Assert.assertNotNull;

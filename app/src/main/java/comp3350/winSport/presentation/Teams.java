@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessTeams;
+import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
 
 public class Teams extends AppCompatActivity {
@@ -31,7 +31,7 @@ public class Teams extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Teams");
 
-        ArrayAdapter adapter = new ArrayAdapter<Team>(this,R.layout.team_item,teams);
+        ArrayAdapter adapter = new ArrayAdapter<>(this,R.layout.team_item,teams);
 
         ListView listView = findViewById(R.id.list_view);
 

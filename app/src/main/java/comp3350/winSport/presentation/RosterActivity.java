@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessTeams;
+import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 

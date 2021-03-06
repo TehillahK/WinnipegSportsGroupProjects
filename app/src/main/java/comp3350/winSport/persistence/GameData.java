@@ -1,5 +1,7 @@
 package comp3350.winSport.persistence;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -329,7 +331,7 @@ public class GameData implements IGame {
             game2p1.addGoal(p17, "11:11");
         }
         catch(Exception InvalidNameException){
-            System.out.print(InvalidNameException.toString());
+            Log.e("Game Data Error",InvalidNameException.toString());
         }
 
 

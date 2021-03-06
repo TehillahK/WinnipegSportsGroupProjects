@@ -1,39 +1,39 @@
-package comp3350.winSport.buisness;
+package comp3350.winSport.business;
 
 import java.util.List;
 
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.TeamData;
-import comp3350.winSport.persistence.ITeam;
 
 public class AccessTeams {
 
-    private ITeam ITeam;
+    private TeamData tData;
+
     private List<Team> teams;
     private Team team;
     private int currentTeam;
 
     public AccessTeams() {
 
-        ITeam = new TeamData();
+        tData = new TeamData();
         teams = null;
         team = null;
         currentTeam = 0;
     }
 
     public List<Team> getTeams() {
-        teams = ITeam.getTeams();
+        teams = tData.getTeams();
         return teams;
     }
 
     public Team getSingleGame() {
-        team = ITeam.getSingleTeam();
+        team = tData.getSingleTeam();
         return team;
     }
 
     public Team getTeamByName(String name) throws InvalidNameException {
-        team = ITeam.getTeamByName(name);
+        team = tData.getTeamByName(name);
         return team;
     }
 }

@@ -10,7 +10,7 @@ import android.os.Bundle;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessGames;
+import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 
 public class CurrentlyPlayingActivity extends AppCompatActivity {
