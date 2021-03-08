@@ -33,9 +33,6 @@ public class Game {
         gamePicID = 0;
     }
 
-    public ArrayList<Period> getPeriods() {
-        return periods;
-    }
 
     public Game(int gID, String gName, League gL, Team t1, Team t2, String gDate, String gLocation, ArrayList<Period> prds, String gScore) {
         gameID = gID;
@@ -50,6 +47,21 @@ public class Game {
         leagueID = R.drawable.nhl;
         gamePicID = R.drawable.jets;
     }
+
+    public Game(int gID, String gName, int team1ID, int team2ID, String date, String location, String score) {
+        gameID = gID;
+        gameName = gName;
+        team1 = new Team();
+        team2 = new Team();
+        gameDate = date;
+        gameLocation = location;
+        gameLeague = new League();
+        periods = new ArrayList<>(3);
+        gameScore = score;
+        leagueID = R.drawable.nhl;
+        gamePicID = R.drawable.jets;
+    }
+
 
     public int getLeagueID() {
         return leagueID;
@@ -98,6 +110,10 @@ public class Game {
                 p = periods.get(i);
         }
         return p;
+    }
+
+    public ArrayList<Period> getPeriods() {
+        return periods;
     }
 
     public String getGameScore() {

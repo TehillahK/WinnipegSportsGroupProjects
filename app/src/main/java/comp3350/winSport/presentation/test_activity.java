@@ -10,8 +10,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessTeams;
-import comp3350.winSport.buisness.team_test;
+import comp3350.winSport.business.AccessTeams;
+import comp3350.winSport.business.team_test;
 import comp3350.winSport.objects.Team;
 
 public class test_activity extends AppCompatActivity {

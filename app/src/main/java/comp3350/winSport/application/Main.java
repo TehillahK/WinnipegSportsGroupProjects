@@ -4,12 +4,6 @@ public class Main
 {
     private static String dbName="WS";
 
-    /*db_list_view
-        src\main\assets\db\WS.script
-        db\WS.script
-        app/src/main/assets/db/WS.script
-        C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\assets\db\WS.script
-     */
 //    public static void main(String[] args)
 //    {
 ////        CLI.run();

@@ -2,6 +2,7 @@ package comp3350.winSport.application;
 
 import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.ITeam;
+import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
 
 public class Services {
@@ -14,6 +15,13 @@ public class Services {
             teamPersistance = new TeamDataHSQLDB(Main.getDBPathName());
         }
         return teamPersistance;
+    }
+
+    public static synchronized IGame getGamePersistance() {
+        if (gamePersistance == null) {
+            gamePersistance = new GameDataHSQLDB(Main.getDBPathName());
+        }
+        return gamePersistance;
     }
 
 }

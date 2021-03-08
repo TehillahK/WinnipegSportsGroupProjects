@@ -1,4 +1,4 @@
-package comp3350.winSport.buisness;
+package comp3350.winSport.business;
 
 import java.util.Collections;
 import java.util.List;

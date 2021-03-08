@@ -2,24 +2,29 @@ package comp3350.winSport.business;
 
 import java.util.List;
 
+import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
-import comp3350.winSport.persistence.TeamData;
+import comp3350.winSport.persistence.ITeam;
+import comp3350.winSport.persistence.fakeDB.TeamData;
 
 public class AccessTeams {
 
-    private TeamData tData;
-
+    private ITeam tData;
     private List<Team> teams;
     private Team team;
     private int currentTeam;
 
     public AccessTeams() {
-
-        tData = new TeamData();
+        tData = Services.getTeamPersistance();
         teams = null;
         team = null;
         currentTeam = 0;
+    }
+
+    public AccessTeams(final ITeam tData) {
+        this();
+        this.tData = tData;
     }
 
     public List<Team> getTeams() {
@@ -36,4 +41,6 @@ public class AccessTeams {
         team = tData.getTeamByName(name);
         return team;
     }
+
+
 }

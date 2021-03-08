@@ -1,4 +1,6 @@
 package comp3350.winSport.persistence.hsqldb;
+import android.util.Log;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,23 +19,52 @@ import comp3350.winSport.objects.Team;
 import comp3350.winSport.persistence.IGame;
 
 public class GameDataHSQLDB implements IGame {
-    private final String dbUrl;
 
-    public GameDataHSQLDB(final String dbUrl)
-    {
-        this.dbUrl=dbUrl;
+    private final String dbPath;
+
+    public GameDataHSQLDB(final String dbPath) {
+        this.dbPath = dbPath;
     }
+
     private Connection connection() throws  SQLException{
-        return DriverManager.getConnection("jdbc:hsqldb:file"+dbUrl+";shutdown=true","SA","");
+        return DriverManager.getConnection("jdbc:hsqldb:file:" + dbPath + ";shutdown=true", "SA", "");
+    }
+
+    private Game fromResultSet(final ResultSet rs) throws SQLException {
+        final int gameID = rs.getInt("GAMEID");
+        final String gameName = rs.getString("GAMENAME");
+        final int t1ID = rs.getInt("TEAM1ID");
+        final int t2ID = rs.getInt("TEAM2ID");
+        final String gameDate = rs.getString("DATE");
+        final String gameLocation = rs.getString("LOCATION");
+        final String gameScore = rs.getString("SCORE");
+
+        return new Game(gameID,gameName,t1ID,t2ID,gameDate,gameLocation,gameScore);
     }
     
     @Override
     public List<Game> getGamesSequential() {
 
+        final List<Game> games = new ArrayList<>();
 
+        try (final Connection c = connection()) {
+            final Statement st = c.createStatement();
+            final ResultSet rs = st.executeQuery("SELECT * FROM GAMES");
 
+            while (rs.next()) {
+                final Game game = fromResultSet(rs);
+                games.add(game);
+            }
 
-        return null;
+            rs.close();
+            st.close();
+        }
+        catch (final SQLException e) {
+            Log.e("SQLException: GameData",e.toString());
+        }
+
+        return games;
+
     }
 
     @Override

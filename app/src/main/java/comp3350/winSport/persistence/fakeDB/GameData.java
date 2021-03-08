@@ -1,4 +1,4 @@
-package comp3350.winSport.persistence;
+package comp3350.winSport.persistence.fakeDB;
 
 import android.util.Log;
 
@@ -11,6 +11,7 @@ import comp3350.winSport.objects.League;
 import comp3350.winSport.objects.Period;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
+import comp3350.winSport.persistence.IGame;
 
 public class GameData implements IGame {
 
