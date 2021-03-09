@@ -8,9 +8,9 @@ public class Game {
 
     private int gameID;
     private String gameName;
-    private League gameLeague;
-    private Team team1;
-    private Team team2;
+    private String gameLeague;
+    private String team1;
+    private String team2;
     private String gameDate;
     private String gameLocation;
     private ArrayList<Period> periods;
@@ -22,9 +22,9 @@ public class Game {
     public Game() {
         gameID = 0;
         gameName = "Unknown";
-        gameLeague = new League();
-        team1 = new Team();
-        team2 = new Team();
+        gameLeague = "Unknown";
+        team1 = "team1 Name";
+        team2 = "team2 Name";
         gameDate = "Unknown";
         gameLocation = "Unknown";
         periods = new ArrayList<>(3);
@@ -34,7 +34,7 @@ public class Game {
     }
 
 
-    public Game(int gID, String gName, League gL, Team t1, Team t2, String gDate, String gLocation, ArrayList<Period> prds, String gScore) {
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, ArrayList<Period> prds, String gScore) {
         gameID = gID;
         gameName = gName;
         gameLeague = gL;
@@ -48,14 +48,14 @@ public class Game {
         gamePicID = R.drawable.jets;
     }
 
-    public Game(int gID, String gName, int team1ID, int team2ID, String date, String location, String score) {
+    public Game(int gID, String gName, String t1, String t2, String date, String location, String score) {
         gameID = gID;
         gameName = gName;
-        team1 = new Team();
-        team2 = new Team();
+        team1 =t1;
+        team2 = t2;
         gameDate = date;
         gameLocation = location;
-        gameLeague = new League();
+        gameLeague = "unknown";
         periods = new ArrayList<>(3);
         gameScore = score;
         leagueID = R.drawable.nhl;
@@ -79,15 +79,15 @@ public class Game {
         return gameName;
     }
 
-    public League getGameLeague() {
+    public String getGameLeague() {
         return gameLeague;
     }
 
-    public Team getTeam1() {
+    public String getTeam1() {
         return team1;
     }
 
-    public Team getTeam2() {
+    public String getTeam2() {
         return team2;
     }
 
@@ -128,8 +128,8 @@ public class Game {
         gameName = s;
     }
 
-    public void setLeague(int ID, String name) {
-        gameLeague = new League(ID, name);
+    public void setLeague(String name) {
+        gameLeague = name;
     }
 
     public void setGameDate(String date) {
@@ -185,10 +185,10 @@ public class Game {
         System.out.print("\n\nGAME INFORMATION");
         System.out.print("\nGame ID: " + this.getGameID());
         System.out.print("\nGame Name: " + this.getGameName());
-        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nLeague: "+ this.getGameLeague());
         System.out.print("\nGame Date: " + this.getGameDate());
-        System.out.print("\nTeam 1: " + this.getTeam1().getName());
-        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nTeam 1: " + this.getTeam1());
+        System.out.print("\nTeam 2: " + this.getTeam2());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
     }
@@ -208,10 +208,10 @@ public class Game {
         System.out.print("\n\nGAME OBJECT");
         System.out.print("\nGame ID: " + this.getGameID());
         System.out.print("\nGame Name: " + this.getGameName());
-        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nLeague: "+ this.getGameLeague());
         System.out.print("\nGame Date: " + this.getGameDate());
-        System.out.print("\nTeam 1: " + this.getTeam1().getName());
-        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nTeam 1: " + this.getTeam1());
+        System.out.print("\nTeam 2: " + this.getTeam2());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
         System.out.print("\nPeriods: " + this.getGamePeriods().get(0).toString());

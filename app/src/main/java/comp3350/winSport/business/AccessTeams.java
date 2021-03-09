@@ -1,5 +1,6 @@
 package comp3350.winSport.business;
 
+import java.util.Collections;
 import java.util.List;
 
 import comp3350.winSport.application.Services;
@@ -29,10 +30,10 @@ public class AccessTeams {
 
     public List<Team> getTeams() {
         teams = tData.getTeams();
-        return teams;
+        return Collections.unmodifiableList(teams);
     }
 
-    public Team getSingleGame() {
+    public Team getSingleTeam() {
         team = tData.getSingleTeam();
         return team;
     }

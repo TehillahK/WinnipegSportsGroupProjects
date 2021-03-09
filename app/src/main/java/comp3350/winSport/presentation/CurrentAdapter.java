@@ -32,9 +32,9 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
 
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
-        holder.gameLeague.setText(games.get(position).getGameLeague().getName());
-        holder.gameTeam.setText(games.get(position).getTeam1().getName() + " Vs.\n" +
-                games.get(position).getTeam2().getName());
+        holder.gameLeague.setText(games.get(position).getGameLeague());
+        holder.gameTeam.setText(games.get(position).getTeam1() + " Vs.\n" +
+                games.get(position).getTeam2());
         holder.gameScore.setText(games.get(position).getGameScore());
         holder.gameStart.setText(games.get(position).getGameDate());
         holder.gameLeaguePhoto.setImageResource(games.get(position).getLeagueID());

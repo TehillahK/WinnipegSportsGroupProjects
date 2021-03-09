@@ -297,8 +297,8 @@ public class GameData implements IGame {
         team6.add(p115);
 
 
-        League league1 = new League(1, "NHL");
-        League league2 = new League(2, "NHL");
+        String league1 = "NHL";
+        String league2 = "NHL";
 
         t1 = new Team("Winnipeg Jets", team1, R.drawable.jets);
         t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs);
@@ -344,10 +344,10 @@ public class GameData implements IGame {
         game2Periods.add(game2p3);
 
 
-        g1 = new Game(1, "Stanley Cup Playoffs", league1, t1, t2, "Feb 26, 2021", "Rogers Place", game1Periods, "4 - 3");
-        g2 = new Game(2, "Stanley Cup Playoffs", league2, t3, t4, "Feb 26, 2021", "Scotiabank Arena", game2Periods, "6 - 5");
-        g3 = new Game(3, "Stanley Cup Playoffs", league1, t5, t6, "Feb 27, 2021", "Rogers Place", game1Periods, "7 - 3");
-        g4 = new Game(4, "Stanley Cup Playoffs", league2, t1, t6, "Feb 27, 2021", "Scotiabank Arena", game2Periods, "9 - 5");
+        g1 = new Game(1, "Stanley Cup Playoffs", league1, t1.getName(), t2.getName(), "Feb 26, 2021", "Rogers Place", game1Periods, "4 - 3");
+        g2 = new Game(2, "Stanley Cup Playoffs", league2, t3.getName(), t4.getName(), "Feb 26, 2021", "Scotiabank Arena", game2Periods, "6 - 5");
+        g3 = new Game(3, "Stanley Cup Playoffs", league1, t5.getName(), t6.getName(), "Feb 27, 2021", "Rogers Place", game1Periods, "7 - 3");
+        g4 = new Game(4, "Stanley Cup Playoffs", league2, t1.getName(), t6.getName(), "Feb 27, 2021", "Scotiabank Arena", game2Periods, "9 - 5");
 
 //        System.out.println(g1.toString());
 //        System.out.println(g2.toString());

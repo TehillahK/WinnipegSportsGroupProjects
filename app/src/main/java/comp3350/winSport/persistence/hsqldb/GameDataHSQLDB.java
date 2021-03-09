@@ -33,13 +33,13 @@ public class GameDataHSQLDB implements IGame {
     private Game fromResultSet(final ResultSet rs) throws SQLException {
         final int gameID = rs.getInt("GAMEID");
         final String gameName = rs.getString("GAMENAME");
-        final int t1ID = rs.getInt("TEAM1ID");
-        final int t2ID = rs.getInt("TEAM2ID");
+        final String t1Name = rs.getString("TEAM1ID");
+        final String t2Name = rs.getString("TEAM2ID");
         final String gameDate = rs.getString("DATE");
         final String gameLocation = rs.getString("LOCATION");
         final String gameScore = rs.getString("SCORE");
 
-        return new Game(gameID,gameName,t1ID,t2ID,gameDate,gameLocation,gameScore);
+        return new Game(gameID,gameName,t1Name,t2Name,gameDate,gameLocation,gameScore);
     }
     
     @Override

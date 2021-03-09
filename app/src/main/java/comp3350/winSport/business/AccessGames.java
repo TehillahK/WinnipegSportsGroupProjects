@@ -17,11 +17,15 @@ public class AccessGames {
     private int currentGame;
 
     public AccessGames() {
-
         gData = Services.getGamePersistance();
         games = null;
         game = null;
         currentGame = 0;
+    }
+
+    public AccessGames(IGame accessingGames) {
+        this();
+        this.gData = accessingGames;
     }
 
     public List<Game> getGames() {
