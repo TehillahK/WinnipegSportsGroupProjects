@@ -41,4 +41,14 @@ public class TeamData implements ITeam {
             throw new InvalidNameException("please pass a team name with letters only");
         }
     }
+
+    @Override
+    public Team insertTeam(Team team) {
+        return null;
+    }
+
+    @Override
+    public Team updateTeam(Team team) {
+        return null;
+    }
 }

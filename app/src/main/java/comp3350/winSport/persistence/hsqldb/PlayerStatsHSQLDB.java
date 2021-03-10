@@ -99,14 +99,15 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
     @Override
     public PlayerStatistic updatePS(PlayerStatistic ps) {
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE PLAYER_STATS SET GamesPlayed=?,Goals=?,Assists=?,Points=?,GoalsPerGame=?,AssistsPerGame=?,ShotsPerGame=?");
-            st.setInt(2,ps.getGamesPlayed());
+            final PreparedStatement st = c.prepareStatement("UPDATE PLAYER_STATS SET GamesPlayed=?,Goals=?,Assists=?,Points=?,GoalsPerGame=?,AssistsPerGame=?,ShotsPerGame=? WHERE Name=?");
+            st.setInt(1,ps.getGamesPlayed());
             st.setInt(2, ps.getGoals());
-            st.setInt(2,ps.getAssists());
-            st.setInt(2, ps.getPoints());
-            st.setFloat(11,ps.getGoalsPerGame());
-            st.setFloat(11,ps.getAssistsPerGame());
-            st.setFloat(11,ps.getShotsPerGame());
+            st.setInt(3,ps.getAssists());
+            st.setInt(4, ps.getPoints());
+            st.setFloat(5,ps.getGoalsPerGame());
+            st.setFloat(6,ps.getAssistsPerGame());
+            st.setFloat(7,ps.getShotsPerGame());
+            st.setString(8,ps.getName());
 
             st.executeUpdate();
         return ps;

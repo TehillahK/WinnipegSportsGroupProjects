@@ -50,9 +50,10 @@ public class PlayerDataHSQLDB implements IPlayer {
         final String name = rs.getString("Player");
         final int number = rs.getInt("Number");
         final String position = rs.getString("Position");
+        final String shot = rs.getString("Shot");
         final String teamName = rs.getString("teamName");
         final int teamID = checkValid(teamName);
-        return new Player(name,number,position,teamName, teamID);
+        return new Player(name,number,position,shot,teamName, teamID);
     }
 
     private int checkValid(String teamName) {
@@ -94,7 +95,7 @@ public class PlayerDataHSQLDB implements IPlayer {
             st.close();
         }
         catch (final SQLException e) {
-            Log.e("TeamDataHSQLDB",e.toString());
+            throw new PersistenceException(e);
         }
 
         return players;
@@ -104,14 +105,12 @@ public class PlayerDataHSQLDB implements IPlayer {
     public Player insertPlayer(Player p) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?, ?, ?)");
+            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?)");
             st.setString(1,p.getName());
             st.setInt(2,p.getNumber());
             st.setString(3,p.getPosition());
             st.setString(4,p.getShot());
-            st.setInt(5,p.getPic());
-            st.setString(6,p.getTeam());
-            st.setInt(7,p.getTeamPic());
+            st.setString(5,p.getTeam());
 
             st.executeUpdate();
 
@@ -126,8 +125,9 @@ public class PlayerDataHSQLDB implements IPlayer {
     public Player updatePlayer(Player p) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE PLAYERS SET PlayerPosition=?");
+            final PreparedStatement st = c.prepareStatement("UPDATE PLAYERS SET Position=? WHERE Player=?");
             st.setString(1,p.getPosition());
+            st.setString(2,p.getName());
             st.executeUpdate();
 
             return p;

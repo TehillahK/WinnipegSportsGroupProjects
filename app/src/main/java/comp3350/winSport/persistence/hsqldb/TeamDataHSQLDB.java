@@ -13,6 +13,7 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessPlayers;
+import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
@@ -27,8 +28,6 @@ public class TeamDataHSQLDB implements ITeam {
         this.dbPath = dbPath;
         this.accessPlayers = new AccessPlayers();
     }
-
-
 
     private Connection connection() throws SQLException {
         return DriverManager.getConnection("jdbc:hsqldb:file:" + dbPath + ";shutdown=true", "SA", "");
@@ -45,13 +44,10 @@ public class TeamDataHSQLDB implements ITeam {
         return new Team(teamName, players, id);
     }
 
-
-
     @Override
     public List<Team> getTeams() {
 
         final List<Team> teams = new ArrayList<>();
-
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
             final ResultSet rs = st.executeQuery("SELECT * FROM TEAMS");
@@ -65,7 +61,7 @@ public class TeamDataHSQLDB implements ITeam {
             st.close();
         }
         catch (final SQLException e) {
-            Log.e("TeamDataHSQLDB",e.toString());
+            throw new PersistenceException(e);
         }
 
         return teams;
@@ -73,7 +69,20 @@ public class TeamDataHSQLDB implements ITeam {
 
     @Override
     public Team getSingleTeam() {
-        return null;
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM TEAMS");
+            final ResultSet rs = st.executeQuery();
+            Team team = fromResultSet(rs);
+
+            rs.close();
+            st.close();
+
+            return team;
+        }
+        catch (final SQLException e)
+        {
+            throw new PersistenceException(e);
+        }
     }
 
     @Override
@@ -94,7 +103,7 @@ public class TeamDataHSQLDB implements ITeam {
                 st.close();
             }
             catch (final SQLException e) {
-                Log.e("TeamDataHSQLDB",e.toString());
+                throw new PersistenceException(e);
             }
 
             for (Team curr : teams) {
@@ -113,9 +122,8 @@ public class TeamDataHSQLDB implements ITeam {
     public Team insertTeam(Team team) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("INSERT INTO TEAMS VALUES(?, ?)");
+            final PreparedStatement st = c.prepareStatement("INSERT INTO TEAMS VALUES(?)");
             st.setString(1,team.getName());
-            st.setInt(2,team.getTeamID());
             st.executeUpdate();
 
             return team;
@@ -129,9 +137,8 @@ public class TeamDataHSQLDB implements ITeam {
     public Team updateTeam(Team team) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE TEAMS SET TeamName=?, TeamID=?");
+            final PreparedStatement st = c.prepareStatement("UPDATE TEAMS SET TeamName=?");
             st.setString(1,team.getName());
-            st.setInt(2,team.getTeamID());
             st.executeUpdate();
 
             return team;
@@ -139,6 +146,5 @@ public class TeamDataHSQLDB implements ITeam {
             throw new PersistenceException(e);
         }
     }
-
 
 }

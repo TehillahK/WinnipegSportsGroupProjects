@@ -37,7 +37,7 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
                 games.get(position).getTeam2());
         holder.gameScore.setText(games.get(position).getGameScore());
         holder.gameStart.setText(games.get(position).getGameDate());
-        holder.gameLeaguePhoto.setImageResource(games.get(position).getLeagueID());
+        holder.gameLeaguePhoto.setImageResource(games.get(position).getLeaguePic());
         holder.gameTeamPhoto.setImageResource(games.get(position).getGamePicID());
     }
 

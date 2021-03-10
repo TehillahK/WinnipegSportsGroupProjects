@@ -22,7 +22,17 @@ public class Player {
         this.teamPic = 0;
     }
 
-    public Player(String name, int num, String pos,String teamName,int picID) {
+    public Player(String name, int num, String pos,String shot, String teamName,int picID) {
+        this.name = name;
+        this.number = num;
+        this.position = pos;
+        this.shot = shot;
+        this.playerPic = R.drawable.headshot;
+        this.teamName = teamName;
+        this.teamPic = picID;
+    }
+
+    public Player(String name, int num, String pos, String teamName,int picID) {
         this.name = name;
         this.number = num;
         this.position = pos;

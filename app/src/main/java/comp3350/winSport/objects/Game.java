@@ -1,7 +1,5 @@
 package comp3350.winSport.objects;
 
-import java.util.ArrayList;
-
 import comp3350.winSport.R;
 
 public class Game {
@@ -15,7 +13,7 @@ public class Game {
     private String gameLocation;
     private String gameScore;
 
-    private int leagueID;
+    private int leaguePic;
     private int gamePicID;
 
     public Game() {
@@ -27,7 +25,7 @@ public class Game {
         gameDate = "Unknown";
         gameLocation = "Unknown";
         gameScore = "Unknown";
-        leagueID = 0;
+        leaguePic = 0;
         gamePicID = 0;
     }
 
@@ -41,12 +39,12 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leagueID = R.drawable.nhl;
+        leaguePic = R.drawable.nhl;
         gamePicID = R.drawable.jets;
     }
 
-    public int getLeagueID() {
-        return leagueID;
+    public int getLeaguePic() {
+        return leaguePic;
     }
 
     public int getGamePicID() {

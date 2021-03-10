@@ -62,7 +62,7 @@ public class GameDataHSQLDB implements IGame {
             st.close();
         }
         catch (final SQLException e) {
-            Log.e("SQLException: GameData",e.toString());
+            throw new PersistenceException(e);
         }
 
         return games;
@@ -74,12 +74,7 @@ public class GameDataHSQLDB implements IGame {
 
         try (final Connection c = connection()) {
 
-            // might need to either add error handling, or be Real sure that we pass a name that
-            // exists.
-
-            final PreparedStatement st = c.prepareStatement("SELECT * FROM GAMES WHERE Name=?");
-            //st.setString(1,name);
-
+            final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM GAMES");
             final ResultSet rs = st.executeQuery();
             Game game = fromResultSet(rs);
 
@@ -99,7 +94,7 @@ public class GameDataHSQLDB implements IGame {
     public Game insertGame(Game g) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("INSERT INTO GAMES VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            final PreparedStatement st = c.prepareStatement("INSERT INTO GAMES VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
             st.setInt(1,g.getGameID());
             st.setString(2,g.getGameName());
             st.setString(3,g.getGameLeague());
@@ -108,8 +103,6 @@ public class GameDataHSQLDB implements IGame {
             st.setString(6,g.getGameDate());
             st.setString(7,g.getGameLocation());
             st.setString(8,g.getGameScore());
-            st.setInt(9,g.getLeagueID());
-            st.setInt(10,g.getGamePicID());
             st.executeUpdate();
 
             return g;
