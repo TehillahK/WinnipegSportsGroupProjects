@@ -1,8 +1,8 @@
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
-CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(20), TEAMID INTEGER NOT NULL PRIMARY KEY)
-CREATE MEMORY TABLE PUBLIC.PLAYERS("Player" character varying,"Games Played" integer,"Goals" integer,"Assists" integer,"Points" integer)
-CREATE MEMORY TABLE PUBLIC.PLAYER_STATS("Name" character varying,"Games Played" integer,"Team" character varying(3),"League" character varying(3),"Position" character varying(2),"Season" character varying(7),"Age" integer,"Goals" integer,"Assists" integer,"Points" integer,"+/-" integer,"PIM" integer,"EV Goals" integer,"PP Goals" integer,"SH Goals" integer,"GW Goals" integer,"Shots" integer,"S%" DECIMAL,"TOI" integer,"Goals Per Game" DECIMAL,"Assists Per Game" DECIMAL,"Points Per Game" DECIMAL,"Shots Per Game" DECIMAL,"OPS" DECIMAL,"DPS" DECIMAL,"Point Shares" DECIMAL)
-CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),TEAM1ID INTEGER,TEAM2ID INTEGER, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
+CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(20))
+CREATE MEMORY TABLE PUBLIC.PLAYERS(Player character varying,Number integer,Position character varying,teamName character varying)
+CREATE MEMORY TABLE PUBLIC.PLAYER_STATS(Name character varying,GamesPlayed integer,Team character varying(3),League character varying(3),Position character varying(2),Season character varying(7),Age integer,Goals integer,Assists integer,Points integer,GoalsPerGame DECIMAL,AssistsPerGame DECIMAL,ShotsPerGame DECIMAL)
+CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),LEAGUENAME VARCHAR(20),TEAM1ID INTEGER,TEAM2ID INTEGER, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
@@ -11,18 +11,17 @@ GRANT DBA TO SA
 SET WRITE_DELAY 20
 SET FILES SCALE 32
 SET SCHEMA PUBLIC
-INSERT INTO TEAMS VALUES('JETS',100)
-INSERT INTO TEAMS VALUES('LEAFS',200)
-INSERT INTO PLAYERS VALUES('Blake Wheeler', 557, 500, 773, 1285)
-INSERT INTO PLAYERS VALUES('Mark Scheifele', 489, 409, 698, 1250)
-INSERT INTO PLAYERS VALUES('Mathieu Perreault', 459, 402, 587, 950)
-INSERT INTO PLAYERS VALUES('Derek Forbort', 350, 577, 956, 900)
-INSERT INTO PLAYER_STATS VALUES('Mark Scheifele',84,'WPG','NHL','C','2021-19',27,22,17,39,-7,33,13,9,0,5,156,14.1,1201,0.26,0.2,0.46,1.86,3.6,1.3,5)
-INSERT INTO PLAYER_STATS VALUES('Kyle Connor',83,'WPG','NHL','LW','2021-19',31,13,26,39,-3,34,12,1,0,0,199,6.5,1540,0.16,0.31,0.47,2.4,1.6,1.8,3.4)
-INSERT INTO PLAYER_STATS VALUES('Neal Pionk',82,'WPG','NHL','D','2021-19',28,19,23,42,-16,120,13,6,0,4,155,12.3,1512,0.23,0.28,0.51,1.89,2.7,1.1,3.8)
+INSERT INTO TEAMS VALUES('Winnipeg Jets')
+INSERT INTO TEAMS VALUES('other bad team')
+INSERT INTO PLAYERS VALUES('Blake Wheeler', 55, 'Centerman', 'Winnipeg Jets')
+INSERT INTO PLAYERS VALUES('Mark Scheifele', 81, 'Left Wing', 'Winnipeg Jets')
+INSERT INTO PLAYERS VALUES('Mathieu Perreault', 4, 'Defenseman', 'Winnipeg Jets')
+INSERT INTO PLAYERS VALUES('Derek Forbort', 26, 'Right wing', 'Winnipeg Jets')
 INSERT INTO PLAYER_STATS VALUES('Blake Wheeler(C)',82,'WPG','NHL','RW','2021-19',27,4,17,21,14,26,4,0,0,1,75,5.3,1753,0.05,0.21,0.26,0.91,0.6,4.7,5.4)
-INSERT INTO PLAYER_STATS VALUES('Mason Appleton',82,'WPG','NHL','RW','2021-19',26,21,26,47,10,28,15,3,3,4,155,13.5,1347,0.26,0.32,0.57,1.89,3.7,1.7,5.5)
-INSERT INTO GAMES VALUES(1, 'Stanley Cup Playoffs', 1, 2, 'Feb 26, 2021', 'Rogers Place', '4 - 3')
-INSERT INTO GAMES VALUES(2, 'Stanley Cup Playoffs', 2, 3, 'Feb 27, 2021', 'Rogers other Place', '5 - 4')
-INSERT INTO GAMES VALUES(3, 'Stanley Cup Playoffs', 3, 4, 'Feb 28, 2021', 'Rogers human Place', '6 - 5')
-INSERT INTO GAMES VALUES(4, 'Stanley Cup Playoffs', 4, 1, 'Feb 29, 2021', 'Rogers non-human Place', '7 - 5')
+INSERT INTO PLAYER_STATS VALUES('Mark Scheifele',84,'WPG','NHL','C','2021-19',27,22,17,39,-7,33,13,9,0,5,156,14.1,1201,0.26,0.2,0.46,1.86,3.6,1.3,5)
+INSERT INTO PLAYER_STATS VALUES('Mathieu Perreault',82,'WPG','NHL','LW','2021-19',31,11,17,28,-5,30,9,2,0,0,218,5,1326,0.13,0.21,0.34,2.66,0.7,1.2,1.9)
+INSERT INTO PLAYER_STATS VALUES('Derek Forbort',82,'WPG','NHL','D','2021-19',28,9,23,32,2,28,7,0,2,3,131,6.9,1183,0.11,0.28,0.39,1.6,1.3,17,3)
+INSERT INTO GAMES VALUES(1, 'Stanley Cup Playoffs','NHL', 1, 2, 'Feb 26, 2021', 'Rogers Place', '4 - 3')
+INSERT INTO GAMES VALUES(2, 'Stanley Cup Playoffs','NHL', 2, 3, 'Feb 27, 2021', 'Rogers other Place', '5 - 4')
+INSERT INTO GAMES VALUES(3, 'Stanley Cup Playoffs','NHL', 3, 4, 'Feb 28, 2021', 'Rogers human Place', '6 - 5')
+INSERT INTO GAMES VALUES(4, 'Stanley Cup Playoffs','NHL', 4, 1, 'Feb 29, 2021', 'Rogers non-human Place', '7 - 5')

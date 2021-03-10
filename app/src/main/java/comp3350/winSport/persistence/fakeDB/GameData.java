@@ -7,7 +7,6 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Game;
-import comp3350.winSport.objects.League;
 import comp3350.winSport.objects.Period;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
@@ -26,8 +25,6 @@ public class GameData implements IGame {
     private Team t4;
     private Team t5;
     private Team t6;
-
-
 
     public GameData() {
 
@@ -211,25 +208,25 @@ public class GameData implements IGame {
         team4.add(p76);
         team4.add(p77);
 
-        Player p78 = new Player("Rasmus Anderson", 4, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
-        Player p79 = new Player("Elias Lindholm", 28, "Centerman","Calgary Flames",R.drawable.calgary_flames);
-        Player p80 = new Player("Dillon Dube", 29, "Centerman","Calgary Flames",R.drawable.calgary_flames);
-        Player p81 = new Player("Johnny Gaudreau", 13, "Left wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p82 = new Player("Milan Lucic", 17, "Left wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p83 = new Player("Connor Mackey", 3, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
-        Player p84 = new Player("Sean Monahan", 23, "Centerman","Calgary Flames",R.drawable.calgary_flames);
-        Player p85 = new Player("Sam Bennett", 93, "Left wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p86 = new Player("Byron Froese", 38, "Centerman","Calgary Flames",R.drawable.calgary_flames);
-        Player p87 = new Player("Mark Giordano", 5, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
-        Player p88 = new Player("Noah Hanifin", 55, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
-        Player p89 = new Player("Andrew Mangiapane", 88, "Left wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p90 = new Player("Jacob Markström", 25, "Goaltender","Calgary Flames",R.drawable.calgary_flames);
-        Player p91 = new Player("Jokaim Nordström", 20, "Left wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p92 = new Player("Buddy Robinson", 53, "Right wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p93 = new Player("Dominik Simon", 81, "Right wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p94 = new Player("Christopher Tanev", 8, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
-        Player p95 = new Player("Matthew Tkatchuk", 19, "Right wing","Calgary Flames",R.drawable.calgary_flames);
-        Player p96 = new Player("Juuso Välimäki", 6, "Defenseman","Calgary Flames",R.drawable.calgary_flames);
+        Player p78 = new Player("Rasmus Anderson", 4, "Defenseman","Calgary Flames",R.drawable.flames);
+        Player p79 = new Player("Elias Lindholm", 28, "Centerman","Calgary Flames",R.drawable.flames);
+        Player p80 = new Player("Dillon Dube", 29, "Centerman","Calgary Flames",R.drawable.flames);
+        Player p81 = new Player("Johnny Gaudreau", 13, "Left wing","Calgary Flames",R.drawable.flames);
+        Player p82 = new Player("Milan Lucic", 17, "Left wing","Calgary Flames",R.drawable.flames);
+        Player p83 = new Player("Connor Mackey", 3, "Defenseman","Calgary Flames",R.drawable.flames);
+        Player p84 = new Player("Sean Monahan", 23, "Centerman","Calgary Flames",R.drawable.flames);
+        Player p85 = new Player("Sam Bennett", 93, "Left wing","Calgary Flames",R.drawable.flames);
+        Player p86 = new Player("Byron Froese", 38, "Centerman","Calgary Flames",R.drawable.flames);
+        Player p87 = new Player("Mark Giordano", 5, "Defenseman","Calgary Flames",R.drawable.flames);
+        Player p88 = new Player("Noah Hanifin", 55, "Defenseman","Calgary Flames",R.drawable.flames);
+        Player p89 = new Player("Andrew Mangiapane", 88, "Left wing","Calgary Flames",R.drawable.flames);
+        Player p90 = new Player("Jacob Markström", 25, "Goaltender","Calgary Flames",R.drawable.flames);
+        Player p91 = new Player("Jokaim Nordström", 20, "Left wing","Calgary Flames",R.drawable.flames);
+        Player p92 = new Player("Buddy Robinson", 53, "Right wing","Calgary Flames",R.drawable.flames);
+        Player p93 = new Player("Dominik Simon", 81, "Right wing","Calgary Flames",R.drawable.flames);
+        Player p94 = new Player("Christopher Tanev", 8, "Defenseman","Calgary Flames",R.drawable.flames);
+        Player p95 = new Player("Matthew Tkatchuk", 19, "Right wing","Calgary Flames",R.drawable.flames);
+        Player p96 = new Player("Juuso Välimäki", 6, "Defenseman","Calgary Flames",R.drawable.flames);
 
 
         ArrayList<Player> team5 = new ArrayList<>();
@@ -304,7 +301,7 @@ public class GameData implements IGame {
         t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs);
         t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa);
         t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers);
-        t5 = new Team("Calgary Flames", team5,R.drawable.calgary_flames);
+        t5 = new Team("Calgary Flames", team5,R.drawable.flames);
         t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal);
 
         Period game1p1 = new Period(1, 3);
@@ -344,10 +341,10 @@ public class GameData implements IGame {
         game2Periods.add(game2p3);
 
 
-        g1 = new Game(1, "Stanley Cup Playoffs", league1, t1.getName(), t2.getName(), "Feb 26, 2021", "Rogers Place", game1Periods, "4 - 3");
-        g2 = new Game(2, "Stanley Cup Playoffs", league2, t3.getName(), t4.getName(), "Feb 26, 2021", "Scotiabank Arena", game2Periods, "6 - 5");
-        g3 = new Game(3, "Stanley Cup Playoffs", league1, t5.getName(), t6.getName(), "Feb 27, 2021", "Rogers Place", game1Periods, "7 - 3");
-        g4 = new Game(4, "Stanley Cup Playoffs", league2, t1.getName(), t6.getName(), "Feb 27, 2021", "Scotiabank Arena", game2Periods, "9 - 5");
+        g1 = new Game(1, "Stanley Cup Playoffs", league1, t1.getName(), t2.getName(), "Feb 26, 2021", "Rogers Place", "4 - 3");
+        g2 = new Game(2, "Stanley Cup Playoffs", league2, t3.getName(), t4.getName(), "Feb 26, 2021", "Scotiabank Arena", "6 - 5");
+        g3 = new Game(3, "Stanley Cup Playoffs", league1, t5.getName(), t6.getName(), "Feb 27, 2021", "Rogers Place", "7 - 3");
+        g4 = new Game(4, "Stanley Cup Playoffs", league2, t1.getName(), t6.getName(), "Feb 27, 2021", "Scotiabank Arena", "9 - 5");
 
 //        System.out.println(g1.toString());
 //        System.out.println(g2.toString());
@@ -369,6 +366,21 @@ public class GameData implements IGame {
     @Override
     public Game getSingleGame() {
         return this.g1;
+    }
+
+    @Override
+    public Game insertGame(Game g) {
+        return null;
+    }
+
+    @Override
+    public Game updateGame(Game g) {
+        return null;
+    }
+
+    @Override
+    public void deleteGame(Game g) {
+
     }
 
     public List<Team> GetTeams() {

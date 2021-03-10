@@ -19,13 +19,14 @@ import comp3350.winSport.objects.Team;
 public class Teams extends AppCompatActivity {
 
     AccessTeams accessTeams = new AccessTeams();
-    List<Team> teams = accessTeams.getTeams();
+    List<Team> teams;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams);
+        teams = accessTeams.getTeams();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

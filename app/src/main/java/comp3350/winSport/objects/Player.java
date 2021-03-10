@@ -13,21 +13,21 @@ public class Player {
     private int teamPic;
 
     public Player() {
-        name = "Unknown";
-        number = 0;
-        position = "Unknown";
-        shot = "L";
-        playerPic = R.drawable.headshot;
+        this.name = "Unknown";
+        this.number = 0;
+        this.position = "Unknown";
+        this.shot = "L";
+        this.playerPic = R.drawable.headshot;
         this.teamName = "LFKAJDFLKJ";
         this.teamPic = 0;
     }
 
-    public Player(String nme, int num, String pos,String teamName,int picID) {
-        name = nme;
-        number = num;
-        position = pos;
-        shot = "L";
-        playerPic = R.drawable.headshot;
+    public Player(String name, int num, String pos,String teamName,int picID) {
+        this.name = name;
+        this.number = num;
+        this.position = pos;
+        this.shot = "L";
+        this.playerPic = R.drawable.headshot;
         this.teamName = teamName;
         this.teamPic = picID;
     }

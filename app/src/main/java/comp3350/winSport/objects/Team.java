@@ -1,13 +1,14 @@
 package comp3350.winSport.objects;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import comp3350.winSport.objects.Player;
 
 public class Team {
 
     private String name;
-    private ArrayList<Player> players;
+    private List<Player> players;
     private int teamID;
 
     public Team() {
@@ -15,10 +16,13 @@ public class Team {
         players = new ArrayList<>();
     }
 
-    public Team(String n, ArrayList<Player> pl, int teamID) {
+    public Team(String n, List<Player> pl, int teamID) {
         name = n;
         players = pl;
         this.teamID = teamID;
+
+
+
     }
 
     public int getTeamID() {
@@ -29,7 +33,7 @@ public class Team {
         return name;
     }
 
-    public ArrayList<Player> getPlayers(){
+    public List<Player> getPlayers(){
         return players;
     }
 
@@ -42,7 +46,7 @@ public class Team {
     }
 
     public String toString() {
-       return this.name + " " + this.teamID;
+       return this.name ;
     }
 
     public void viewTeamObject(){

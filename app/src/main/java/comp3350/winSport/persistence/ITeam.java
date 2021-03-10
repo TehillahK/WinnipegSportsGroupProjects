@@ -9,5 +9,7 @@ public interface ITeam {
     List<Team> getTeams();
     Team getSingleTeam();
     Team getTeamByName(String name) throws InvalidNameException;
+    Team insertTeam(Team team);
+    Team updateTeam(Team team);
 
 }

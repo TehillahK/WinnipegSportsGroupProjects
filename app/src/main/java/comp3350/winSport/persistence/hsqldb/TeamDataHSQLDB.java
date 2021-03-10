@@ -1,16 +1,17 @@
 package comp3350.winSport.persistence.hsqldb;
 import android.util.Log;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import comp3350.winSport.objects.Game;
+import comp3350.winSport.R;
+import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
@@ -19,10 +20,14 @@ import comp3350.winSport.persistence.ITeam;
 public class TeamDataHSQLDB implements ITeam {
 
     private final String dbPath;
+    private final AccessPlayers accessPlayers;
 
     public TeamDataHSQLDB(final String dbPath) {
         this.dbPath = dbPath;
+        this.accessPlayers = new AccessPlayers();
     }
+
+
 
     private Connection connection() throws SQLException {
         return DriverManager.getConnection("jdbc:hsqldb:file:" + dbPath + ";shutdown=true", "SA", "");
@@ -30,12 +35,16 @@ public class TeamDataHSQLDB implements ITeam {
 
     private Team fromResultSet(final ResultSet rs) throws SQLException {
         final String teamName = rs.getString("NAME");
-        final int teamID = Integer.parseInt(rs.getString("TEAMID"));
-        ArrayList<Player> players = new ArrayList<>();
-        players.add(new Player());
-        players.add(new Player());
-        return new Team(teamName, players, teamID);
+        List<Player> players = this.accessPlayers.getPlayers(teamName);
+        int id;
+        if (players.size() != 0)
+            id = players.get(0).getTeamPic();
+        else
+            id = R.drawable.nhl;
+        return new Team(teamName, players, id);
     }
+
+
 
     @Override
     public List<Team> getTeams() {
@@ -80,7 +89,6 @@ public class TeamDataHSQLDB implements ITeam {
                     final Team team = fromResultSet(rs);
                     teams.add(team);
                 }
-
                 rs.close();
                 st.close();
             }
@@ -92,8 +100,6 @@ public class TeamDataHSQLDB implements ITeam {
                 if (curr.getName().equals(name))
                     return curr;
             }
-
-
         }
         else {
             throw new InvalidNameException("please pass a team name with letters only");
@@ -101,4 +107,16 @@ public class TeamDataHSQLDB implements ITeam {
 
         return null;
     }
+
+    @Override
+    public Team insertTeam(Team team) {
+        return null;
+    }
+
+    @Override
+    public Team updateTeam(Team team) {
+        return null;
+    }
+
+
 }

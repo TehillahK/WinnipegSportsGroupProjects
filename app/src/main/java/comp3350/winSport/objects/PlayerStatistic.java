@@ -1,6 +1,6 @@
 package comp3350.winSport.objects;
 
-public class PlayerStatistics {
+public class PlayerStatistic {
 
     private String name;
     private int gamesPlayed;
@@ -16,7 +16,7 @@ public class PlayerStatistics {
     private float assistsPerGame;
     private float shotsPerGame;
 
-    public PlayerStatistics(){
+    public PlayerStatistic(){
 
         name = "unknown";
         gamesPlayed = 0;
@@ -33,8 +33,8 @@ public class PlayerStatistics {
         shotsPerGame = 0;
     }
 
-    public PlayerStatistics(String psName, int psGamesPlayed, String psTeam, String psLeague, String psPosition, String psSeason, int psAge,
-                            int psGoals, int psAssists, int psPoints, float psGoalsPerGame, float psAssistsPerGame, float psShotsPerGame){
+    public PlayerStatistic(String psName, int psGamesPlayed, String psTeam, String psLeague, String psPosition, String psSeason, int psAge,
+                           int psGoals, int psAssists, int psPoints, float psGoalsPerGame, float psAssistsPerGame, float psShotsPerGame){
         name = psName;
         gamesPlayed = psGamesPlayed;
         team = psTeam;

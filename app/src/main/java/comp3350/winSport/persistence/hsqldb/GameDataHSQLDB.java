@@ -33,13 +33,14 @@ public class GameDataHSQLDB implements IGame {
     private Game fromResultSet(final ResultSet rs) throws SQLException {
         final int gameID = rs.getInt("GAMEID");
         final String gameName = rs.getString("GAMENAME");
+        final String gameLeague = rs.getString("LEAGUENAME");
         final String t1Name = rs.getString("TEAM1ID");
         final String t2Name = rs.getString("TEAM2ID");
         final String gameDate = rs.getString("DATE");
         final String gameLocation = rs.getString("LOCATION");
         final String gameScore = rs.getString("SCORE");
 
-        return new Game(gameID,gameName,t1Name,t2Name,gameDate,gameLocation,gameScore);
+        return new Game(gameID,gameName,gameLeague,t1Name,t2Name,gameDate,gameLocation,gameScore);
     }
     
     @Override
@@ -71,4 +72,21 @@ public class GameDataHSQLDB implements IGame {
     public Game getSingleGame() {
         return null;
     }
+
+    @Override
+    public Game insertGame(Game g) {
+        return null;
+    }
+
+    @Override
+    public Game updateGame(Game g) {
+        return null;
+    }
+
+    @Override
+    public void deleteGame(Game g) {
+
+    }
+
+
 }

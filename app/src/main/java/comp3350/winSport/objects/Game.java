@@ -13,7 +13,6 @@ public class Game {
     private String team2;
     private String gameDate;
     private String gameLocation;
-    private ArrayList<Period> periods;
     private String gameScore;
 
     private int leagueID;
@@ -27,14 +26,13 @@ public class Game {
         team2 = "team2 Name";
         gameDate = "Unknown";
         gameLocation = "Unknown";
-        periods = new ArrayList<>(3);
         gameScore = "Unknown";
         leagueID = 0;
         gamePicID = 0;
     }
 
 
-    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, ArrayList<Period> prds, String gScore) {
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore) {
         gameID = gID;
         gameName = gName;
         gameLeague = gL;
@@ -42,26 +40,10 @@ public class Game {
         team2 = t2;
         gameDate = gDate;
         gameLocation = gLocation;
-        periods = prds;
         gameScore = gScore;
         leagueID = R.drawable.nhl;
         gamePicID = R.drawable.jets;
     }
-
-    public Game(int gID, String gName, String t1, String t2, String date, String location, String score) {
-        gameID = gID;
-        gameName = gName;
-        team1 =t1;
-        team2 = t2;
-        gameDate = date;
-        gameLocation = location;
-        gameLeague = "unknown";
-        periods = new ArrayList<>(3);
-        gameScore = score;
-        leagueID = R.drawable.nhl;
-        gamePicID = R.drawable.jets;
-    }
-
 
     public int getLeagueID() {
         return leagueID;
@@ -99,23 +81,6 @@ public class Game {
         return gameLocation;
     }
 
-    public ArrayList<Period> getGamePeriods() {
-        return periods;
-    }
-
-    public Period getOnePeriod(int ind) {
-        Period p = null;
-        for(int i = 0; i < 3; i++) {
-            if(periods.get(i).getID() == ind)
-                p = periods.get(i);
-        }
-        return p;
-    }
-
-    public ArrayList<Period> getPeriods() {
-        return periods;
-    }
-
     public String getGameScore() {
         return gameScore;
     }
@@ -140,26 +105,13 @@ public class Game {
         gameLocation = location;
     }
 
-    public void setGamePeriods(ArrayList<Period> p) {
-        periods = p;
-    }
-
-    public void setOnePeriod(Period pr) {
-        if(periods.size() < 3)
-            periods.add(pr);
-        else
-            System.out.println("3 periods are already added");
-    }
-
     public void setGameScore(String sc) {
         gameScore = sc;
     }
 
     public String toString() {
         String per = "";
-        for(int i = 0; i < 2; i++)
-            per = per + periods.get(i).toString() + "\n";
-        per += periods.get(2).toString();
+
         String res = "\n------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
                 + "comp3350.winSport.objects.Game date: " + gameDate + "\n"
                 + "comp3350.winSport.objects.Game location: " + gameLocation + "\ncomp3350.winSport.objects.Game score: " + gameScore + "\n------------------------------------\n"
@@ -214,6 +166,5 @@ public class Game {
         System.out.print("\nTeam 2: " + this.getTeam2());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
-        System.out.print("\nPeriods: " + this.getGamePeriods().get(0).toString());
     }
 }

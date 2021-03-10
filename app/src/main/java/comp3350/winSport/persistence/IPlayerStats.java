@@ -1,12 +1,11 @@
 package comp3350.winSport.persistence;
 
-import java.util.List;
 
-
-import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.PlayerStatistic;
 
 public interface IPlayerStats {
-    List<Player> getPlayersSequential();
-    Player getSinglePlayer();
-
+    PlayerStatistic getPlayerByName(String name);
+    PlayerStatistic insertPlayerStat(PlayerStatistic ps);
+    PlayerStatistic updatePS(PlayerStatistic ps);
+    void deletePlayerStat(PlayerStatistic ps);
 }
