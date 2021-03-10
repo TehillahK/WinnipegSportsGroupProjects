@@ -48,7 +48,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginStart="48dp"
         android:textColor="@color/white"
-        android:text="@string/comming_soon"
+        android:text="Player Stats"
         android:layout_below="@+id/teamRostersMenu"
         android:gravity="center"
         android:textSize="50sp"/>

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.soonMenu:
                 // comming soon
-                Intent testIntent = new Intent(MainActivity.this, test_activity.class);
+                Intent testIntent = new Intent(MainActivity.this, PlayersActivity.class);
                 MainActivity.this.startActivity(testIntent);
                 break;
             default:
