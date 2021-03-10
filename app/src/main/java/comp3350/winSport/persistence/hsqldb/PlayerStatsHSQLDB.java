@@ -58,12 +58,12 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
             st.setString(1,name);
 
             final ResultSet rs = st.executeQuery();
-            PlayerStatistic playa = fromResultSet(rs);
+            PlayerStatistic player = fromResultSet(rs);
 
             rs.close();
             st.close();
 
-            return playa;
+            return player;
         }
         catch (final SQLException e)
         {
@@ -99,7 +99,7 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
     @Override
     public PlayerStatistic updatePS(PlayerStatistic ps) {
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE player_stats SET GamesPlayed=?,Goals=?,Assists=?,Points=?,GoalsPerGame=?,AssistsPerGame=?,ShotsPerGame=?");
+            final PreparedStatement st = c.prepareStatement("UPDATE PLAYER_STATS SET GamesPlayed=?,Goals=?,Assists=?,Points=?,GoalsPerGame=?,AssistsPerGame=?,ShotsPerGame=?");
             st.setInt(2,ps.getGamesPlayed());
             st.setInt(2, ps.getGoals());
             st.setInt(2,ps.getAssists());
@@ -118,7 +118,7 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
     @Override
     public void deletePlayerStat(PlayerStatistic ps) {
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("DELETE FROM player_stats WHERE Name = ?");
+            final PreparedStatement st = c.prepareStatement("DELETE FROM PLAYER_STATS WHERE Name = ?");
             st.setString(1, ps.getName());
             st.executeUpdate();
         } catch (final SQLException e) {

@@ -4,6 +4,7 @@ import android.util.Log;
 import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -110,12 +111,33 @@ public class TeamDataHSQLDB implements ITeam {
 
     @Override
     public Team insertTeam(Team team) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("INSERT INTO TEAMS VALUES(?, ?)");
+            st.setString(1,team.getName());
+            st.setInt(2,team.getTeamID());
+            st.executeUpdate();
+
+            return team;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
     }
 
     @Override
     public Team updateTeam(Team team) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("UPDATE TEAMS SET TeamName=?, TeamID=?");
+            st.setString(1,team.getName());
+            st.setInt(2,team.getTeamID());
+            st.executeUpdate();
+
+            return team;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
     }
 
 

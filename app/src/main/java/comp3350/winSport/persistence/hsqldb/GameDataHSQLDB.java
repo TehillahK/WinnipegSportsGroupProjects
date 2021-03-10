@@ -14,6 +14,7 @@ import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.League;
 import comp3350.winSport.objects.Period;
 import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.objects.Team;
 
 import comp3350.winSport.persistence.IGame;
@@ -70,21 +71,80 @@ public class GameDataHSQLDB implements IGame {
 
     @Override
     public Game getSingleGame() {
-        return null;
+
+        try (final Connection c = connection()) {
+
+            // might need to either add error handling, or be Real sure that we pass a name that
+            // exists.
+
+            final PreparedStatement st = c.prepareStatement("SELECT * FROM GAMES WHERE Name=?");
+            //st.setString(1,name);
+
+            final ResultSet rs = st.executeQuery();
+            Game game = fromResultSet(rs);
+
+            rs.close();
+            st.close();
+
+            return game;
+        }
+        catch (final SQLException e)
+        {
+            throw new PersistenceException(e);
+        }
+
     }
 
     @Override
     public Game insertGame(Game g) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("INSERT INTO GAMES VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            st.setInt(1,g.getGameID());
+            st.setString(2,g.getGameName());
+            st.setString(3,g.getGameLeague());
+            st.setString(4,g.getTeam1());
+            st.setString(5,g.getTeam2());
+            st.setString(6,g.getGameDate());
+            st.setString(7,g.getGameLocation());
+            st.setString(8,g.getGameScore());
+            st.setInt(9,g.getLeagueID());
+            st.setInt(10,g.getGamePicID());
+            st.executeUpdate();
+
+            return g;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
     }
 
     @Override
     public Game updateGame(Game g) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("UPDATE GAMES SET GameScore=?,GameDate=?");
+            st.setString(1,g.getGameScore());
+            st.setString(2, g.getGameDate());
+            st.executeUpdate();
+
+            return g;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
     }
 
     @Override
     public void deleteGame(Game g) {
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("DELETE FROM GAMES WHERE Name = ?");
+            st.setString(1, g.getGameName());
+            st.executeUpdate();
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
 
     }
 

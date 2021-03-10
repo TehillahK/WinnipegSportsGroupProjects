@@ -102,12 +102,38 @@ public class PlayerDataHSQLDB implements IPlayer {
 
     @Override
     public Player insertPlayer(Player p) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?, ?, ?)");
+            st.setString(1,p.getName());
+            st.setInt(2,p.getNumber());
+            st.setString(3,p.getPosition());
+            st.setString(4,p.getShot());
+            st.setInt(5,p.getPic());
+            st.setString(6,p.getTeam());
+            st.setInt(7,p.getTeamPic());
+
+            st.executeUpdate();
+
+            return p;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
     }
 
     @Override
     public Player updatePlayer(Player p) {
-        return null;
+
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("UPDATE PLAYERS SET PlayerPosition=?");
+            st.setString(1,p.getPosition());
+            st.executeUpdate();
+
+            return p;
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
     }
 
 
