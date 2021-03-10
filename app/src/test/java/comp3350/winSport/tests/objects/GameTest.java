@@ -47,7 +47,7 @@ public class GameTest {
         periods.add(new Period());
         periods.add(new Period());
 
-        game = new Game(gameID,gameName,gameLeague,team1,team2,date,location,periods,score);
+        game = new Game(gameID,gameName,gameLeague.getName(),team1.getName(),team2.getName(),date,location,score);
         assertNotNull(game);
     }
 
@@ -61,6 +61,8 @@ public class GameTest {
         //
     }
 
+
+    /* Colin commented out because period functionality has sorta been dropped.
     @Test
     public void getAPeriod(){
         System.out.print("\n------------------Game Test---------------------");
@@ -75,5 +77,5 @@ public class GameTest {
         assertNull(null);
         System.out.print("\nPassed.");
     }
-
+     */
 }

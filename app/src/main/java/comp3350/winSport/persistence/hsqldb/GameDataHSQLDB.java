@@ -76,7 +76,13 @@ public class GameDataHSQLDB implements IGame {
 
             final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM GAMES");
             final ResultSet rs = st.executeQuery();
-            Game game = fromResultSet(rs);
+            final Game game;
+
+            if (rs.next())
+                game = fromResultSet(rs);
+            else
+                game = new Game();
+
 
             rs.close();
             st.close();

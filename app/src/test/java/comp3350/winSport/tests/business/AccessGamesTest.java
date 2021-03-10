@@ -31,9 +31,9 @@ public class AccessGamesTest {
 
         assertNotNull(accessGames.getSingleGame());
 
-        assertTrue("Winnipeg Jets".equals(accessGames.getSingleGame().getTeam1().getName()));
-        assertTrue("Toronto Maple Leafs".equals(accessGames.getSingleGame().getTeam2().getName()));
-        assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague().getName()));
+        assertTrue("Winnipeg Jets".equals(accessGames.getSingleGame().getTeam1()));
+        assertTrue("Ottowa Senators".equals(accessGames.getSingleGame().getTeam2()));
+        assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague()));
         assertTrue("4 - 3".equals(accessGames.getSingleGame().getGameScore()));
         assertTrue("Stanley Cup Playoffs".equals(accessGames.getSingleGame().getGameName()));
         assertTrue("Feb 26, 2021".equals(accessGames.getSingleGame().getGameDate()));
@@ -70,7 +70,7 @@ public class AccessGamesTest {
             assertNotNull(game.getGameLocation());
             assertNotNull(game.getGameName());
             assertNotNull(game.getGameScore());
-            assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague().getName()));
+            assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague()));
 
         }
     }

@@ -2,10 +2,16 @@ package comp3350.winSport.tests.business;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ListIterator;
 
 import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
+import comp3350.winSport.persistence.ITeam;
+import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
+import comp3350.winSport.tests.utils.TestUtils;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -16,10 +22,13 @@ import static org.junit.Assert.fail;
 public class AccessTeamsTest {
 
     private AccessTeams accessTeams;
+    private File tempDB;
 
     @Before
-    public void setUp(){
-        accessTeams = new AccessTeams();
+    public void setUp() throws IOException {
+        this.tempDB = TestUtils.copyDB();
+        final ITeam tim = new TeamDataHSQLDB(this.tempDB.getAbsolutePath().replace(".script",""));
+        accessTeams = new AccessTeams(tim);
     }
 
     @Test
@@ -44,8 +53,8 @@ public class AccessTeamsTest {
         System.out.print("\nTest 2: View a Team");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTests if getSingleGame() has successfully fetched a team from the data layer.");
-        System.out.print("\n" + accessTeams.getSingleGame().getName());
-        assertTrue("Winnipeg Jets".equals(accessTeams.getSingleGame().getName()));
+        System.out.print("\n" + accessTeams.getSingleTeam().getName());
+        assertTrue("Winnipeg Jets".equals(accessTeams.getSingleTeam().getName()));
 
     }
 

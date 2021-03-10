@@ -30,7 +30,7 @@ public class AccessTeams {
 
     public List<Team> getTeams() {
         teams = tData.getTeams();
-        return Collections.unmodifiableList(teams);
+        return (teams);
     }
 
     public Team getSingleTeam() {

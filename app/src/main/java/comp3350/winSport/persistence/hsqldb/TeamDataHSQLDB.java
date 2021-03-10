@@ -50,7 +50,7 @@ public class TeamDataHSQLDB implements ITeam {
         final List<Team> teams = new ArrayList<>();
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT * FROM TEAMS");
+            final ResultSet rs = st.executeQuery("SELECT * FROM PUBLIC.TEAMS");
 
             while (rs.next()) {
                 final Team team = fromResultSet(rs);
@@ -70,9 +70,13 @@ public class TeamDataHSQLDB implements ITeam {
     @Override
     public Team getSingleTeam() {
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM TEAMS");
+            final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM PUBLIC.TEAMS");
             final ResultSet rs = st.executeQuery();
-            Team team = fromResultSet(rs);
+            final Team team;
+            if (rs.next())
+                team = fromResultSet(rs);
+            else
+                team = new Team();
 
             rs.close();
             st.close();
