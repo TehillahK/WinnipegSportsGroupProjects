@@ -22,5 +22,6 @@
     <string name="winnipeg_sports_app" />
     <string name="by_group_6" />
     <string name="content">CONTENT</string>
+    <string name="player_name">Player Name</string>
 
 </resources>
