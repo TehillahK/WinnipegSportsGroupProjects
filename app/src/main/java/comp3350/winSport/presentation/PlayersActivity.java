@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.buisness.AccessTeams;
+import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
@@ -62,15 +62,11 @@ public class PlayersActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         team=temp;
         // A Dev task for the future should be to develop a screen to display if teams is null.
-        if (temp!= null) {
             // Activate Layout manager and RecyclerView
-            rv.setLayoutManager(llm);
+        rv.setLayoutManager(llm);
 
-
-            adapter = new PlayersAdapter(temp);
-            rv.setAdapter(adapter);
-        }
-
+        adapter = new PlayersAdapter(temp);
+        rv.setAdapter(adapter);
     }
     private  void filter(String searchedItem)
     {
