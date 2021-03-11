@@ -23,5 +23,9 @@
     <string name="by_group_6" />
     <string name="content">CONTENT</string>
     <string name="player_name">Player Name</string>
+    <string name="player_stats">Player Stats</string>
+    <string name="schedules">Schedules</string>
+    <string name="channels">Channels</string>
+    <string name="track_live_game">Track Live Game</string>
 
 </resources>

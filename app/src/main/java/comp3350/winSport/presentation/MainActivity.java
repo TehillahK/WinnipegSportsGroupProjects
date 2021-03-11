@@ -23,11 +23,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button button1 = (Button)findViewById(R.id.currentlyPlayingMenu);
         Button button2 = (Button)findViewById(R.id.teamRostersMenu);
-        Button button3 = (Button)findViewById(R.id.soonMenu);
+        Button button3 = (Button)findViewById(R.id.player_stat_layout);
+        Button button4 = (Button)findViewById(R.id.schedule_layout);
+        Button button5 = (Button)findViewById(R.id.channel_layout);
+        Button button6 = (Button)findViewById(R.id.live_game_layout);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
     }
 
 
@@ -36,18 +42,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()) {
             case R.id.currentlyPlayingMenu:
                 // activate currently playing menu
-                Intent myIntent = new Intent(MainActivity.this,CurrentlyPlayingActivity.class);
-                MainActivity.this.startActivity(myIntent);
+                Intent intent1 = new Intent(MainActivity.this,CurrentlyPlayingActivity.class);
+                MainActivity.this.startActivity(intent1);
                 break;
             case R.id.teamRostersMenu:
                 // games menu
-                Intent myOtherIntent = new Intent(MainActivity.this,Teams.class);
-                MainActivity.this.startActivity(myOtherIntent);
+                Intent intent2 = new Intent(MainActivity.this,Teams.class);
+                MainActivity.this.startActivity(intent2);
                 break;
-            case R.id.soonMenu:
+            case R.id.player_stat_layout:
                 // Player Stats
-                Intent testIntent = new Intent(MainActivity.this, PlayersActivity.class);
-                MainActivity.this.startActivity(testIntent);
+                Intent intent3 = new Intent(MainActivity.this, PlayersActivity.class);
+                MainActivity.this.startActivity(intent3);
+                break;
+            case R.id.schedule_layout:
+                // Player Stats
+//                Intent intent4 = new Intent(MainActivity.this, PlayersActivity.class);
+//                MainActivity.this.startActivity(intent4);
+                break;
+            case R.id.channel_layout:
+                // Player Stats
+//                Intent intent5 = new Intent(MainActivity.this, PlayersActivity.class);
+//                MainActivity.this.startActivity(intent5);
+                break;
+            case R.id.live_game_layout:
+                // Player Stats
+//                Intent intent6 = new Intent(MainActivity.this, PlayersActivity.class);
+//                MainActivity.this.startActivity(intent6);
                 break;
             default:
                 break;
