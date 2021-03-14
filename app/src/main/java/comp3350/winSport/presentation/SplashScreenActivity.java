@@ -3,6 +3,7 @@ package comp3350.winSport.presentation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -41,9 +42,11 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private AccessTeams accessTeams;
     private AccessPlayers accessPlayers;
-    private List<Team> teams = new ArrayList<>();
     private List<String> teamNames = new ArrayList<>();
     private RequestQueue mRequestQueue;
+
+    final String PREFS_NAME = "MyPrefsFile";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,20 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         Handler handler=new Handler();
 
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        if (settings.getBoolean("my_first_time", true)) {
+            //the app is being launched for first time, do something
+            Log.d("Comments", "First time");
+
+            // first time task
+            mRequestQueue = Volley.newRequestQueue(this);
+            getTeams();
+
+            // record the fact that the app has been started at least once
+            settings.edit().putBoolean("my_first_time", false).commit();
+        }
 
 
-        mRequestQueue = Volley.newRequestQueue(this);
-        getTeams();
 
         handler.postDelayed(
                 new Runnable() {
@@ -71,11 +84,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                     }
                 },2000);
 
-//        for (int i = 0; i < 2; i++) {
-//            Team t = teams.get(i);
-//            List<Player> p = t.getPlayers();
-//            accessTeams.setTeam(t);
-//        }
+
+
 
     }
 
@@ -91,16 +101,13 @@ public class SplashScreenActivity extends AppCompatActivity {
                         try {
                             JSONArray jsonArray = response.getJSONArray("teams");
 
+                            List<Team> teams = new ArrayList<>();
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject team = jsonArray.getJSONObject(i);
-
                                 JSONObject roster = team.getJSONObject("roster");
-
                                 JSONArray roster_player = roster.getJSONArray("roster");
-
-                                ArrayList<Player> plays = new ArrayList<>();
-
                                 String name = team.getString("name");
+                                ArrayList<Player> plays = new ArrayList<>();
 
                                 for (int j = 0; j < roster_player.length(); j++) {
 
@@ -113,13 +120,11 @@ public class SplashScreenActivity extends AppCompatActivity {
                                     int id = realPlayer.getInt("id");
                                     int number = player.getInt("jerseyNumber");
 
-
                                     Player playa = new Player(playerName,number,pos,"L",name,R.drawable.headshot,id);
-//                                    if (!plays.contains(playa))
-//                                    plays.add(playa);
+                                    if (!plays.contains(playa))
+                                        plays.add(playa);
 //                                    accessPlayers.setPlayer(playa);
                                 }
-
 
                                 int id = team.getInt("id");
                                 teamNames.add(name);
@@ -129,15 +134,20 @@ public class SplashScreenActivity extends AppCompatActivity {
                                 t.setTeamID(id);
                                 t.setPlayers(plays);
 
-                                accessTeams.setTeam(t);
+                                teams.add(t);
                             }
 
 
-
+                            List<Team> displayTeams = new ArrayList<>();
+                            for (int i = 0; i < 10; i++) {
+                                Team t = teams.get(i);
+                                displayTeams.add(t);
+                                accessPlayers.setAllPlayers(t.getPlayers());
+                            }
+                            accessTeams.setAllTeams(displayTeams);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
                 }, new Response.ErrorListener() {
             @Override

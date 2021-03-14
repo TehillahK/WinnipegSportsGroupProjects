@@ -51,7 +51,7 @@ public class TeamDataHSQLDB implements ITeam {
         final List<Team> teams = new ArrayList<>();
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT * FROM PUBLIC.TEAMS");
+            final ResultSet rs = st.executeQuery("SELECT DISTINCT * FROM PUBLIC.TEAMS");
 
             while (rs.next()) {
                 final Team team = fromResultSet(rs);
@@ -93,7 +93,7 @@ public class TeamDataHSQLDB implements ITeam {
     @Override
     public Team getTeamByName(String name) throws InvalidNameException {
 
-        if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
+        if (name.matches("^[a-zA-zé]+([\\s][a-zA-Zé]+)*$")) {
 
             final List<Team> teams = new ArrayList<>();
             try (final Connection c = connection()) {
@@ -138,6 +138,28 @@ public class TeamDataHSQLDB implements ITeam {
         }
 
     }
+
+    @Override
+    public void insertAllTeams(List<Team> teams) {
+        try {
+            try (final Connection c = connection()) {
+
+                String query = "INSERT INTO TEAMS VALUES";
+                for (int i= 0; i < teams.size(); i++) {
+                    Team team = teams.get(i);
+                    String singleValue = String.format("('%s', %s)", team.getName(),team.getTeamID());
+                    if (i != teams.size()-1)
+                        singleValue+=",";
+                    query+=singleValue;
+                }
+                final PreparedStatement st = c.prepareStatement(query);
+                st.executeUpdate();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
 
     @Override
     public Team updateTeam(Team team) {

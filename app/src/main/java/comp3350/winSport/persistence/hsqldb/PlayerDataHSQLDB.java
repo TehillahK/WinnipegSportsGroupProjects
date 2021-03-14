@@ -105,7 +105,6 @@ public class PlayerDataHSQLDB implements IPlayer {
 
     @Override
     public Player insertPlayer(Player p) {
-
         try (final Connection c = connection()) {
             final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?, ?)");
             st.setInt(1,p.getPlayerID());
@@ -121,7 +120,30 @@ public class PlayerDataHSQLDB implements IPlayer {
         } catch (final SQLException e) {
             throw new PersistenceException(e);
         }
+    }
 
+    @Override
+    public void insertAllPlayers(List<Player> p) {
+        try {
+            try (final Connection c = connection()) {
+
+                String query = "INSERT INTO PLAYERS VALUES";
+                for (int i= 0; i < p.size(); i++) {
+                    Player player = p.get(i);
+                    String playerName = player.getName().replaceAll("[']","");
+                    String singleValue = String.format("(%s, '%s', %s, '%s', '%s', '%s')", player.getPlayerID(),playerName,
+                            player.getNumber(),player.getPosition(),player.getShot(),player.getTeam());
+                    if (i != p.size()-1)
+                        singleValue+=",";
+                    query+=singleValue;
+                }
+
+                final PreparedStatement st = c.prepareStatement(query);
+                st.executeUpdate();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override

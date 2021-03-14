@@ -31,6 +31,10 @@ public class AccessPlayers {
         iplayer.insertPlayer(p);
     }
 
+    public void setAllPlayers(List<Player> p) {
+        iplayer.insertAllPlayers(p);
+    }
+
 
 
 }

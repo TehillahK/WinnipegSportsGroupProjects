@@ -48,6 +48,11 @@ public class TeamData implements ITeam {
     }
 
     @Override
+    public void insertAllTeams(List<Team> teams) {
+
+    }
+
+    @Override
     public Team updateTeam(Team team) {
         return null;
     }
