@@ -8,18 +8,42 @@ import android.os.Handler;
 
 import comp3350.winSport.R;
 import comp3350.winSport.application.Main;
+import comp3350.winSport.business.AccessPlayers;
+import comp3350.winSport.business.AccessTeams;
+import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.Team;
 
 import android.content.Context;
 
 import android.content.res.AssetManager;
+import android.util.Log;
 
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SplashScreenActivity extends AppCompatActivity {
+
+    private AccessTeams accessTeams;
+    private AccessPlayers accessPlayers;
+    private List<Team> teams = new ArrayList<>();
+    private List<String> teamNames = new ArrayList<>();
+    private RequestQueue mRequestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +51,15 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.splash_screen);
         copyDatabaseToDevice();
 
+        accessTeams = new AccessTeams();
+        accessPlayers = new AccessPlayers();
+
         Handler handler=new Handler();
+
+
+
+        mRequestQueue = Volley.newRequestQueue(this);
+        getTeams();
 
         handler.postDelayed(
                 new Runnable() {
@@ -37,8 +69,135 @@ public class SplashScreenActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-                },500);
+                },2000);
 
+//        for (int i = 0; i < 2; i++) {
+//            Team t = teams.get(i);
+//            List<Player> p = t.getPlayers();
+//            accessTeams.setTeam(t);
+//        }
+
+    }
+
+    private void getTeams() {
+
+        String url = "https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster";
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("teams");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject team = jsonArray.getJSONObject(i);
+
+                                JSONObject roster = team.getJSONObject("roster");
+
+                                JSONArray roster_player = roster.getJSONArray("roster");
+
+                                ArrayList<Player> plays = new ArrayList<>();
+
+                                String name = team.getString("name");
+
+                                for (int j = 0; j < roster_player.length(); j++) {
+
+                                    JSONObject player = roster_player.getJSONObject(j);
+                                    JSONObject realPlayer = player.getJSONObject("person");
+                                    JSONObject position = player.getJSONObject("position");
+
+                                    String playerName = realPlayer.getString("fullName");
+                                    String pos = position.getString("name");
+                                    int id = realPlayer.getInt("id");
+                                    int number = player.getInt("jerseyNumber");
+
+
+                                    Player playa = new Player(playerName,number,pos,"L",name,R.drawable.headshot,id);
+//                                    if (!plays.contains(playa))
+//                                    plays.add(playa);
+//                                    accessPlayers.setPlayer(playa);
+                                }
+
+
+                                int id = team.getInt("id");
+                                teamNames.add(name);
+
+                                Team t = new Team();
+                                t.setName(name);
+                                t.setTeamID(id);
+                                t.setPlayers(plays);
+
+                                accessTeams.setTeam(t);
+                            }
+
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        mRequestQueue.add(request);
+    }
+
+    private void getTeamStats(Team team) {
+
+        List<Player> players = team.getPlayers();
+
+        for (int i = 1; i < players.size(); i++) {
+
+            getPlayerStats(players.get(i).getPlayerID());
+
+        }
+
+    }
+
+    private void getPlayerStats(int playerID) {
+
+        String url = "https://statsapi.web.nhl.com/api/v1/people/" + playerID + "/stats?stats=statsSingleSeason&season=20202021";
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("stats");
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject lower = jsonArray.getJSONObject(i);
+                                JSONArray splits  = lower.getJSONArray("splits");
+                                for (int j = 0; j < splits.length(); j++) {
+                                    JSONObject stat = splits.getJSONObject(i);
+                                    JSONObject legit_stat = stat.getJSONObject("stat");
+
+                                    Log.v("STAT","" + legit_stat.getInt("points"));
+
+                                }
+
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                });
+        mRequestQueue.add(request);
     }
 
 

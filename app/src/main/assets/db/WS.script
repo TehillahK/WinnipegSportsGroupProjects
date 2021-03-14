@@ -1,6 +1,6 @@
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
-CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(20))
-CREATE MEMORY TABLE PUBLIC.PLAYERS(Player character varying,Number integer,Position character varying,Shot character varying,teamName character varying)
+CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(30),teamID integer)
+CREATE MEMORY TABLE PUBLIC.PLAYERS(PlayerID integer, Player character varying,Number integer,Position character varying,Shot character varying,teamName character varying)
 CREATE MEMORY TABLE PUBLIC.PLAYER_STATS(Name character varying,GamesPlayed integer,Team character varying(3),League character varying(3),Position character varying(2),Season character varying(7),Age integer,Goals integer,Assists integer,Points integer,GoalsPerGame DECIMAL,AssistsPerGame DECIMAL,ShotsPerGame DECIMAL)
 CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),LEAGUENAME VARCHAR(20),TEAM1ID character varying,TEAM2ID character varying, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
@@ -11,12 +11,13 @@ GRANT DBA TO SA
 SET WRITE_DELAY 20
 SET FILES SCALE 32
 SET SCHEMA PUBLIC
-INSERT INTO TEAMS VALUES('Winnipeg Jets')
-INSERT INTO TEAMS VALUES('other bad team')
-INSERT INTO PLAYERS VALUES('Blake Wheeler', 55, 'Centerman', 'L','Winnipeg Jets')
-INSERT INTO PLAYERS VALUES('Mark Scheifele', 81, 'Left Wing', 'R','Winnipeg Jets')
-INSERT INTO PLAYERS VALUES('Mathieu Perreault', 4, 'Defenseman', 'R','Winnipeg Jets')
-INSERT INTO PLAYERS VALUES('Derek Forbort', 26, 'Right wing', 'R','Winnipeg Jets')
+INSERT INTO TEAMS VALUES('Winnipeg Jets',0)
+INSERT INTO TEAMS VALUES('Toronto Maple Leafs',1)
+INSERT INTO TEAMS VALUES('fake team',1)
+INSERT INTO PLAYERS VALUES(1,'Blake Wheeler', 55, 'Centerman', 'L','Winnipeg Jets')
+INSERT INTO PLAYERS VALUES(2,'Mark Scheifele', 81, 'Left Wing', 'R','Winnipeg Jets')
+INSERT INTO PLAYERS VALUES(3,'Mathieu Perreault', 4, 'Defenseman', 'R','Winnipeg Jets')
+INSERT INTO PLAYERS VALUES(4,'Derek Forbort', 26, 'Right wing', 'R','Winnipeg Jets')
 INSERT INTO PLAYER_STATS VALUES('Blake Wheeler(C)',82,'WPG','NHL','RW','2021-19',27,4,17,21,14,26,4,0,0,1,75,5.3,1753,0.05,0.21,0.26,0.91,0.6,4.7,5.4)
 INSERT INTO PLAYER_STATS VALUES('Mark Scheifele',84,'WPG','NHL','C','2021-19',27,22,17,39,-7,33,13,9,0,5,156,14.1,1201,0.26,0.2,0.46,1.86,3.6,1.3,5)
 INSERT INTO PLAYER_STATS VALUES('Mathieu Perreault',82,'WPG','NHL','LW','2021-19',31,11,17,28,-5,30,9,2,0,0,218,5,1326,0.13,0.21,0.34,2.66,0.7,1.2,1.9)

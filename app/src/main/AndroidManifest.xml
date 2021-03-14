@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WinnipegSports">
-        <activity android:name=".presentation.PlayersActivity"></activity>
+        <activity android:name=".presentation.TeamScheduleActivity"></activity>
+        <activity android:name=".presentation.ScheduleActivity" />
+        <activity android:name=".presentation.PlayersActivity" />
         <activity android:name=".presentation.Teams" />
         <activity android:name=".presentation.SplashScreenActivity">
             <intent-filter>

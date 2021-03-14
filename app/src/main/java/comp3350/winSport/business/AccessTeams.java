@@ -43,5 +43,9 @@ public class AccessTeams {
         return team;
     }
 
+    public void setTeam(Team t) {
+        tData.insertTeam(t);
+    }
+
 
 }

@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.schedule_layout:
                 // Player Stats
-//                Intent intent4 = new Intent(MainActivity.this, PlayersActivity.class);
-//                MainActivity.this.startActivity(intent4);
+                Intent intent4 = new Intent(MainActivity.this, ScheduleActivity.class);
+                MainActivity.this.startActivity(intent4);
                 break;
             case R.id.channel_layout:
                 // Player Stats

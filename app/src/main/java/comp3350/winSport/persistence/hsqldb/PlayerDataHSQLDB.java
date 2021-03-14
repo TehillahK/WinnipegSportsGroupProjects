@@ -47,13 +47,15 @@ public class PlayerDataHSQLDB implements IPlayer {
 
     private Player fromResultSet(final ResultSet rs) throws SQLException {
 
+        final int playerID = rs.getInt("playerID");
         final String name = rs.getString("Player");
         final int number = rs.getInt("Number");
         final String position = rs.getString("Position");
         final String shot = rs.getString("Shot");
         final String teamName = rs.getString("teamName");
         final int teamID = checkValid(teamName);
-        return new Player(name,number,position,shot,teamName, teamID);
+
+        return new Player(name,number,position,shot,teamName, R.drawable.headshot,playerID);
     }
 
     private int checkValid(String teamName) {
@@ -105,12 +107,13 @@ public class PlayerDataHSQLDB implements IPlayer {
     public Player insertPlayer(Player p) {
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?)");
-            st.setString(1,p.getName());
-            st.setInt(2,p.getNumber());
-            st.setString(3,p.getPosition());
-            st.setString(4,p.getShot());
-            st.setString(5,p.getTeam());
+            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYERS VALUES(?, ?, ?, ?, ?, ?)");
+            st.setInt(1,p.getPlayerID());
+            st.setString(2,p.getName());
+            st.setInt(3,p.getNumber());
+            st.setString(4,p.getPosition());
+            st.setString(5,p.getShot());
+            st.setString(6,p.getTeam());
 
             st.executeUpdate();
 
