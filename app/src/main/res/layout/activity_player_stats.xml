@@ -141,4 +141,94 @@
 
         />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_assists"
+        android:text="assists"
+        android:textSize="30sp"
+        android:layout_below="@id/player_goals"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_toRightOf="@id/player_assists"
+        android:textSize="30sp"
+        android:layout_below="@id/player_goals"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/points"
+        android:text="points"
+        android:textSize="30sp"
+        android:layout_below="@id/player_assists"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_toRightOf="@id/player_assists"
+        android:textSize="30sp"
+        android:layout_below="@id/player_assists"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_goals_perGame"
+        android:text="goalsPerGame"
+        android:textSize="30sp"
+        android:layout_below="@+id/points"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_toRightOf="@id/player_goals_perGame"
+        android:textSize="30sp"
+        android:layout_below="@id/points"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_assists_pergame"
+        android:text="assistsPerGame"
+        android:textSize="30sp"
+        android:layout_below="@id/player_goals_perGame"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_toRightOf="@id/player_assists_pergame"
+        android:textSize="30sp"
+        android:layout_below="@id/player_goals_perGame"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_shots_PerGame"
+        android:text="shotsPerGame"
+        android:textSize="30sp"
+        android:layout_below="@id/player_assists_pergame"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_toRightOf="@id/player_shots_PerGame"
+        android:textSize="30sp"
+        android:layout_below="@id/player_assists_pergame"
+
+        />
+
 </RelativeLayout>
