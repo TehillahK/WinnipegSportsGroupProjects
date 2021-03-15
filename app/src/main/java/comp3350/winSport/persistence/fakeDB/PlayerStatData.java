@@ -4,6 +4,9 @@ import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.persistence.IPlayerStats;
 
 public class PlayerStatData implements IPlayerStats {
+
+
+
     @Override
     public PlayerStatistic getPlayerByName(String name) {
         return null;

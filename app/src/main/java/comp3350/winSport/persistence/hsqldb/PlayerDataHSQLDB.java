@@ -47,7 +47,7 @@ public class PlayerDataHSQLDB implements IPlayer {
 
     private Player fromResultSet(final ResultSet rs) throws SQLException {
 
-        final int playerID = rs.getInt("playerID");
+        final int playerID = rs.getInt("PlayerID");
         final String name = rs.getString("Player");
         final int number = rs.getInt("Number");
         final String position = rs.getString("Position");

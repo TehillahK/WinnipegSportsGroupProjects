@@ -13,8 +13,8 @@ comp3350/winSport/presentation/RosterAdapter.java
  comp3350.winSport.presentation.RosterAdapter$PlayerViewHolder
 comp3350/winSport/persistence/hsqldb/TeamDataHSQLDB.java
  comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB
-comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
- comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
+comp3350/winSport/BuildConfig.java
+ comp3350.winSport.BuildConfig
 comp3350/winSport/objects/Schedule.java
  comp3350.winSport.objects.Schedule
 comp3350/winSport/presentation/PlayersAdapter.java
@@ -73,8 +73,8 @@ comp3350/winSport/presentation/ScheduleAdapter.java
  comp3350.winSport.presentation.ScheduleAdapter$ScheduleViewHolder
 comp3350/winSport/presentation/MainActivity.java
  comp3350.winSport.presentation.MainActivity
-comp3350/winSport/application/Services.java
- comp3350.winSport.application.Services
+comp3350/winSport/presentation/ChannelItem.java
+ comp3350.winSport.presentation.ChannelItem
 comp3350/winSport/objects/exceptions/InvalidNameException.java
  comp3350.winSport.objects.exceptions.InvalidNameException
 comp3350/winSport/business/AccessPlayerStats.java
@@ -96,7 +96,7 @@ comp3350/winSport/presentation/SplashScreenActivity.java
  comp3350.winSport.presentation.SplashScreenActivity$3
  comp3350.winSport.presentation.SplashScreenActivity$4
  comp3350.winSport.presentation.SplashScreenActivity$5
-comp3350/winSport/BuildConfig.java
- comp3350.winSport.BuildConfig
-comp3350/winSport/presentation/ChannelItem.java
- comp3350.winSport.presentation.ChannelItem
+comp3350/winSport/application/Services.java
+ comp3350.winSport.application.Services
+comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
+ comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
