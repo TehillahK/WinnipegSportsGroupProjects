@@ -32,7 +32,6 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         accessGames = new AccessGames();
-
         games = accessGames.getGames();
 
         RecyclerView rv = findViewById(R.id.rv);

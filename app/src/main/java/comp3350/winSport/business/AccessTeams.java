@@ -43,5 +43,11 @@ public class AccessTeams {
         return team;
     }
 
+    public void setTeam(Team t) {
+        tData.insertTeam(t);
+    }
+
+    public void setAllTeams(List<Team> t) { tData.insertAllTeams(t);}
+
 
 }

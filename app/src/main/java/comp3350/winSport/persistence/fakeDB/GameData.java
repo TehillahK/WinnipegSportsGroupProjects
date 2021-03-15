@@ -297,12 +297,12 @@ public class GameData implements IGame {
         String league1 = "NHL";
         String league2 = "NHL";
 
-        t1 = new Team("Winnipeg Jets", team1, R.drawable.jets);
-        t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs);
-        t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa);
-        t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers);
-        t5 = new Team("Calgary Flames", team5,R.drawable.flames);
-        t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal);
+        t1 = new Team("Winnipeg Jets", team1, R.drawable.jets,0);
+        t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs,1);
+        t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa,2);
+        t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers,3);
+        t5 = new Team("Calgary Flames", team5,R.drawable.flames,4);
+        t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal,5);
 
         Period game1p1 = new Period(1, 3);
         Period game1p2 = new Period(2, 5);

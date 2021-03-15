@@ -23,4 +23,8 @@ public class AccessPlayerStats {
         return oneStat;
     }
 
+    public void setPlayerStats(PlayerStatistic player) {
+        playerStats.insertPlayerStat(player);
+    }
+
 }
