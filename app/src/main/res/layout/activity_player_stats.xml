@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.PlayerStatsActivity">
+    tools:context=".presentation.PlayerStatsActivity"
+    android:layout_margin="100sp"
+    >
     <ImageView
         android:layout_width="100sp"
         android:layout_height="100sp"
@@ -179,13 +181,12 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/player_goals_perGame"
-        android:text="goalsPerGame"
-        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/points"
-        />
+        android:text="goalsPerGame"
+        android:textSize="30sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
