@@ -62,8 +62,8 @@ comp3350/winSport/persistence/hsqldb/PlayerStatsHSQLDB.java
  comp3350.winSport.persistence.hsqldb.PlayerStatsHSQLDB
 comp3350/winSport/persistence/IPlayer.java
  comp3350.winSport.persistence.IPlayer
-comp3350/winSport/persistence/fakeDB/PlayerStatData.java
- comp3350.winSport.persistence.fakeDB.PlayerStatData
+comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
+ comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
 comp3350/winSport/persistence/fakeDB/GameData.java
  comp3350.winSport.persistence.fakeDB.GameData
 comp3350/winSport/persistence/hsqldb/PersistenceException.java
@@ -98,5 +98,5 @@ comp3350/winSport/presentation/SplashScreenActivity.java
  comp3350.winSport.presentation.SplashScreenActivity$5
 comp3350/winSport/application/Services.java
  comp3350.winSport.application.Services
-comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
- comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
+comp3350/winSport/persistence/fakeDB/PlayerStatData.java
+ comp3350.winSport.persistence.fakeDB.PlayerStatData
