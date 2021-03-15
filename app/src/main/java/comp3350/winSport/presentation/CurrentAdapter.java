@@ -52,7 +52,6 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
     }
 
 
-
     public static class GameViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView gameLeague;

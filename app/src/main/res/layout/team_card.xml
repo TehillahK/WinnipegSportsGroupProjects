@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/schedule_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8sp">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6sp"
+        android:elevation="4dp">
+        <TextView
+            android:textSize="25sp"
+            android:id="@+id/game_date"
+            android:text="@string/thur_jan_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:text="@string/vs_tor"
+            android:textSize="25sp"
+            android:id="@+id/game_opponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:textSize="25sp"
+            android:text="@string/otw_4_3"
+            android:id="@+id/game_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

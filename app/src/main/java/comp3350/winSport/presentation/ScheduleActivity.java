@@ -39,7 +39,7 @@ public class ScheduleActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Team o = (Team)listView.getItemAtPosition(position);
                 String val = o.getName();
-                Intent myIntent = new Intent(ScheduleActivity.this,RosterActivity.class);
+                Intent myIntent = new Intent(ScheduleActivity.this,TeamScheduleActivity.class);
                 myIntent.putExtra("TeamName", o.getName()); //Optional parameters
                 ScheduleActivity.this.startActivity(myIntent);
             }

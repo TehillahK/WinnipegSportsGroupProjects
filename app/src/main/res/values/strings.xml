@@ -27,5 +27,8 @@
     <string name="schedules">Schedules</string>
     <string name="channels">Channels</string>
     <string name="track_live_game">Track Live Game</string>
+    <string name="thur_jan_14">Thur, Jan 14</string>
+    <string name="vs_tor">VS. TOR</string>
+    <string name="otw_4_3">OTW 4-3</string>
 
 </resources>
