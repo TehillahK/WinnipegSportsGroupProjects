@@ -1,5 +1,6 @@
 package comp3350.winSport.persistence.fakeDB;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.objects.exceptions.InvalidNameException;
@@ -9,7 +10,18 @@ import comp3350.winSport.persistence.fakeDB.GameData;
 
 public class TeamData implements ITeam {
 
+    List<Team> teams;
     GameData gData = new GameData();
+
+    public TeamData() {
+        teams = new ArrayList<>();
+        initData();
+    }
+
+    void initData() {
+
+    }
+
 
     @Override
     public List<Team> getTeams() {
@@ -42,18 +54,4 @@ public class TeamData implements ITeam {
         }
     }
 
-    @Override
-    public Team insertTeam(Team team) {
-        return null;
-    }
-
-    @Override
-    public void insertAllTeams(List<Team> teams) {
-
-    }
-
-    @Override
-    public Team updateTeam(Team team) {
-        return null;
-    }
 }

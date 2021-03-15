@@ -71,7 +71,6 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
         }
     }
 
-    @Override
     public PlayerStatistic insertPlayerStat(PlayerStatistic ps) {
         try (final Connection c = connection()) {
             final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYER_STATS VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -95,37 +94,5 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
             throw new PersistenceException(e);
         }
     }
-
-    @Override
-    public PlayerStatistic updatePS(PlayerStatistic ps) {
-        try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE PLAYER_STATS SET GamesPlayed=?,Goals=?,Assists=?,Points=?,GoalsPerGame=?,AssistsPerGame=?,ShotsPerGame=? WHERE Name=?");
-            st.setInt(1,ps.getGamesPlayed());
-            st.setInt(2, ps.getGoals());
-            st.setInt(3,ps.getAssists());
-            st.setInt(4, ps.getPoints());
-            st.setFloat(5,ps.getGoalsPerGame());
-            st.setFloat(6,ps.getAssistsPerGame());
-            st.setFloat(7,ps.getShotsPerGame());
-            st.setString(8,ps.getName());
-
-            st.executeUpdate();
-        return ps;
-        } catch (final SQLException e) {
-            throw new PersistenceException(e);
-        }
-    }
-
-    @Override
-    public void deletePlayerStat(PlayerStatistic ps) {
-        try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("DELETE FROM PLAYER_STATS WHERE Name = ?");
-            st.setString(1, ps.getName());
-            st.executeUpdate();
-        } catch (final SQLException e) {
-            throw new PersistenceException(e);
-        }
-    }
-
 
 }

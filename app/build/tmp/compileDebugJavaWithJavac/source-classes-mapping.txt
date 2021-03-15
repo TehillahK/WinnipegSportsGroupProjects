@@ -13,8 +13,8 @@ comp3350/winSport/presentation/RosterAdapter.java
  comp3350.winSport.presentation.RosterAdapter$PlayerViewHolder
 comp3350/winSport/persistence/hsqldb/TeamDataHSQLDB.java
  comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB
-comp3350/winSport/BuildConfig.java
- comp3350.winSport.BuildConfig
+comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
+ comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
 comp3350/winSport/objects/Schedule.java
  comp3350.winSport.objects.Schedule
 comp3350/winSport/presentation/PlayersAdapter.java
@@ -36,16 +36,17 @@ comp3350/winSport/objects/Game.java
  comp3350.winSport.objects.Game
 comp3350/winSport/objects/League.java
  comp3350.winSport.objects.League
-comp3350/winSport/persistence/fakeDB/PlayerData.java
- comp3350.winSport.persistence.fakeDB.PlayerData
+comp3350/winSport/presentation/ScheduleActivity.java
+ comp3350.winSport.presentation.ScheduleActivity
+ comp3350.winSport.presentation.ScheduleActivity$1
 comp3350/winSport/objects/Team.java
  comp3350.winSport.objects.Team
 comp3350/winSport/objects/Player.java
  comp3350.winSport.objects.Player
 comp3350/winSport/business/AccessTeams.java
  comp3350.winSport.business.AccessTeams
-comp3350/winSport/persistence/fakeDB/TeamData.java
- comp3350.winSport.persistence.fakeDB.TeamData
+comp3350/winSport/persistence/fakeDB/PlayerStatData.java
+ comp3350.winSport.persistence.fakeDB.PlayerStatData
 comp3350/winSport/presentation/ChannelAdapter.java
  comp3350.winSport.presentation.ChannelAdapter
  comp3350.winSport.presentation.ChannelAdapter$MyViewHolder
@@ -62,10 +63,11 @@ comp3350/winSport/persistence/hsqldb/PlayerStatsHSQLDB.java
  comp3350.winSport.persistence.hsqldb.PlayerStatsHSQLDB
 comp3350/winSport/persistence/IPlayer.java
  comp3350.winSport.persistence.IPlayer
-comp3350/winSport/persistence/hsqldb/PlayerDataHSQLDB.java
- comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB
-comp3350/winSport/persistence/fakeDB/GameData.java
- comp3350.winSport.persistence.fakeDB.GameData
+comp3350/winSport/presentation/CurrentAdapter.java
+ comp3350.winSport.presentation.CurrentAdapter
+ comp3350.winSport.presentation.CurrentAdapter$GameViewHolder
+comp3350/winSport/presentation/ChannelItem.java
+ comp3350.winSport.presentation.ChannelItem
 comp3350/winSport/persistence/hsqldb/PersistenceException.java
  comp3350.winSport.persistence.hsqldb.PersistenceException
 comp3350/winSport/presentation/ScheduleAdapter.java
@@ -73,8 +75,8 @@ comp3350/winSport/presentation/ScheduleAdapter.java
  comp3350.winSport.presentation.ScheduleAdapter$ScheduleViewHolder
 comp3350/winSport/presentation/MainActivity.java
  comp3350.winSport.presentation.MainActivity
-comp3350/winSport/presentation/ChannelItem.java
- comp3350.winSport.presentation.ChannelItem
+comp3350/winSport/BuildConfig.java
+ comp3350.winSport.BuildConfig
 comp3350/winSport/objects/exceptions/InvalidNameException.java
  comp3350.winSport.objects.exceptions.InvalidNameException
 comp3350/winSport/business/AccessPlayerStats.java
@@ -83,20 +85,14 @@ comp3350/winSport/business/AccessGames.java
  comp3350.winSport.business.AccessGames
 comp3350/winSport/persistence/IGame.java
  comp3350.winSport.persistence.IGame
-comp3350/winSport/presentation/CurrentAdapter.java
- comp3350.winSport.presentation.CurrentAdapter
- comp3350.winSport.presentation.CurrentAdapter$GameViewHolder
-comp3350/winSport/presentation/ScheduleActivity.java
- comp3350.winSport.presentation.ScheduleActivity
- comp3350.winSport.presentation.ScheduleActivity$1
+comp3350/winSport/persistence/fakeDB/GameData.java
+ comp3350.winSport.persistence.fakeDB.GameData
+comp3350/winSport/application/Services.java
+ comp3350.winSport.application.Services
+comp3350/winSport/persistence/fakeDB/TeamData.java
+ comp3350.winSport.persistence.fakeDB.TeamData
+comp3350/winSport/persistence/fakeDB/PlayerData.java
+ comp3350.winSport.persistence.fakeDB.PlayerData
 comp3350/winSport/presentation/SplashScreenActivity.java
  comp3350.winSport.presentation.SplashScreenActivity
  comp3350.winSport.presentation.SplashScreenActivity$1
- comp3350.winSport.presentation.SplashScreenActivity$2
- comp3350.winSport.presentation.SplashScreenActivity$3
- comp3350.winSport.presentation.SplashScreenActivity$4
- comp3350.winSport.presentation.SplashScreenActivity$5
-comp3350/winSport/application/Services.java
- comp3350.winSport.application.Services
-comp3350/winSport/persistence/fakeDB/PlayerStatData.java
- comp3350.winSport.persistence.fakeDB.PlayerStatData

@@ -27,14 +27,4 @@ public class AccessPlayers {
         return players;
     }
 
-    public void setPlayer(Player p) {
-        iplayer.insertPlayer(p);
-    }
-
-    public void setAllPlayers(List<Player> p) {
-        iplayer.insertAllPlayers(p);
-    }
-
-
-
 }

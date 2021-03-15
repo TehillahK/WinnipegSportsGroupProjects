@@ -14,6 +14,8 @@ import comp3350.winSport.persistence.IGame;
 
 public class GameData implements IGame {
 
+    List<Game> games;
+
     private Game g1;
     private Game g2;
     private Game g3;
@@ -33,6 +35,7 @@ public class GameData implements IGame {
         g3 = null;
         g4 = null;
 
+        games  = new ArrayList<>();
         initData();
 
     }
@@ -367,22 +370,6 @@ public class GameData implements IGame {
     public Game getSingleGame() {
         return this.g1;
     }
-
-    @Override
-    public Game insertGame(Game g) {
-        return null;
-    }
-
-    @Override
-    public Game updateGame(Game g) {
-        return null;
-    }
-
-    @Override
-    public void deleteGame(Game g) {
-
-    }
-
     public List<Team> GetTeams() {
 
         List<Team> teams = new ArrayList<>();
