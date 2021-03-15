@@ -71,28 +71,4 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
         }
     }
 
-    public PlayerStatistic insertPlayerStat(PlayerStatistic ps) {
-        try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("INSERT INTO PLAYER_STATS VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            st.setString(1,ps.getName());
-            st.setInt(2,ps.getGamesPlayed());
-            st.setString(3,ps.getTeam());
-            st.setString(4,ps.getLeague());
-            st.setString(5,ps.getPosition());
-            st.setString(6,ps.getSeason());
-            st.setInt(7,ps.getAge());
-            st.setInt(8,ps.getGoals());
-            st.setInt(9,ps.getAssists());
-            st.setInt(10,ps.getPoints());
-            st.setFloat(11,ps.getGoalsPerGame());
-            st.setFloat(12,ps.getAssistsPerGame());
-            st.setFloat(13,ps.getShotsPerGame());
-            st.executeUpdate();
-
-            return ps;
-        } catch (final SQLException e) {
-            throw new PersistenceException(e);
-        }
-    }
-
 }
