@@ -51,7 +51,7 @@ public class TeamDataHSQLDB implements ITeam {
         final List<Team> teams = new ArrayList<>();
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT DISTINCT * FROM PUBLIC.TEAMS");
+            final ResultSet rs = st.executeQuery("SELECT DISTINCT * FROM TEAMS");
 
             while (rs.next()) {
                 final Team team = fromResultSet(rs);
