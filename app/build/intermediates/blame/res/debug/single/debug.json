@@ -1,162 +1,186 @@
 [
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_currently_playing.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\activity_currently_playing.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calgary_flames.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\calgary_flames.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_roster.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\activity_roster.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vancouver.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\vancouver.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nhl.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\nhl.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_team_list.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\team_list.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_current_card.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\current_card.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_channel_item_row.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\channel_item_row.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sportnets_logo.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\sportnets_logo.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_teams.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_teams.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_currently_playing.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_currently_playing.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_channel.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\activity_channel.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sportnets_logo.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\sportnets_logo.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nhl.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\nhl.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_roster.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_roster.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_channel_item_row.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\channel_item_row.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_player_header.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\player_header.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_jets.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\jets.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_leafs.gif.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\leafs.gif"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oilers.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\oilers.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_track_game.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\track_game.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_team_card.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\team_card.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_teams.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\activity_teams.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_screen.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_team_list.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\team_list.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ottawa.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\ottawa.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oilers.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\oilers.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_screen.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\splash_screen.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_team_item.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\team_item.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_logo_w_text.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\app_logo_w_text.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_player_card.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\player_card.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_montreal.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\montreal.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_logo_w_text.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\app_logo_w_text.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_players.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_players.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tsn_logo.jpg.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\tsn_logo.jpg"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_headshot.jpg.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\headshot.jpg"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_jets.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\jets.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cbc_sports.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\cbc_sports.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vancouver.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\vancouver.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_current_card.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\current_card.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_montreal.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\montreal.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_schedule.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_schedule.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_team_schedule.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_team_schedule.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_leafs.gif.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\leafs.gif"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_team_item.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\team_item.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cbc_sports.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\drawable\\cbc_sports.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_player_card.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\player_card.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\toolbar.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_channel.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_channel.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\layout_player_header.xml.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\layout\\player_header.xml"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flames.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\flames.png"
     },
     {
-        "merged": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ottawa.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\ottawa.png"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tsn_logo.jpg.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\tsn_logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\drawable_headshot.jpg.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\drawable\\headshot.jpg"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\res\\merged\\debug\\layout_players_menu_card.xml.flat",
+        "source": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\src\\main\\res\\layout\\players_menu_card.xml"
     }
 ]

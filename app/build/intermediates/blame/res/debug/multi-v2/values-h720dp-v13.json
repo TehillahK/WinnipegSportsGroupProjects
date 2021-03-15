@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\modun\\Desktop\\winnipeg-sports-app-a03-group-6_final\\winnipeg-sports-app-a03-group-6 (3)\\winnipeg-sports-app-a03-group-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "C:\\Users\\School\\AndroidStudioProjects\\WinnipegSports\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\modun\\.gradle\\caches\\transforms-2\\files-2.1\\a621425fdde0cc39c6e6986394ecd820\\appcompat-1.2.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\School\\.gradle\\caches\\transforms-2\\files-2.1\\a621425fdde0cc39c6e6986394ecd820\\appcompat-1.2.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

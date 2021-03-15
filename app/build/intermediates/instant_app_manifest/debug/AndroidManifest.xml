@@ -9,6 +9,8 @@
         android:minSdkVersion="23"
         android:targetSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -19,17 +21,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.WinnipegSports" >
-        <activity android:name="comp3350.winSport.Channel" >
+        <activity android:name="comp3350.winSport.presentation.TeamScheduleActivity" />
+        <activity android:name="comp3350.winSport.presentation.ScheduleActivity" />
+        <activity android:name="comp3350.winSport.presentation.PlayersActivity" />
+        <activity android:name="comp3350.winSport.presentation.Channel" >
         </activity>
         <activity android:name="comp3350.winSport.presentation.Teams" />
         <activity android:name="comp3350.winSport.presentation.SplashScreenActivity" >
-        </activity>
-        <activity android:name="comp3350.winSport.presentation.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="comp3350.winSport.presentation.MainActivity" >
         </activity>
         <activity android:name="comp3350.winSport.presentation.RosterActivity" />
         <activity android:name="comp3350.winSport.presentation.CurrentlyPlayingActivity" />

@@ -1,4 +1,4 @@
-package comp3350.winSport;
+package comp3350.winSport.presentation;
 
 import android.content.Context;
 import android.os.Build;
@@ -6,16 +6,15 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
+import comp3350.winSport.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 

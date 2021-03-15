@@ -18,11 +18,10 @@
         android:fillViewport="true">
 
         <LinearLayout
-            android:layout_below="@id/toolbar"
             android:orientation="vertical"
             android:weightSum="3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp">
 
             <LinearLayout
@@ -67,25 +66,25 @@
                 android:layout_height="0dp">
 
                 <Button
-                    android:id="@+id/soonMenu"
+                    android:id="@+id/player_stat_layout"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_margin="20dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="PLAYER STATS"
+                    android:text="@string/player_stats_main"
                     android:gravity="center"
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
 
                 <Button
-                    android:id="@+id/schedules"
+                    android:id="@+id/schedule_layout"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_margin="20dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="SCHEDULES"
+                    android:text="@string/schedules_main"
                     android:gravity="center"
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
@@ -100,24 +99,25 @@
                 android:layout_height="0dp">
 
                 <Button
-                    android:id="@+id/channels"
+                    android:id="@+id/channel_layout"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_margin="20dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="CHANNELS"
+                    android:text="@string/channels_main"
                     android:gravity="center"
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
 
                 <Button
+                    android:id="@+id/live_game_layout"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_margin="20dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="TRACK LIVE GAME"
+                    android:text="@string/track_live_game_main"
                     android:gravity="center"
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>

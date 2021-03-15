@@ -6,58 +6,71 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml
+8-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml
+9-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:5:5-25:19
-12        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-12-->[androidx.core:core:1.3.1] C:\Users\modun\.gradle\caches\transforms-2\files-2.1\3fb110591b633ccbfa136562b7a4046a\core-1.3.1\AndroidManifest.xml:24:18-86
-13        android:debuggable="true"
-14        android:extractNativeLibs="false"
-15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:6:9-43
-16        android:label="@string/app_name"
-16-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:7:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:8:9-54
-18        android:supportsRtl="true"
-18-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:9:9-35
-19        android:testOnly="true"
-20        android:theme="@style/Theme.WinnipegSports" >
-20-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:10:9-52
-21        <activity android:name="comp3350.winSport.Channel" >
-21-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:11:9-12:20
-21-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:11:19-42
-22        </activity>
-23        <activity android:name="comp3350.winSport.presentation.Teams" />
-23-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:13:9-56
-23-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:13:19-53
-24        <activity android:name="comp3350.winSport.presentation.SplashScreenActivity" >
-24-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:14:9-15:20
-24-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:14:19-68
-25        </activity>
-26        <activity android:name="comp3350.winSport.presentation.MainActivity" >
-26-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:16:9-22:20
-26-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:16:19-60
-27            <intent-filter>
-27-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:17:13-21:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:18:17-69
-28-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:18:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:20:17-77
-30-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:20:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity android:name="comp3350.winSport.presentation.RosterActivity" />
-33-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:23:9-65
-33-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:23:19-62
-34        <activity android:name="comp3350.winSport.presentation.CurrentlyPlayingActivity" />
-34-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:24:9-75
-34-->C:\Users\modun\Desktop\winnipeg-sports-app-a03-group-6_final\winnipeg-sports-app-a03-group-6 (3)\winnipeg-sports-app-a03-group-6\app\src\main\AndroidManifest.xml:24:19-72
-35    </application>
-36
-37</manifest>
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:7:5-31:19
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.3.1] C:\Users\School\.gradle\caches\transforms-2\files-2.1\3fb110591b633ccbfa136562b7a4046a\core-1.3.1\AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:8:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:9:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:10:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:11:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.WinnipegSports" >
+22-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:12:9-52
+23        <activity android:name="comp3350.winSport.presentation.TeamScheduleActivity" />
+23-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:13:9-70
+23-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:13:19-68
+24        <activity android:name="comp3350.winSport.presentation.ScheduleActivity" />
+24-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:14:9-67
+24-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:14:19-64
+25        <activity android:name="comp3350.winSport.presentation.PlayersActivity" />
+25-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:15:9-66
+25-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:15:19-63
+26        <activity android:name="comp3350.winSport.presentation.Channel" >
+26-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:16:9-17:20
+26-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:16:19-55
+27        </activity>
+28        <activity android:name="comp3350.winSport.presentation.Teams" />
+28-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:18:9-56
+28-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:18:19-53
+29        <activity android:name="comp3350.winSport.presentation.SplashScreenActivity" >
+29-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:19:9-25:20
+29-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:19:19-68
+30            <intent-filter>
+30-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:20:13-24:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:21:17-69
+31-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:21:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:23:17-77
+33-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:23:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity android:name="comp3350.winSport.presentation.MainActivity" >
+36-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:26:9-28:20
+36-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:26:19-60
+37        </activity>
+38        <activity android:name="comp3350.winSport.presentation.RosterActivity" />
+38-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:29:9-65
+38-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:29:19-62
+39        <activity android:name="comp3350.winSport.presentation.CurrentlyPlayingActivity" />
+39-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:30:9-75
+39-->C:\Users\School\AndroidStudioProjects\WinnipegSports\app\src\main\AndroidManifest.xml:30:19-72
+40    </application>
+41
+42</manifest>

@@ -1,4 +1,4 @@
-package comp3350.winSport;
+package comp3350.winSport.presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import comp3350.winSport.R;
 
 public class Channel extends AppCompatActivity {
     RecyclerView rv;

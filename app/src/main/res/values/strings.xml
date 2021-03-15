@@ -34,5 +34,9 @@
     <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
     <string name="Sportsnet" ><a href="https://www.sportsnet.ca">Sportsnet</a></string>
     <string name="TSN"       ><a href="https://www.tsn.ca">TSN</a></string>
+    <string name="player_stats_main">PLAYER STATS</string>
+    <string name="schedules_main">SCHEDULES</string>
+    <string name="channels_main">CHANNELS</string>
+    <string name="track_live_game_main">TRACK LIVE GAME</string>
 
 </resources>
