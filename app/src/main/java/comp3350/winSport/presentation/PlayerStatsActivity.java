@@ -3,6 +3,8 @@ package comp3350.winSport.presentation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,5 +18,13 @@ public class PlayerStatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_stats);
+        TextView playerNameTxt=findViewById(R.id.player_name_textView);
+        String playerName="";
+        Bundle extras=getIntent().getExtras();
+        if(extras!=null)
+        {
+            playerName=extras.getString("playerName");
+        }
+        playerNameTxt.setText(playerName);
     }
 }

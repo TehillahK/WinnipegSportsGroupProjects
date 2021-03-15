@@ -16,12 +16,15 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
 
-public class PlayersAdapter  extends RecyclerView.Adapter<PlayersAdapter.PlayerViewHolder> {
+public class PlayersAdapter  extends RecyclerView.Adapter<PlayersAdapter.PlayerViewHolder>  {
 
     private List<Player> players;
+    private RecyclerViewEventListener listener;
 
-    public PlayersAdapter(List<Player> players) {
+    public PlayersAdapter(List<Player> players,RecyclerViewEventListener listener) {
+
         this.players=players;
+        this.listener=listener;
     }
 
 
@@ -52,7 +55,12 @@ public class PlayersAdapter  extends RecyclerView.Adapter<PlayersAdapter.PlayerV
         notifyDataSetChanged();
     }
 
-    public static class PlayerViewHolder extends RecyclerView.ViewHolder {
+
+    public interface RecyclerViewEventListener{
+        void onClick(View view,int pos);
+    }
+
+    public  class PlayerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
        ImageView player_pic;
        TextView player_name;
        TextView player_team;
@@ -62,9 +70,17 @@ public class PlayersAdapter  extends RecyclerView.Adapter<PlayersAdapter.PlayerV
 
         public PlayerViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             player_pic=itemView.findViewById(R.id.playerProfile);
             player_name=itemView.findViewById(R.id.playerName);
             player_team=itemView.findViewById(R.id.playerTeam);
         }
+
+        @Override
+        public void onClick(View v) {
+            listener.onClick(itemView,getAdapterPosition());
+        }
     }
+
+
 }
