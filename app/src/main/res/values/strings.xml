@@ -22,4 +22,8 @@
     <string name="winnipeg_sports_app" />
     <string name="by_group_6" />
 
+    <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
+    <string name="Sportsnet" ><a href="https://www.sportsnet.ca">Sportsnet</a></string>
+    <string name="TSN"       ><a href="https://www.tsn.ca">TSN</a></string>
+
 </resources>

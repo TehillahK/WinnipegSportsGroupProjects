@@ -1,0 +1,54 @@
+comp3350/winSport/objects/Team.java
+ comp3350.winSport.objects.Team
+comp3350/winSport/objects/Player.java
+ comp3350.winSport.objects.Player
+comp3350/winSport/presentation/Teams.java
+ comp3350.winSport.presentation.Teams
+ comp3350.winSport.presentation.Teams$1
+comp3350/winSport/buisness/AccessTeams.java
+ comp3350.winSport.buisness.AccessTeams
+comp3350/winSport/persistence/ITeam.java
+ comp3350.winSport.persistence.ITeam
+comp3350/winSport/presentation/RosterActivity.java
+ comp3350.winSport.presentation.RosterActivity
+comp3350/winSport/presentation/RosterAdapter.java
+ comp3350.winSport.presentation.RosterAdapter
+ comp3350.winSport.presentation.RosterAdapter$PlayerHeaderViewHolder
+ comp3350.winSport.presentation.RosterAdapter$PlayerViewHolder
+comp3350/winSport/ChannelAdapter.java
+ comp3350.winSport.ChannelAdapter
+ comp3350.winSport.ChannelAdapter$MyViewHolder
+comp3350/winSport/objects/exceptions/InvalidTimeException.java
+ comp3350.winSport.objects.exceptions.InvalidTimeException
+comp3350/winSport/buisness/AccessGames.java
+ comp3350.winSport.buisness.AccessGames
+comp3350/winSport/persistence/GameData.java
+ comp3350.winSport.persistence.GameData
+comp3350/winSport/presentation/CurrentlyPlayingActivity.java
+ comp3350.winSport.presentation.CurrentlyPlayingActivity
+comp3350/winSport/objects/Period.java
+ comp3350.winSport.objects.Period
+comp3350/winSport/presentation/MainActivity.java
+ comp3350.winSport.presentation.MainActivity
+comp3350/winSport/objects/exceptions/InvalidNameException.java
+ comp3350.winSport.objects.exceptions.InvalidNameException
+comp3350/winSport/Channel.java
+ comp3350.winSport.Channel
+comp3350/winSport/persistence/IGame.java
+ comp3350.winSport.persistence.IGame
+comp3350/winSport/persistence/TeamData.java
+ comp3350.winSport.persistence.TeamData
+comp3350/winSport/presentation/CurrentAdapter.java
+ comp3350.winSport.presentation.CurrentAdapter
+ comp3350.winSport.presentation.CurrentAdapter$GameViewHolder
+comp3350/winSport/ChannelItem.java
+ comp3350.winSport.ChannelItem
+comp3350/winSport/presentation/SplashScreenActivity.java
+ comp3350.winSport.presentation.SplashScreenActivity
+ comp3350.winSport.presentation.SplashScreenActivity$1
+comp3350/winSport/objects/Game.java
+ comp3350.winSport.objects.Game
+comp3350/winSport/BuildConfig.java
+ comp3350.winSport.BuildConfig
+comp3350/winSport/objects/League.java
+ comp3350.winSport.objects.League

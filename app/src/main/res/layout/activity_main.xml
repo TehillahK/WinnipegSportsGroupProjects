@@ -11,46 +11,121 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <Button
-        android:id="@+id/currentlyPlayingMenu"
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:padding="40dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="48dp"
-        android:textColor="@color/white"
-        android:text="@string/currently_playing"
-        android:layout_below="@+id/toolbar"
-        android:gravity="center"
-        android:backgroundTint="@color/light_purp"
-        android:textSize="50sp"/>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <Button
-        android:id="@+id/teamRostersMenu"
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/light_purp"
-        android:padding="40dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="48dp"
-        android:textColor="@color/white"
-        android:text="@string/team_rosters"
-        android:layout_below="@+id/currentlyPlayingMenu"
-        android:gravity="center"
-        android:textSize="50sp"/>
+        <LinearLayout
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
 
-    <Button
-        android:id="@+id/soonMenu"
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/light_purp"
-        android:padding="40dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="48dp"
-        android:textColor="@color/white"
-        android:text="@string/comming_soon"
-        android:layout_below="@+id/teamRostersMenu"
-        android:gravity="center"
-        android:textSize="50sp"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/currentlyPlayingMenu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/currently_playing"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"
+                    />
+
+                <Button
+                    android:id="@+id/teamRostersMenu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/team_rosters"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/soonMenu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="PLAYER STATS"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+                <Button
+                    android:id="@+id/schedules"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="SCHEDULES"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/channels"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="CHANNELS"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="TRACK LIVE GAME"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import comp3350.winSport.Channel;
 import comp3350.winSport.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -24,10 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button1 = (Button)findViewById(R.id.currentlyPlayingMenu);
         Button button2 = (Button)findViewById(R.id.teamRostersMenu);
         Button button3 = (Button)findViewById(R.id.soonMenu);
+        Button button4 = (Button)findViewById(R.id.channels);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
     }
 
 
@@ -46,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.soonMenu:
                 // comming soon
+                break;
+            case R.id.channels:
+                // channels
+                Intent channelIntent = new Intent(MainActivity.this, Channel.class);
+                MainActivity.this.startActivity(channelIntent);
                 break;
             default:
                 break;
