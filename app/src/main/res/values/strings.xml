@@ -31,4 +31,8 @@
     <string name="vs_tor">VS. TOR</string>
     <string name="otw_4_3">OTW 4-3</string>
 
+    <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
+    <string name="Sportsnet" ><a href="https://www.sportsnet.ca">Sportsnet</a></string>
+    <string name="TSN"       ><a href="https://www.tsn.ca">TSN</a></string>
+
 </resources>

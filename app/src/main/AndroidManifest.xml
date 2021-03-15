@@ -13,6 +13,8 @@
         <activity android:name=".presentation.TeamScheduleActivity"></activity>
         <activity android:name=".presentation.ScheduleActivity" />
         <activity android:name=".presentation.PlayersActivity" />
+        <activity android:name=".Channel">
+        </activity>
         <activity android:name=".presentation.Teams" />
         <activity android:name=".presentation.SplashScreenActivity">
             <intent-filter>
@@ -21,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.MainActivity" />
+        <activity android:name=".presentation.MainActivity">
+
+        </activity>
         <activity android:name=".presentation.RosterActivity" />
         <activity android:name=".presentation.CurrentlyPlayingActivity" />
     </application>

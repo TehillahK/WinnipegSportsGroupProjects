@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import comp3350.winSport.Channel;
 import comp3350.winSport.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -62,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.channel_layout:
                 // Player Stats
-//                Intent intent5 = new Intent(MainActivity.this, PlayersActivity.class);
-//                MainActivity.this.startActivity(intent5);
+                Intent channelIntent = new Intent(MainActivity.this, Channel.class);
+                MainActivity.this.startActivity(channelIntent);
                 break;
             case R.id.live_game_layout:
                 // Player Stats
