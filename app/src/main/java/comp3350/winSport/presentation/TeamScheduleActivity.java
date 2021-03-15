@@ -35,14 +35,12 @@ public class TeamScheduleActivity extends AppCompatActivity {
         games = accessGames.getGamesTeam(value);
 
         RecyclerView rv = findViewById(R.id.schedule_rv);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        LinearLayoutManager llm = new LinearLayoutManager(this );
 
         if (games != null) {
             rv.setLayoutManager(llm);
-            ScheduleAdapter adapter = new ScheduleAdapter(games);
+            ScheduleAdapter adapter = new ScheduleAdapter(games,value);
             rv.setAdapter(adapter);
         }
-
-
     }
 }

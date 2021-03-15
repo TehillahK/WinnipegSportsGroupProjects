@@ -16,23 +16,30 @@ import comp3350.winSport.objects.Game;
 
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>{
 
-    List<Game> games; // declare games List
+    private String teamName;
+    private List<Game> games; // declare games List
 
-    ScheduleAdapter(List<Game> g) { this.games = g;}
+    ScheduleAdapter(List<Game> g,String t) {
+        this.games = g;
+        this.teamName = t;
+    }
 
     @NonNull
     @Override
     public ScheduleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.team_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.team_card, parent, false);
         return new ScheduleAdapter.ScheduleViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ScheduleViewHolder holder, int position) {
-        holder.gameDate.setText(games.get(position).getGameDate());
-        holder.gameOpponent.setText(games.get(position).getTeam2());
-        holder.gameScore.setText(games.get(position).getGameScore());
-
+        Game game = games.get(position);
+        holder.gameDate.setText(game.getGameDate());
+        if (this.teamName.equals(game.getTeam2()))
+            holder.gameOpponent.setText(game.getTeam1());
+        else
+            holder.gameOpponent.setText(game.getTeam2());
+        holder.gameScore.setText(game.getGameScore());
     }
 
     @Override
@@ -53,8 +60,5 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
             gameOpponent = itemView.findViewById(R.id.game_opponent);
             gameScore = itemView.findViewById(R.id.game_result);
         }
-
-
     }
-
 }
