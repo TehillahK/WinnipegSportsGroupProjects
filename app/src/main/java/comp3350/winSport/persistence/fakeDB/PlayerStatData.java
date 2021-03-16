@@ -17,8 +17,9 @@ public class PlayerStatData implements IPlayerStats {
 
     void initData() {
 
-    }
 
+
+    }
 
     @Override
     public PlayerStatistic getPlayerByName(String name) {
