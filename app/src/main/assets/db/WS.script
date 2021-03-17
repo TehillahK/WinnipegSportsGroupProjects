@@ -87,7 +87,7 @@ INSERT INTO PLAYER_STATS VALUES('Brendan Gallagher',82,'MC','NHL','RW','2021-19'
 INSERT INTO PLAYER_STATS VALUES('Tyler Toffoli',84,'MC','NHL','LW','2021-19',27,4,17,21,0.3,0.2,0.1)
 INSERT INTO PLAYER_STATS VALUES('Phillip Danault',82,'MC','NHL','C','2021-19',27,4,17,21,0.4,0.3,0.5)
 INSERT INTO PLAYER_STATS VALUES('Jeff Petry',84,'MC','NHL','D','2021-19',27,4,17,21,0.55,0.75,0.65)
-INSERT INTO PLAYER_STATS VALUES('Josh Anderson',,82,'MC','NHL','RW','2021-19',27,4,17,21,0.3,0.3,0.3)
+INSERT INTO PLAYER_STATS VALUES('Josh Anderson',82,'MC','NHL','RW','2021-19',27,4,17,21,0.3,0.3,0.3)
 INSERT INTO PLAYER_STATS VALUES('Joel Armia',84,'MC','NHL','LW','2021-19',27,4,17,21,0.4,0.4,0.4)
 INSERT INTO GAMES VALUES(1, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Ottowa Senators', 'Feb 26, 2021', 'Rogers Place', '4 - 3')
 INSERT INTO GAMES VALUES(2, 'Stanley Cup Playoffs','NHL', 'Ottowa Senators', 'Montreal Canadiens', 'Apr 27, 2021', 'Rogers other Place', '0 - 0')

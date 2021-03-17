@@ -17,7 +17,6 @@ public class AccessGames {
     */
 
     private IGame gData;
-
     private List<Game> games;
     private Game game;
 

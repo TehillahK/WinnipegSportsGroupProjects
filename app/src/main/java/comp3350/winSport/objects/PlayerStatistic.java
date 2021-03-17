@@ -16,9 +16,9 @@ public class PlayerStatistic {
     private int goals;
     private int assists;
     private int points;
-    private float goalsPerGame;
-    private float assistsPerGame;
-    private float shotsPerGame;
+    private double goalsPerGame;
+    private double assistsPerGame;
+    private double shotsPerGame;
 
     public PlayerStatistic(){
 
@@ -38,7 +38,7 @@ public class PlayerStatistic {
     }
 
     public PlayerStatistic(String psName, int psGamesPlayed, String psTeam, String psLeague, String psPosition, String psSeason, int psAge,
-                           int psGoals, int psAssists, int psPoints, float psGoalsPerGame, float psAssistsPerGame, float psShotsPerGame){
+                           int psGoals, int psAssists, int psPoints, double psGoalsPerGame, double psAssistsPerGame, double psShotsPerGame){
         name = psName;
         gamesPlayed = psGamesPlayed;
         team = psTeam;
@@ -75,9 +75,9 @@ public class PlayerStatistic {
 
     public int getPoints(){return points;}
 
-    public float getGoalsPerGame(){return goalsPerGame;}
+    public double getGoalsPerGame(){return goalsPerGame;}
 
-    public float getAssistsPerGame(){return assistsPerGame;}
+    public double getAssistsPerGame(){return assistsPerGame;}
 
-    public float getShotsPerGame(){return shotsPerGame;}
+    public double getShotsPerGame(){return shotsPerGame;}
 }

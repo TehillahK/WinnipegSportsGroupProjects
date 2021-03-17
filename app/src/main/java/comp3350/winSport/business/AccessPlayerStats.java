@@ -2,6 +2,7 @@ package comp3350.winSport.business;
 
 import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.PlayerStatistic;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayerStats;
 
 public class AccessPlayerStats {
@@ -23,7 +24,7 @@ public class AccessPlayerStats {
         this.playerStats = ps;
     }
 
-    public PlayerStatistic getPlayerStatsByName(String playerName) {
+    public PlayerStatistic getPlayerStatsByName(String playerName) throws InvalidNameException {
         oneStat = playerStats.getPlayerByName(playerName);
         return oneStat;
     }
