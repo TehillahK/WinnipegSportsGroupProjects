@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class PlayersActivity extends AppCompatActivity {
     private AccessTeams accessTeams;
     private List<Player> team;
     private  PlayersAdapter adapter;
+    private PlayersAdapter.RecyclerViewEventListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,10 +66,25 @@ public class PlayersActivity extends AppCompatActivity {
         // A Dev task for the future should be to develop a screen to display if teams is null.
             // Activate Layout manager and RecyclerView
         rv.setLayoutManager(llm);
+        
+        setOnClickListner();
 
-        adapter = new PlayersAdapter(temp);
+        adapter = new PlayersAdapter(temp,listener);
         rv.setAdapter(adapter);
     }
+
+    private void setOnClickListner() {
+        listener = new PlayersAdapter.RecyclerViewEventListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                Intent intent =new Intent(getApplicationContext(),PlayerStatsActivity.class);
+                intent.putExtra("playerName",team.get(pos).getName());
+                startActivity(intent);
+
+            }
+        };
+    }
+
     private  void filter(String searchedItem)
     {
         List<Player> searchResults=new ArrayList<>();
