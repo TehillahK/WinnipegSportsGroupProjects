@@ -2,6 +2,10 @@ package comp3350.winSport.objects;
 
 public class PlayerStatistic {
 
+    /*
+        PlayerStasastic DSO specifically used for our Player Stats feature.
+    */
+
     private String name;
     private int gamesPlayed;
     private String team;

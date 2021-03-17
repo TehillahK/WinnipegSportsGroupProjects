@@ -4,6 +4,10 @@ import comp3350.winSport.R;
 
 public class Player {
 
+    /*
+        Player DSO specifically used for our Roster and Player Stats features.
+    */
+
     private String name;
     private int number;
     private String position;
@@ -12,15 +16,6 @@ public class Player {
     private String teamName;
     private int teamPic;
     private int playerID;
-
-    public int getPlayerID() {
-        return playerID;
-    }
-
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
-    }
-
 
     public Player() {
         this.name = "Unknown";
@@ -44,10 +39,6 @@ public class Player {
         this.playerID = 0;
     }
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
-    }
-
     public Player(String name, int num, String pos, String shot, String teamName, int picID, int playerID) {
         this.name = name;
         this.number = num;
@@ -58,6 +49,18 @@ public class Player {
         this.teamPic = picID;
         this.playerID = playerID;
 
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
     }
 
     public String getName() {

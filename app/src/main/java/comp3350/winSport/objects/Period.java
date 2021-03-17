@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import comp3350.winSport.objects.exceptions.InvalidTimeException;
 
 public class Period {
+
+    /*
+        Period DSO specifically Created for Track Live Game feature in upcomming iteration.
+    */
+
     private int ID;
     private int score;
     private ArrayList<Player> playerGoals;

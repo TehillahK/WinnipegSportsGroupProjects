@@ -5,19 +5,14 @@ import java.util.List;
 
 public class Team {
 
+    /*
+        Team DSO specifically used for our Roster and Player Stats features.
+    */
+
     private String name;
     private List<Player> players;
     private int teamPic;
     private int teamID;
-
-    public int getTeamID() {
-        return teamID;
-    }
-
-    public void setTeamID(int teamID) {
-        this.teamID = teamID;
-    }
-
 
     public Team() {
         name = "Unknown";
@@ -51,6 +46,14 @@ public class Team {
 
     public void setPlayers(ArrayList<Player> lst) {
         players = lst;
+    }
+
+    public int getTeamID() {
+        return teamID;
+    }
+
+    public void setTeamID(int teamID) {
+        this.teamID = teamID;
     }
 
     public String toString() {

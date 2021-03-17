@@ -4,6 +4,10 @@ import comp3350.winSport.R;
 
 public class Game {
 
+    /*
+        Game DSO specifically used for our currently playing and Schedule Features.
+    */
+
     private int gameID;
     private String gameName;
     private String gameLeague;
