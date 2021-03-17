@@ -10,18 +10,18 @@ import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.fakeDB.GameData;
 
 public class AccessGames {
-
+    /*
+        Abstracts where the data is comming from using interfaces.
+        What UI methods call to get data
+    */
     private IGame gData;
-
     private List<Game> games;
     private Game game;
-    private int currentGame;
 
     public AccessGames() {
         gData = Services.getGamePersistance();
         games = null;
         game = null;
-        currentGame = 0;
     }
 
     public AccessGames(IGame accessingGames) {

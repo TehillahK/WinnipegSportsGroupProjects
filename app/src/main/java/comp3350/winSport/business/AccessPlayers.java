@@ -9,6 +9,11 @@ import comp3350.winSport.persistence.IPlayer;
 
 public class AccessPlayers {
 
+    /*
+        Abstracts where the data is comming from using interfaces.
+        What UI methods call to get data
+    */
+
     private IPlayer iplayer;
     private List<Player> players;
 
