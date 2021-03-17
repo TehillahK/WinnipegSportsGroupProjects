@@ -1,5 +1,6 @@
 package comp3350.winSport.business;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,6 +37,17 @@ public class AccessGames {
     public Game getSingleGame() {
         game = gData.getSingleGame();
         return game;
+    }
+
+    public List<Game> getGamesTeam(String teamName) {
+        games = gData.getGamesSequential();
+        List<Game> teamGames = new ArrayList<>();
+
+        for (Game curr : games)
+            if (curr.getTeam2().equals(teamName) || curr.getTeam1().equals(teamName))
+                teamGames.add(curr);
+
+        return teamGames;
     }
 
 }

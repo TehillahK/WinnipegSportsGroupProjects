@@ -11,35 +11,53 @@ public class Player {
     private int playerPic;
     private String teamName;
     private int teamPic;
+    private int playerID;
+
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
+    }
+
 
     public Player() {
         this.name = "Unknown";
         this.number = 0;
         this.position = "Unknown";
         this.shot = "L";
-        this.playerPic = R.drawable.headshot;
+        this.playerPic = 0;
         this.teamName = "LFKAJDFLKJ";
         this.teamPic = 0;
-    }
-
-    public Player(String name, int num, String pos,String shot, String teamName,int picID) {
-        this.name = name;
-        this.number = num;
-        this.position = pos;
-        this.shot = shot;
-        this.playerPic = R.drawable.headshot;
-        this.teamName = teamName;
-        this.teamPic = picID;
+        this.playerID = 0;
     }
 
     public Player(String name, int num, String pos, String teamName,int picID) {
         this.name = name;
         this.number = num;
         this.position = pos;
-        this.shot = "L";
-        this.playerPic = R.drawable.headshot;
+        this.shot = "l";
+        this.playerPic = 0;
         this.teamName = teamName;
         this.teamPic = picID;
+        this.playerID = 0;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public Player(String name, int num, String pos, String shot, String teamName, int picID, int playerID) {
+        this.name = name;
+        this.number = num;
+        this.position = pos;
+        this.shot = shot;
+        this.playerPic = picID;
+        this.teamName = teamName;
+        this.teamPic = picID;
+        this.playerID = playerID;
+
     }
 
     public String getName() {

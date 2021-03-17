@@ -14,6 +14,8 @@ import comp3350.winSport.persistence.IGame;
 
 public class GameData implements IGame {
 
+    List<Game> games;
+
     private Game g1;
     private Game g2;
     private Game g3;
@@ -33,6 +35,7 @@ public class GameData implements IGame {
         g3 = null;
         g4 = null;
 
+        games  = new ArrayList<>();
         initData();
 
     }
@@ -297,12 +300,12 @@ public class GameData implements IGame {
         String league1 = "NHL";
         String league2 = "NHL";
 
-        t1 = new Team("Winnipeg Jets", team1, R.drawable.jets);
-        t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs);
-        t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa);
-        t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers);
-        t5 = new Team("Calgary Flames", team5,R.drawable.flames);
-        t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal);
+        t1 = new Team("Winnipeg Jets", team1, R.drawable.jets,0);
+        t2 = new Team("Toronto Maple Leafs", team2,R.drawable.leafs,1);
+        t3 = new Team("Ottawa Senators", team3, R.drawable.ottawa,2);
+        t4 = new Team("Edmonton Oilers", team4,R.drawable.oilers,3);
+        t5 = new Team("Calgary Flames", team5,R.drawable.flames,4);
+        t6 = new Team("Montreal Canadiens", team6,R.drawable.montreal,5);
 
         Period game1p1 = new Period(1, 3);
         Period game1p2 = new Period(2, 5);
@@ -367,22 +370,6 @@ public class GameData implements IGame {
     public Game getSingleGame() {
         return this.g1;
     }
-
-    @Override
-    public Game insertGame(Game g) {
-        return null;
-    }
-
-    @Override
-    public Game updateGame(Game g) {
-        return null;
-    }
-
-    @Override
-    public void deleteGame(Game g) {
-
-    }
-
     public List<Team> GetTeams() {
 
         List<Team> teams = new ArrayList<>();

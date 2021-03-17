@@ -22,11 +22,9 @@ public class AccessPlayers {
         iplayer = playa;
     }
 
-    public List<Player> getPlayers(String name) {
-        players = iplayer.getPlayers(name);
+    public List<Player> getPlayers(String teamName) {
+        players = iplayer.getPlayers(teamName);
         return players;
     }
-
-
 
 }

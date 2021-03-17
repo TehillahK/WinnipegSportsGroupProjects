@@ -65,9 +65,6 @@ public class PlayersAdapter  extends RecyclerView.Adapter<PlayersAdapter.PlayerV
        TextView player_name;
        TextView player_team;
 
-
-
-
         public PlayerViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
