@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Winnipeg Sports");
 
-        Button button1 = (Button)findViewById(R.id.currentlyPlayingMenu);
-        Button button2 = (Button)findViewById(R.id.teamRostersMenu);
-        Button button3 = (Button)findViewById(R.id.player_stat_layout);
-        Button button4 = (Button)findViewById(R.id.schedule_layout);
-        Button button5 = (Button)findViewById(R.id.channel_layout);
-        Button button6 = (Button)findViewById(R.id.live_game_layout);
+        Button button1 = findViewById(R.id.currentlyPlayingMenu);
+        Button button2 = findViewById(R.id.teamRostersMenu);
+        Button button3 = findViewById(R.id.player_stat_layout);
+        Button button4 = findViewById(R.id.schedule_layout);
+        Button button5 = findViewById(R.id.channel_layout);
+        Button button6 = findViewById(R.id.live_game_layout);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
