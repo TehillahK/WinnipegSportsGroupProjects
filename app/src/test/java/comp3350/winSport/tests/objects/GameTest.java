@@ -30,14 +30,14 @@ public class GameTest {
     @Before
     public void setUp(){
         ArrayList<Player> pTeam1= new ArrayList<>();
-        Team team1 = new Team("Space People", pTeam1, 0);
+        Team team1 = new Team("Space People", pTeam1, 0,1);
 
         pTeam1.add(new Player("James T. Kirk",34,"center",team1.getName(),1));
         pTeam1.add(new Player("General Zod",283,"left",team1.getName(),2));
         pTeam1.add(new Player("Sheev Palpatine",80,"right",team1.getName(),3));
 
         ArrayList<Player> pTeam2= new ArrayList<>();
-        Team team2 = new Team("Fascinating Rulers", pTeam1, 0);
+        Team team2 = new Team("Fascinating Rulers", pTeam1, 0,2);
         pTeam2.add(new Player("Fire Lord Ozai",55,"center",team2.getName(),4));
         pTeam2.add(new Player("Ocean Master",29,"left",team2.getName(),5));
         pTeam2.add(new Player("Lord Faarguad",1,"right",team2.getName(),6));
