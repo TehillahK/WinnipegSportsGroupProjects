@@ -15,6 +15,8 @@ import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
 
 public class Services {
 
+    // ONE LINE DB SWITCH BOOLEAN.
+    // Set to false to use our Fake DB.
     private static boolean useHSQLDB = true;
 
     private static ITeam teamPersistance = null;

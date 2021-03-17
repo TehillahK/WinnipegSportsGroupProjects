@@ -2,13 +2,9 @@ package comp3350.winSport.application;
 
 public class Main
 {
-    private static String dbName="WS";
 
-//    public static void main(String[] args)
-//    {
-////        CLI.run();
-//        System.out.println("All done");
-//    }
+    // Name of our HSQLDB script file. Found in App/assets/db/WS.script
+    private static String dbName="WS";
 
     public static void setDBPathName(final String name) {
         try {

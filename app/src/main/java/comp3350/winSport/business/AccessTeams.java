@@ -11,16 +11,19 @@ import comp3350.winSport.persistence.fakeDB.TeamData;
 
 public class AccessTeams {
 
+    /*
+        Abstracts where the data is comming from using interfaces.
+        What UI methods call to get data
+    */
+
     private ITeam tData;
     private List<Team> teams;
     private Team team;
-    private int currentTeam;
 
     public AccessTeams() {
         tData = Services.getTeamPersistance();
         teams = null;
         team = null;
-        currentTeam = 0;
     }
 
     public AccessTeams(final ITeam tData) {

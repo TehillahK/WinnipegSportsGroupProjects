@@ -6,6 +6,11 @@ import comp3350.winSport.persistence.IPlayerStats;
 
 public class AccessPlayerStats {
 
+    /*
+        Abstracts where the data is comming from using interfaces.
+        What UI methods call to get data
+    */
+
     private IPlayerStats playerStats;
     private PlayerStatistic oneStat;
 
