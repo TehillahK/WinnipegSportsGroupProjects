@@ -1,5 +1,6 @@
 package comp3350.winSport.tests.business;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,8 +28,8 @@ public class AccessTeamsTest {
     @Before
     public void setUp() throws IOException {
         this.tempDB = TestUtils.copyDB();
-        final ITeam tim = new TeamDataHSQLDB(this.tempDB.getAbsolutePath().replace(".script",""));
-        accessTeams = new AccessTeams(tim);
+        final ITeam team = new TeamDataHSQLDB(this.tempDB.getAbsolutePath().replace(".script",""));
+        accessTeams = new AccessTeams(team);
     }
 
     @Test
@@ -163,6 +164,12 @@ public class AccessTeamsTest {
         catch (Exception InvalidNameException){
             System.out.print("\nMethod threw an exception.\n");
         }
+    }
+
+    @After
+    public void tearDown() {
+        // reset DB
+        this.tempDB.delete();
     }
 
 }
