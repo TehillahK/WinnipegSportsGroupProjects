@@ -6,7 +6,9 @@
 * [Iteration 1](#iteration-1)
     * [Branching Strategy](#branching-strategy)
     * [Architecture](#architecture)
-    * [Group Worksheet](#group-worksheet)
+    * [Group Worksheet 1](#group-worksheet-1)
+* [Iteration 2](#iteration-2)
+	* [Group Worksheet 2](#group-worksheet-2)
 * [Our Team](#our-team)
 
 ---
@@ -43,9 +45,15 @@ Our branching strategy is called [git-flow](https://nvie.com/posts/a-successful-
 
 Our `architecture.md` file [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md).
 
-### Group Worksheet
+### Group Worksheet 1
 
 Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/iteration_1_worksheet.md).
+
+## Iteration 2
+
+### Group Worksheet 2
+
+Our filled-in group worksheet (link).
 
 ## Our Team
 - Kehinde Elukanle (@Kehinde)

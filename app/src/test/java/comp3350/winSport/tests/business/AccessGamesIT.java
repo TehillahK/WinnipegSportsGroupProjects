@@ -12,16 +12,11 @@ import java.util.ListIterator;
 import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.persistence.IGame;
-import comp3350.winSport.persistence.fakeDB.GameData;
 import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 public class AccessGamesIT {
 
