@@ -12,7 +12,7 @@ import comp3350.winSport.persistence.fakeDB.GameData;
 public class AccessGames {
 
     /*
-        Abstracts where the data is comming from using interfaces.
+        Abstracts where the data is coming from using interfaces.
         What UI methods call to get data
     */
 

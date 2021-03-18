@@ -52,8 +52,6 @@ public class AccessGamesTest {
     @Test
     public void listGames(){
 
-        final Game game;
-
         System.out.print("\n------------------AccessGames Test---------------------");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 2: List of Games");
