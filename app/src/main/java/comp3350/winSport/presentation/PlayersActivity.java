@@ -30,7 +30,13 @@ public class PlayersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_players);
-
+        try {
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle("Player Statistics");
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         EditText searchBox= findViewById(R.id.searchTxt);
         searchBox.addTextChangedListener(
                 new TextWatcher() {
