@@ -3,7 +3,7 @@ package comp3350.winSport.objects;
 public class PlayerStatistic {
 
     /*
-        PlayerStasastic DSO specifically used for our Player Stats feature.
+        PlayerStatistic DSO specifically used for our Player Stats feature.
     */
 
     private String name;
@@ -80,4 +80,21 @@ public class PlayerStatistic {
     public double getAssistsPerGame(){return assistsPerGame;}
 
     public double getShotsPerGame(){return shotsPerGame;}
+
+    public void viewPlayerStatObject() {
+        System.out.print("\nPLAYER STATISTIC OBJECT");
+        System.out.print("\nPlayer: " + this.getName());
+        System.out.print("\nGames Played: " + this.getGamesPlayed());
+        System.out.print("\nTeam: " + this.getTeam());
+        System.out.print("\nLeague: " + this.getLeague());
+        System.out.print("\nPosition: " + this.getPosition());
+        System.out.print("\nSeason: " + this.getSeason());
+        System.out.print("\nAge: " + this.getAge());
+        System.out.print("\nGoals: " + this.getGoals());
+        System.out.print("\nAssists: " + this.getAssists());
+        System.out.print("\nPoints: " + this.getPoints());
+        System.out.print("\nGoals Per Game: " + this.getGoalsPerGame());
+        System.out.print("\nAssists Per Game: " + this.getAssistsPerGame());
+        System.out.print("\nShots Per Game: " + this.getShotsPerGame());
+    }
 }
