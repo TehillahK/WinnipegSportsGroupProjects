@@ -53,7 +53,7 @@ public class PlayerData implements IPlayer {
         Player p19 = new Player("Kristian Vesalainen", 93, "Left wing","Winnipeg Jets", R.drawable.jets);
 
 
-        ArrayList<Player> players1 = new ArrayList<>();
+        players1 = new ArrayList<>();
         players1.add(p1);
         players1.add(p2);
         players1.add(p3);
@@ -94,7 +94,7 @@ public class PlayerData implements IPlayer {
         Player p37 = new Player("Jimmy Vesey", 26, "Right wing","Toronto Maple Leafs",R.drawable.leafs);
 
 
-        ArrayList<Player> players2 = new ArrayList<>();
+        players2 = new ArrayList<>();
         players2.add(p20);
         players2.add(p21);
         players2.add(p22);
@@ -135,7 +135,7 @@ public class PlayerData implements IPlayer {
         Player p57 = new Player("Nikita Zaitsev", 22, "Defenseman","Ottawa Senators",R.drawable.ottawa);
 
 
-        ArrayList<Player> players3 = new ArrayList<>();
+        players3 = new ArrayList<>();
         players3.add(p39);
         players3.add(p40);
         players3.add(p41);
@@ -177,7 +177,7 @@ public class PlayerData implements IPlayer {
         Player p76 = new Player("Mike Smith", 41, "Goaltender","Edmonton Oilers",R.drawable.oilers);
         Player p77 = new Player("Kyle Turris", 8, "Centerman","Edmonton Oilers",R.drawable.oilers);
 
-        ArrayList<Player> players4 = new ArrayList<>();
+        players4 = new ArrayList<>();
         players4.add(p58);
         players4.add(p59);
         players4.add(p60);
@@ -220,7 +220,7 @@ public class PlayerData implements IPlayer {
         Player p96 = new Player("Juuso Välimäki", 6, "Defenseman","Calgary Flames",R.drawable.flames);
 
 
-        ArrayList<Player> players5 = new ArrayList<>();
+        players5 = new ArrayList<>();
         players5.add(p78);
         players5.add(p79);
         players5.add(p80);
@@ -262,7 +262,7 @@ public class PlayerData implements IPlayer {
         Player p115 = new Player("Shea Weber", 6, "Defenseman","Montreal Canadiens",R.drawable.montreal);
 
 
-        ArrayList<Player> players6 = new ArrayList<>();
+        players6 = new ArrayList<>();
         players6.add(p97);
         players6.add(p98);
         players6.add(p99);
