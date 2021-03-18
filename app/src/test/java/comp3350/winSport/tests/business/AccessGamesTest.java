@@ -3,14 +3,11 @@ package comp3350.winSport.tests.business;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.persistence.IGame;
-import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -33,15 +30,19 @@ public class AccessGamesTest {
     public void singleGame(){
 
         final Game game;
+        final Game sampleGame;
 
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Single Game");
         System.out.print("\n---------------------------------------");
         System.out.print("\nGetting a single game...");
 
-        game = accessGames.getSingleGame();
+        sampleGame = new Game();
+
+        when(iGame.getSingleGame()).thenReturn(sampleGame);
+
+        game = iGame.getSingleGame();
         assertNotNull("Should not be null", game);
-        assertTrue("NHL".equals(game.getGameLeague()));
 
         verify(iGame).getSingleGame();
 
