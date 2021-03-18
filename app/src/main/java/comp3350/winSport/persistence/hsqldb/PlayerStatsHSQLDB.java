@@ -12,22 +12,22 @@ import comp3350.winSport.persistence.IPlayerStats;
 
 public class PlayerStatsHSQLDB implements IPlayerStats {
 
-    private final String dbUrl;
+    private final String dbPath;
 
-    public PlayerStatsHSQLDB(final String dbUrl)
+    public PlayerStatsHSQLDB(final String dbPath)
     {
-        this.dbUrl=dbUrl;
+        this.dbPath=dbPath;
     }
 
     private Connection connection() throws SQLException {
-        return DriverManager.getConnection("jdbc:hsqldb:file"+dbUrl+";shutdown=true","SA","");
+        return DriverManager.getConnection("jdbc:hsqldb:file:" + dbPath + ";shutdown=true", "SA", "");
     }
 
     private PlayerStatistic fromResultSet(final ResultSet rs) throws SQLException {
 
         // opportunity for design patter? monster constructor not ideal design.
 
-        final String psName = rs.getString("NAME");
+        final String psName = rs.getString("playerName");
         final int psGamesPlayed = rs.getInt("GamesPlayed");
         final String psTeam = rs.getString("Team");
         final String psLeague = rs.getString("League");
@@ -37,9 +37,9 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
         final int psGoals = rs.getInt("Goals");
         final int psAssists = rs.getInt("Assists");
         final int psPoints = rs.getInt("Points");
-        final float psGoalsPerGame = rs.getFloat("GoalsPerGame");
-        final float psAssistsPerGame = rs.getFloat("AssistsPerGame");
-        final float psShotsPerGame = rs.getFloat("ShotsPerGame");
+        final double psGoalsPerGame = rs.getDouble("GoalsPerGame");
+        final double psAssistsPerGame = rs.getDouble("AssistsPerGame");
+        final double psShotsPerGame = rs.getDouble("ShotsPerGame");
 
         return new PlayerStatistic(psName,psGamesPlayed,psTeam,psLeague, psPosition,psSeason,psAge,psGoals,psAssists,psPoints,psGoalsPerGame,psAssistsPerGame,psShotsPerGame);
 
@@ -49,17 +49,20 @@ public class PlayerStatsHSQLDB implements IPlayerStats {
     @Override
     public PlayerStatistic getPlayerByName(String name) {
 
+
         try (final Connection c = connection()) {
 
             // might need to either add error handling, or be Real sure that we pass a name that
             // exists.
 
-            final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYER_STATS WHERE Name=?");
+            final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYER_STATS WHERE playerName=?");
             st.setString(1,name);
 
             final ResultSet rs = st.executeQuery();
-            PlayerStatistic player = fromResultSet(rs);
-
+            PlayerStatistic player = null;
+            while (rs.next()) {
+                player = fromResultSet(rs);
+            }
             rs.close();
             st.close();
 
