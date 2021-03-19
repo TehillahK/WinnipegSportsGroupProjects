@@ -6,7 +6,7 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.persistence.IPlayer;
-
+import comp3350.winSport.persistence.hsqldb.PersistenceException;
 public class PlayerData implements IPlayer {
 
     List<Player> players1;
@@ -294,7 +294,23 @@ public class PlayerData implements IPlayer {
 
     @Override
     public List<Player> getPlayers(String teamName) {
-        return allPlayer;
+        List<Player> result=null;
+        Player player;
+        try
+        {
+            for (int i = 0; i < allPlayer.size(); i++) {
+                player=allPlayer.get(i);
+                if(player.getTeam().equalsIgnoreCase(teamName))
+                {
+                    result.add(player);
+                }
+            }
+        }catch ( final PersistenceException e)
+        {
+            throw new PersistenceException(e);
+        }
+
+        return result;
     }
 
     List<Player> getPlayersById(int id) {
