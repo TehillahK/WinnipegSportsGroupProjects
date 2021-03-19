@@ -32,12 +32,9 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
 
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
-        //holder.gameLeague.setText(games.get(position).getGameLeague().getName());
         holder.gameTeam.setText(games.get(position).getTeam1() + " Vs.\n" +
                 games.get(position).getTeam2());
         holder.gameScore.setText(games.get(position).getGameScore());
-        //holder.gameStart.setText(games.get(position).getGameDate());
-        //holder.gameLeaguePhoto.setImageResource(games.get(position).getLeagueID());
         holder.gameTeamPhoto.setImageResource(games.get(position).getGamePicID());
     }
 
@@ -55,21 +52,15 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
 
     public static class GameViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView gameLeague;
         TextView gameTeam;
         TextView gameScore;
-        TextView gameStart;
-        ImageView gameLeaguePhoto;
         ImageView gameTeamPhoto;
 
          GameViewHolder(@NonNull View itemView) {
             super(itemView);
             cv = itemView.findViewById(R.id.current_playing_card);
-            //gameLeague = itemView.findViewById(R.id.league_name);
             gameTeam = itemView.findViewById(R.id.team_name);
             gameScore = itemView.findViewById(R.id.game_score);
-            //gameStart = itemView.findViewById(R.id.game_time);
-            //gameLeaguePhoto = itemView.findViewById(R.id.league_logo);
             gameTeamPhoto = itemView.findViewById(R.id.team_picture);
         }
     }
