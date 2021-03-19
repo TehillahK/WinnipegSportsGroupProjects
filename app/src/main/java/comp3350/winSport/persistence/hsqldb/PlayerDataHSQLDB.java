@@ -14,6 +14,7 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 public class PlayerDataHSQLDB implements IPlayer {
@@ -80,26 +81,29 @@ public class PlayerDataHSQLDB implements IPlayer {
         return R.drawable.nhl;
     }
 
-    public List<Player> getPlayers(String teamName){
+    public List<Player> getPlayers(String teamName) throws InvalidNameException {
         final List<Player> players = new ArrayList<>();
 
-        try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYERS WHERE teamName=?");
-            st.setString(1,teamName);
+        if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
 
-            final ResultSet rs = st.executeQuery();
-            while (rs.next()) {
-                final Player player = fromResultSet(rs);
-                players.add(player);
+            try (final Connection c = connection()) {
+                final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYERS WHERE teamName=?");
+                st.setString(1, teamName);
+
+                final ResultSet rs = st.executeQuery();
+                while (rs.next()) {
+                    final Player player = fromResultSet(rs);
+                    players.add(player);
+                }
+
+                rs.close();
+                st.close();
+            } catch (final SQLException e) {
+                throw new PersistenceException(e);
             }
-
-            rs.close();
-            st.close();
+        } else {
+            throw new InvalidNameException("please pass a team name with letters only");
         }
-        catch (final SQLException e) {
-            throw new PersistenceException(e);
-        }
-
         return players;
     }
 
