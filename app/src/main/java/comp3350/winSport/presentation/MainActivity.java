@@ -26,14 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button3 = findViewById(R.id.player_stat_layout);
         Button button4 = findViewById(R.id.schedule_layout);
         Button button5 = findViewById(R.id.channel_layout);
-        Button button6 = findViewById(R.id.live_game_layout);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
-        button6.setOnClickListener(this);
     }
 
 
@@ -65,11 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent channelIntent = new Intent(MainActivity.this, Channel.class);
                 MainActivity.this.startActivity(channelIntent);
                 break;
-            case R.id.live_game_layout:
-                // Player Stats
-//                Intent intent6 = new Intent(MainActivity.this, PlayersActivity.class);
-//                MainActivity.this.startActivity(intent6);
-                break;
+
             default:
                 break;
         }
