@@ -77,7 +77,6 @@ public class PlayerStatistic {
 
     public double getGoalsPerGame(){
         goalsPerGame=goals /(double)gamesPlayed;
-        x
         return goalsPerGame;
     }
 
