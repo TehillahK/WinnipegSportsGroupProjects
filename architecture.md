@@ -93,5 +93,5 @@ Presentation Layer  |                       |                      |            
     * **PlayersAdapter (new)**
     * **PlayerStatsActivity (new)**
     * **ScheduleActivity (new)**
-    * **ScheduleAdapter(new)**
-    * **TeamScheduleActivity(new)**
+    * **ScheduleAdapter (new)**
+    * **TeamScheduleActivity (new)**
