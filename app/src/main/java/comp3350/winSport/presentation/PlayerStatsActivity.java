@@ -57,6 +57,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     private void initializeViews()
     {
         playerProfile=findViewById(R.id.playerProfile);
