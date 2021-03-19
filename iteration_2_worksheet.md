@@ -7,7 +7,6 @@
 One instance of our group paying off technical debt comes from the initial construction of our domain specific objects. Many of them contained nested objects that were hard to translate to SQL tables and required refactoring. 
 
 - [Commit: 8958e8bf](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/commit/8958e8bf75dd42ca0203ddff9acd08d8653c4c83#4d61493eea5042964e918b7b6d15824a3725e1e8_14_11)
-
 - [Commit: c35a80d4](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/commit/c35a80d4da08075f9dfcc749497ffe8bc9a253c5#4d61493eea5042964e918b7b6d15824a3725e1e8_54_5)
 
 We consider this debt to be inadvertent and prudent mostly because while we would do things differently, the core of the object design has remained. Our domain specific objects were initially designed before we started coding in Android Studio. While we have paid off technical debt by refactoring our objects, we could not have known beforehand what exactly we needed. 
