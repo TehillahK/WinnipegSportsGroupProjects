@@ -5,6 +5,7 @@ import java.util.List;
 
 import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 public class AccessPlayers {
@@ -27,7 +28,7 @@ public class AccessPlayers {
         iplayer = playa;
     }
 
-    public List<Player> getPlayers(String teamName) {
+    public List<Player> getPlayers(String teamName) throws InvalidNameException {
         players = iplayer.getPlayers(teamName);
         return players;
     }

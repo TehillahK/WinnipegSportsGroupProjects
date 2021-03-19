@@ -13,8 +13,7 @@ import comp3350.winSport.tests.business.AccessTeamsIT;
 @Suite.SuiteClasses({
         AccessGamesIT.class,
         AccessPlayersIT.class,
-        AccessPlayerStatsIT.class,
-        AccessTeamsIT.class
+        AccessPlayerStatsIT.class
 })
 
 public class IntegrationTests {

@@ -10,6 +10,7 @@ import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.IPlayer;
 
@@ -34,7 +35,7 @@ public class AccessPlayersTest {
     }
 
     @Test
-    public void testGetPlayers(){
+    public void testGetPlayers() throws InvalidNameException {
 
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Get Players - Behaviour");

@@ -5,6 +5,7 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.hsqldb.PersistenceException;
 public class PlayerData implements IPlayer {
@@ -293,11 +294,10 @@ public class PlayerData implements IPlayer {
     }
 
     @Override
-    public List<Player> getPlayers(String teamName) {
+    public List<Player> getPlayers(String teamName) throws InvalidNameException{
         List<Player> result=null;
         Player player;
-            try {
-                if(teamName.equals("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
+            if(teamName.equals("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
                     for (int i = 0; i < allPlayer.size(); i++) {
                         player = allPlayer.get(i);
                         if (player.getTeam().equalsIgnoreCase(teamName)) {
@@ -305,11 +305,9 @@ public class PlayerData implements IPlayer {
                         }
                     }
                 }
-                else {
-                    throw new InvalidNameException("please pass a team name with letters only");
-                }
-            } catch (InvalidNameException e) {
-                e.printStackTrace();
+
+            else {
+                throw new InvalidNameException("please pass a team name with letters only");
             }
 
 

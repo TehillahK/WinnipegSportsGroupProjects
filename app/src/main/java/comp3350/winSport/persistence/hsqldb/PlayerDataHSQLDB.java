@@ -80,7 +80,7 @@ public class PlayerDataHSQLDB implements IPlayer {
         return R.drawable.nhl;
     }
 
-    public List<Player> getPlayers(String teamName) {
+    public List<Player> getPlayers(String teamName){
         final List<Player> players = new ArrayList<>();
 
         try (final Connection c = connection()) {
