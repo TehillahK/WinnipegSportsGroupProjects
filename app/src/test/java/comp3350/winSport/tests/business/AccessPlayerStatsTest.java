@@ -3,15 +3,16 @@ package comp3350.winSport.tests.business;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.business.AccessGames;
+import comp3350.winSport.business.AccessPlayerStats;
 import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.objects.Game;
-import comp3350.winSport.objects.Player;
+import comp3350.winSport.objects.PlayerStatistic;
+import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IGame;
-import comp3350.winSport.persistence.IPlayer;
+import comp3350.winSport.persistence.IPlayerStats;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -20,60 +21,56 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class AccessPlayersTest {
+public class AccessPlayerStatsTest {
 
-    private IPlayer iPlayer;
-    private AccessPlayers accessPlayers;
-    private AccessPlayers accessPlayersNoMock;
+    private AccessPlayerStats accessPlayerStats;
+    private IPlayerStats iPlayerStats;
+    private AccessPlayerStats accessPlayerStatsNoMock;
 
     @Before
     public void setUp(){
-        iPlayer = mock(IPlayer.class);
-        accessPlayers = new AccessPlayers(iPlayer);
-        accessPlayersNoMock = new AccessPlayers();
+        iPlayerStats = mock(IPlayerStats.class);
+        accessPlayerStats = new AccessPlayerStats(iPlayerStats);
+        accessPlayerStatsNoMock = new AccessPlayerStats();
     }
 
     @Test
-    public void testGetPlayers(){
-
+    public void testPlayerStatsName1() throws InvalidNameException {
+        System.out.print("\n------------------AccessPlayerStats Test---------------------");
         System.out.print("\n---------------------------------------");
-        System.out.print("\nTest 1: Get Players - Behaviour");
+        System.out.print("\nTest 1: Get Players Stats - Behaviour");
         System.out.print("\n---------------------------------------");
-        System.out.print("\nGetting a single game...");
 
-        final List<Player> dummyList;
-        final List<Player> samplePlayers = new ArrayList<>();
+        final PlayerStatistic playerStatistic;
+        final PlayerStatistic samplePlayer = new PlayerStatistic();
 
-        when(iPlayer.getPlayers("Winnipeg Jets")).thenReturn(samplePlayers);
+        when(iPlayerStats.getPlayerByName("Mark Scheifele")).thenReturn(samplePlayer);
+        playerStatistic = accessPlayerStats.getPlayerByName("Mark Scheifele");
+        assertNotNull(playerStatistic);
 
-        dummyList = accessPlayers.getPlayers("Winnipeg Jets");
-        assertNotNull(dummyList);
-
-        verify(iPlayer).getPlayers("Winnipeg Jets");
+        verify(iPlayerStats).getPlayerByName("Mark Scheifele");
 
         System.out.print("\nFinished test.");
-
     }
 
     @Test
-    public void testGetPlayers2(){
-        System.out.print("\n------------------AccessPlayers Test---------------------");
+    public void testPlayerStatsName2(){
         System.out.print("\n---------------------------------------");
-        System.out.print("\nTest 2: Get Players - Errors");
+        System.out.print("\nTest 2: Get Player Stats - Errors");
         System.out.print("\n---------------------------------------");
 
         String input1 = "39803498034";
-        String input2 = "Winnipeg Jets 25";
+        String input2 = "Mark Scheifele 45";
         String input3 = "";
         String input4 = "            ";
-        String input5 = "Winnipeg              Jets";
-        String input6 = " Winnipeg Jets    ";
+        String input5 = "Mark              Scheifele";
+        String input6 = " Mark Scheifele    ";
 
         int counter = 0;
 
         try{
             System.out.print("\nInput: " + input1);
-            accessPlayersNoMock.getPlayers(input1);
+            accessPlayerStatsNoMock.getPlayerByName(input1);
             fail("\nMethod did not throw an exception.\n");
         }
         catch (Exception e){
@@ -83,7 +80,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input2);
-            accessPlayersNoMock.getPlayers(input2);
+            accessPlayerStatsNoMock.getPlayerByName(input2);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -93,7 +90,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: (empty)");
-            accessPlayersNoMock.getPlayers(input3);
+            accessPlayerStatsNoMock.getPlayerByName(input3);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -103,7 +100,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: (whitespace)");
-            accessPlayersNoMock.getPlayers(input4);
+            accessPlayerStatsNoMock.getPlayerByName(input4);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -113,7 +110,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input5);
-            accessPlayersNoMock.getPlayers(input5);
+            accessPlayerStatsNoMock.getPlayerByName(input5);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -123,7 +120,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input6);
-            accessPlayersNoMock.getPlayers(input6);
+            accessPlayerStatsNoMock.getPlayerByName(input6);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -135,6 +132,6 @@ public class AccessPlayersTest {
         System.out.print("\nExpected: 6");
         System.out.print("\nExceptions thrown: " + counter);
         System.out.print("\n---------------------------------------");
-
     }
+
 }

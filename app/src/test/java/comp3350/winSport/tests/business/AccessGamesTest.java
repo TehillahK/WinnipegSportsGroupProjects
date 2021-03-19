@@ -41,7 +41,7 @@ public class AccessGamesTest {
 
         when(iGame.getSingleGame()).thenReturn(sampleGame);
 
-        game = iGame.getSingleGame();
+        game = accessGames.getSingleGame();
         assertNotNull("Should not be null", game);
 
         verify(iGame).getSingleGame();

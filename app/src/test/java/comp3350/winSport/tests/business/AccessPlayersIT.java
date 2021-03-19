@@ -9,17 +9,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ListIterator;
 
-import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.business.AccessPlayers;
-import comp3350.winSport.objects.Game;
+
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.IPlayer;
-import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class AccessPlayersIT {
