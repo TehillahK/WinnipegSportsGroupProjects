@@ -21,7 +21,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-public class AccessTeamsTestIT {
+public class AccessTeamsIT {
     //WIP
 
     private AccessTeams accessTeams;
@@ -31,7 +31,7 @@ public class AccessTeamsTestIT {
     public void setUp() throws IOException {
         this.tempDB = TestUtils.copyDB();
         final ITeam iTeam = new TeamDataHSQLDB(this.tempDB.getAbsolutePath().replace(".script",""));
-        accessTeams = new AccessTeams(iTeam);
+        this.accessTeams = new AccessTeams(iTeam);
     }
 
     @Test
