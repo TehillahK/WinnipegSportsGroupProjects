@@ -50,7 +50,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
         playerNameTxt.setText(playerName);
 
         try {
-            playerStatistic=playerStats.getPlayerStatsByName(playerName);
+            playerStatistic=playerStats.getPlayerByName(playerName);
             setStatsData();
         } catch(NullPointerException | InvalidNameException e)
         {
@@ -77,7 +77,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
 
     private void setStatsData()
     {
-        playerGamesPlayedTxt.setText(":"+playerStatistic.getGamesPlayed()+"");
+        playerGamesPlayedTxt.setText(playerStatistic.getGamesPlayed()+"");
         playerTeamNameTxt.setText(playerStatistic.getTeam()+"");
         playerLeagueTxt.setText(playerStatistic.getLeague()+"");
         playerPositionTxt.setText(playerStatistic.getPosition()+"");
@@ -89,6 +89,6 @@ public class PlayerStatsActivity extends AppCompatActivity {
         playerAssistsPerGameTxt.setText(playerStatistic.getAssistsPerGame()+"");
         playerShotsPerGameTxt.setText(playerStatistic.getShotsPerGame()+"");
         playerAgeTxt.setText(playerStatistic.getAge()+"");
-
+        playerProfile.setImageResource(R.drawable.headshot);
     }
 }

@@ -10,7 +10,7 @@ import comp3350.winSport.persistence.IPlayer;
 public class AccessPlayers {
 
     /*
-        Abstracts where the data is comming from using interfaces.
+        Abstracts where the data is coming from using interfaces.
         What UI methods call to get data
     */
 

@@ -5,7 +5,7 @@ import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayerStats;
 
-public class AccessPlayerStats {
+public class AccessPlayerStats implements IPlayerStats {
 
     /*
         Abstracts where the data is coming from using interfaces.
@@ -24,7 +24,7 @@ public class AccessPlayerStats {
         this.playerStats = ps;
     }
 
-    public PlayerStatistic getPlayerStatsByName(String playerName) throws InvalidNameException {
+    public PlayerStatistic getPlayerByName(String playerName) throws InvalidNameException {
         oneStat = playerStats.getPlayerByName(playerName);
         return oneStat;
     }
