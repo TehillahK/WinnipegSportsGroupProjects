@@ -63,7 +63,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
         playerProfile=findViewById(R.id.playerProfile);
         playerNameTxt=findViewById(R.id.player_name_textView);
         playerGamesPlayedTxt=findViewById(R.id.games_played_textView);
-        playerTeamNameTxt=findViewById(R.id.team_name__textView);
+        playerTeamNameTxt=findViewById(R.id.team_name_textView);
         playerLeagueTxt=findViewById(R.id.player_league__textView);
         playerPositionTxt=findViewById(R.id.player_position__textView);
         playerSeasonTxt=findViewById(R.id.game_season__textView);
