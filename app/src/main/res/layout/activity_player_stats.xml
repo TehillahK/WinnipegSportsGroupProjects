@@ -5,13 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.PlayerStatsActivity"
-    android:gravity="center"
+
 
     >
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/toolbar">
     <ImageView
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:id="@+id/playerProfile"
+
+        android:layout_margin="16sp"
+
         />
     <TextView
         android:layout_width="wrap_content"
@@ -21,6 +34,7 @@
         android:textSize="30sp"
         android:layout_below="@id/playerProfile"
         android:textColor="@color/black"
+
         />
     <TextView
         android:layout_width="wrap_content"
@@ -31,6 +45,7 @@
         android:textSize="30sp"
         android:layout_below="@id/playerProfile"
         android:textColor="@color/red"
+
         />
     <TextView
         android:layout_width="wrap_content"
@@ -268,5 +283,5 @@
         android:layout_below="@id/player_assists_pergame"
         android:textColor="@color/red"
         />
-
+    </RelativeLayout>
 </RelativeLayout>
