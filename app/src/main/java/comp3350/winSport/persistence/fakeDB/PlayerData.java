@@ -296,18 +296,17 @@ public class PlayerData implements IPlayer {
     public List<Player> getPlayers(String teamName) {
         List<Player> result=null;
         Player player;
-        try
-        {
+        if(teamName.equals("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
             for (int i = 0; i < allPlayer.size(); i++) {
-                player=allPlayer.get(i);
-                if(player.getTeam().equalsIgnoreCase(teamName))
-                {
-                    result.add(player);
+                player = allPlayer.get(i);
+                if (player.getTeam().equalsIgnoreCase(teamName)) {
+                        result.add(player);
+                    }
                 }
-            }
-        }catch ( final PersistenceException e)
+        }
+        else
         {
-            throw new PersistenceException(e);
+            throw new InvalidNameException("please pass a team name with letters only");
         }
 
         return result;
