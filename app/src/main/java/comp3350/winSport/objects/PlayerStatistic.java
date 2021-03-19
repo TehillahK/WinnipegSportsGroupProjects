@@ -75,11 +75,20 @@ public class PlayerStatistic {
 
     public int getPoints(){return points;}
 
-    public double getGoalsPerGame(){return goalsPerGame;}
+    public double getGoalsPerGame(){
+        goalsPerGame=goals /(double)gamesPlayed;
+        return goalsPerGame;
+    }
 
-    public double getAssistsPerGame(){return assistsPerGame;}
+    public double getAssistsPerGame(){
+        assistsPerGame=assists/(double)gamesPlayed;
+        return assistsPerGame;
+    }
 
-    public double getShotsPerGame(){return shotsPerGame;}
+    public double getShotsPerGame(){
+
+        return shotsPerGame;
+    }
 
     public void viewPlayerStatObject() {
         System.out.print("\nPLAYER STATISTIC OBJECT");
@@ -97,4 +106,6 @@ public class PlayerStatistic {
         System.out.print("\nAssists Per Game: " + this.getAssistsPerGame());
         System.out.print("\nShots Per Game: " + this.getShotsPerGame());
     }
+
+
 }

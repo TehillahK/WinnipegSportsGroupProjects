@@ -39,20 +39,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.MyViewHo
     public void onBindViewHolder(@NonNull ChannelAdapter.MyViewHolder holder, final int position) {
         holder.name.setText(ls.get(position).getName());
         holder.name.setMovementMethod(LinkMovementMethod.getInstance());
-//        holder.row.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(c, position + "", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
         holder.ivPic.setImageDrawable(c.getDrawable(ls.get(position).getPic()));
-    }
-
-    public void setContactList( List<ChannelItem> contactList){
-        // ls.clear();
-        ls = contactList;
-        notifyDataSetChanged();
     }
 
     @Override
