@@ -1,35 +1,42 @@
 package comp3350.winSport.objects;
 
 import java.util.ArrayList;
-
-import comp3350.winSport.objects.Player;
+import java.util.List;
 
 public class Team {
 
+    /*
+        Team DSO specifically used for our Roster and Player Stats features.
+    */
+
     private String name;
-    private ArrayList<Player> players;
+    private List<Player> players;
+    private int teamPic;
     private int teamID;
 
     public Team() {
         name = "Unknown";
         players = new ArrayList<>();
+        this.teamPic = 0;
+        this.teamID = 0;
     }
 
-    public Team(String n, ArrayList<Player> pl, int teamID) {
+    public Team(String n, List<Player> pl, int teamPic,int teamID) {
         name = n;
         players = pl;
+        this.teamPic = teamPic;
         this.teamID = teamID;
     }
 
-    public int getTeamID() {
-        return teamID;
+    public int getTeamPic() {
+        return teamPic;
     }
 
     public String getName() {
         return name;
     }
 
-    public ArrayList<Player> getPlayers(){
+    public List<Player> getPlayers(){
         return players;
     }
 
@@ -41,15 +48,23 @@ public class Team {
         players = lst;
     }
 
+    public int getTeamID() {
+        return teamID;
+    }
+
+    public void setTeamID(int teamID) {
+        this.teamID = teamID;
+    }
+
     public String toString() {
-       return this.name;
+        return this.name ;
     }
 
     public void viewTeamObject(){
         System.out.print("\nTEAM OBJECT");
         System.out.print("\nName: " + getName());
         System.out.print("\nPlayers: " + getPlayers());
-        System.out.print("\nTeam ID: " + getTeamID());
+        System.out.print("\nTeam ID: " + getTeamPic());
 
     }
 

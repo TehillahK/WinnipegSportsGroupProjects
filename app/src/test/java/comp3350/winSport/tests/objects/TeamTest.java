@@ -22,7 +22,7 @@ public class TeamTest {
         playerList.add(new Player("Michael Jordan", 23,"left",teamName,1));
         playerList.add(new Player("Bugs Bunny", 0,"right",teamName,2));
         playerList.add(new Player("Porky Pig", 1,"center",teamName,3));
-        team = new Team(teamName,playerList, 1);
+        team = new Team(teamName,playerList, 1,3);
     }
 
     @Test

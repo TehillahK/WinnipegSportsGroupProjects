@@ -2,6 +2,10 @@ package comp3350.winSport.objects;
 
 public class League {
 
+    /*
+        league DSO specifically used for our currently playing Feature.
+    */
+
     private int ID;
     private String name;
 

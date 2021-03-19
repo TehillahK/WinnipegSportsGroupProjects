@@ -4,6 +4,10 @@ import comp3350.winSport.R;
 
 public class Player {
 
+    /*
+        Player DSO specifically used for our Roster and Player Stats features.
+    */
+
     private String name;
     private int number;
     private String position;
@@ -11,25 +15,52 @@ public class Player {
     private int playerPic;
     private String teamName;
     private int teamPic;
+    private int playerID;
 
     public Player() {
-        name = "Unknown";
-        number = 0;
-        position = "Unknown";
-        shot = "L";
-        playerPic = R.drawable.headshot;
+        this.name = "Unknown";
+        this.number = 0;
+        this.position = "Unknown";
+        this.shot = "L";
+        this.playerPic = 0;
         this.teamName = "LFKAJDFLKJ";
         this.teamPic = 0;
+        this.playerID = 0;
     }
 
-    public Player(String nme, int num, String pos,String teamName,int picID) {
-        name = nme;
-        number = num;
-        position = pos;
-        shot = "L";
-        playerPic = R.drawable.headshot;
+    public Player(String name, int num, String pos, String teamName,int picID) {
+        this.name = name;
+        this.number = num;
+        this.position = pos;
+        this.shot = "l";
+        this.playerPic = 0;
         this.teamName = teamName;
         this.teamPic = picID;
+        this.playerID = 0;
+    }
+
+    public Player(String name, int num, String pos, String shot, String teamName, int picID, int playerID) {
+        this.name = name;
+        this.number = num;
+        this.position = pos;
+        this.shot = shot;
+        this.playerPic = picID;
+        this.teamName = teamName;
+        this.teamPic = picID;
+        this.playerID = playerID;
+
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
     }
 
     public String getName() {

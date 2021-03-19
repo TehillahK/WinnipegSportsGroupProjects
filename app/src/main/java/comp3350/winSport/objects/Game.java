@@ -1,43 +1,40 @@
 package comp3350.winSport.objects;
 
-import java.util.ArrayList;
-
 import comp3350.winSport.R;
 
 public class Game {
 
+    /*
+        Game DSO specifically used for our currently playing and Schedule Features.
+    */
+
     private int gameID;
     private String gameName;
-    private League gameLeague;
-    private Team team1;
-    private Team team2;
+    private String gameLeague;
+    private String team1;
+    private String team2;
     private String gameDate;
     private String gameLocation;
-    private ArrayList<Period> periods;
     private String gameScore;
 
-    private int leagueID;
+    private int leaguePic;
     private int gamePicID;
 
     public Game() {
         gameID = 0;
         gameName = "Unknown";
-        gameLeague = new League();
-        team1 = new Team();
-        team2 = new Team();
+        gameLeague = "Unknown";
+        team1 = "team1 Name";
+        team2 = "team2 Name";
         gameDate = "Unknown";
         gameLocation = "Unknown";
-        periods = new ArrayList<>(3);
         gameScore = "Unknown";
-        leagueID = 0;
+        leaguePic = 0;
         gamePicID = 0;
     }
 
-    public ArrayList<Period> getPeriods() {
-        return periods;
-    }
 
-    public Game(int gID, String gName, League gL, Team t1, Team t2, String gDate, String gLocation, ArrayList<Period> prds, String gScore) {
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore) {
         gameID = gID;
         gameName = gName;
         gameLeague = gL;
@@ -45,14 +42,13 @@ public class Game {
         team2 = t2;
         gameDate = gDate;
         gameLocation = gLocation;
-        periods = prds;
         gameScore = gScore;
-        leagueID = R.drawable.nhl;
+        leaguePic = R.drawable.nhl;
         gamePicID = R.drawable.jets;
     }
 
-    public int getLeagueID() {
-        return leagueID;
+    public int getLeaguePic() {
+        return leaguePic;
     }
 
     public int getGamePicID() {
@@ -67,15 +63,15 @@ public class Game {
         return gameName;
     }
 
-    public League getGameLeague() {
+    public String getGameLeague() {
         return gameLeague;
     }
 
-    public Team getTeam1() {
+    public String getTeam1() {
         return team1;
     }
 
-    public Team getTeam2() {
+    public String getTeam2() {
         return team2;
     }
 
@@ -85,19 +81,6 @@ public class Game {
 
     public String getGameLocation() {
         return gameLocation;
-    }
-
-    public ArrayList<Period> getGamePeriods() {
-        return periods;
-    }
-
-    public Period getOnePeriod(int ind) {
-        Period p = null;
-        for(int i = 0; i < 3; i++) {
-            if(periods.get(i).getID() == ind)
-                p = periods.get(i);
-        }
-        return p;
     }
 
     public String getGameScore() {
@@ -112,8 +95,8 @@ public class Game {
         gameName = s;
     }
 
-    public void setLeague(int ID, String name) {
-        gameLeague = new League(ID, name);
+    public void setLeague(String name) {
+        gameLeague = name;
     }
 
     public void setGameDate(String date) {
@@ -124,26 +107,13 @@ public class Game {
         gameLocation = location;
     }
 
-    public void setGamePeriods(ArrayList<Period> p) {
-        periods = p;
-    }
-
-    public void setOnePeriod(Period pr) {
-        if(periods.size() < 3)
-            periods.add(pr);
-        else
-            System.out.println("3 periods are already added");
-    }
-
     public void setGameScore(String sc) {
         gameScore = sc;
     }
 
     public String toString() {
         String per = "";
-        for(int i = 0; i < 2; i++)
-            per = per + periods.get(i).toString() + "\n";
-        per += periods.get(2).toString();
+
         String res = "\n------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
                 + "comp3350.winSport.objects.Game date: " + gameDate + "\n"
                 + "comp3350.winSport.objects.Game location: " + gameLocation + "\ncomp3350.winSport.objects.Game score: " + gameScore + "\n------------------------------------\n"
@@ -169,10 +139,10 @@ public class Game {
         System.out.print("\n\nGAME INFORMATION");
         System.out.print("\nGame ID: " + this.getGameID());
         System.out.print("\nGame Name: " + this.getGameName());
-        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nLeague: "+ this.getGameLeague());
         System.out.print("\nGame Date: " + this.getGameDate());
-        System.out.print("\nTeam 1: " + this.getTeam1().getName());
-        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nTeam 1: " + this.getTeam1());
+        System.out.print("\nTeam 2: " + this.getTeam2());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
     }
@@ -192,12 +162,11 @@ public class Game {
         System.out.print("\n\nGAME OBJECT");
         System.out.print("\nGame ID: " + this.getGameID());
         System.out.print("\nGame Name: " + this.getGameName());
-        System.out.print("\nLeague: "+ this.getGameLeague().getName());
+        System.out.print("\nLeague: "+ this.getGameLeague());
         System.out.print("\nGame Date: " + this.getGameDate());
-        System.out.print("\nTeam 1: " + this.getTeam1().getName());
-        System.out.print("\nTeam 2: " + this.getTeam2().getName());
+        System.out.print("\nTeam 1: " + this.getTeam1());
+        System.out.print("\nTeam 2: " + this.getTeam2());
         System.out.print("\nLocation: "+ this.getGameLocation());
         System.out.print("\nScore: " + this.getGameScore());
-        System.out.print("\nPeriods: " + this.getGamePeriods().get(0).toString());
     }
 }

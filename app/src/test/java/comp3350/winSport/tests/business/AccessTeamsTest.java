@@ -2,24 +2,32 @@ package comp3350.winSport.tests.business;
 
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ListIterator;
 
-import comp3350.winSport.buisness.AccessTeams;
+import java.util.List;
+
+import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
+import comp3350.winSport.persistence.ITeam;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class AccessTeamsTest {
 
     private AccessTeams accessTeams;
+    private ITeam iTeam;
+    private AccessTeams accessTeamsNoMock;
 
     @Before
-    public void setUp(){
-        accessTeams = new AccessTeams();
+    public void setUp() {
+        iTeam = mock(ITeam.class);
+        accessTeams = new AccessTeams(iTeam);
+        accessTeamsNoMock = new AccessTeams();
     }
 
     @Test
@@ -27,15 +35,13 @@ public class AccessTeamsTest {
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Listing Teams");
         System.out.print("\n---------------------------------------");
-        ListIterator<Team> iterator = accessTeams.getTeams().listIterator();
-        System.out.print("\nUsing iterator...\n");
-        assertNotNull("First game should not be null.",iterator.hasNext());
-        while (iterator.hasNext()){
-            Team team = iterator.next();
-            assertNotNull(team);
-            System.out.print(team.getName() + "\n");
 
-        }
+        final List<Team> teams = accessTeams.getTeams();
+        assertNotNull(teams);
+
+        verify(iTeam).getTeams();
+        System.out.print("\nFinished test.");
+
     }
 
     @Test
@@ -44,8 +50,20 @@ public class AccessTeamsTest {
         System.out.print("\nTest 2: View a Team");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTests if getSingleGame() has successfully fetched a team from the data layer.");
-        System.out.print("\n" + accessTeams.getSingleGame().getName());
-        assertTrue("Winnipeg Jets".equals(accessTeams.getSingleGame().getName()));
+
+        final Team team;
+        final Team sampleTeam;
+
+        sampleTeam = new Team();
+
+        when(iTeam.getSingleTeam()).thenReturn(sampleTeam);
+
+        team = iTeam.getSingleTeam();
+        assertNotNull("Should not be null",team);
+
+        verify(iTeam).getSingleTeam();
+
+        System.out.print("\nFinished test.");
 
     }
 
@@ -69,7 +87,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: " + input1);
-            accessTeams.getTeamByName(input1);
+            accessTeamsNoMock.getTeamByName(input1);
             fail("\nMethod did not throw an exception.\n");
         }
         catch (Exception InvalidNameException){
@@ -79,7 +97,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: " + input2);
-            accessTeams.getTeamByName(input2);
+            accessTeamsNoMock.getTeamByName(input2);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception InvalidNameException){
@@ -89,7 +107,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: (empty)");
-            accessTeams.getTeamByName(input3);
+            accessTeamsNoMock.getTeamByName(input3);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception InvalidNameException){
@@ -99,7 +117,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: (whitespace)");
-            accessTeams.getTeamByName(input4);
+            accessTeamsNoMock.getTeamByName(input4);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception InvalidNameException){
@@ -109,7 +127,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: " + input5);
-            accessTeams.getTeamByName(input5);
+            accessTeamsNoMock.getTeamByName(input5);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception InvalidNameException){
@@ -119,7 +137,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: " + input6);
-            accessTeams.getTeamByName(input6);
+            accessTeamsNoMock.getTeamByName(input6);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception InvalidNameException){
@@ -148,7 +166,7 @@ public class AccessTeamsTest {
 
         try{
             System.out.print("\nInput: " + input1);
-            accessTeams.getTeamByName(input1);
+            accessTeamsNoMock.getTeamByName(input1);
             assertNull(null); //should return null if not found.
         }
         catch (Exception InvalidNameException){

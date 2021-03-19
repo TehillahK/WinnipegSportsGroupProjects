@@ -2,77 +2,69 @@ package comp3350.winSport.tests.business;
 
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ListIterator;
 
-import comp3350.winSport.buisness.AccessGames;
+import java.util.List;
+
+import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
+import comp3350.winSport.persistence.IGame;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class AccessGamesTest {
 
     private AccessGames accessGames;
+    private IGame iGame;
 
     @Before
     public void setUp(){
-        accessGames = new AccessGames();
+        iGame = mock(IGame.class);
+        accessGames = new AccessGames(iGame);
     }
 
     @Test
     public void singleGame(){
+
+        final Game game;
+        final Game sampleGame;
+
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Single Game");
         System.out.print("\n---------------------------------------");
         System.out.print("\nGetting a single game...");
 
-        accessGames.getSingleGame().viewGame();
+        sampleGame = new Game();
 
-        assertNotNull(accessGames.getSingleGame());
+        when(iGame.getSingleGame()).thenReturn(sampleGame);
 
-        assertTrue("Winnipeg Jets".equals(accessGames.getSingleGame().getTeam1().getName()));
-        assertTrue("Toronto Maple Leafs".equals(accessGames.getSingleGame().getTeam2().getName()));
-        assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague().getName()));
-        assertTrue("4 - 3".equals(accessGames.getSingleGame().getGameScore()));
-        assertTrue("Stanley Cup Playoffs".equals(accessGames.getSingleGame().getGameName()));
-        assertTrue("Feb 26, 2021".equals(accessGames.getSingleGame().getGameDate()));
+        game = accessGames.getSingleGame();
+        assertNotNull("Should not be null", game);
 
-        assertNotNull(accessGames.getSingleGame().getGameName());
-        assertNotNull(accessGames.getSingleGame().getGameID());
-        assertNotNull(accessGames.getSingleGame().getGameDate());
-        assertNotNull(accessGames.getSingleGame().getGameLocation());
-        assertNotNull(accessGames.getSingleGame().getTeam1());
-        assertNotNull(accessGames.getSingleGame().getTeam2());
-        assertNotNull(accessGames.getSingleGame().getGameScore());
+        verify(iGame).getSingleGame();
+
+        System.out.print("\nFinished test.");
 
     }
 
     @Test
     public void listGames(){
+
         System.out.print("\n------------------AccessGames Test---------------------");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 2: List of Games");
         System.out.print("\n---------------------------------------");
-        ListIterator<Game> iterator = accessGames.getGames().listIterator();
-        System.out.print("\nUsing iterator...");
-        assertNotNull("First game should not be null.",iterator.hasNext());
-        while (iterator.hasNext()){
 
-            Game game = iterator.next();
-            game.viewGame();
+        final List<Game> games = accessGames.getGames();
+        assertNotNull(games);
 
-            assertNotNull(game.getGameID());
-            assertNotNull(game.getGameDate());
-            assertNotNull(game.getTeam1());
-            assertNotNull(game.getTeam2());
-            assertNotNull(game.getGameLeague());
-            assertNotNull(game.getGameLocation());
-            assertNotNull(game.getGameName());
-            assertNotNull(game.getGameScore());
-            assertTrue("NHL".equals(accessGames.getSingleGame().getGameLeague().getName()));
+        verify(iGame).getGamesSequential();
 
-        }
+        System.out.print("\nFinished test.");
+
     }
 
 }

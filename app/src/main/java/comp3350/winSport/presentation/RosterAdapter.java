@@ -55,7 +55,7 @@ public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             itemViewHolder.player_num.setText("" + data.getNumber());
             itemViewHolder.position.setText(data.getPosition());
             itemViewHolder.shot.setText(data.getShot());
-            itemViewHolder.player_pic.setImageResource(data.getPic());
+            itemViewHolder.player_pic.setImageResource(data.getTeamPic());
         }
         else if (holder instanceof PlayerHeaderViewHolder) {
 
