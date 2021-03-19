@@ -85,7 +85,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
         playerGoalsTxt.setText(playerStatistic.getGoals()+"");
         playerAssistsTxt.setText(playerStatistic.getAssists()+"");
         playerPointsTxt.setText(playerStatistic.getPoints()+"");
-        playerGoalsPerGameTxt.setText(playerStatistic.getAge()+"");
+        playerGoalsPerGameTxt.setText(playerStatistic.getGoalsPerGame()+"");
         playerAssistsPerGameTxt.setText(playerStatistic.getAssistsPerGame()+"");
         playerShotsPerGameTxt.setText(playerStatistic.getShotsPerGame()+"");
         playerAgeTxt.setText(playerStatistic.getAge()+"");

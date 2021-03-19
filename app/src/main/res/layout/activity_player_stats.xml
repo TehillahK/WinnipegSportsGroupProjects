@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/name_label"
-        android:text="name"
+        android:text="name:"
         android:textSize="30sp"
         android:layout_below="@id/playerProfile"
         />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/games_played_label"
-        android:text="games played"
+        android:text="games played:"
         android:textSize="30sp"
         android:layout_below="@id/name_label"
         />
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/team_name"
-        android:text="team"
+        android:text="team:"
         android:textSize="30sp"
         android:layout_below="@id/games_played_label"
         />
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_league"
-        android:text="league"
+        android:text="league:"
         android:textSize="30sp"
         android:layout_below="@id/team_name"
         />
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_position"
-        android:text="position"
+        android:text="position:"
         android:textSize="30sp"
         android:layout_below="@id/player_league"
         />
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/game_season_label"
-        android:text="season"
+        android:text="season:"
         android:textSize="30sp"
         android:layout_below="@id/player_position"
         />
@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_age"
-        android:text="Age"
+        android:text="Age:"
         android:textSize="30sp"
         android:layout_below="@id/game_season_label"
         />
@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_goals"
-        android:text="goals"
+        android:text="goals:"
         android:textSize="30sp"
         android:layout_below="@id/player_age"
         />
@@ -156,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_assists"
-        android:text="assists"
+        android:text="assists:"
         android:textSize="30sp"
         android:layout_below="@id/player_goals"
         />
@@ -174,7 +174,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/points"
-        android:text="points"
+        android:text="points:"
         android:textSize="30sp"
         android:layout_below="@id/player_assists"
         />
@@ -195,7 +195,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_below="@+id/points"
-        android:text="goalsPerGame"
+        android:text="goalsPerGame:"
         android:textSize="30sp" />
     <TextView
         android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_assists_pergame"
-        android:text="assistsPerGame"
+        android:text="assistsPerGame:"
         android:textSize="30sp"
         android:layout_below="@id/player_goals_perGame"
         />
@@ -230,7 +230,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/player_shots_PerGame"
-        android:text="shotsPerGame"
+        android:text="shotsPerGame:"
         android:textSize="30sp"
         android:layout_below="@id/player_assists_pergame"
         />
