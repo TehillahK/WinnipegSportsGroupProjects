@@ -3,6 +3,7 @@
 ## Paying Off Technical Debt
 
 **Objects are Nested in Iteration 1**
+
 One instance of our group paying off technical debt comes from the initial construction of our domain specific objects. Many of them contained nested objects that were hard to translate to SQL tables and required refactoring. 
 
 - [Commit: 8958e8bf](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/commit/8958e8bf75dd42ca0203ddff9acd08d8653c4c83#4d61493eea5042964e918b7b6d15824a3725e1e8_14_11)
