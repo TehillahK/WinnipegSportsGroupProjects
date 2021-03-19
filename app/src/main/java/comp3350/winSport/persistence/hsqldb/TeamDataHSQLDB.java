@@ -35,14 +35,23 @@ public class TeamDataHSQLDB implements ITeam {
 
     private Team fromResultSet(final ResultSet rs) throws SQLException {
         final String teamName = rs.getString("NAME");
-        List<Player> players = this.accessPlayers.getPlayers(teamName);
-        final int teamID = rs.getInt("teamID");
-        int pic;
-        if (players.size() != 0)
-            pic = players.get(0).getTeamPic();
-        else
-            pic = R.drawable.nhl;
-        return new Team(teamName, players, pic,teamID);
+        List<Player> players;
+        final int teamID;
+
+        try {
+            players = this.accessPlayers.getPlayers(teamName);
+            teamID = rs.getInt("teamID");
+            int pic;
+            if (players.size() != 0)
+                pic = players.get(0).getTeamPic();
+            else
+                pic = R.drawable.nhl;
+            return new Team(teamName, players, pic,teamID);
+        }
+        catch (InvalidNameException e){
+            System.out.print("Team is not on the list.");
+        }
+        return null;
     }
 
     @Override
