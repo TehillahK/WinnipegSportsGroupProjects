@@ -50,7 +50,7 @@ public class PlayerStatsActivity extends AppCompatActivity {
         playerNameTxt.setText(playerName);
 
         try {
-            playerStatistic=playerStats.getPlayerStatsByName(playerName);
+            playerStatistic=playerStats.getPlayerByName(playerName);
             setStatsData();
         } catch(NullPointerException | InvalidNameException e)
         {
