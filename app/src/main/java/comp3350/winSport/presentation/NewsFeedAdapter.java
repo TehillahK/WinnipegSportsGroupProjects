@@ -14,11 +14,12 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.objects.NewsPost;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
-
+    private RecyclerViewEventListener listener;
     List<NewsPost> newsPosts;
-    public NewsFeedAdapter(List<NewsPost> newsPosts)
+    public NewsFeedAdapter(List<NewsPost> newsPosts, RecyclerViewEventListener listener)
     {
         this.newsPosts=newsPosts;
+        this.listener=listener;
     }
     @NonNull
     @Override
@@ -42,8 +43,11 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         return newsPosts.size();
     }
 
+    public interface RecyclerViewEventListener{
+        void onClick(View view,int pos);
+    }
 
-    public static class NewsFeedHolder extends RecyclerView.ViewHolder  {
+    public class NewsFeedHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
         ImageView photo;
         TextView postTitle;
         TextView caption;
@@ -58,6 +62,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         }
 
 
+        @Override
+        public void onClick(View v) {
+            listener.onClick(itemView,getAdapterPosition());
+        }
     }
 
 }

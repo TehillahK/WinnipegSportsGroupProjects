@@ -5,15 +5,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.NewsPost;
 
 public class NewsFeedActivity extends AppCompatActivity {
-
+    private NewsFeedAdapter.RecyclerViewEventListener listener;
+    private List<NewsPost> newsPosts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +39,22 @@ public class NewsFeedActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
-        NewsFeedAdapter adapter = new NewsFeedAdapter(posts);
+        setOnClickListner();
+        NewsFeedAdapter adapter = new NewsFeedAdapter(posts,listener);
         rv.setAdapter(adapter);
 
+    }
+
+
+    private void setOnClickListner() {
+        listener = new NewsFeedAdapter.RecyclerViewEventListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                Intent intent =new Intent(getApplicationContext(),PlayerStatsActivity.class);
+                intent.putExtra("postID",newsPosts.get(pos).getPostID());
+                startActivity(intent);
+
+            }
+        };
     }
 }

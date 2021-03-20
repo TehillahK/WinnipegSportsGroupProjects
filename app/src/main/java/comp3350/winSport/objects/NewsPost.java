@@ -30,7 +30,7 @@ public class NewsPost {
         return image;
     }
 
-    public static int getPostID() {
+    public int getPostID() {
         return postID;
     }
 
