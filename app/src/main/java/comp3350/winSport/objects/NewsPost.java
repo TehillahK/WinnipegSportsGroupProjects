@@ -1,7 +1,7 @@
 package comp3350.winSport.objects;
 
 public class NewsPost {
-    private static int postId=0;
+    private static int postID=0;
     private String title;
     private String datePosted;
     private String caption;
@@ -13,7 +13,7 @@ public class NewsPost {
         datePosted="12/03/19";
         caption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
         numLikes=0;
-        postId++;
+        postID++;
     }
     public NewsPost(String title,String datePosted ,String caption, int numLikes,int image)
     {
@@ -24,16 +24,14 @@ public class NewsPost {
         this.image=image;
     }
 
-    public void setNumLikes(int numLikes) {
-        this.numLikes = numLikes;
-    }
+
     public int getImage()
     {
         return image;
     }
 
-    public static int getPostId() {
-        return postId;
+    public static int getPostID() {
+        return postID;
     }
 
     public String getTitle() {
@@ -48,8 +46,35 @@ public class NewsPost {
         return caption;
     }
 
+    public void setDatePosted(String datePosted) {
+        this.datePosted = datePosted;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public void setNumLikes(int numLikes) {
+        this.numLikes = numLikes;
+    }
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
+
+
+
     public int getNumLikes() {
         return numLikes;
     }
+    public void viewNewsPostObject(){
+        System.out.print("\nNewsPost OBJECT");
+        System.out.print("\npost ID: " + getPostID());
+        System.out.print("\nLeague Name: " + getTitle());
+        System.out.print("\npost ID: " + getDatePosted());
+        System.out.print("\nLeague Name: " + getCaption());
+        System.out.print("\npost ID: " + getNumLikes());
+        System.out.print("\nLeague Name: " + getImage());
 
+
+    }
 }
