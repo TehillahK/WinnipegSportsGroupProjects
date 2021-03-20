@@ -1,6 +1,7 @@
 package comp3350.winSport.objects;
 
 public class NewsPost {
+    private static int postId=0;
     private String title;
     private String datePosted;
     private String caption;
@@ -12,6 +13,7 @@ public class NewsPost {
         datePosted="12/03/19";
         caption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
         numLikes=0;
+        postId++;
     }
     public NewsPost(String title,String datePosted ,String caption, int numLikes,int image)
     {
@@ -28,6 +30,10 @@ public class NewsPost {
     public int getImage()
     {
         return image;
+    }
+
+    public static int getPostId() {
+        return postId;
     }
 
     public String getTitle() {
