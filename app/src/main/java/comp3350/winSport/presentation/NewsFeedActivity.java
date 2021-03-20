@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 
 import comp3350.winSport.R;
+import comp3350.winSport.objects.NewsPost;
 
 public class NewsFeedActivity extends AppCompatActivity {
 
@@ -20,5 +21,6 @@ public class NewsFeedActivity extends AppCompatActivity {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
+
     }
 }
