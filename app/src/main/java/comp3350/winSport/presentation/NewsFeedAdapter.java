@@ -16,11 +16,15 @@ import comp3350.winSport.objects.NewsPost;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
 
     List<NewsPost> newsPosts;
+    public NewsFeedAdapter(List<NewsPost> newsPosts)
+    {
+        this.newsPosts=newsPosts;
+    }
     @NonNull
     @Override
     public NewsFeedHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_feed_card, parent, false);
-        return new NewsFeedAdapter.NewsFeedHolder(v);
+        return new NewsFeedHolder(v);
     }
 
     @Override
@@ -39,7 +43,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
     }
 
 
-    public  class NewsFeedHolder extends RecyclerView.ViewHolder  {
+    public static class NewsFeedHolder extends RecyclerView.ViewHolder  {
         ImageView photo;
         TextView postTitle;
         TextView caption;
