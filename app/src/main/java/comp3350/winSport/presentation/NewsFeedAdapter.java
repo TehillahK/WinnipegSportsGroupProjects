@@ -9,9 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 import comp3350.winSport.R;
 import comp3350.winSport.objects.NewsPost;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
+
+    List<NewsPost> newsPosts;
     @NonNull
     @Override
     public NewsFeedHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -21,7 +25,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
 
     @Override
     public void onBindViewHolder(@NonNull NewsFeedHolder holder, int position) {
-
+        holder.photo.setImageResource(newsPosts.get(position).getImage());
+        holder.postTitle.setText(newsPosts.get(position).getTitle());
+        holder.caption.setText(newsPosts.get(position).getCaption());
+        holder.datePosted.setText(newsPosts.get(position).getDatePosted());
     }
 
 
