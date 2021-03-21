@@ -58,7 +58,7 @@ public class PlayersActivity extends AppCompatActivity {
         );
 
         accessTeams= new AccessTeams();
-        List<String> teamNames;
+
         List<Player> temp;
         List<Team> teams = accessTeams.getTeams();
         temp=new ArrayList<>();
