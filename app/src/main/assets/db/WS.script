@@ -110,3 +110,4 @@ INSERT INTO GAMES VALUES(17, 'Stanley Cup Playoffs','NHL', 'Montreal Canadiens',
 INSERT INTO GAMES VALUES(18, 'Stanley Cup Playoffs','NHL', 'Ottowa Senators', 'Winnipeg Jets', 'Jan 02, 2021', 'Rogers other Place', '5 - 4')
 INSERT INTO GAMES VALUES(19, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Edmonton Oilers', 'Jun 10, 2021', 'Rogers human Place', '0 - 0')
 INSERT INTO GAMES VALUES(20, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Ottawa Senators', 'Jun 19, 2021', 'Rogers non-human Place', '0 - 0')
+INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',0,0)
