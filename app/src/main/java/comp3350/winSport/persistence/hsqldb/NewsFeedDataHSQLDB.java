@@ -43,7 +43,7 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
     }
 
     @Override
-    public List<NewsPost> getNewsPosts()  throws InvalidNameException  {
+    public List<NewsPost> getNewsPosts()   {
         List<NewsPost> newsPosts;
         newsPosts=new ArrayList<>();
         try(final Connection c=connection())
