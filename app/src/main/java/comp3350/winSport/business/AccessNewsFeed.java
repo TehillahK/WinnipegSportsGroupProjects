@@ -21,6 +21,7 @@ public class AccessNewsFeed {
     }
 
     public List<NewsPost> getNewsPosts ()   {
+        newsPosts=iNewsFeed.getNewsPosts();
         return newsPosts;
     }
 }
