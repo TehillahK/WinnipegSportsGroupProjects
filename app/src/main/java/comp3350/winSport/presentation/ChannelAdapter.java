@@ -15,14 +15,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 import comp3350.winSport.R;
+import comp3350.winSport.objects.Channel;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.MyViewHolder> {
-    List<ChannelItem> ls;
+    List<Channel> ls;
     Context c;
 
-    public ChannelAdapter(List<ChannelItem> ls, Context c) {
+    public ChannelAdapter(List<Channel> ls, Context c) {
         this.c = c;
         this.ls = ls;
     }

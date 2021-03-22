@@ -1,11 +1,11 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.objects;
 
-public class ChannelItem {
+public class Channel {
 
     private int name;
     private int pic;
 
-    public ChannelItem(int name, int pic) {
+    public Channel(int name, int pic) {
         this.name = name;
         this.pic = pic;
     }
