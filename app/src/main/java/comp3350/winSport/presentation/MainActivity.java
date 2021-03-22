@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.channel_layout:
                 // Player Stats
-                Intent channelIntent = new Intent(MainActivity.this, Channel.class);
+                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
                 MainActivity.this.startActivity(channelIntent);
                 break;
             case R.id.live_game_layout:

@@ -1,20 +1,27 @@
 package comp3350.winSport.objects;
 
 public class NewsPost {
-    private static int postID=0;
+
+    private static int postCount=0;
+
+    private int postID;
     private String title;
     private String datePosted;
     private String caption;
     private int numLikes;
     private int image;
+
     public NewsPost()
     {
         title="The Title";
         datePosted="12/03/19";
         caption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
         numLikes=0;
-        postID++;
+        image = 0;
+        postID = postCount;
+        postCount++;
     }
+
     public NewsPost(String title,String datePosted ,String caption, int numLikes,int image)
     {
         this.title=title;
@@ -22,8 +29,13 @@ public class NewsPost {
         this.caption=caption;
         this.numLikes=numLikes;
         this.image=image;
+        postID = postCount;
+        postCount++;
     }
 
+    public static int getPostCount() {
+        return postCount;
+    }
 
     public int getImage()
     {
@@ -60,12 +72,10 @@ public class NewsPost {
     public void setCaption(String caption) {
         this.caption = caption;
     }
-
-
-
     public int getNumLikes() {
         return numLikes;
     }
+
     public void viewNewsPostObject(){
         System.out.print("\nNewsPost OBJECT");
         System.out.print("\npost ID: " + getPostID());
