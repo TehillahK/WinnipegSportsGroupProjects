@@ -2,23 +2,25 @@ package comp3350.winSport.business;
 
 import java.util.List;
 
+import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.NewsPost;
 import comp3350.winSport.persistence.INewsFeed;
 
-public class AccessNewsPost {
+public class AccessNewsFeed {
     private INewsFeed iNewsFeed;
     private List<NewsPost> newsPosts;
-    public AccessNewsPost()
+    public AccessNewsFeed()
     {
+        iNewsFeed= Services.getNewsFeedPersistance();
         newsPosts=null;
     }
-    public AccessNewsPost(INewsFeed iNewsFeed)
+    public AccessNewsFeed(INewsFeed iNewsFeed)
     {
+
         this.iNewsFeed=iNewsFeed;
     }
 
-    public List<NewsPost> getNewsPosts()
-    {
+    public List<NewsPost> getNewsPosts ()   {
         return newsPosts;
     }
 }

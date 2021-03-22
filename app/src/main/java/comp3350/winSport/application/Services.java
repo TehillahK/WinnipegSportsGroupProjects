@@ -1,10 +1,12 @@
 package comp3350.winSport.application;
 
 import comp3350.winSport.persistence.IGame;
+import comp3350.winSport.persistence.INewsFeed;
 import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.IPlayerStats;
 import comp3350.winSport.persistence.ITeam;
 import comp3350.winSport.persistence.fakeDB.GameData;
+import comp3350.winSport.persistence.fakeDB.NewsFeedData;
 import comp3350.winSport.persistence.fakeDB.PlayerData;
 import comp3350.winSport.persistence.fakeDB.PlayerStatData;
 import comp3350.winSport.persistence.fakeDB.TeamData;
@@ -17,11 +19,12 @@ public class    Services {
 
     // ONE LINE DB SWITCH BOOLEAN.
     // Set to false to use our Fake DB.
-    private static boolean useHSQLDB = true;
+    private static boolean useHSQLDB = false;
     private static ITeam teamPersistance = null;
     private static IGame gamePersistance = null;
     private static IPlayer playerPersistance = null;
     private static IPlayerStats playerStatsPersistance = null;
+    private static INewsFeed newsFeedPersistance=null;
 
     public static synchronized ITeam getTeamPersistance() {
         if (teamPersistance == null) {
@@ -61,6 +64,17 @@ public class    Services {
                 playerStatsPersistance = new PlayerStatData();
         }
         return playerStatsPersistance;
+    }
+
+    public static synchronized INewsFeed getNewsFeedPersistance()
+    {
+        if(newsFeedPersistance == null){
+            if(useHSQLDB)
+                System.out.println("");
+            else
+                newsFeedPersistance=new NewsFeedData();
+        }
+        return newsFeedPersistance;
     }
 
 }
