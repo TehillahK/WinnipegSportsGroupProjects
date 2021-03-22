@@ -19,12 +19,12 @@ import comp3350.winSport.R;
 import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.presentation.Adapters.PlayersAdapter;
 
 public class PlayersActivity extends AppCompatActivity {
     private AccessTeams accessTeams;
     private List<Player> team;
-    private  PlayersAdapter adapter;
+    private PlayersAdapter adapter;
     private PlayersAdapter.RecyclerViewEventListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

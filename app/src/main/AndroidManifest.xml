@@ -15,10 +15,10 @@
         <activity android:name=".presentation.TeamScheduleActivity"/>
         <activity android:name=".presentation.ScheduleActivity" />
         <activity android:name=".presentation.PlayersActivity" />
-        <activity android:name=".presentation.Channel">
+        <activity android:name=".presentation.ChannelActivity">
         </activity>
 
-        <activity android:name=".presentation.Teams" />
+        <activity android:name=".presentation.TeamsActivity" />
         <activity android:name=".presentation.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

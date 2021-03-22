@@ -13,6 +13,7 @@ import comp3350.winSport.R;
 import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.presentation.Adapters.RosterAdapter;
 
 public class RosterActivity extends AppCompatActivity {
 

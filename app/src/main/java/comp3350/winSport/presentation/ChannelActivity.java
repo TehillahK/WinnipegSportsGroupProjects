@@ -11,11 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.objects.Channel;
+import comp3350.winSport.presentation.Adapters.ChannelAdapter;
 
-public class Channel extends AppCompatActivity {
+public class ChannelActivity extends AppCompatActivity {
     RecyclerView rv;
     //Button add;
-    List<ChannelItem> Items;
+    List<Channel> Items;
     ChannelAdapter adapter;
 
     @Override
@@ -33,9 +35,9 @@ public class Channel extends AppCompatActivity {
 
         Items = new ArrayList<>();
 
-        Items.add(new ChannelItem(R.string.CBCSports  , R.drawable.cbc_sports));
-        Items.add(new ChannelItem(R.string.Sportsnet  , R.drawable.sportnets_logo));
-        Items.add(new ChannelItem(R.string.TSN        , R.drawable.tsn_logo));
+        Items.add(new Channel(R.string.CBCSports  , R.drawable.cbc_sports));
+        Items.add(new Channel(R.string.Sportsnet  , R.drawable.sportnets_logo));
+        Items.add(new Channel(R.string.TSN        , R.drawable.tsn_logo));
 
         rv = findViewById(R.id.rv);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);

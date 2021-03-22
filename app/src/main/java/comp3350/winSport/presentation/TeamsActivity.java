@@ -16,11 +16,10 @@ import comp3350.winSport.R;
 import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Team;
 
-public class Teams extends AppCompatActivity {
+public class TeamsActivity extends AppCompatActivity {
 
     AccessTeams accessTeams = new AccessTeams();
     List<Team> teams;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +39,9 @@ public class Teams extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Team o = (Team)listView.getItemAtPosition(position);
                 String val = o.getName();
-                Intent myIntent = new Intent(Teams.this,RosterActivity.class);
+                Intent myIntent = new Intent(TeamsActivity.this,RosterActivity.class);
                 myIntent.putExtra("TeamName", o.getName()); //Optional parameters
-                Teams.this.startActivity(myIntent);
+                TeamsActivity.this.startActivity(myIntent);
             }
         }));
         listView.setAdapter(adapter);

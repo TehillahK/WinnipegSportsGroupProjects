@@ -21,6 +21,14 @@ public class Team {
         this.teamID = 0;
     }
 
+    // constructor used when populating slower..
+    public Team(String n, int teamPic, int teamID) {
+        this.name = n;
+        this.teamPic = teamPic;
+        this.teamID = teamID;
+        players = null;
+    }
+
     public Team(String n, List<Player> pl, int teamPic,int teamID) {
         name = n;
         players = pl;
