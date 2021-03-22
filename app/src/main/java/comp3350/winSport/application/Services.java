@@ -11,6 +11,7 @@ import comp3350.winSport.persistence.fakeDB.PlayerData;
 import comp3350.winSport.persistence.fakeDB.PlayerStatData;
 import comp3350.winSport.persistence.fakeDB.TeamData;
 import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
+import comp3350.winSport.persistence.hsqldb.NewsFeedDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.PlayerStatsHSQLDB;
 import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
@@ -70,7 +71,7 @@ public class    Services {
     {
         if(newsFeedPersistance == null){
             if(useHSQLDB)
-                System.out.println("");
+                newsFeedPersistance= new NewsFeedDataHSQLDB(Main.getDBPathName());
             else
                 newsFeedPersistance=new NewsFeedData();
         }
