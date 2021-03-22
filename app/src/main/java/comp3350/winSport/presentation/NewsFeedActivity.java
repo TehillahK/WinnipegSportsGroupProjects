@@ -5,12 +5,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.NewsPost;
+import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedActivity extends AppCompatActivity {
 
@@ -39,4 +42,6 @@ public class NewsFeedActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
     }
+
+
 }
