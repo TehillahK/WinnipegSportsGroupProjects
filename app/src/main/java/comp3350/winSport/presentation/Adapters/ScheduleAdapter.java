@@ -19,7 +19,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     private String teamName;
     private List<Game> games; // declare games List
 
-    ScheduleAdapter(List<Game> g,String t) {
+    public ScheduleAdapter(List<Game> g, String t) {
         this.games = g;
         this.teamName = t;
     }

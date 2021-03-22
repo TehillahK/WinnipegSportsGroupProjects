@@ -16,14 +16,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.presentation.Adapters.PlayersAdapter;
 
 public class PlayersActivity extends AppCompatActivity {
-    private AccessTeams accessTeams;
-    private List<Player> team;
+
+    private AccessPlayers accessPlayers;
+    private List<Player> players;
+
     private PlayersAdapter adapter;
     private PlayersAdapter.RecyclerViewEventListener listener;
     @Override
@@ -57,25 +60,18 @@ public class PlayersActivity extends AppCompatActivity {
                 }
         );
 
-        accessTeams= new AccessTeams();
-        List<String> teamNames;
-        List<Player> temp;
-        List<Team> teams = accessTeams.getTeams();
-        temp=new ArrayList<>();
-        for (int i = 0; i <teams.size() ; i++) {
-            temp.addAll(teams.get(i).getPlayers());
-        }
+        accessPlayers= new AccessPlayers();
+        players = accessPlayers.getAllPlayers();
+
         // Initialize Recycler view and Linear layout Manager
         RecyclerView rv = findViewById(R.id.player_rv_stats);
         LinearLayoutManager llm = new LinearLayoutManager(this);
-        team=temp;
         // A Dev task for the future should be to develop a screen to display if teams is null.
-            // Activate Layout manager and RecyclerView
-        rv.setLayoutManager(llm);
-        
-        setOnClickListner();
+        // Activate Layout manager and RecyclerView
 
-        adapter = new PlayersAdapter(temp,listener);
+        rv.setLayoutManager(llm);
+        setOnClickListner();
+        adapter = new PlayersAdapter(players,listener);
         rv.setAdapter(adapter);
     }
 
@@ -84,9 +80,8 @@ public class PlayersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int pos) {
                 Intent intent =new Intent(getApplicationContext(),PlayerStatsActivity.class);
-                intent.putExtra("playerName",team.get(pos).getName());
+                intent.putExtra("playerName",players.get(pos).getTeam());
                 startActivity(intent);
-
             }
         };
     }
@@ -94,15 +89,12 @@ public class PlayersActivity extends AppCompatActivity {
     private  void filter(String searchedItem)
     {
         List<Player> searchResults=new ArrayList<>();
-        for (Player item : team) {
+        for (Player item : players) {
             if (item.getName().toLowerCase().contains(searchedItem.toLowerCase())) {
                 searchResults.add(item);
             }
         }
         adapter.filterList(searchResults);
-
     }
-
-
 
     }

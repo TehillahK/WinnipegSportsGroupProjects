@@ -107,4 +107,22 @@ public class PlayerDataHSQLDB implements IPlayer {
         return players;
     }
 
+    public List<Player> getAllPlayers()  {
+
+        final List<Player> players = new ArrayList<>();
+            try (final Connection c = connection()) {
+                final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYERS");
+
+                final ResultSet rs = st.executeQuery();
+                while (rs.next()) {
+                    final Player player = fromResultSet(rs);
+                    players.add(player);
+                }
+                rs.close();
+                st.close();
+            } catch (final SQLException e) {
+                throw new PersistenceException(e);
+            }
+        return players;
+    }
 }

@@ -26,7 +26,7 @@ public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     List<Player> players; // declare games List
 
-    RosterAdapter(List<Player> players) { // constructor initalizing games list.
+    public RosterAdapter(List<Player> players) { // constructor initalizing games list.
         this.players = players;
     }
 

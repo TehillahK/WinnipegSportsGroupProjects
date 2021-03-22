@@ -11,8 +11,8 @@ import comp3350.winSport.persistence.IPlayer;
 public class AccessPlayers {
 
     /*
-        Abstracts where the data is coming from using interfaces.
-        What UI methods call to get data
+        Abstracts player data access using interfaces.
+        UI methods to get data
     */
 
     private IPlayer iplayer;
@@ -28,7 +28,12 @@ public class AccessPlayers {
         iplayer = playa;
     }
 
-    public List<Player> getPlayers(String teamName) throws InvalidNameException {
+    public List<Player> getAllPlayers() {
+        players = iplayer.getAllPlayers();
+        return players;
+    }
+
+    public List<Player> getPlayersByTeam(String teamName) throws InvalidNameException {
         players = iplayer.getPlayers(teamName);
         return players;
     }
