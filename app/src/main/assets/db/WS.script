@@ -3,6 +3,7 @@ CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(30),teamID integer)
 CREATE MEMORY TABLE PUBLIC.PLAYERS(PlayerID integer, Player character varying,Number integer,Position character varying,Shot character varying,teamName character varying)
 CREATE MEMORY TABLE PUBLIC.PLAYER_STATS(playerName character varying,GamesPlayed integer,Team character varying(3),League character varying(3),Position character varying(2),Season character varying(7),Age integer,Goals integer,Assists integer,Points integer,GoalsPerGame DECIMAL,AssistsPerGame DECIMAL,ShotsPerGame DECIMAL)
 CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),LEAGUENAME VARCHAR(20),TEAM1ID character varying,TEAM2ID character varying, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
+CREATE MEMORY TABLE PUBLIC.NEWS_FEED(POSTID INTEGER NOT NULL PRIMARY KEY, TITLE VARCHAR(20),DATEPOSTED VARCHAR(20),CAPTION VARCHAR(20),NUMLIKES Integer,IMAGE Integer)
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA

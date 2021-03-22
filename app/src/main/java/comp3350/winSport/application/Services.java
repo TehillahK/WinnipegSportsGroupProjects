@@ -20,7 +20,7 @@ public class    Services {
 
     // ONE LINE DB SWITCH BOOLEAN.
     // Set to false to use our Fake DB.
-    private static boolean useHSQLDB = false;
+    private static boolean useHSQLDB = true;
     private static ITeam teamPersistance = null;
     private static IGame gamePersistance = null;
     private static IPlayer playerPersistance = null;
