@@ -11,7 +11,6 @@ public class NewsPost {
     private int numLikes;
     private int image;
 
-
     public NewsPost()
     {
         title="The Title";
@@ -22,6 +21,7 @@ public class NewsPost {
         postID = postCount;
         postCount++;
     }
+
     public NewsPost(String title,String datePosted ,String caption, int numLikes,int image)
     {
         this.title=title;
