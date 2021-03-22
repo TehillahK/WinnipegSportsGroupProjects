@@ -49,7 +49,7 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
         try(final Connection c=connection())
         {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT DISTINCT * FROM NEWS_FEED");
+            final ResultSet rs = st.executeQuery("SELECT * FROM NEWS_FEED");
 
             while (rs.next()) {
                 final NewsPost newsPost = fromResultSet(rs);
