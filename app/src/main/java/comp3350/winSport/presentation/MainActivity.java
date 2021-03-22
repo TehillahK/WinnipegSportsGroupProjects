@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.teamRostersMenu:
                 // games menu
-                Intent intent2 = new Intent(MainActivity.this,Teams.class);
+                Intent intent2 = new Intent(MainActivity.this, TeamsActivity.class);
                 MainActivity.this.startActivity(intent2);
                 break;
             case R.id.player_stat_layout:
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.channel_layout:
                 // Player Stats
-                Intent channelIntent = new Intent(MainActivity.this, Channel.class);
+                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
                 MainActivity.this.startActivity(channelIntent);
                 break;
 
