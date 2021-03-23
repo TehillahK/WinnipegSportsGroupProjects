@@ -12,6 +12,8 @@ public class NewsPost {
     private int image;
     private int likes;
     private int dislikes;
+    private boolean isLiked;
+    private boolean isDisliked;
     public NewsPost()
     {
         title="The Title";
@@ -23,6 +25,8 @@ public class NewsPost {
         likes=0;
         dislikes=0;
         postCount++;
+        isLiked=false;
+        isDisliked=false;
     }
 
     public NewsPost(String title,String datePosted ,String caption, int likes,int dislikes,int image)
@@ -36,9 +40,43 @@ public class NewsPost {
         postID = postCount;
         postCount++;
     }
+    public boolean isLiked()
+    {
+
+        return isLiked;
+    }
+    public void likePost(boolean likeButtonPressed)
+    {
+        if(!isLiked && !isDisliked && likeButtonPressed )
+        {
+            isLiked=true;
+
+            setLikes(getLikes()+1);
+        }
+        else if(isLiked && !isDisliked && likeButtonPressed){
+            isLiked=false;
+            setLikes(getLikes()-1);
+        }
+
+        else if(!isLiked && isDisliked && !likeButtonPressed){
+            isDisliked=false;
+            setDislikes(getDislikes()-1);
+        }
+        else if(!isLiked && !isDisliked && !likeButtonPressed)
+        {
+            isDisliked=true;
+            setDislikes(getDislikes()+1);
+        }
+
+
+    }
 
     public static int getPostCount() {
         return postCount;
+    }
+    public void setDislikes(int dislikes)
+    {
+        this.dislikes=dislikes;
     }
 
     public int getImage()
@@ -92,6 +130,7 @@ public class NewsPost {
     public void setLikes(int likes) {
         this.likes = likes;
     }
+
 
     public void viewNewsPostObject(){
         System.out.print("\nNewsPost OBJECT");

@@ -80,10 +80,16 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     NewsPost post;
                     int currLikes;
                     System.out.println("clicked like button");
+
                     post= newsPosts.get(getAdapterPosition());
-                    currLikes=post.getLikes()+1;
-                    post.setLikes(currLikes);
-                    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
+                 //   currLikes=post.getLikes()+1;
+                //    post.setLikes(currLikes);
+                    post.likePost(true);
+                //    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
+                    likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
+
+                    likeButton.setText("liked");
+             //       dislikeButton.setEnabled(false);
 
                 }
             });
@@ -94,9 +100,13 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     int currLikes;
                     System.out.println("clicked dislike button");
                     post= newsPosts.get(getAdapterPosition());
-                    currLikes=post.getLikes()+1;
-                    post.setLikes(currLikes);
-                    dislikeCounter.setText(Integer.toString(currLikes)+PEOPLE_DISLIKE_LIKE_THIS);
+                    post.likePost(false);
+                  //  currLikes=post.getLikes()+1;
+                //    post.setLikes(currLikes);
+                    dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
+                    dislikeButton.setText("disliked");
+                  //  likeButton.setEnabled(false);
+
                 }
             });
         }
