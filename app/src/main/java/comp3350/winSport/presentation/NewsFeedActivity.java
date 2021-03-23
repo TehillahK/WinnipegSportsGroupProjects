@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +14,12 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessNewsFeed;
 import comp3350.winSport.objects.NewsPost;
+import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedActivity extends AppCompatActivity {
     private AccessNewsFeed accessNewsFeed;
     private List<NewsPost> newsPosts;
+    private RecyclerViewEventListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +44,20 @@ public class NewsFeedActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
-        NewsFeedAdapter adapter = new NewsFeedAdapter(newsPosts);
+        setOnClickListner();
+        NewsFeedAdapter adapter = new NewsFeedAdapter(newsPosts,listener);
         rv.setAdapter(adapter);
 
     }
 
-
+    private  void setOnClickListner()
+    {
+        listener=new RecyclerViewEventListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                //do stuff
+                System.out.println("click");
+            }
+        };
+    }
 }
