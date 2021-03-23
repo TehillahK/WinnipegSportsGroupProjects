@@ -55,7 +55,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         TextView caption;
         TextView datePosted;
         Button likeButton;
-
+        Button dislikeButton;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -63,6 +63,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             caption=itemView.findViewById(R.id.caption);
             datePosted=itemView.findViewById(R.id.date_posted);
             likeButton=itemView.findViewById(R.id.like_button);
+            dislikeButton=itemView.findViewById(R.id.dislike_button);
             itemView.setOnClickListener(this);
             likeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -74,6 +75,17 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     currLikes=post.getLikes();
                     post.setLikes(currLikes+1);
 
+                }
+            });
+            dislikeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NewsPost post;
+                    int currLikes;
+                    System.out.println("clicked dislike button");
+                    post= newsPosts.get(getAdapterPosition());
+                    currLikes=post.getLikes();
+                    post.setLikes(currLikes-1);
                 }
             });
         }
