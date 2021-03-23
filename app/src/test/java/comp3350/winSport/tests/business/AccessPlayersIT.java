@@ -32,7 +32,7 @@ public class AccessPlayersIT {
     }
 
     @Test
-    public void testGetPlayers() throws InvalidNameException {
+    public void testGetPlayersByTeam() throws InvalidNameException {
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Get Players of a Team");
         System.out.print("\n---------------------------------------");

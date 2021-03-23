@@ -135,4 +135,18 @@ public class AccessPlayersTest {
         System.out.print("\n---------------------------------------");
 
     }
+
+    @Test
+    public void testGetAllPlayers(){
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nTest 3: Get All Players");
+        System.out.print("\n---------------------------------------");
+
+        final List<Player> players = accessPlayers.getAllPlayers();
+        assertNotNull(players);
+
+        verify(iPlayer).getAllPlayers();
+        System.out.print("\nFinished test.");
+    }
+
 }
