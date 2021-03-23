@@ -56,6 +56,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         TextView datePosted;
         Button likeButton;
         Button dislikeButton;
+        TextView likeCounter;
+        TextView dislikeCounter;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -64,16 +66,20 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             datePosted=itemView.findViewById(R.id.date_posted);
             likeButton=itemView.findViewById(R.id.like_button);
             dislikeButton=itemView.findViewById(R.id.dislike_button);
+            likeCounter=itemView.findViewById(R.id.numLikes);
+            dislikeCounter=itemView.findViewById(R.id.numDislikes);
             itemView.setOnClickListener(this);
             likeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     NewsPost post;
                     int currLikes;
                     System.out.println("clicked like button");
                     post= newsPosts.get(getAdapterPosition());
-                    currLikes=post.getLikes();
-                    post.setLikes(currLikes+1);
+                    currLikes=post.getLikes()+1;
+                    post.setLikes(currLikes);
+                    likeCounter.setText(Integer.toString(currLikes));
 
                 }
             });
@@ -84,8 +90,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     int currLikes;
                     System.out.println("clicked dislike button");
                     post= newsPosts.get(getAdapterPosition());
-                    currLikes=post.getLikes();
-                    post.setLikes(currLikes-1);
+                    currLikes=post.getLikes()+1;
+                    post.setLikes(currLikes);
+                    dislikeCounter.setText(Integer.toString(currLikes));
                 }
             });
         }
