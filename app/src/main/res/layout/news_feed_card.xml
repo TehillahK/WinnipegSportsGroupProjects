@@ -41,7 +41,7 @@
             android:id="@+id/caption"
             android:textColor="@color/black"
             android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_below="@id/post_image"
             />
 
@@ -59,9 +59,9 @@
           android:id="@+id/numLikes"
           android:text="0"
           android:textColor="@color/black"
-          android:textSize="30sp"
-          android:layout_toRightOf="@+id/like_button"
-          android:layout_below="@+id/caption"
+          android:textSize="15sp"
+
+          android:layout_below="@+id/like_button"
 
           />
         <Button
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dislike_button"
             android:layout_below="@+id/caption"
-            android:layout_marginLeft="50sp"
+            android:layout_marginLeft="60sp"
             android:layout_toRightOf="@+id/like_button"
             android:text="dislike"
             />
@@ -79,9 +79,9 @@
             android:id="@+id/numDislikes"
             android:text="0"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_toRightOf="@+id/dislike_button"
-            android:layout_below="@+id/caption"
+            android:textSize="15sp"
+         android:layout_marginLeft="155sp"
+            android:layout_below="@+id/dislike_button"
 
             />
 

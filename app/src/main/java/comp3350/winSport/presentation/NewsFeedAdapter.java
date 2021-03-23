@@ -1,6 +1,6 @@
 package comp3350.winSport.presentation;
 
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +20,8 @@ import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
 
     List<NewsPost> newsPosts;
+    final String PEOPLE_LIKE_THIS=" people like this";
+    final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
     private RecyclerViewEventListener listener;
     public NewsFeedAdapter(List<NewsPost> newsPosts, RecyclerViewEventListener listener)
     {
@@ -39,6 +41,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         holder.postTitle.setText(newsPosts.get(position).getTitle());
         holder.caption.setText(newsPosts.get(position).getCaption());
         holder.datePosted.setText(newsPosts.get(position).getDatePosted());
+        holder.likeCounter.setText(Integer.toString(newsPosts.get(position).getLikes())+ PEOPLE_LIKE_THIS);
+        holder.dislikeCounter.setText(Integer.toString(newsPosts.get(position).getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
     }
 
 
@@ -79,7 +83,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     post= newsPosts.get(getAdapterPosition());
                     currLikes=post.getLikes()+1;
                     post.setLikes(currLikes);
-                    likeCounter.setText(Integer.toString(currLikes));
+                    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
 
                 }
             });
@@ -92,7 +96,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     post= newsPosts.get(getAdapterPosition());
                     currLikes=post.getLikes()+1;
                     post.setLikes(currLikes);
-                    dislikeCounter.setText(Integer.toString(currLikes));
+                    dislikeCounter.setText(Integer.toString(currLikes)+PEOPLE_DISLIKE_LIKE_THIS);
                 }
             });
         }
