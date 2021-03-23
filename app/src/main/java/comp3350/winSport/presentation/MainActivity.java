@@ -26,12 +26,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button3 = findViewById(R.id.player_stat_layout);
         Button button4 = findViewById(R.id.schedule_layout);
         Button button5 = findViewById(R.id.channel_layout);
+        Button button6 = findViewById(R.id.player_stat_layout);
+        Button button7 = findViewById(R.id.schedule_layout);
+        Button button8 = findViewById(R.id.channel_layout);
+        Button button9 = findViewById(R.id.nearby_bars);
+
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
     }
 
 
@@ -63,7 +72,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
                 MainActivity.this.startActivity(channelIntent);
                 break;
-
+            case R.id.newsFeedMenu:
+                // Player Stats
+//                Intent intent3 = new Intent(MainActivity.this, PlayersActivity.class);
+//                MainActivity.this.startActivity(intent3);
+                break;
+            case R.id.buy_tickets_menu:
+                // Player Stats
+//                Intent intent4 = new Intent(MainActivity.this, ScheduleActivity.class);
+//                MainActivity.this.startActivity(intent4);
+                break;
+            case R.id.standings_menu:
+                // Player Stats
+//                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
+//                MainActivity.this.startActivity(channelIntent);
+                break;
+            case R.id.nearby_bars:
+                // Player Stats
+//                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
+//                MainActivity.this.startActivity(channelIntent);
+                break;
             default:
                 break;
         }

@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:weightSum="3"
+            android:weightSum="5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp">
@@ -110,8 +110,70 @@
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
 
+                <Button
+                    android:id="@+id/newsFeedMenu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/news_feed"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
 
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/buy_tickets_menu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/buy_tickets"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+                <Button
+                    android:id="@+id/standings_menu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/standings"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/nearby_bars"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/find_nearby_bars"
+                    android:gravity="center"                    android:textSize="30sp"
+                    android:backgroundTint="@color/light_purp"/>
             </LinearLayout>
 
         </LinearLayout>
