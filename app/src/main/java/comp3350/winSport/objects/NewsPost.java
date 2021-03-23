@@ -10,7 +10,8 @@ public class NewsPost {
     private String caption;
     private int numLikes;
     private int image;
-
+    private int likes;
+    private int dislikes;
     public NewsPost()
     {
         title="The Title";
@@ -19,15 +20,18 @@ public class NewsPost {
         numLikes=0;
         image = 0;
         postID = postCount;
+        likes=0;
+        dislikes=0;
         postCount++;
     }
 
-    public NewsPost(String title,String datePosted ,String caption, int numLikes,int image)
+    public NewsPost(String title,String datePosted ,String caption, int likes,int dislikes,int image)
     {
         this.title=title;
         this.datePosted=datePosted;
         this.caption=caption;
-        this.numLikes=numLikes;
+        this.likes=likes;
+        this.dislikes=dislikes;
         this.image=image;
         postID = postCount;
         postCount++;
@@ -72,6 +76,15 @@ public class NewsPost {
     public void setCaption(String caption) {
         this.caption = caption;
     }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
     public int getNumLikes() {
         return numLikes;
     }

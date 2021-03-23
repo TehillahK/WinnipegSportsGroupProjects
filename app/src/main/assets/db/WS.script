@@ -3,7 +3,7 @@ CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(30),teamID integer)
 CREATE MEMORY TABLE PUBLIC.PLAYERS(PlayerID integer, Player character varying,Number integer,Position character varying,Shot character varying,teamName character varying)
 CREATE MEMORY TABLE PUBLIC.PLAYER_STATS(playerName character varying,GamesPlayed integer,Team character varying(3),League character varying(3),Position character varying(2),Season character varying(7),Age integer,Goals integer,Assists integer,Points integer,GoalsPerGame DECIMAL,AssistsPerGame DECIMAL,ShotsPerGame DECIMAL)
 CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),LEAGUENAME VARCHAR(20),TEAM1ID character varying,TEAM2ID character varying, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
-CREATE MEMORY TABLE PUBLIC.NEWS_FEED(POSTID INTEGER NOT NULL PRIMARY KEY, TITLE VARCHAR(20),DATEPOSTED VARCHAR(20),CAPTION VARCHAR(20),NUMLIKES Integer,IMAGE Integer)
+CREATE MEMORY TABLE PUBLIC.NEWS_FEED(POSTID INTEGER NOT NULL PRIMARY KEY, TITLE VARCHAR(20),DATEPOSTED VARCHAR(20),CAPTION VARCHAR(20),LIKES Integer,DISLIKES Integer,IMAGE Integer)
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
@@ -110,4 +110,4 @@ INSERT INTO GAMES VALUES(17, 'Stanley Cup Playoffs','NHL', 'Montreal Canadiens',
 INSERT INTO GAMES VALUES(18, 'Stanley Cup Playoffs','NHL', 'Ottowa Senators', 'Winnipeg Jets', 'Jan 02, 2021', 'Rogers other Place', '5 - 4')
 INSERT INTO GAMES VALUES(19, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Edmonton Oilers', 'Jun 10, 2021', 'Rogers human Place', '0 - 0')
 INSERT INTO GAMES VALUES(20, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Ottawa Senators', 'Jun 19, 2021', 'Rogers non-human Place', '0 - 0')
-INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',0,0)
+INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',0,0,0)

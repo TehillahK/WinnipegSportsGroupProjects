@@ -33,11 +33,12 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
         final String datePosted= rs.getString("DATEPOSTED");
         final String caption = rs.getString("CAPTION");
 
-        final int numLikes = rs.getInt("NUMLIKES");
+        final int numLikes = rs.getInt("LIKES");
+        final int numDisLikes=rs.getInt("DISLIKES");
         final int image = rs.getInt("IMAGE");
 
 
-        return new NewsPost(title,datePosted,caption,numLikes,image);
+        return new NewsPost(title,datePosted,caption,numLikes,numDisLikes,image);
 
 
     }
