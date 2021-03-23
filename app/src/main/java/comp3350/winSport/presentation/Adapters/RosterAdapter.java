@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +26,7 @@ public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     List<Player> players; // declare games List
 
-    RosterAdapter(List<Player> players) { // constructor initalizing games list.
+    public RosterAdapter(List<Player> players) { // constructor initalizing games list.
         this.players = players;
     }
 

@@ -110,17 +110,7 @@
                     android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
 
-                <Button
-                    android:id="@+id/live_game_layout"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_margin="20dp"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/track_live_game_main"
-                    android:gravity="center"
-                    android:textSize="30sp"
-                    android:backgroundTint="@color/light_purp"/>
+
 
             </LinearLayout>
 

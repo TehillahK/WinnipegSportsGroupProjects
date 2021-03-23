@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
 
     List<Game> games; // declare games List
 
-    CurrentAdapter(List<Game> games) { // constructor initalizing games list.
+    public CurrentAdapter(List<Game> games) { // constructor initalizing games list.
         this.games = games;
     }
 

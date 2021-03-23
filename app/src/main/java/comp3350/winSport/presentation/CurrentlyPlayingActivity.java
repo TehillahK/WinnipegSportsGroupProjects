@@ -12,6 +12,7 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
+import comp3350.winSport.presentation.Adapters.CurrentAdapter;
 
 public class CurrentlyPlayingActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
