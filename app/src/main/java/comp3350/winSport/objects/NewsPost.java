@@ -89,6 +89,10 @@ public class NewsPost {
         return numLikes;
     }
 
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
     public void viewNewsPostObject(){
         System.out.print("\nNewsPost OBJECT");
         System.out.print("\npost ID: " + getPostID());

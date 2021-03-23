@@ -1,8 +1,10 @@
 package comp3350.winSport.presentation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +54,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         TextView postTitle;
         TextView caption;
         TextView datePosted;
+        Button likeButton;
 
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,7 +62,20 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             postTitle=itemView.findViewById(R.id.post_title);
             caption=itemView.findViewById(R.id.caption);
             datePosted=itemView.findViewById(R.id.date_posted);
+            likeButton=itemView.findViewById(R.id.like_button);
             itemView.setOnClickListener(this);
+            likeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NewsPost post;
+                    int currLikes;
+                    System.out.println("clicked like button");
+                    post= newsPosts.get(getAdapterPosition());
+                    currLikes=post.getLikes();
+                    post.setLikes(currLikes+1);
+
+                }
+            });
         }
 
 
