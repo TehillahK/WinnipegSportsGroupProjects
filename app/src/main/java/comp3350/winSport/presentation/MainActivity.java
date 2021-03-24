@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button8 = findViewById(R.id.standings_menu);
         Button button9 = findViewById(R.id.nearby_bars);
 
-
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button8.setOnClickListener(this);
         button9.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {
