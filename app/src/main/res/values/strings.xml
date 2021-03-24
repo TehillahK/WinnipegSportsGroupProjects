@@ -42,5 +42,9 @@
     <string name="standings">Standings</string>
     <string name="news_feed">News Feed</string>
     <string name="find_nearby_bars">Find Nearby Bars</string>
+    <string name="teampicture">TeamPicture</string>
+    <string name="teamname">TeamName</string>
+    <string name="_32">32</string>
+    <string name="w1">W1</string>
 
 </resources>
