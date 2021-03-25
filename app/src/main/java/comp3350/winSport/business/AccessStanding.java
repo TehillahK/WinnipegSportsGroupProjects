@@ -16,7 +16,14 @@ public class AccessStanding {
         this.standingList = null;
     }
 
+    public AccessStanding(final IStanding standingInterface) {
+        this.iStanding = standingInterface;
+        this.standingList = null;
+    }
 
-
+    public List<Standing> getStandingInOrder() {
+        standingList = iStanding.getStandingsInOrder();
+        return standingList;
+    }
 
 }

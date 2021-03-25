@@ -2,7 +2,7 @@ package comp3350.winSport.objects;
 
 public class Standing {
 
-    private String teamID;
+    private int teamID;
 
     private String teamName;
     private int wins;
@@ -12,7 +12,7 @@ public class Standing {
     private String win_streak;
 
 
-    public Standing(String teamID, String teamName, int wins, int losses, int ot_losses, int pts, String win_streak) {
+    public Standing(int teamID, String teamName, int wins, int losses, int ot_losses, int pts, String win_streak) {
         this.teamID = teamID;
         this.teamName = teamName;
         this.wins = wins;
@@ -46,7 +46,7 @@ public class Standing {
         return win_streak;
     }
 
-    public String getTeamID() {
+    public int getTeamID() {
         return teamID;
     }
 }
