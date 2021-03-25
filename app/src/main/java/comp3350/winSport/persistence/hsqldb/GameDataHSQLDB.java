@@ -82,8 +82,6 @@ public class GameDataHSQLDB implements IGame {
                 game = fromResultSet(rs);
             else
                 game = new Game();
-
-
             rs.close();
             st.close();
 

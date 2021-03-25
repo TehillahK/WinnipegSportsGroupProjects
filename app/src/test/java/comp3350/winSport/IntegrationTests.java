@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 import comp3350.winSport.business.AccessPlayers;
+import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.tests.business.AccessGamesIT;
 import comp3350.winSport.tests.business.AccessPlayerStatsIT;
 import comp3350.winSport.tests.business.AccessPlayersIT;
@@ -13,7 +14,8 @@ import comp3350.winSport.tests.business.AccessTeamsIT;
 @Suite.SuiteClasses({
         AccessGamesIT.class,
         AccessPlayersIT.class,
-        AccessPlayerStatsIT.class
+        AccessPlayerStatsIT.class,
+        AccessTeamsIT.class
 })
 
 public class IntegrationTests {
