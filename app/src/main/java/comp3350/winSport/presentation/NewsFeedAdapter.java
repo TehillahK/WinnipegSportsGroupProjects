@@ -1,6 +1,7 @@
 package comp3350.winSport.presentation;
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         Button dislikeButton;
         TextView likeCounter;
         TextView dislikeCounter;
+        Button shareButton;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -72,7 +74,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             dislikeButton=itemView.findViewById(R.id.dislike_button);
             likeCounter=itemView.findViewById(R.id.numLikes);
             dislikeCounter=itemView.findViewById(R.id.numDislikes);
+          //  shareButton=itemView.findViewById(R.id.share_button);
             itemView.setOnClickListener(this);
+
             likeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -84,11 +88,17 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     post= newsPosts.get(getAdapterPosition());
                  //   currLikes=post.getLikes()+1;
                 //    post.setLikes(currLikes);
+
                     post.likePost(true);
+                    if(!post.isDisliked())
+                    {
+                        dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
+                    }
                 //    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
                     likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
 
                     likeButton.setText("liked");
+
              //       dislikeButton.setEnabled(false);
 
                 }
@@ -103,6 +113,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     post.likePost(false);
                   //  currLikes=post.getLikes()+1;
                 //    post.setLikes(currLikes);
+                    if(!post.isLiked())
+                    {
+                        likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
+                    }
                     dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
                     dislikeButton.setText("disliked");
                   //  likeButton.setEnabled(false);

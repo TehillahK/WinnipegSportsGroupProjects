@@ -57,6 +57,13 @@ public class NewsPost {
             isLiked=false;
             setLikes(getLikes()-1);
         }
+        else if(!isLiked && isDisliked && likeButtonPressed)
+        {
+            isDisliked=false;
+            isLiked=true;
+            setLikes(getLikes()+1);
+            setDislikes(getDislikes()-1);
+        }
 
         else if(!isLiked && isDisliked && !likeButtonPressed){
             isDisliked=false;
@@ -67,6 +74,14 @@ public class NewsPost {
             isDisliked=true;
             setDislikes(getDislikes()+1);
         }
+      else if(isLiked && !isDisliked && !likeButtonPressed){
+          isDisliked=true;
+          isLiked=false;
+          setLikes(getLikes()-1);
+          setDislikes(getDislikes()+1);
+        }
+
+
 
 
     }
@@ -131,7 +146,10 @@ public class NewsPost {
         this.likes = likes;
     }
 
-
+    public boolean isDisliked()
+    {
+        return isDisliked;
+    }
     public void viewNewsPostObject(){
         System.out.print("\nNewsPost OBJECT");
         System.out.print("\npost ID: " + getPostID());
