@@ -3,6 +3,7 @@ CREATE MEMORY TABLE PUBLIC.TEAMS(NAME VARCHAR(30),teamID integer)
 CREATE MEMORY TABLE PUBLIC.PLAYERS(PlayerID integer, Player character varying,Number integer,Position character varying,Shot character varying,teamName character varying)
 CREATE MEMORY TABLE PUBLIC.PLAYER_STATS(playerName character varying,GamesPlayed integer,Team character varying(3),League character varying(3),Position character varying(2),Season character varying(7),Age integer,Goals integer,Assists integer,Points integer,GoalsPerGame DECIMAL,AssistsPerGame DECIMAL,ShotsPerGame DECIMAL)
 CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME VARCHAR(20),LEAGUENAME VARCHAR(20),TEAM1ID character varying,TEAM2ID character varying, DATE VARCHAR(20), LOCATION VARCHAR(20), SCORE VARCHAR(5))
+CREATE MEMORY TABLE PUBLIC.STANDINGS(TEAMID INTEGER NOT NULL PRIMARY KEY, teamName character varying, wins integer, losses integet, ot_losses integer, points integer, win_streak character varying)
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
@@ -109,3 +110,9 @@ INSERT INTO GAMES VALUES(17, 'Stanley Cup Playoffs','NHL', 'Montreal Canadiens',
 INSERT INTO GAMES VALUES(18, 'Stanley Cup Playoffs','NHL', 'Ottowa Senators', 'Winnipeg Jets', 'Jan 02, 2021', 'Rogers other Place', '5 - 4')
 INSERT INTO GAMES VALUES(19, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Edmonton Oilers', 'Jun 10, 2021', 'Rogers human Place', '0 - 0')
 INSERT INTO GAMES VALUES(20, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Ottawa Senators', 'Jun 19, 2021', 'Rogers non-human Place', '0 - 0')
+INSERT INTO STANDING (1,'Winnipeg Jets',19,11,2,40,'W1')
+INSERT INTO STANDING (2,'Toronto Maple Leafs',20,10,2,42,'W1')
+INSERT INTO STANDING (3,'Ottawa Senators',12,20,3,27,'W2')
+INSERT INTO STANDING (4,'Edmonton Oilers',21,13,0,42,'W3')
+INSERT INTO STANDING (5,'Calgary Flames',15,16,3,33,'L3')
+INSERT INTO STANDING (6,'Montreal Canadiens',14,8,9,37,'W1')
