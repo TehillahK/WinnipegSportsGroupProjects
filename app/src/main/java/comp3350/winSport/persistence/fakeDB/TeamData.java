@@ -12,7 +12,6 @@ import comp3350.winSport.persistence.fakeDB.GameData;
 public class TeamData implements ITeam {
 
     List<Team> teams;
-    PlayerData playerData = new PlayerData();
 
     Team t1;
     Team t2;
@@ -29,12 +28,12 @@ public class TeamData implements ITeam {
 
     void initData() {
 
-        t1 = new Team("Winnipeg Jets", playerData.getPlayersById(1), R.drawable.jets,0);
-        t2 = new Team("Toronto Maple Leafs", playerData.getPlayersById(2),R.drawable.leafs,1);
-        t3 = new Team("Ottawa Senators", playerData.getPlayersById(3), R.drawable.ottawa,2);
-        t4 = new Team("Edmonton Oilers", playerData.getPlayersById(4),R.drawable.oilers,3);
-        t5 = new Team("Calgary Flames", playerData.getPlayersById(5),R.drawable.flames,4);
-        t6 = new Team("Montreal Canadiens", playerData.getPlayersById(6),R.drawable.montreal,5);
+        t1 = new Team("Winnipeg Jets", R.drawable.jets,0);
+        t2 = new Team("Toronto Maple Leafs",R.drawable.leafs,1);
+        t3 = new Team("Ottawa Senators", R.drawable.ottawa,2);
+        t4 = new Team("Edmonton Oilers", R.drawable.oilers,3);
+        t5 = new Team("Calgary Flames", R.drawable.flames,4);
+        t6 = new Team("Montreal Canadiens",R.drawable.montreal,5);
 
         teams.add(t1);
         teams.add(t2);
