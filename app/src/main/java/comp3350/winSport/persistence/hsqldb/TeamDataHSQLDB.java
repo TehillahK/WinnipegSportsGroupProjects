@@ -1,7 +1,5 @@
 package comp3350.winSport.persistence.hsqldb;
-import android.util.Log;
 
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,9 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.business.AccessPlayers;
-import comp3350.winSport.objects.Game;
-import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.ITeam;
@@ -22,11 +17,9 @@ import comp3350.winSport.persistence.ITeam;
 public class TeamDataHSQLDB implements ITeam {
 
     private final String dbPath;
-    private final AccessPlayers accessPlayers;
 
     public TeamDataHSQLDB(final String dbPath) {
         this.dbPath = dbPath;
-        this.accessPlayers = new AccessPlayers();
     }
 
     private Connection connection() throws SQLException {
@@ -35,23 +28,11 @@ public class TeamDataHSQLDB implements ITeam {
 
     private Team fromResultSet(final ResultSet rs) throws SQLException {
         final String teamName = rs.getString("NAME");
-        List<Player> players;
         final int teamID;
 
-        try {
-            players = this.accessPlayers.getPlayers(teamName);
-            teamID = rs.getInt("teamID");
-            int pic;
-            if (players.size() != 0)
-                pic = players.get(0).getTeamPic();
-            else
-                pic = R.drawable.nhl;
-            return new Team(teamName, players, pic,teamID);
-        }
-        catch (InvalidNameException e){
-            System.out.print("Team is not on the list.");
-        }
-        return null;
+        teamID = rs.getInt("teamID");
+        int pic = R.drawable.nhl_main;
+        return new Team(teamName, pic, teamID);
     }
 
     @Override

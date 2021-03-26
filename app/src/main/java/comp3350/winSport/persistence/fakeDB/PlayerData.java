@@ -314,6 +314,11 @@ public class PlayerData implements IPlayer {
         return result;
     }
 
+    @Override
+    public List<Player> getAllPlayers() {
+        return allPlayer;
+    }
+
     List<Player> getPlayersById(int id) {
         switch(id) {
             case 1:

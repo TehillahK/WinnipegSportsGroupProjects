@@ -9,15 +9,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.List;
+
 import comp3350.winSport.R;
+import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.business.AccessTeams;
+import comp3350.winSport.objects.Player;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.presentation.Adapters.RosterAdapter;
 
 public class RosterActivity extends AppCompatActivity {
 
-    private AccessTeams accessTeams;
-    private Team team;
+    private AccessPlayers accessPlayers;
+    private List<Player> team;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +41,10 @@ public class RosterActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         // RECYCLER VIEW DATA
-        accessTeams = new AccessTeams();
+        accessPlayers = new AccessPlayers();
 
         try {
-            team = accessTeams.getTeamByName(value);
+            team = accessPlayers.getPlayersByTeam(value);
         } catch (InvalidNameException e) {
             team = null;
             Log.e("Roster Name ER",e.toString());
@@ -50,10 +55,10 @@ public class RosterActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         // A Dev task for the future should be to develop a screen to display if teams is null.
-        if (team != null && !team.getPlayers().isEmpty()) {
+        if (team != null) {
             // Activate Layout manager and RecyclerView
             rv.setLayoutManager(llm);
-            RosterAdapter adapter = new RosterAdapter(team.getPlayers());
+            RosterAdapter adapter = new RosterAdapter(team);
             rv.setAdapter(adapter);
         }
         else {

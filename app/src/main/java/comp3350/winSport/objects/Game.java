@@ -8,6 +8,12 @@ public class Game {
         Game DSO specifically used for our currently playing and Schedule Features.
     */
 
+
+
+
+
+
+
     private int gameID;
     private String gameName;
     private String gameLeague;
@@ -19,6 +25,12 @@ public class Game {
 
     private int leaguePic;
     private int gamePicID;
+
+    public Game(String team2 , String gameScore, int gamePicID) {
+        this.team2 = team2;
+        this.gameScore = gameScore;
+        this.gamePicID = gamePicID;
+    }
 
     public Game() {
         gameID = 0;
@@ -43,7 +55,7 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leaguePic = R.drawable.nhl;
+        leaguePic = R.drawable.nhl_main;
         gamePicID = R.drawable.jets;
     }
 
