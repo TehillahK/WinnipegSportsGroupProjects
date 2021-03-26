@@ -35,10 +35,10 @@ public class StandingAdapter extends RecyclerView.Adapter<StandingAdapter.Standi
 
         holder.teamPic.setImageResource(R.drawable.jets);
         holder.teamName.setText(s.getTeamName());
-        holder.wins.setText(s.getWins());
-        holder.losses.setText(s.getLosses());
-        holder.ot_losses.setText(s.getOt_losses());
-        holder.points.setText(s.getPts());
+        holder.wins.setText(String.valueOf(s.getWins()));
+        holder.losses.setText(String.valueOf(s.getLosses()));
+        holder.ot_losses.setText(String.valueOf(s.getOt_losses()));
+        holder.points.setText(String.valueOf(s.getPts()));
         holder.win_streak.setText(s.getWin_streak());
 
     }
