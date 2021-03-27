@@ -1,4 +1,4 @@
-package comp3350.winSport;
+package comp3350.winSport.objects;
 
 public class Ticket {
     private String name;

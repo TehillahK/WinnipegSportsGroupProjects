@@ -1,4 +1,4 @@
-package comp3350.winSport;
+package comp3350.winSport.presentation.Adapters;
 
 import android.content.Context;
 import android.os.Build;
@@ -14,8 +14,9 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
-import comp3350.winSport.objects.Channel;
-import comp3350.winSport.presentation.Adapters.ChannelAdapter;
+
+import comp3350.winSport.R;
+import comp3350.winSport.objects.Ticket;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class BuyTicketAdapter extends RecyclerView.Adapter<BuyTicketAdapter.MyViewHolder>{

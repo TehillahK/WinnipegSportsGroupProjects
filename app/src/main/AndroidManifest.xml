@@ -2,18 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comp3350.winSport">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WinnipegSports">
-        <activity android:name=".BuyTickets"></activity>
+        <activity android:name=".presentation.TicketsActivity"/>
         <activity android:name=".presentation.PlayerStatsActivity" />
         <activity android:name=".presentation.TeamScheduleActivity" />
         <activity android:name=".presentation.ScheduleActivity" />
         <activity android:name=".presentation.PlayersActivity" />
-        <activity android:name=".presentation.ChannelActivity"></activity>
+        <activity android:name=".presentation.ChannelActivity"/>
         <activity android:name=".presentation.TeamsActivity" />
         <activity android:name=".presentation.SplashScreenActivity">
             <intent-filter>
@@ -22,11 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.MainActivity"></activity>
+        <activity android:name=".presentation.MainActivity"/>
         <activity android:name=".presentation.RosterActivity" />
         <activity android:name=".presentation.CurrentlyPlayingActivity" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

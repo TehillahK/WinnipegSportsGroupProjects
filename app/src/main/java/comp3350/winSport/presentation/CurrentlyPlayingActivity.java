@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.Ticket;
 import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.presentation.Adapters.CurrentAdapter;
@@ -37,15 +36,7 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
 //        accessGames = new AccessGames();
 //        games = accessGames.getGames();
 
-
-        games = new ArrayList<>();
-
-        games.add(new Game("Calgary Flames"       ,"0 - 0" , R.drawable.flames));
-        games.add(new Game("Edmonton Oilers"      ,"0 - 0" , R.drawable.oilers));
-        games.add(new Game("Montréal Canadiens"   ,"0 - 0" , R.drawable.montreal));
-        games.add(new Game("Ottawa Senators"      ,"0 - 0" , R.drawable.ottawa));
-        games.add(new Game("Toronto Maple Leafs"  ,"0 - 0" , R.drawable.leafs));
-        games.add(new Game("Vancouver Canucks"    ,"0 - 0" , R.drawable.vancouver));
+        initGames();
 
         RecyclerView rv = findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -55,4 +46,16 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
     }
+
+    void initGames() {
+        games = new ArrayList<>();
+
+        games.add(new Game("Calgary Flames"       ,"0 - 0" , R.drawable.flames));
+        games.add(new Game("Edmonton Oilers"      ,"0 - 0" , R.drawable.oilers));
+        games.add(new Game("Montréal Canadiens"   ,"0 - 0" , R.drawable.montreal));
+        games.add(new Game("Ottawa Senators"      ,"0 - 0" , R.drawable.ottawa));
+        games.add(new Game("Toronto Maple Leafs"  ,"0 - 0" , R.drawable.leafs));
+        games.add(new Game("Vancouver Canucks"    ,"0 - 0" , R.drawable.vancouver));
+    }
+
 }

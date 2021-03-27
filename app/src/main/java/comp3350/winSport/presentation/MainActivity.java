@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import comp3350.winSport.BuyTickets;
 import comp3350.winSport.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buy_tickets_menu:
                 // Player Stats
-                Intent BuyTicketintent = new Intent(MainActivity.this, BuyTickets.class);
+                Intent BuyTicketintent = new Intent(MainActivity.this, TicketsActivity.class);
                 MainActivity.this.startActivity(BuyTicketintent);
                 break;
             case R.id.standings_menu:
