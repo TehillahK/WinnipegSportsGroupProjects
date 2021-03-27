@@ -33,7 +33,7 @@ public class StandingAdapter extends RecyclerView.Adapter<StandingAdapter.Standi
     public void onBindViewHolder(@NonNull StandingViewHolder holder, int position) {
         Standing s = standings.get(position);
 
-        holder.teamPic.setImageResource(R.drawable.jets);
+        holder.teamPic.setImageResource(s.getTeamPic());
         holder.teamName.setText(s.getTeamName());
         holder.wins.setText(String.valueOf(s.getWins()));
         holder.losses.setText(String.valueOf(s.getLosses()));

@@ -11,8 +11,10 @@ public class Standing {
     private int pts;
     private String win_streak;
 
+    private int teamPic;
 
-    public Standing(int teamID, String teamName, int wins, int losses, int ot_losses, int pts, String win_streak) {
+
+    public Standing(int teamID, String teamName, int wins, int losses, int ot_losses, int pts, String win_streak,int teamPic) {
         this.teamID = teamID;
         this.teamName = teamName;
         this.wins = wins;
@@ -20,6 +22,7 @@ public class Standing {
         this.ot_losses = ot_losses;
         this.pts = pts;
         this.win_streak = win_streak;
+        this.teamPic = teamPic;
     }
 
     public String getTeamName() {
@@ -48,5 +51,9 @@ public class Standing {
 
     public int getTeamID() {
         return teamID;
+    }
+
+    public int getTeamPic() {
+        return teamPic;
     }
 }
