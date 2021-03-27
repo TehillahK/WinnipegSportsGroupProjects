@@ -32,7 +32,7 @@ public class NewsFeedActivity extends AppCompatActivity {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-        AccessNewsFeed accessNewsFeed = new AccessNewsFeed();
+        accessNewsFeed = new AccessNewsFeed();
         newsPosts=new ArrayList<>();
         newsPosts.addAll( accessNewsFeed.getNewsPosts());
     //    ArrayList<NewsPost> posts;
@@ -44,20 +44,21 @@ public class NewsFeedActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
-        setOnClickListner();
+//        setOnClickListner();
         NewsFeedAdapter adapter = new NewsFeedAdapter(newsPosts,listener);
         rv.setAdapter(adapter);
 
     }
 
-    private  void setOnClickListner()
-    {
-        listener=new RecyclerViewEventListener() {
-            @Override
-            public void onClick(View view, int pos) {
-                //do stuff
-                System.out.println("click");
-            }
-        };
-    }
+    // COLIN : not sure if we need this, i commented it out and the code runs without it.
+//    private  void setOnClickListner()
+//    {
+//        listener=new RecyclerViewEventListener() {
+//            @Override
+//            public void onClick(View view, int pos) {
+//                //do stuff
+//                System.out.println("click");
+//            }
+//        };
+//    }
 }
