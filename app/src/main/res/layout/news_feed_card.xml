@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/post_image"
             android:src="@mipmap/ic_launcher"
+
             android:layout_below="@id/date_posted"
             />
         <TextView

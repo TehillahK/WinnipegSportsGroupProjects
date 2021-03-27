@@ -135,8 +135,11 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
 
                   //  likeButton.setEnabled(false);
                     System.out.println(dislikeButton.getText());
-                    if(dislikeButton.getText().equals("dislike"))
+                    if(dislikeButton.getText().equals("dislike")  && post.isDisliked()) {
                         dislikeButton.setText("disliked");
+                        likeButton.setText("Like");
+                    }
+
                     else
                         dislikeButton.setText("dislike");
                 }
