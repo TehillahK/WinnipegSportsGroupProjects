@@ -96,8 +96,22 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     }
                 //    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
                     likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
-
-                    likeButton.setText("liked");
+                    if(likeButton.getText().equals("Like") && !post.isDisliked()) {
+                        likeButton.setText("Liked");
+                        dislikeButton.setText("dislike");
+                    }
+                    else if(likeButton.getText().equals("Liked") && !post.isDisliked()) {
+                        likeButton.setText("Like");
+                     //   dislikeButton.setText("")
+                    }
+                    else if(likeButton.getText().equals("Like") && post.isDisliked()) {
+                        likeButton.setText("Liked");
+                    //    dislikeButton.setText("disliked");
+                    }
+                    else if(likeButton.getText().equals("Liked") && post.isDisliked()) {
+                        likeButton.setText("Like");
+                        dislikeButton.setText("dislike");
+                    }
 
              //       dislikeButton.setEnabled(false);
 
@@ -118,9 +132,13 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                         likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
                     }
                     dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
-                    dislikeButton.setText("disliked");
-                  //  likeButton.setEnabled(false);
 
+                  //  likeButton.setEnabled(false);
+                    System.out.println(dislikeButton.getText());
+                    if(dislikeButton.getText().equals("dislike"))
+                        dislikeButton.setText("disliked");
+                    else
+                        dislikeButton.setText("dislike");
                 }
             });
         }

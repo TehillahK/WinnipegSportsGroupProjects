@@ -24,4 +24,9 @@ public class AccessNewsFeed {
         newsPosts=iNewsFeed.getNewsPosts();
         return newsPosts;
     }
+
+    public void likePost()
+    {
+
+    }
 }

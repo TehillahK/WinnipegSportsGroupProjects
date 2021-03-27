@@ -91,6 +91,7 @@ public class NewsPost {
     }
     public void setDislikes(int dislikes)
     {
+
         this.dislikes=dislikes;
     }
 
@@ -123,9 +124,6 @@ public class NewsPost {
         this.image = image;
     }
 
-    public void setNumLikes(int numLikes) {
-        this.numLikes = numLikes;
-    }
     public void setCaption(String caption) {
         this.caption = caption;
     }
