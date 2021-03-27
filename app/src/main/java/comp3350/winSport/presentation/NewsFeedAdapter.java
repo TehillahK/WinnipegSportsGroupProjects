@@ -2,6 +2,7 @@ package comp3350.winSport.presentation;
 
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +43,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         holder.postTitle.setText(newsPosts.get(position).getTitle());
         holder.caption.setText(newsPosts.get(position).getCaption());
         holder.datePosted.setText(newsPosts.get(position).getDatePosted());
-        holder.likeCounter.setText(Integer.toString(newsPosts.get(position).getLikes())+ PEOPLE_LIKE_THIS);
-        holder.dislikeCounter.setText(Integer.toString(newsPosts.get(position).getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
+        holder.likeCounter.setText(String.format("%s%s", newsPosts.get(position).getLikes(), PEOPLE_LIKE_THIS));
+        holder.dislikeCounter.setText(String.format("%s%s", newsPosts.get(position).getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
     }
 
 
@@ -82,36 +83,45 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 public void onClick(View v) {
 
                     NewsPost post;
-                    int currLikes;
-                    System.out.println("clicked like button");
+                    Log.v("NewsFeedAdapter","user clicked like or dislike button");
 
                     post= newsPosts.get(getAdapterPosition());
-                 //   currLikes=post.getLikes()+1;
-                //    post.setLikes(currLikes);
+                    //   currLikes=post.getLikes()+1;
+                    //    post.setLikes(currLikes);
 
                     post.likePost(true);
-                    if(!post.isDisliked())
-                    {
-                        dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
-                    }
-                //    likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
-                    likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
-                    if(likeButton.getText().equals("Like") && !post.isDisliked()) {
+
+                    dislikeCounter.setText(String.format("%s%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
+                    likeCounter.setText(String.format("%s%s", post.getLikes(), PEOPLE_LIKE_THIS));
+
+                    // likeCounter.setText(Integer.toString(currLikes)+PEOPLE_LIKE_THIS);
+
+                    boolean currLike = likeButton.getText().equals("Like");
+                    if (currLike)
                         likeButton.setText("Liked");
-                        dislikeButton.setText("dislike");
-                    }
-                    else if(likeButton.getText().equals("Liked") && !post.isDisliked()) {
+                    else
                         likeButton.setText("Like");
-                     //   dislikeButton.setText("")
-                    }
-                    else if(likeButton.getText().equals("Like") && post.isDisliked()) {
-                        likeButton.setText("Liked");
-                    //    dislikeButton.setText("disliked");
-                    }
-                    else if(likeButton.getText().equals("Liked") && post.isDisliked()) {
-                        likeButton.setText("Like");
-                        dislikeButton.setText("dislike");
-                    }
+                    dislikeButton.setText("dislike");
+
+                    // COLIN : i simplified the logic a bit like you did in the dislike onclicklistener.
+                    // once we clean up the method it will be a lot more compact.
+
+//                    if(currLike && !post.isDisliked()) {
+//                        likeButton.setText("Liked");
+//                        dislikeButton.setText("dislike");
+//                    }
+//                    else if(!currLike && !post.isDisliked()) {
+//                        likeButton.setText("Like");
+//                     //   dislikeButton.setText("")
+//                    }
+//                    else if(currLike && post.isDisliked()) {
+//                        likeButton.setText("Liked");
+//                    //    dislikeButton.setText("disliked");
+//                    }
+//                    else if(!currLike && post.isDisliked()) {
+//                        likeButton.setText("Like");
+//                        dislikeButton.setText("dislike");
+//                    }
 
              //       dislikeButton.setEnabled(false);
 
@@ -127,21 +137,18 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     post.likePost(false);
                   //  currLikes=post.getLikes()+1;
                 //    post.setLikes(currLikes);
-                    if(!post.isLiked())
-                    {
-                        likeCounter.setText(Integer.toString(post.getLikes())+PEOPLE_LIKE_THIS);
-                    }
-                    dislikeCounter.setText(Integer.toString(post.getDislikes())+PEOPLE_DISLIKE_LIKE_THIS);
+
+
+                    likeCounter.setText(String.format("%d%s", post.getLikes(), PEOPLE_LIKE_THIS));
+                    dislikeCounter.setText(String.format("%d%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
 
                   //  likeButton.setEnabled(false);
-                    System.out.println(dislikeButton.getText());
-                    if(dislikeButton.getText().equals("dislike")  && post.isDisliked()) {
+                    if(dislikeButton.getText().equals("dislike")  && post.isDisliked())
                         dislikeButton.setText("disliked");
-                        likeButton.setText("Like");
-                    }
-
                     else
                         dislikeButton.setText("dislike");
+                    likeButton.setText("Like");
+
                 }
             });
         }

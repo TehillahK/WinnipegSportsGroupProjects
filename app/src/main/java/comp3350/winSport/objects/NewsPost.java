@@ -42,48 +42,54 @@ public class NewsPost {
     }
     public boolean isLiked()
     {
-
         return isLiked;
     }
+
+
+    // COLIN : I think we need a messy method like to to handle the logic, Its good its here and not
+    // in the presentation layer. I tried to Comment each if/else block to make things a bit more readable
+    // and i also changed how you increment/deincrement because i don't think we have to use getters/setters
+    // inside the object, and i think it looks cleaner without them.
     public void likePost(boolean likeButtonPressed)
     {
+        // Nothing liked yet
         if(!isLiked && !isDisliked && likeButtonPressed )
         {
             isLiked=true;
-
-            setLikes(getLikes()+1);
+            likes+=1;
         }
+        // already liked and liked pressed again.
         else if(isLiked && !isDisliked && likeButtonPressed){
             isLiked=false;
-            setLikes(getLikes()-1);
+            likes-=1;
         }
+        // Disliked already selected, and liked pressed.
+        // Cancels out disliked and increments liked.
         else if(!isLiked && isDisliked && likeButtonPressed)
         {
             isDisliked=false;
             isLiked=true;
-            setLikes(getLikes()+1);
-            setDislikes(getDislikes()-1);
+            likes+=1;
+            dislikes-=1;
         }
-
+        // already disliked and disliked pressed again
         else if(!isLiked && isDisliked && !likeButtonPressed){
             isDisliked=false;
-            setDislikes(getDislikes()-1);
+            dislikes-=1;
         }
+        // nothing selected and disliked clicked.
         else if(!isLiked && !isDisliked && !likeButtonPressed)
         {
             isDisliked=true;
-            setDislikes(getDislikes()+1);
+            dislikes+=1;
         }
-      else if(isLiked && !isDisliked && !likeButtonPressed){
-          isDisliked=true;
-          isLiked=false;
-          setLikes(getLikes()-1);
-          setDislikes(getDislikes()+1);
+        // liked already selected and disliked now selected
+        else if(isLiked && !isDisliked && !likeButtonPressed){
+            isDisliked=true;
+            isLiked=false;
+            likes-=1;
+            dislikes+=1;
         }
-
-
-
-
     }
 
     public static int getPostCount() {
@@ -91,7 +97,6 @@ public class NewsPost {
     }
     public void setDislikes(int dislikes)
     {
-
         this.dislikes=dislikes;
     }
 
