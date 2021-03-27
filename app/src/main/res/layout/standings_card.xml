@@ -9,11 +9,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal">
 
         <ImageView
             android:contentDescription="@string/teampicture"
+            android:layout_gravity="center_vertical"
             android:src="@drawable/jets"
             android:id="@+id/team_pic_standingss"
             android:layout_width="50dp"
@@ -66,7 +67,7 @@
 
         <TextView
             android:id="@+id/standing_points"
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="37dp"
             android:layout_gravity="center_vertical"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -77,7 +78,7 @@
 
         <TextView
             android:id="@+id/standing_winstreak"
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="37dp"
             android:layout_gravity="center_vertical"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -87,5 +88,10 @@
         </TextView>
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray"/>
 
 </androidx.cardview.widget.CardView>
