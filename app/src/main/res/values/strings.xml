@@ -46,5 +46,9 @@
     <string name="teamname">TeamName</string>
     <string name="_32">32</string>
     <string name="w1">W1</string>
+    <string name="Teams_Standing">Teams</string>
+    <string name="OT_standing">OT</string>
+    <string name="Pts_standing">Pts</string>
+    <string name="STK_standing">STK</string>
 
 </resources>
