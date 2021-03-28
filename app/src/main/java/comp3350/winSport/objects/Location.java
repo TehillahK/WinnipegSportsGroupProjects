@@ -2,14 +2,15 @@ package comp3350.winSport.objects;
 
 public class Location {
 
+
     private String name;
     private String description;
     private String address;
-    private int lat;
-    private int lng;
+    private double lat;
+    private double lng;
     private boolean bar;
 
-    public Location(String name, String description, String address, int lat, int lng, boolean bar) {
+    public Location(String name, String description, String address, double lat, double lng, boolean bar) {
         this.name = name;
         this.description = description;
         this.address = address;
@@ -30,17 +31,19 @@ public class Location {
         return description;
     }
 
-    public int getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public int getLng() {
+    public double getLng() {
         return lng;
     }
 
     public boolean isBar() {
         return bar;
     }
+
+
 
 
 
