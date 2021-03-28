@@ -67,7 +67,6 @@ public class TeamData implements ITeam {
             }
 
             //If team is not in the list...
-//            System.out.print("\nTeam not found.");
             return null;
         }
         else {
