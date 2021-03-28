@@ -26,11 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button3 = findViewById(R.id.player_stat_layout);
         Button button4 = findViewById(R.id.schedule_layout);
         Button button5 = findViewById(R.id.channel_layout);
-        Button button6 = findViewById(R.id.player_stat_layout);
-        Button button7 = findViewById(R.id.schedule_layout);
-        Button button8 = findViewById(R.id.channel_layout);
+        Button button6 = findViewById(R.id.newsFeedMenu);
+        Button button7 = findViewById(R.id.buy_tickets_menu);
+        Button button8 = findViewById(R.id.standings_menu);
         Button button9 = findViewById(R.id.nearby_bars);
-
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button8.setOnClickListener(this);
         button9.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {
@@ -83,9 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                MainActivity.this.startActivity(intent4);
                 break;
             case R.id.standings_menu:
-                // Player Stats
-//                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
-//                MainActivity.this.startActivity(channelIntent);
+                // Team Standings
+                Intent standingsIntent = new Intent(MainActivity.this, StandingsActivity.class);
+                MainActivity.this.startActivity(standingsIntent);
                 break;
             case R.id.nearby_bars:
                 // Player Stats

@@ -32,8 +32,8 @@
     <string name="otw_4_3">OTW 4-3</string>
 
     <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
-    <string name="Sportsnet" ><a href="https://www.sportsnet.ca">Sportsnet</a></string>
-    <string name="TSN"       ><a href="https://www.tsn.ca">TSN</a></string>
+    <string name="Sportsnet"><a href="https://www.sportsnet.ca">Sportsnet</a></string>
+    <string name="TSN"><a href="https://www.tsn.ca">TSN</a></string>
     <string name="player_stats_main">PLAYER STATS</string>
     <string name="schedules_main">SCHEDULES</string>
     <string name="channels_main">CHANNELS</string>
@@ -42,5 +42,13 @@
     <string name="standings">Standings</string>
     <string name="news_feed">News Feed</string>
     <string name="find_nearby_bars">Find Nearby Bars</string>
+    <string name="teampicture">TeamPicture</string>
+    <string name="teamname">TeamName</string>
+    <string name="_32">32</string>
+    <string name="w1">W1</string>
+    <string name="Teams_Standing">Teams</string>
+    <string name="OT_standing">OT</string>
+    <string name="Pts_standing">Pts</string>
+    <string name="STK_standing">STK</string>
 
 </resources>

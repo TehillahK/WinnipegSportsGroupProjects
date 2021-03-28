@@ -24,7 +24,7 @@ public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
 
-    List<Player> players; // declare games List
+    private List<Player> players; // declare games List
 
     public RosterAdapter(List<Player> players) { // constructor initalizing games list.
         this.players = players;
@@ -52,7 +52,7 @@ public class RosterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             final Player data = players.get(position-1);
 
             itemViewHolder.player_name.setText(data.getName());
-            itemViewHolder.player_num.setText("" + data.getNumber());
+            itemViewHolder.player_num.setText(String.format("%d", data.getNumber()));
             itemViewHolder.position.setText(data.getPosition());
             itemViewHolder.shot.setText(data.getShot());
             itemViewHolder.player_pic.setImageResource(data.getTeamPic());

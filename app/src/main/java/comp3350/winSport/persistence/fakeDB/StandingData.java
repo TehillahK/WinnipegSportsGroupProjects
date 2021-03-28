@@ -1,0 +1,54 @@
+package comp3350.winSport.persistence.fakeDB;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import comp3350.winSport.R;
+import comp3350.winSport.objects.Standing;
+import comp3350.winSport.persistence.IStanding;
+
+public class StandingData implements IStanding {
+
+    private List<Standing> standings;
+
+    private Standing s1;
+    private Standing s2;
+    private Standing s3;
+    private Standing s4;
+    private Standing s5;
+    private Standing s6;
+
+    public StandingData() {
+        standings = new ArrayList<>();
+        initData();
+    }
+
+    private void initData() {
+
+        s1 = new Standing(1,"Winnipeg Jets",19,11,2,40,"W1", R.drawable.jets);
+        s2 = new Standing(2,"Toronto Maple Leafs",20,10,2,42,"W1",R.drawable.leafs);
+        s3 = new Standing(3,"Ottawa Senators",12,20,3,27,"W2",R.drawable.ottawa);
+        s4 = new Standing(4,"Edmonton Oilers",21,13,0,42,"W3",R.drawable.oilers);
+        s5 = new Standing(5,"Calgary Flames",15,16,3,33,"L3",R.drawable.flames);
+        s6 = new Standing(6,"Montreal Canadiens",14,8,9,37,"W1",R.drawable.montreal);
+
+        standings.add(s1);
+        standings.add(s2);
+        standings.add(s3);
+        standings.add(s4);
+        standings.add(s5);
+        standings.add(s6);
+    }
+
+    @Override
+    public List<Standing> getStandingsInOrder() {
+
+        Collections.sort(standings, (o1, o2) -> (o1.getPts() - o2.getPts()));
+
+        return standings;
+    }
+
+}
