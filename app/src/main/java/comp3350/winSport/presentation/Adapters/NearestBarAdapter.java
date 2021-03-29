@@ -64,6 +64,7 @@ public class NearestBarAdapter extends RecyclerView.Adapter<NearestBarAdapter.Ne
 
         @Override
         public void onClick(View v) {
+
             listener.onClick(itemView,getAdapterPosition());
         }
     }
