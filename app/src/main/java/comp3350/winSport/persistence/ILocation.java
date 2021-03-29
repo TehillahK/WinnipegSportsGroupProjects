@@ -8,5 +8,5 @@ public interface ILocation {
 
     List<Location> getSportVenues();
     List<Location> getNearestBars();
-
+    Location getLocationByName(String name);
 }

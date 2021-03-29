@@ -10,6 +10,8 @@ public class Location {
     private double lng;
     private boolean bar;
 
+    private double sortDist;
+
     public Location(String name, String description, String address, double lat, double lng, boolean bar) {
         this.name = name;
         this.description = description;
@@ -17,6 +19,7 @@ public class Location {
         this.lat = lat;
         this.lng = lng;
         this.bar = bar;
+        sortDist = 0;
     }
 
     public String getAddress() {
@@ -41,6 +44,20 @@ public class Location {
 
     public boolean isBar() {
         return bar;
+    }
+
+    public double getSortDist() { return sortDist;}
+
+    public void setSortDist(Double d) { this.sortDist = d;}
+
+    public int compareTo(Location l) {
+        double val = this.sortDist - l.getSortDist();
+        if (val > 0)
+            return 1;
+        else if (val == 0)
+            return 0;
+        else
+            return -1;
     }
 
 
