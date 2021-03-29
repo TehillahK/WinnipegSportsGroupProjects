@@ -47,15 +47,13 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         holder.dislikeCounter.setText(String.format("%s%s", newsPosts.get(position).getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
     }
 
-
-
     @Override
     public int getItemCount() {
         return newsPosts.size();
     }
 
 
-    public class NewsFeedHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class NewsFeedHolder extends RecyclerView.ViewHolder {
         ImageView photo;
         TextView postTitle;
         TextView caption;
@@ -76,7 +74,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             likeCounter=itemView.findViewById(R.id.numLikes);
             dislikeCounter=itemView.findViewById(R.id.numDislikes);
           //  shareButton=itemView.findViewById(R.id.share_button);
-            itemView.setOnClickListener(this);
+//            itemView.setOnClickListener(this);
 
             likeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -154,10 +152,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         }
 
 
-        @Override
-        public void onClick(View v) {
-            listener.onClick(v,getAdapterPosition());
-        }
+//        @Override
+//        public void onClick(View v) {
+//            listener.onClick(v,getAdapterPosition());
+//        }
     }
 
 }
