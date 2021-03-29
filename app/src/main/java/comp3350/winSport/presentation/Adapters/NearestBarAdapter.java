@@ -55,6 +55,7 @@ public class NearestBarAdapter extends RecyclerView.Adapter<NearestBarAdapter.Ne
         ImageView venuePic;
         public NearestBarViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             venueName= itemView.findViewById(R.id.sportsVenueText1);
             venueAddress=itemView.findViewById(R.id.sportsVenueAddress);
             venueDescription=itemView.findViewById(R.id.sportsVenueDescription);

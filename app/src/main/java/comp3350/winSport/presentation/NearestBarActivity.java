@@ -46,8 +46,17 @@ public class NearestBarActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.venuesRV);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);
+        setOnClickListner();
         adapter = new NearestBarAdapter(venues, listener);
         rv.setAdapter(adapter);
+
+
+
+
+        Log.v("NearestBarA","Content");
+    }
+    private void setOnClickListner()
+    {
         listener = new NearestBarAdapter.RecyclerViewEventListener() {
             @Override
             public void onClick(View view, int pos) {
@@ -57,10 +66,6 @@ public class NearestBarActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-
-
-
-        Log.v("NearestBarA","Content");
     }
 
     void initValues() {
