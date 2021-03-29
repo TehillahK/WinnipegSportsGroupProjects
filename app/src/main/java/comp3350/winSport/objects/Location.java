@@ -1,18 +1,20 @@
 package comp3350.winSport.objects;
 
+import java.math.BigDecimal;
+
 public class Location {
 
 
     private String name;
     private String description;
     private String address;
-    private double lat;
-    private double lng;
+    private Double lat;
+    private Double lng;
     private boolean bar;
 
     private double sortDist;
 
-    public Location(String name, String description, String address, double lat, double lng, boolean bar) {
+    public Location(String name, String description, String address, Double lat, Double lng, boolean bar) {
         this.name = name;
         this.description = description;
         this.address = address;
@@ -34,11 +36,11 @@ public class Location {
         return description;
     }
 
-    public double getLat() {
+    public Double getLat() {
         return lat;
     }
 
-    public double getLng() {
+    public Double getLng() {
         return lng;
     }
 

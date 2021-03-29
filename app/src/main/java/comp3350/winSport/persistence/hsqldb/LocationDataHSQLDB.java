@@ -1,7 +1,9 @@
 package comp3350.winSport.persistence.hsqldb;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,6 +12,7 @@ import java.util.List;
 
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Location;
+import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.persistence.ILocation;
 
 public class LocationDataHSQLDB implements ILocation {
@@ -29,14 +32,10 @@ public class LocationDataHSQLDB implements ILocation {
         final String name = rs.getString("locationName");
         final String description = rs.getString("locationDescription");
         final String address = rs.getString("locationAddress");
-        final double lat = rs.getDouble("locationLat");
-        final double lng = rs.getDouble("locationLong");
-        final int bit = rs.getInt("locationBar");
-        final boolean val;
-
-        val = bit == 1;
-
-        return new Location(name,description,address,lat,lng,val);
+        final BigDecimal lat = rs.getBigDecimal("locationLat");
+        final BigDecimal lng = rs.getBigDecimal("locationLong");
+        final boolean bit = rs.getBoolean("locationBar");
+        return new Location(name,description,address,lat.doubleValue(),lng.doubleValue(),bit);
     }
 
     @Override
@@ -46,7 +45,7 @@ public class LocationDataHSQLDB implements ILocation {
 
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT * FROM LOCATIONS WHERE locationBar = 1");
+            final ResultSet rs = st.executeQuery("SELECT * FROM LOCATIONS WHERE locationBar = FALSE");
 
             while (rs.next()) {
                 final Location location = fromResultSet(rs);
@@ -70,7 +69,7 @@ public class LocationDataHSQLDB implements ILocation {
 
         try (final Connection c = connection()) {
             final Statement st = c.createStatement();
-            final ResultSet rs = st.executeQuery("SELECT * FROM LOCATIONS WHERE locationBar = 0");
+            final ResultSet rs = st.executeQuery("SELECT * FROM LOCATIONS WHERE locationBar = TRUE");
 
             while (rs.next()) {
                 final Location location = fromResultSet(rs);
@@ -89,6 +88,25 @@ public class LocationDataHSQLDB implements ILocation {
 
     @Override
     public Location getLocationByName(String name) {
-        return null;
+        Location location = null;
+
+        try (final Connection c = connection()) {
+
+            final PreparedStatement st = c.prepareStatement("SELECT * FROM LOCATIONS WHERE locationName=?");
+            st.setString(1,name);
+
+            final ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                location = fromResultSet(rs);
+            }
+            rs.close();
+            st.close();
+
+        }
+        catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
+        return location;
     }
 }

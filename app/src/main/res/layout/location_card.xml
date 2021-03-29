@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
               android:layout_below="@id/sportsVenueAddress"
                 android:text="Description"
-                android:textSize="15"
+                android:textSize="15sp"
                 android:textColor="@color/black"
                 />
             <ImageView

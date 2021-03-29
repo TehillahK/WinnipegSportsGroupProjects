@@ -1,5 +1,6 @@
 package comp3350.winSport.business;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
@@ -62,8 +63,8 @@ public class AccessLocations {
 
     }
 
-    private double calculateDistanceInmeter(double userLat, double userLng,
-                                            double venueLat, double venueLng) {
+    private double calculateDistanceInmeter(Double userLat, Double userLng,
+                                            Double venueLat, Double venueLng) {
 
         double latDistance = Math.toRadians(userLat - venueLat);
         double lngDistance = Math.toRadians(userLng - venueLng);

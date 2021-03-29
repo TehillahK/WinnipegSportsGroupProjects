@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.nearby_bars:
                 // Player Stats
-//                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
-//                MainActivity.this.startActivity(channelIntent);
+                Intent barIntent = new Intent(MainActivity.this, NearestBarActivity.class);
+                MainActivity.this.startActivity(barIntent);
                 break;
             default:
                 break;

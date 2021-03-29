@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,15 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.Player;
-import comp3350.winSport.presentation.Adapters.PlayersAdapter;
 
 public class NearestBarAdapter extends RecyclerView.Adapter<NearestBarAdapter.NearestBarViewHolder> {
     private List<Location> venues;
