@@ -60,9 +60,6 @@
     <string name="OT_standing">OT</string>
     <string name="Pts_standing">Pts</string>
     <string name="STK_standing">STK</string>
-    <string name="buy_tickets">Buy Tickets</string>
-    <string name="standings">Standings</string>
-    <string name="news_feed">News Feed</string>
-    <string name="find_nearby_bars">Find Nearby Bars</string>
+
 
 </resources>
