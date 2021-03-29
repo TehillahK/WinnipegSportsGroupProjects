@@ -34,6 +34,16 @@
     <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
     <string name="Sportsnet"><a href="https://www.sportsnet.ca">Sportsnet</a></string>
     <string name="TSN"><a href="https://www.tsn.ca">TSN</a></string>
+
+    <string name="CalgaryFlames"><a href="https://www.nhl.com/flames/tickets/">https://www.nhl.com/flames/tickets/</a></string>
+    <string name="EdmontonOilers"><a href="https://www.ticketmaster.ca/Edmonton-Oilers-tickets/">https://www.ticketmaster.ca/Edmonton-Oilers-tickets/</a></string>
+    <string name="MontréalCanadiens"><a href="https://www.nhl.com/canadiens/tickets">https://www.nhl.com/canadiens/tickets</a></string>
+    <string name="OttawaSenators"><a href="https://www.nhl.com/senators/tickets">https://www.nhl.com/senators/tickets</a></string>
+    <string name="TorontoMapleLeafs"><a href="https://www.nhl.com/mapleleafs/tickets/">https://www.nhl.com/mapleleafs/tickets/</a></string>
+    <string name="VancouverCanucks"><a href="https://tickets.canucks.com/">https://tickets.canucks.com/</a></string>
+    <string name="WinnipegJets"><a href="https://www.nhl.com/jets/tickets/single-game-tickets">https://www.nhl.com/jets/tickets/single-game-tickets</a></string>
+
+
     <string name="player_stats_main">PLAYER STATS</string>
     <string name="schedules_main">SCHEDULES</string>
     <string name="channels_main">CHANNELS</string>
@@ -50,5 +60,9 @@
     <string name="OT_standing">OT</string>
     <string name="Pts_standing">Pts</string>
     <string name="STK_standing">STK</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="standings">Standings</string>
+    <string name="news_feed">News Feed</string>
+    <string name="find_nearby_bars">Find Nearby Bars</string>
 
 </resources>

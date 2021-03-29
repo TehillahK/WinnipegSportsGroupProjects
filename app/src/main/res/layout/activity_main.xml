@@ -22,7 +22,7 @@
             android:weightSum="5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp">
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:layout_weight="1"
@@ -172,7 +172,8 @@
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
                     android:text="@string/find_nearby_bars"
-                    android:gravity="center"                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:textSize="30sp"
                     android:backgroundTint="@color/light_purp"/>
             </LinearLayout>
 

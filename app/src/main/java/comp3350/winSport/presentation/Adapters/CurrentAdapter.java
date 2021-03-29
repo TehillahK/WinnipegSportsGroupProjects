@@ -1,5 +1,6 @@
 package comp3350.winSport.presentation.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,15 +19,17 @@ import comp3350.winSport.objects.Game;
 public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameViewHolder> {
 
     List<Game> games; // declare games List
+    Context c;
 
-    public CurrentAdapter(List<Game> games) { // constructor initalizing games list.
+    public CurrentAdapter(List<Game> games, Context c) { // constructor initalizing games list.
         this.games = games;
+        this.c = c;
     }
 
     @NonNull
     @Override
     public GameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.current_card, parent, false);
+        View v = LayoutInflater.from(c).inflate(R.layout.current_card, parent, false);
         return new GameViewHolder(v);
     }
 

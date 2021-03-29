@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button9.setOnClickListener(this);
     }
 
+
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
@@ -77,8 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buy_tickets_menu:
                 // Player Stats
-//                Intent intent4 = new Intent(MainActivity.this, ScheduleActivity.class);
-//                MainActivity.this.startActivity(intent4);
+                Intent BuyTicketintent = new Intent(MainActivity.this, TicketsActivity.class);
+                MainActivity.this.startActivity(BuyTicketintent);
                 break;
             case R.id.standings_menu:
                 // Team Standings
