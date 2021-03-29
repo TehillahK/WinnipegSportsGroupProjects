@@ -11,7 +11,9 @@ import comp3350.winSport.objects.Location;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.presentation.Adapters.NearestBarAdapter;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.List;
 
@@ -46,7 +48,18 @@ public class BarsActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.venuesRV);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);
+        setOnClickListner();
         adapter = new NearestBarAdapter(bars, listener);
         rv.setAdapter(adapter);
+    }
+
+    private void setOnClickListner() {
+        listener = new NearestBarAdapter.RecyclerViewEventListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                //this is because we reuse the NearestBar adapter ,do not remove this method.
+
+            }
+        };
     }
 }
