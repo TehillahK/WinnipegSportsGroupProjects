@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.newsFeedMenu:
                 // Player Stats
-//                Intent intent3 = new Intent(MainActivity.this, PlayersActivity.class);
-//                MainActivity.this.startActivity(intent3);
+                Intent intent6 = new Intent(MainActivity.this, NewsFeedActivity.class);
+                MainActivity.this.startActivity(intent6);
                 break;
             case R.id.buy_tickets_menu:
                 // Player Stats

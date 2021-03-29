@@ -1,6 +1,7 @@
 package comp3350.winSport.application;
 
 import comp3350.winSport.persistence.IGame;
+import comp3350.winSport.persistence.INewsFeed;
 import comp3350.winSport.persistence.ILocation;
 import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.IPlayerStats;
@@ -8,12 +9,14 @@ import comp3350.winSport.persistence.IStanding;
 import comp3350.winSport.persistence.ITeam;
 import comp3350.winSport.persistence.fakeDB.GameData;
 import comp3350.winSport.persistence.fakeDB.LocationData;
+import comp3350.winSport.persistence.fakeDB.NewsFeedData;
 import comp3350.winSport.persistence.fakeDB.PlayerData;
 import comp3350.winSport.persistence.fakeDB.PlayerStatData;
 import comp3350.winSport.persistence.fakeDB.StandingData;
 import comp3350.winSport.persistence.fakeDB.TeamData;
 import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.LocationDataHSQLDB;
+import comp3350.winSport.persistence.hsqldb.NewsFeedDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.PlayerStatsHSQLDB;
 import comp3350.winSport.persistence.hsqldb.StandingHSQLDB;
@@ -30,6 +33,7 @@ public class    Services {
     private static IGame gamePersistance = null;
     private static IPlayer playerPersistance = null;
     private static IPlayerStats playerStatsPersistance = null;
+    private static INewsFeed newsFeedPersistance=null;
     private static IStanding standingPersistance = null;
 
     public static synchronized IStanding getStandingPersistance() {
@@ -89,6 +93,17 @@ public class    Services {
                 playerStatsPersistance = new PlayerStatData();
         }
         return playerStatsPersistance;
+    }
+
+    public static synchronized INewsFeed getNewsFeedPersistance()
+    {
+        if(newsFeedPersistance == null){
+            if(useHSQLDB)
+                newsFeedPersistance= new NewsFeedDataHSQLDB(Main.getDBPathName());
+            else
+                newsFeedPersistance=new NewsFeedData();
+        }
+        return newsFeedPersistance;
     }
 
 }
