@@ -54,7 +54,7 @@ public class AccessLocations {
 
             Collections.sort(bars,(Location::compareTo));
 
-            return bars;
+            return bars.subList(0,5);
 
         }
         else {
