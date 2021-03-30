@@ -33,5 +33,4 @@
         <activity android:name=".presentation.CurrentlyPlayingActivity" />
     </application>
 
-
 </manifest>

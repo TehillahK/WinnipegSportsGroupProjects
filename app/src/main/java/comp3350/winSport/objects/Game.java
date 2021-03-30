@@ -55,7 +55,7 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leaguePic = R.drawable.nhl;
+        leaguePic = R.drawable.nhl_main;
         gamePicID = R.drawable.jets;
     }
 

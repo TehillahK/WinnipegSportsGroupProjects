@@ -1,19 +1,15 @@
 package comp3350.winSport.persistence.hsqldb;
 
-import android.util.Log;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.Team;
 import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
@@ -78,7 +74,7 @@ public class PlayerDataHSQLDB implements IPlayer {
                     return R.drawable.oilers;
             }
         }
-        return R.drawable.nhl;
+        return R.drawable.nhl_main;
     }
 
     public List<Player> getPlayers(String teamName) throws InvalidNameException {
