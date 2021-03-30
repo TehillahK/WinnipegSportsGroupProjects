@@ -62,7 +62,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         Button dislikeButton;
         TextView likeCounter;
         TextView dislikeCounter;
-        Button shareButton;
+        Button commentButton;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -146,6 +146,12 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     else
                         dislikeButton.setText("dislike");
                     likeButton.setText("Like");
+
+                }
+            });
+            commentButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
                 }
             });
