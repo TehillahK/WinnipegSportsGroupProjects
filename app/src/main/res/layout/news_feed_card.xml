@@ -85,6 +85,27 @@
             android:layout_below="@+id/dislike_button"
 
             />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentsRV"
+            android:layout_below="@+id/numLikes"
+            />
+        <EditText
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentTxt"
+            android:layout_below="@id/commentsRV"
+
+            android:hint="Comment here"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentsRV"
+            android:layout_toRightOf="@id/commentTxt"
+            android:text="comment"
+            />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
