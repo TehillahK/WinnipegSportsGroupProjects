@@ -22,6 +22,14 @@ public class Comment {
         return postID;
     }
 
+    public String getUserNickName() {
+        return userNickName;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
     public void setPostID(int postID) {
         this.postID = postID;
     }
