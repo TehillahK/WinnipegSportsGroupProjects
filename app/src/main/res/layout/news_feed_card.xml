@@ -102,6 +102,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/comment_button"
             android:layout_below="@id/commentsRV"
             android:layout_toRightOf="@id/commentTxt"
             android:text="comment"
