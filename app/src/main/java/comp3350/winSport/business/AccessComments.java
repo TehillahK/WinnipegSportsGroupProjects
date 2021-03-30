@@ -1,6 +1,8 @@
 package comp3350.winSport.business;
 import java.util.ArrayList;
 import java.util.List;
+
+import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.persistence.IComments;
 
@@ -9,7 +11,8 @@ public class AccessComments {
     private List<Comment> comments;
     public AccessComments()
     {
-        comments=new ArrayList<>();
+        iComments= Services.getCommentsPersistance();
+        comments=null;
 
     }
     public AccessComments(IComments iComments)
