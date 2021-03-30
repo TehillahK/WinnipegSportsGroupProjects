@@ -10,6 +10,7 @@ public class AccessComments {
     public AccessComments()
     {
         comments=new ArrayList<>();
+
     }
     public AccessComments(IComments iComments)
     {
@@ -23,7 +24,7 @@ public class AccessComments {
 
     public Comment getComments(int postID,String title)
     {
-        comments=iComments.getComments();
+        comments=iComments.getComments(postID);
         return null;
 
     }

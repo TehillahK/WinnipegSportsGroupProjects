@@ -1,5 +1,7 @@
 package comp3350.winSport.application;
 
+import comp3350.winSport.objects.Comment;
+import comp3350.winSport.persistence.IComments;
 import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.INewsFeed;
 import comp3350.winSport.persistence.ILocation;
@@ -7,6 +9,7 @@ import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.IPlayerStats;
 import comp3350.winSport.persistence.IStanding;
 import comp3350.winSport.persistence.ITeam;
+import comp3350.winSport.persistence.fakeDB.CommentsData;
 import comp3350.winSport.persistence.fakeDB.GameData;
 import comp3350.winSport.persistence.fakeDB.LocationData;
 import comp3350.winSport.persistence.fakeDB.NewsFeedData;
@@ -35,7 +38,7 @@ public class    Services {
     private static IPlayerStats playerStatsPersistance = null;
     private static INewsFeed newsFeedPersistance=null;
     private static IStanding standingPersistance = null;
-
+    private static IComments commentsPersistance=null;
     public static synchronized IStanding getStandingPersistance() {
         if (standingPersistance == null) {
             if (useHSQLDB)
@@ -105,5 +108,17 @@ public class    Services {
         }
         return newsFeedPersistance;
     }
+    public  static  synchronized IComments getCommentsPersistance()
+    {
+        if(commentsPersistance==null)
+        {
+            if(useHSQLDB)
+            {
 
+            }
+            else
+                commentsPersistance=new CommentsData();
+        }
+        return commentsPersistance;
+    }
 }
