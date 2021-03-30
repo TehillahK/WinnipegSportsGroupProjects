@@ -11,6 +11,16 @@ public class Comment {
         //phineas and ferb reference
         userNickName="Cheeky Monkey";
     }
+    public Comment(int postID,String postTitle,String comment)
+    {
+        this.postID=postID;
+        this.postTitle=postTitle;
+        this.comment=comment;
+    }
+
+    public int getPostID() {
+        return postID;
+    }
 
     public void setPostID(int postID) {
         this.postID = postID;
