@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.business.AccessComments;
+import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
+import comp3350.winSport.presentation.Adapters.CommentsAdapter;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
@@ -25,6 +28,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
     final String PEOPLE_LIKE_THIS=" people like this";
     final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
     private RecyclerViewEventListener listener;
+
     public NewsFeedAdapter(List<NewsPost> newsPosts, RecyclerViewEventListener listener)
     {
         this.newsPosts=newsPosts;
@@ -63,7 +67,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         TextView likeCounter;
         TextView dislikeCounter;
         Button commentButton;
-
+        RecyclerView commentSection;
+        AccessComments accessComments;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -75,6 +80,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             likeCounter=itemView.findViewById(R.id.numLikes);
             dislikeCounter=itemView.findViewById(R.id.numDislikes);
             commentButton=itemView.findViewById(R.id.comment_button);
+            commentSection=itemView.findViewById(R.id.commentsRV);
+            accessComments=new AccessComments();
           //  shareButton=itemView.findViewById(R.id.share_button);
 //            itemView.setOnClickListener(this);
 
@@ -155,6 +162,12 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 @Override
                 public void onClick(View v) {
 
+                    NewsPost post= newsPosts.get(getAdapterPosition());
+                    int postID= post.getPostID();
+                    String postTitle=post.getTitle();
+                   List<Comment> commentList= accessComments.getComments(postID,postTitle);
+
+                    CommentsAdapter commentsAdapter=new CommentsAdapter(commentList);
                 }
             });
         }

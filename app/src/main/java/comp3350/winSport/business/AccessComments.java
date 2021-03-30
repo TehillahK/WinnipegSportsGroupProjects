@@ -22,10 +22,10 @@ public class AccessComments {
         iComments.addComments(postID,"",comment);
     }
 
-    public Comment getComments(int postID,String title)
+    public List<Comment> getComments(int postID,String title)
     {
         comments=iComments.getComments(postID);
-        return null;
+        return comments;
 
     }
 
