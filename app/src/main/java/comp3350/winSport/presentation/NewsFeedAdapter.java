@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -69,6 +70,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         Button commentButton;
         RecyclerView commentSection;
         AccessComments accessComments;
+        EditText commentInput;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -79,6 +81,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             dislikeButton=itemView.findViewById(R.id.dislike_button);
             likeCounter=itemView.findViewById(R.id.numLikes);
             dislikeCounter=itemView.findViewById(R.id.numDislikes);
+            commentInput=itemView.findViewById(R.id.commentTxt);
             commentButton=itemView.findViewById(R.id.comment_button);
             commentSection=itemView.findViewById(R.id.commentsRV);
             accessComments=new AccessComments();
@@ -165,7 +168,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     NewsPost post= newsPosts.get(getAdapterPosition());
                     int postID= post.getPostID();
                     String postTitle=post.getTitle();
-                   List<Comment> commentList= accessComments.getComments(postID,postTitle);
+                    String comment=commentInput.getText().toString();
+                    accessComments.addComment(postID,comment);
+                    List<Comment> commentList= accessComments.getComments(postID,postTitle);
 
                     CommentsAdapter commentsAdapter=new CommentsAdapter(commentList);
                     commentSection.setAdapter(commentsAdapter);
