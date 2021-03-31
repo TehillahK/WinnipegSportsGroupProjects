@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="30sp"
+    android:layout_margin="10sp"
 
     >
     <RelativeLayout
@@ -19,14 +19,13 @@
            android:id="@+id/user_name"
            android:text="user name"
            android:textColor="@color/light_purp"
-           android:textSize="25sp"
+           android:textSize="18sp"
 
            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/user_comment"
-            android:layout_marginLeft="10sp"
             android:text="comments"
             android:textColor="@color/black"
             android:layout_below="@id/user_name"
