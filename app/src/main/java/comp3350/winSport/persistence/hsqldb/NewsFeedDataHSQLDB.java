@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import comp3350.winSport.R;
 import comp3350.winSport.objects.NewsPost;
 
 import comp3350.winSport.objects.PlayerStatistic;
@@ -28,6 +29,7 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
 
     private NewsPost fromResultSet(final ResultSet rs) throws SQLException
     {
+        final int postID = rs.getInt("POSTID");
         final String title = rs.getString("TITLE");
        // final int psGamesPlayed = rs.getInt("GamesPlayed");
         final String datePosted= rs.getString("DATEPOSTED");
@@ -35,10 +37,16 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
 
         final int numLikes = rs.getInt("LIKES");
         final int numDisLikes=rs.getInt("DISLIKES");
-        final int image = rs.getInt("IMAGE");
+        int image;
 
+        if (postID % 3 == 0)
+            image = R.drawable.trade_deadline;
+        else if (postID % 3 == 1)
+            image = R.drawable.oilers_jets;
+        else
+            image = R.drawable.cole;
 
-        return new NewsPost(title,datePosted,caption,numLikes,numDisLikes,image);
+        return new NewsPost(postID,title,datePosted,caption,numLikes,numDisLikes,image);
 
 
     }

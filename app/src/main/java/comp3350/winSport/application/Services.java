@@ -1,5 +1,7 @@
 package comp3350.winSport.application;
 
+import comp3350.winSport.objects.Comment;
+import comp3350.winSport.persistence.IComments;
 import comp3350.winSport.persistence.IGame;
 import comp3350.winSport.persistence.INewsFeed;
 import comp3350.winSport.persistence.ILocation;
@@ -7,6 +9,7 @@ import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.IPlayerStats;
 import comp3350.winSport.persistence.IStanding;
 import comp3350.winSport.persistence.ITeam;
+import comp3350.winSport.persistence.fakeDB.CommentsData;
 import comp3350.winSport.persistence.fakeDB.GameData;
 import comp3350.winSport.persistence.fakeDB.LocationData;
 import comp3350.winSport.persistence.fakeDB.NewsFeedData;
@@ -14,6 +17,7 @@ import comp3350.winSport.persistence.fakeDB.PlayerData;
 import comp3350.winSport.persistence.fakeDB.PlayerStatData;
 import comp3350.winSport.persistence.fakeDB.StandingData;
 import comp3350.winSport.persistence.fakeDB.TeamData;
+import comp3350.winSport.persistence.hsqldb.CommentsHSQLDB;
 import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.LocationDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.NewsFeedDataHSQLDB;
@@ -26,15 +30,16 @@ public class    Services {
 
     // ONE LINE DB SWITCH BOOLEAN.
     // Set to false to use our Fake DB.
-    private static boolean useHSQLDB = true;
-    private static ILocation locationPersistance = null;
+    private static boolean useHSQLDB = false;
 
+    private static ILocation locationPersistance = null;
     private static ITeam teamPersistance = null;
     private static IGame gamePersistance = null;
     private static IPlayer playerPersistance = null;
     private static IPlayerStats playerStatsPersistance = null;
     private static INewsFeed newsFeedPersistance=null;
     private static IStanding standingPersistance = null;
+    private static IComments commentsPersistance=null;
 
     public static synchronized IStanding getStandingPersistance() {
         if (standingPersistance == null) {
@@ -105,5 +110,15 @@ public class    Services {
         }
         return newsFeedPersistance;
     }
-
+    public  static  synchronized IComments getCommentsPersistance()
+    {
+        if(commentsPersistance==null)
+        {
+            if(useHSQLDB)
+                commentsPersistance = new CommentsHSQLDB(Main.getDBPathName());
+            else
+                commentsPersistance=new CommentsData();
+        }
+        return commentsPersistance;
+    }
 }

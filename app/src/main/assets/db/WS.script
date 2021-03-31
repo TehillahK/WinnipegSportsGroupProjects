@@ -6,6 +6,7 @@ CREATE MEMORY TABLE PUBLIC.GAMES(GAMEID INTEGER NOT NULL PRIMARY KEY, GAMENAME V
 CREATE MEMORY TABLE PUBLIC.STANDINGS(TEAMID INTEGER NOT NULL PRIMARY KEY, teamName character varying, wins integer, losses integer, ot_losses integer, points integer, win_streak character varying)
 CREATE MEMORY TABLE PUBLIC.LOCATIONS(locationName character varying NOT NULL PRIMARY KEY, locationDescription character varying, locationAddress character varying, locationLat DECIMAL(16,14), locationLong DECIMAL(16,14), locationBar BOOLEAN)
 CREATE MEMORY TABLE PUBLIC.NEWS_FEED(POSTID INTEGER NOT NULL PRIMARY KEY, TITLE VARCHAR(20),DATEPOSTED VARCHAR(20),CAPTION VARCHAR(20),LIKES Integer,DISLIKES Integer,IMAGE Integer)
+CREATE MEMORY TABLE PUBLIC.COMMENTS(postID INTEGER NOT NULL, postTitle character varying, comment character varying)
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
@@ -113,6 +114,8 @@ INSERT INTO GAMES VALUES(18, 'Stanley Cup Playoffs','NHL', 'Ottowa Senators', 'W
 INSERT INTO GAMES VALUES(19, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Edmonton Oilers', 'Jun 10, 2021', 'Rogers human Place', '0 - 0')
 INSERT INTO GAMES VALUES(20, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Ottawa Senators', 'Jun 19, 2021', 'Rogers non-human Place', '0 - 0')
 INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',0,0,0)
+INSERT INTO NEWS_FEED VALUES(1,'Jets top guns fire blanks','20/03/21','Jets lose to Edmonton Oliers',30,5,0)
+INSERT INTO NEWS_FEED VALUES(2,'Its awards season for Cole Caufield','21/03/21','Caufied become the first unanimous winner of big the ten player of the years award',20,90,0)
 INSERT INTO STANDINGS VALUES(1,'Winnipeg Jets',19,11,2,40,'W1')
 INSERT INTO STANDINGS VALUES(2,'Toronto Maple Leafs',20,10,2,42,'W1')
 INSERT INTO STANDINGS VALUES(3,'Ottawa Senators',12,20,3,27,'W2')

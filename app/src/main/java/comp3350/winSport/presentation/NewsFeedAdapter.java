@@ -7,28 +7,39 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.application.Services;
+import comp3350.winSport.business.AccessComments;
+import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
+import comp3350.winSport.presentation.Adapters.CommentsAdapter;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
 
     List<NewsPost> newsPosts;
+    List<Comment> commentList;
+    AccessComments accessComments;
+    CommentsAdapter commentsAdapter;
     final String PEOPLE_LIKE_THIS=" people like this";
     final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
     private RecyclerViewEventListener listener;
+
     public NewsFeedAdapter(List<NewsPost> newsPosts, RecyclerViewEventListener listener)
     {
         this.newsPosts=newsPosts;
         this.listener=listener;
+        accessComments=new AccessComments();
     }
     @NonNull
     @Override
@@ -45,6 +56,16 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         holder.datePosted.setText(newsPosts.get(position).getDatePosted());
         holder.likeCounter.setText(String.format("%s%s", newsPosts.get(position).getLikes(), PEOPLE_LIKE_THIS));
         holder.dislikeCounter.setText(String.format("%s%s", newsPosts.get(position).getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(
+                holder.commentSection.getContext(),
+                LinearLayoutManager.VERTICAL,
+                false
+        );
+
+        holder.commentSection.setLayoutManager(layoutManager);
+        commentList= accessComments.getComments(newsPosts.get(position).getPostID());
+        commentsAdapter=new CommentsAdapter(commentList);
+        holder.commentSection.setAdapter(commentsAdapter);
     }
 
     @Override
@@ -62,7 +83,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         Button dislikeButton;
         TextView likeCounter;
         TextView dislikeCounter;
-        Button shareButton;
+        Button commentButton;
+        RecyclerView commentSection;
+        AccessComments accessComments;
+        EditText commentInput;
         public  NewsFeedHolder(@NonNull View itemView) {
             super(itemView);
             photo=itemView.findViewById(R.id.post_image);
@@ -73,6 +97,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
             dislikeButton=itemView.findViewById(R.id.dislike_button);
             likeCounter=itemView.findViewById(R.id.numLikes);
             dislikeCounter=itemView.findViewById(R.id.numDislikes);
+            commentInput=itemView.findViewById(R.id.commentTxt);
+            commentButton=itemView.findViewById(R.id.comment_button);
+            commentSection=itemView.findViewById(R.id.commentsRV);
+            accessComments=new AccessComments();
           //  shareButton=itemView.findViewById(R.id.share_button);
 //            itemView.setOnClickListener(this);
 
@@ -101,27 +129,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                         likeButton.setText("Like");
                     dislikeButton.setText("dislike");
 
-                    // COLIN : i simplified the logic a bit like you did in the dislike onclicklistener.
-                    // once we clean up the method it will be a lot more compact.
-
-//                    if(currLike && !post.isDisliked()) {
-//                        likeButton.setText("Liked");
-//                        dislikeButton.setText("dislike");
-//                    }
-//                    else if(!currLike && !post.isDisliked()) {
-//                        likeButton.setText("Like");
-//                     //   dislikeButton.setText("")
-//                    }
-//                    else if(currLike && post.isDisliked()) {
-//                        likeButton.setText("Liked");
-//                    //    dislikeButton.setText("disliked");
-//                    }
-//                    else if(!currLike && post.isDisliked()) {
-//                        likeButton.setText("Like");
-//                        dislikeButton.setText("dislike");
-//                    }
-
-             //       dislikeButton.setEnabled(false);
 
                 }
             });
@@ -130,7 +137,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 public void onClick(View v) {
                     NewsPost post;
                     int currLikes;
-                    System.out.println("clicked dislike button");
                     post= newsPosts.get(getAdapterPosition());
                     post.likePost(false);
                   //  currLikes=post.getLikes()+1;
@@ -149,6 +155,24 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
 
                 }
             });
+            commentButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    // Get Current post.
+                    NewsPost post= newsPosts.get(getAdapterPosition());
+                    // Get user input, then create and add comment to DB.
+                    String comment=commentInput.getText().toString();
+                    Comment addMe = new Comment(post.getPostID(),post.getTitle(),comment);
+                    accessComments.addComment(addMe);
+
+                    commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
+                    commentsAdapter=new CommentsAdapter(commentList);
+                    commentSection.setAdapter(commentsAdapter);
+
+                }
+            });
+
         }
 
 

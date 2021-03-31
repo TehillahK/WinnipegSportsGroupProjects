@@ -16,11 +16,11 @@ public class NewsFeedData implements INewsFeed {
     }
     public  void  initData()
     {
-        NewsPost post1= new NewsPost("Jets Trade deadline","22/03/21",
+        NewsPost post1= new NewsPost(1,"Jets Trade deadline","22/03/21",
                 "Is cheveldayoff willing to spend on big target",60,8, R.drawable.trade_deadline);
-        NewsPost post2= new NewsPost("Jets top guns fire blanks","20/03/21",
+        NewsPost post2= new NewsPost(2,"Jets top guns fire blanks","20/03/21",
                 "Jets lose to Edmonton Oliers",30,5,R.drawable.oilers_jets);
-        NewsPost post3= new NewsPost("Its awards season for Cole Caufield","21/03/21",
+        NewsPost post3= new NewsPost(3,"Its awards season for Cole Caufield","21/03/21",
                 "Caufied become the first unanimous winner of big the ten player of the year's award",
                 20,90,R.drawable.cole);
         newsPosts.add(post2);
