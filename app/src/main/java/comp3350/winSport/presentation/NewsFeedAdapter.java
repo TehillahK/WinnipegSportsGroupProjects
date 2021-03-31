@@ -28,7 +28,9 @@ import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
 
     List<NewsPost> newsPosts;
+    List<Comment> commentList;
     AccessComments accessComments;
+    CommentsAdapter commentsAdapter;
     final String PEOPLE_LIKE_THIS=" people like this";
     final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
     private RecyclerViewEventListener listener;
@@ -61,7 +63,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         );
 
         holder.commentSection.setLayoutManager(layoutManager);
-
+        commentList= accessComments.getComments(newsPosts.get(position).getPostID());
+        commentsAdapter=new CommentsAdapter(commentList);
+        holder.commentSection.setAdapter(commentsAdapter);
     }
 
     @Override
@@ -125,27 +129,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                         likeButton.setText("Like");
                     dislikeButton.setText("dislike");
 
-                    // COLIN : i simplified the logic a bit like you did in the dislike onclicklistener.
-                    // once we clean up the method it will be a lot more compact.
-
-//                    if(currLike && !post.isDisliked()) {
-//                        likeButton.setText("Liked");
-//                        dislikeButton.setText("dislike");
-//                    }
-//                    else if(!currLike && !post.isDisliked()) {
-//                        likeButton.setText("Like");
-//                     //   dislikeButton.setText("")
-//                    }
-//                    else if(currLike && post.isDisliked()) {
-//                        likeButton.setText("Liked");
-//                    //    dislikeButton.setText("disliked");
-//                    }
-//                    else if(!currLike && post.isDisliked()) {
-//                        likeButton.setText("Like");
-//                        dislikeButton.setText("dislike");
-//                    }
-
-             //       dislikeButton.setEnabled(false);
 
                 }
             });
@@ -183,8 +166,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     Comment addMe = new Comment(post.getPostID(),post.getTitle(),comment);
                     accessComments.addComment(addMe);
 
-                    List<Comment> commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
-                    CommentsAdapter commentsAdapter=new CommentsAdapter(commentList);
+                    commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
+                    commentsAdapter=new CommentsAdapter(commentList);
                     commentSection.setAdapter(commentsAdapter);
 
                 }

@@ -11,6 +11,11 @@ public class CommentsData implements IComments {
     public CommentsData()
     {
         comments=new ArrayList<>();
+        initData();
+    }
+
+    public  void  initData(){
+        comments.add(new Comment(1,"","Boo!!!"));
     }
     @Override
     public void insertComment(Comment comment) {
