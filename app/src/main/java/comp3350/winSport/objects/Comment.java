@@ -13,6 +13,7 @@ public class Comment {
     }
     public Comment(int postID,String postTitle,String comment)
     {
+        userNickName="Cheeky Monkey";
         this.postID=postID;
         this.postTitle=postTitle;
         this.comment=comment;
