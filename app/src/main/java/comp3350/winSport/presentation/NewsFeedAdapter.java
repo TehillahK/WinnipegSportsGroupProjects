@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.application.Services;
 import comp3350.winSport.business.AccessComments;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
@@ -153,7 +154,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 public void onClick(View v) {
                     NewsPost post;
                     int currLikes;
-                    System.out.println("clicked dislike button");
                     post= newsPosts.get(getAdapterPosition());
                     post.likePost(false);
                   //  currLikes=post.getLikes()+1;
@@ -176,17 +176,20 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 @Override
                 public void onClick(View v) {
 
+                    // Get Current post.
                     NewsPost post= newsPosts.get(getAdapterPosition());
-                    int postID= post.getPostID();
-                    String postTitle=post.getTitle();
+                    // Get user input, then create and add comment to DB.
                     String comment=commentInput.getText().toString();
+                    Comment addMe = new Comment(post.getPostID(),post.getTitle(),comment);
+                    accessComments.addComment(addMe);
 
-                    accessComments.addComment(postID,comment);
-                    List<Comment> commentList= accessComments.getComments(postID,postTitle);
+                    List<Comment> commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
                     CommentsAdapter commentsAdapter=new CommentsAdapter(commentList);
                     commentSection.setAdapter(commentsAdapter);
+
                 }
             });
+
         }
 
 

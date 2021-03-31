@@ -60,9 +60,17 @@ public class CommentsHSQLDB implements IComments {
     }
 
     @Override
-    public void updateComment (int postID, String postTitle, String comment) {
+    public void insertComment (Comment comment) {
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("INSERT INTO COMMENTS VALUES(?,?,?)");
+            st.setInt(1,comment.getPostID());
+            st.setString(2,comment.getPostTitle());
+            st.setString(3,comment.getComment());
+            st.executeUpdate();
 
-
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
 
     }
 }

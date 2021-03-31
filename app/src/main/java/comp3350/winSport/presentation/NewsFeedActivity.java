@@ -59,7 +59,6 @@ public class NewsFeedActivity extends AppCompatActivity {
 //            @Override
 //            public void onClick(View view, int pos) {
 //                //do stuff
-//                System.out.println("click");
 //            }
 //        };
 //    }

@@ -13,9 +13,8 @@ public class CommentsData implements IComments {
         comments=new ArrayList<>();
     }
     @Override
-    public void addComments(int postID,String postTitle,String comment) {
-        Comment newComment= new Comment(postID,postTitle,comment);
-        comments.add(newComment);
+    public void insertComment(Comment comment) {
+        comments.add(comment);
     }
 
     @Override

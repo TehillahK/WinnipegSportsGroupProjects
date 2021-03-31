@@ -25,7 +25,6 @@ public class NearestBarActivity extends AppCompatActivity {
     NearestBarAdapter adapter;
     NearestBarAdapter.RecyclerViewEventListener listener;
     private List<Location> venues;
-    private List<Location> bars;
     private AccessLocations accessLocations;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +35,6 @@ public class NearestBarActivity extends AppCompatActivity {
         initValues();
 
         venues = accessLocations.getVenues();
-
-        try {
-            bars = accessLocations.getBars(venues.get(0).getName());
-        } catch (InvalidNameException e) {
-            e.printStackTrace();
-        }
 
         RecyclerView rv = findViewById(R.id.venuesRV);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -60,7 +53,6 @@ public class NearestBarActivity extends AppCompatActivity {
         listener = new NearestBarAdapter.RecyclerViewEventListener() {
             @Override
             public void onClick(View view, int pos) {
-                System.out.println("click");
                 Intent intent =new Intent(getApplicationContext(),BarsActivity.class);
                 intent.putExtra("venueName",venues.get(pos).getName());
                 startActivity(intent);
@@ -79,7 +71,6 @@ public class NearestBarActivity extends AppCompatActivity {
         }
 
         venues = new ArrayList<>();
-        bars = new ArrayList<>();
 
         accessLocations = new AccessLocations();
     }

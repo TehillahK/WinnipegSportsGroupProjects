@@ -20,13 +20,15 @@ public class AccessComments {
         this.iComments=iComments;
     }
 
-    public void addComment(int postID,String comment)
+    public void addComment(Comment comment)
     {
-        iComments.addComments(postID,"",comment);
+        // validate comment
+        iComments.insertComment(comment);
     }
 
-    public List<Comment> getComments(int postID,String title)
+    public List<Comment> getComments(int postID)
     {
+        // validate postID
         comments=iComments.getComments(postID);
         return comments;
 

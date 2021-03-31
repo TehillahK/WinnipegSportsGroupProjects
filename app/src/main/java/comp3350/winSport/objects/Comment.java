@@ -11,7 +11,7 @@ public class Comment {
         //phineas and ferb reference
         this.userNickName="Cheeky Monkey";
         this.postID = 0;
-        this.postTitle = "";
+        this.postTitle = "HACKA";
         this.comment = "blank comment";
     }
     public Comment(int postID,String postTitle,String comment)
