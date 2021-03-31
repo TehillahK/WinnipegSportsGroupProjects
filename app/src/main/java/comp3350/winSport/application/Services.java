@@ -17,6 +17,7 @@ import comp3350.winSport.persistence.fakeDB.PlayerData;
 import comp3350.winSport.persistence.fakeDB.PlayerStatData;
 import comp3350.winSport.persistence.fakeDB.StandingData;
 import comp3350.winSport.persistence.fakeDB.TeamData;
+import comp3350.winSport.persistence.hsqldb.CommentsHSQLDB;
 import comp3350.winSport.persistence.hsqldb.GameDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.LocationDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.NewsFeedDataHSQLDB;
@@ -30,8 +31,8 @@ public class    Services {
     // ONE LINE DB SWITCH BOOLEAN.
     // Set to false to use our Fake DB.
     private static boolean useHSQLDB = false;
-    private static ILocation locationPersistance = null;
 
+    private static ILocation locationPersistance = null;
     private static ITeam teamPersistance = null;
     private static IGame gamePersistance = null;
     private static IPlayer playerPersistance = null;
@@ -39,6 +40,7 @@ public class    Services {
     private static INewsFeed newsFeedPersistance=null;
     private static IStanding standingPersistance = null;
     private static IComments commentsPersistance=null;
+
     public static synchronized IStanding getStandingPersistance() {
         if (standingPersistance == null) {
             if (useHSQLDB)
@@ -113,9 +115,7 @@ public class    Services {
         if(commentsPersistance==null)
         {
             if(useHSQLDB)
-            {
-
-            }
+                commentsPersistance = new CommentsHSQLDB(Main.getDBPathName());
             else
                 commentsPersistance=new CommentsData();
         }

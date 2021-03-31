@@ -9,7 +9,10 @@ public class Comment {
     public Comment()
     {
         //phineas and ferb reference
-        userNickName="Cheeky Monkey";
+        this.userNickName="Cheeky Monkey";
+        this.postID = 0;
+        this.postTitle = "";
+        this.comment = "blank comment";
     }
     public Comment(int postID,String postTitle,String comment)
     {
@@ -31,6 +34,10 @@ public class Comment {
         return comment;
     }
 
+    public String getPostTitle() {
+        return postTitle;
+    }
+
     public void setPostID(int postID) {
         this.postID = postID;
     }
@@ -42,6 +49,7 @@ public class Comment {
     public void setUserNickName(String userNickName) {
         this.userNickName = userNickName;
     }
+
 
 
 }
