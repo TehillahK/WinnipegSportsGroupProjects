@@ -22,22 +22,22 @@ public class NewsPost {
         numLikes=0;
         image = 0;
         postID = postCount;
+        postCount++;
         likes=0;
         dislikes=0;
-        postCount++;
         isLiked=false;
         isDisliked=false;
     }
 
-    public NewsPost(String title,String datePosted ,String caption, int likes,int dislikes,int image)
+    public NewsPost(int postID,String title,String datePosted ,String caption, int likes,int dislikes,int image)
     {
+        this.postID = postID;
         this.title=title;
         this.datePosted=datePosted;
         this.caption=caption;
         this.likes=likes;
         this.dislikes=dislikes;
         this.image=image;
-        postID = postCount;
         postCount++;
     }
     public boolean isLiked()
