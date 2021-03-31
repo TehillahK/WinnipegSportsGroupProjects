@@ -44,8 +44,9 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Commen
 
         public CommentsViewHolder(@NonNull View itemView) {
             super(itemView);
-            userName.findViewById(R.id.user_name);
-            userComment.findViewById(R.id.user_comment);
+            userName= itemView.findViewById(R.id.user_name);
+            userComment= itemView.findViewById(R.id.user_comment);
+
         }
     }
 }

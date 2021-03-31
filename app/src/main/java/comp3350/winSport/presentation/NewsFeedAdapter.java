@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -26,6 +27,7 @@ import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
 
     List<NewsPost> newsPosts;
+    AccessComments accessComments;
     final String PEOPLE_LIKE_THIS=" people like this";
     final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
     private RecyclerViewEventListener listener;
@@ -34,6 +36,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
     {
         this.newsPosts=newsPosts;
         this.listener=listener;
+        accessComments=new AccessComments();
     }
     @NonNull
     @Override
@@ -50,6 +53,14 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         holder.datePosted.setText(newsPosts.get(position).getDatePosted());
         holder.likeCounter.setText(String.format("%s%s", newsPosts.get(position).getLikes(), PEOPLE_LIKE_THIS));
         holder.dislikeCounter.setText(String.format("%s%s", newsPosts.get(position).getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(
+                holder.commentSection.getContext(),
+                LinearLayoutManager.VERTICAL,
+                false
+        );
+
+        holder.commentSection.setLayoutManager(layoutManager);
+
     }
 
     @Override
@@ -169,9 +180,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     int postID= post.getPostID();
                     String postTitle=post.getTitle();
                     String comment=commentInput.getText().toString();
+
                     accessComments.addComment(postID,comment);
                     List<Comment> commentList= accessComments.getComments(postID,postTitle);
-
                     CommentsAdapter commentsAdapter=new CommentsAdapter(commentList);
                     commentSection.setAdapter(commentsAdapter);
                 }

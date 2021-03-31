@@ -41,9 +41,11 @@ public class NewsFeedActivity extends AppCompatActivity {
        //     posts.add(new NewsPost());
      //   }
         RecyclerView rv = findViewById(R.id.rv);
+
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
+     //   commentSection.setLayoutManager(llm);
 //        setOnClickListner();
         NewsFeedAdapter adapter = new NewsFeedAdapter(newsPosts,listener);
         rv.setAdapter(adapter);
