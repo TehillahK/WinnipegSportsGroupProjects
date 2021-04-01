@@ -14,6 +14,8 @@ public class NewsPost {
     private int dislikes;
     private boolean isLiked;
     private boolean isDisliked;
+
+    // Null constructor.
     public NewsPost()
     {
         title="The Title";
@@ -92,6 +94,8 @@ public class NewsPost {
         }
     }
 
+
+
     public static int getPostCount() {
         return postCount;
     }
@@ -153,6 +157,7 @@ public class NewsPost {
     {
         return isDisliked;
     }
+
     public void viewNewsPostObject(){
         System.out.print("\nNewsPost OBJECT");
         System.out.print("\npost ID: " + getPostID());
