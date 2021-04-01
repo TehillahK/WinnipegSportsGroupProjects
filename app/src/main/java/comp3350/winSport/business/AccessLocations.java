@@ -1,12 +1,11 @@
 package comp3350.winSport.business;
 
-import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
 import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.ILocation;
 
 public class AccessLocations {

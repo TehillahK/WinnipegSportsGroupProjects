@@ -5,12 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Comment;
-import comp3350.winSport.objects.Game;
 import comp3350.winSport.persistence.IComments;
 
 public class CommentsHSQLDB implements IComments {

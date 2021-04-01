@@ -2,7 +2,7 @@ package comp3350.winSport.objects;
 
 import java.util.ArrayList;
 
-import comp3350.winSport.objects.exceptions.InvalidTimeException;
+import comp3350.winSport.exceptions.InvalidTimeException;
 
 public class Period {
 

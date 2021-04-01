@@ -2,7 +2,6 @@ package comp3350.winSport.persistence.hsqldb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,11 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.NewsPost;
 
-import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.Team;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.INewsFeed;
 
 public class NewsFeedDataHSQLDB implements INewsFeed {

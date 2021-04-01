@@ -1,5 +1,4 @@
 package comp3350.winSport.persistence.hsqldb;
-import android.util.Log;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,12 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Game;
-import comp3350.winSport.objects.League;
-import comp3350.winSport.objects.Period;
-import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.Team;
 
 import comp3350.winSport.persistence.IGame;
 

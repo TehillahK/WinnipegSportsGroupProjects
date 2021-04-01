@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Standing;
-import comp3350.winSport.objects.Team;
 import comp3350.winSport.persistence.IStanding;
 
 public class StandingHSQLDB implements IStanding {

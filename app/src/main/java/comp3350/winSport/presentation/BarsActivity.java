@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessLocations;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.presentation.Adapters.NearestBarAdapter;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 

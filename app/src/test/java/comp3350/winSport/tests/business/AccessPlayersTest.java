@@ -8,7 +8,7 @@ import java.util.List;
 
 import comp3350.winSport.business.AccessPlayers;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 import static org.junit.Assert.assertNotNull;

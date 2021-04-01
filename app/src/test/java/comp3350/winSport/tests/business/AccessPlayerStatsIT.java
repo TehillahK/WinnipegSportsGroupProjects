@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import comp3350.winSport.business.AccessPlayerStats;
 import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayerStats;
 import comp3350.winSport.persistence.hsqldb.PlayerStatsHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
