@@ -10,9 +10,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import comp3350.winSport.objects.Game;
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.persistence.ILocation;
 
 public class LocationDataHSQLDB implements ILocation {

@@ -2,7 +2,7 @@ package comp3350.winSport.business;
 
 import comp3350.winSport.application.Services;
 import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayerStats;
 
 public class AccessPlayerStats implements IPlayerStats {

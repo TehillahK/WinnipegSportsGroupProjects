@@ -17,7 +17,6 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessLocations;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
 import comp3350.winSport.presentation.Adapters.NearestBarAdapter;
 
 public class NearestBarActivity extends AppCompatActivity {

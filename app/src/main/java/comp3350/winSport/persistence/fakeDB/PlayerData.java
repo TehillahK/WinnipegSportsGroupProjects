@@ -5,9 +5,9 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
-import comp3350.winSport.persistence.hsqldb.PersistenceException;
+
 public class PlayerData implements IPlayer {
 
     List<Player> players1;

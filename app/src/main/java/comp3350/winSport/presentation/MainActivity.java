@@ -8,18 +8,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Objects;
+
 import comp3350.winSport.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private HashMap<Integer,Class<?>> ids;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Winnipeg Sports");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Winnipeg Sports");
+
+        initIDs();
 
         Button button1 = findViewById(R.id.currentlyPlayingMenu);
         Button button2 = findViewById(R.id.teamRostersMenu);
@@ -42,57 +51,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button9.setOnClickListener(this);
     }
 
+    // Initialize our hashmap with ID value Class value.
+    // Will allow for clean onclick method below.
+    private void initIDs() {
+        ids = new HashMap<>();
+        ids.put(R.id.currentlyPlayingMenu,CurrentlyPlayingActivity.class);
+        ids.put(R.id.teamRostersMenu,TeamsActivity.class);
+        ids.put(R.id.player_stat_layout,PlayersActivity.class);
+        ids.put(R.id.schedule_layout,ScheduleActivity.class);
+        ids.put(R.id.channel_layout,ChannelActivity.class);
+        ids.put(R.id.newsFeedMenu,NewsFeedActivity.class);
+        ids.put(R.id.buy_tickets_menu,TicketsActivity.class);
+        ids.put(R.id.standings_menu,StandingsActivity.class);
+        ids.put(R.id.nearby_bars,NearestBarActivity.class);
+    }
 
+    // Can simply get matching key of the on clicked id.
     @Override
     public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.currentlyPlayingMenu:
-                // activate currently playing menu
-                Intent intent1 = new Intent(MainActivity.this,CurrentlyPlayingActivity.class);
-                MainActivity.this.startActivity(intent1);
-                break;
-            case R.id.teamRostersMenu:
-                // games menu
-                Intent intent2 = new Intent(MainActivity.this, TeamsActivity.class);
-                MainActivity.this.startActivity(intent2);
-                break;
-            case R.id.player_stat_layout:
-                // Player Stats
-                Intent intent3 = new Intent(MainActivity.this, PlayersActivity.class);
-                MainActivity.this.startActivity(intent3);
-                break;
-            case R.id.schedule_layout:
-                // Player Stats
-                Intent intent4 = new Intent(MainActivity.this, ScheduleActivity.class);
-                MainActivity.this.startActivity(intent4);
-                break;
-            case R.id.channel_layout:
-                // Player Stats
-                Intent channelIntent = new Intent(MainActivity.this, ChannelActivity.class);
-                MainActivity.this.startActivity(channelIntent);
-                break;
-            case R.id.newsFeedMenu:
-                // Player Stats
-                Intent intent6 = new Intent(MainActivity.this, NewsFeedActivity.class);
-                MainActivity.this.startActivity(intent6);
-                break;
-            case R.id.buy_tickets_menu:
-                // Player Stats
-                Intent BuyTicketintent = new Intent(MainActivity.this, TicketsActivity.class);
-                MainActivity.this.startActivity(BuyTicketintent);
-                break;
-            case R.id.standings_menu:
-                // Team Standings
-                Intent standingsIntent = new Intent(MainActivity.this, StandingsActivity.class);
-                MainActivity.this.startActivity(standingsIntent);
-                break;
-            case R.id.nearby_bars:
-                // Player Stats
-                Intent barIntent = new Intent(MainActivity.this, NearestBarActivity.class);
-                MainActivity.this.startActivity(barIntent);
-                break;
-            default:
-                break;
-        }
+        Intent intent = new Intent(MainActivity.this,ids.get(v.getId()));
+        MainActivity.this.startActivity(intent);
     }
+
 }

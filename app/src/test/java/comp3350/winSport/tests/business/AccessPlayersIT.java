@@ -12,7 +12,7 @@ import java.util.ListIterator;
 import comp3350.winSport.business.AccessPlayers;
 
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;

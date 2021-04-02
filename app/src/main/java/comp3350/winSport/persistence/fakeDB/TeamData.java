@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.persistence.ITeam;
-import comp3350.winSport.persistence.fakeDB.GameData;
 
 public class TeamData implements ITeam {
 
