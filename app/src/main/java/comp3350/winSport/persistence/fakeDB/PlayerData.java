@@ -295,7 +295,7 @@ public class PlayerData implements IPlayer {
 
     @Override
     public List<Player> getPlayers(String teamName) throws InvalidNameException{
-        List<Player> result=null;
+        List<Player> result=new ArrayList<>();
         Player player;
         if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
             for (int i = 0; i < allPlayer.size(); i++) {
