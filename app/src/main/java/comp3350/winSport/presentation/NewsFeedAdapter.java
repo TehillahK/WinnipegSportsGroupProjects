@@ -1,7 +1,7 @@
 package comp3350.winSport.presentation;
 
 
-import android.content.Intent;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import comp3350.winSport.R;
-import comp3350.winSport.application.Services;
+
 import comp3350.winSport.business.AccessComments;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
@@ -164,11 +164,14 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     // Get user input, then create and add comment to DB.
                     String comment=commentInput.getText().toString();
                     Comment addMe = new Comment(post.getPostID(),post.getTitle(),comment);
-                    accessComments.addComment(addMe);
 
-                    commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
-                    commentsAdapter=new CommentsAdapter(commentList);
+                    accessComments.addComment(addMe);
+                    commentList.add(addMe);
+                  //  commentList= accessComments.getComments(newsPosts.get(getAdapterPosition()).getPostID());
+
+                   // commentsAdapter=new CommentsAdapter(commentList);/
                     commentSection.setAdapter(commentsAdapter);
+                    commentsAdapter.notifyDataSetChanged();
 
                 }
             });
