@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 
 
@@ -22,7 +22,6 @@ import comp3350.winSport.R;
 import comp3350.winSport.business.AccessComments;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
-import comp3350.winSport.presentation.Adapters.CommentsAdapter;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {

@@ -13,6 +13,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessLocations;
@@ -33,6 +34,9 @@ public class NearestBarActivity extends AppCompatActivity {
 
         initValues();
 
+        venues = new ArrayList<>();
+        accessLocations = new AccessLocations();
+
         venues = accessLocations.getVenues();
 
         RecyclerView rv = findViewById(R.id.venuesRV);
@@ -41,9 +45,6 @@ public class NearestBarActivity extends AppCompatActivity {
         setOnClickListner();
         adapter = new NearestBarAdapter(venues, listener);
         rv.setAdapter(adapter);
-
-
-
 
         Log.v("NearestBarA","Content");
     }
@@ -64,14 +65,11 @@ public class NearestBarActivity extends AppCompatActivity {
         try {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setTitle("Nearest Bar");
+            Objects.requireNonNull(getSupportActionBar()).setTitle("Nearest Bar");
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
-        venues = new ArrayList<>();
-
-        accessLocations = new AccessLocations();
     }
 
 }

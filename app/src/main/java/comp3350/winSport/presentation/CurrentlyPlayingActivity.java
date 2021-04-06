@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessGames;
@@ -29,14 +31,18 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
         try {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setTitle("Currently Playing");
+            Objects.requireNonNull(getSupportActionBar()).setTitle("Currently Playing");
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-//        accessGames = new AccessGames();
-//        games = accessGames.getGames();
 
-        initGames();
+        accessGames = new AccessGames();
+        games = accessGames.getGames();
+
+        for (int i=0;i<games.size();i++){
+            Log.d("currently",games.get(i).getGameName());
+        }
+
 
         RecyclerView rv = findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -46,16 +52,4 @@ public class CurrentlyPlayingActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
     }
-
-    void initGames() {
-        games = new ArrayList<>();
-
-        games.add(new Game("Calgary Flames"       ,"0 - 0" , R.drawable.flames));
-        games.add(new Game("Edmonton Oilers"      ,"0 - 0" , R.drawable.oilers));
-        games.add(new Game("Montréal Canadiens"   ,"0 - 0" , R.drawable.montreal));
-        games.add(new Game("Ottawa Senators"      ,"0 - 0" , R.drawable.ottawa));
-        games.add(new Game("Toronto Maple Leafs"  ,"0 - 0" , R.drawable.leafs));
-        games.add(new Game("Vancouver Canucks"    ,"0 - 0" , R.drawable.vancouver));
-    }
-
 }

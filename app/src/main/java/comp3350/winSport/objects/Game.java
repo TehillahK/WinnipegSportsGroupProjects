@@ -8,12 +8,6 @@ public class Game {
         Game DSO specifically used for our currently playing and Schedule Features.
     */
 
-
-
-
-
-
-
     private int gameID;
     private String gameName;
     private String gameLeague;
@@ -59,6 +53,19 @@ public class Game {
         gamePicID = R.drawable.jets;
     }
 
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore,int lPic, int gPicID) {
+        gameID = gID;
+        gameName = gName;
+        gameLeague = gL;
+        team1 = t1;
+        team2 = t2;
+        gameDate = gDate;
+        gameLocation = gLocation;
+        gameScore = gScore;
+        leaguePic = lPic;
+        gamePicID = gPicID;
+    }
+
     public int getLeaguePic() {
         return leaguePic;
     }
@@ -99,39 +106,8 @@ public class Game {
         return gameScore;
     }
 
-    public void setGameID(int n) {
-        gameID = n;
-    }
-
-    public void setGameName(String s) {
-        gameName = s;
-    }
-
     public void setLeague(String name) {
         gameLeague = name;
-    }
-
-    public void setGameDate(String date) {
-        gameDate = date;
-    }
-
-    public void setGameLocation(String location) {
-        gameLocation = location;
-    }
-
-    public void setGameScore(String sc) {
-        gameScore = sc;
-    }
-
-    public String toString() {
-        String per = "";
-
-        String res = "\n------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
-                + "comp3350.winSport.objects.Game date: " + gameDate + "\n"
-                + "comp3350.winSport.objects.Game location: " + gameLocation + "\ncomp3350.winSport.objects.Game score: " + gameScore + "\n------------------------------------\n"
-                + "comp3350.winSport.objects.Team 1: " + team1.toString() + "\ncomp3350.winSport.objects.Team 2: " + team2.toString() + "\n------------------------------------\n"
-                + per + "\n------------------------------------\n";
-        return res;
     }
 
     //-------------------------------

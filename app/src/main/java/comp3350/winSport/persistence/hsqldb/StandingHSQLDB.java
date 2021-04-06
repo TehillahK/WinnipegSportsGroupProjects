@@ -49,7 +49,7 @@ public class StandingHSQLDB implements IStanding {
         validNames.add("calgary flames");
         validNames.add("winnipeg jets");
         validNames.add("montreal canadiens");
-        validNames.add("ottowa senators");
+        validNames.add("ottawa senators");
         validNames.add("toronto maple leafs");
         validNames.add("edmonton oilers");
 
@@ -67,7 +67,7 @@ public class StandingHSQLDB implements IStanding {
                     return R.drawable.jets;
                 else if (curr.contains("montreal"))
                     return R.drawable.montreal;
-                else if (curr.contains("ottowa"))
+                else if (curr.contains("ottawa"))
                     return R.drawable.ottawa;
                 else if (curr.contains("leafs"))
                     return R.drawable.leafs;

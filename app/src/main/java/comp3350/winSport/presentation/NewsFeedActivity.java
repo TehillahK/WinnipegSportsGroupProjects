@@ -6,14 +6,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessNewsFeed;
 import comp3350.winSport.objects.NewsPost;
+import comp3350.winSport.presentation.Adapters.NewsFeedAdapter;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class NewsFeedActivity extends AppCompatActivity {
         try {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setTitle("News Feed");
+            Objects.requireNonNull(getSupportActionBar()).setTitle("News Feed");
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
