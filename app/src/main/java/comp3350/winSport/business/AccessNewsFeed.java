@@ -25,8 +25,4 @@ public class AccessNewsFeed {
         return newsPosts;
     }
 
-    public void likePost()
-    {
-
-    }
 }

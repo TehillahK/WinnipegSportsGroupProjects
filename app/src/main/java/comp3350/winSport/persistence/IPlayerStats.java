@@ -5,5 +5,5 @@ import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.exceptions.InvalidNameException;
 
 public interface IPlayerStats {
-    PlayerStatistic getPlayerByName(String name) throws InvalidNameException;
+    PlayerStatistic getPlayerByName(String name) ;
 }
