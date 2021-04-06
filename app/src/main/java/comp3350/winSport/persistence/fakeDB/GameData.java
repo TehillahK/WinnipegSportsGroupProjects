@@ -48,7 +48,7 @@ public class GameData implements IGame {
         g7 = new Game(7, "Stanley Cup Playoffs", league1, "Winnipeg Jets", "Ottawa Senators", "Apr 12, 2021", "Rogers Place", "TBP",R.drawable.jets, R.drawable.ottawa);
         g8 = new Game(8, "Stanley Cup Playoffs", league2, "Calgary Flames", "Toronto Maple Leafs", "Apr 13, 2021", "Rogers Place", "TBP",R.drawable.flames, R.drawable.leafs);
         g9 = new Game(9, "Stanley Cup Playoffs", league1, "Ottawa Senators", "Montreal Canadiens", "Apr 17, 2021", "Rogers Place", "TBP",R.drawable.ottawa, R.drawable.montreal);
-        g10 = new Game(10, "Stanley Cup Playoffs", league2, "Edmonton Oilers", "Winnipeg Jets", "Apr 17, 2021", "Rogers Place", "TBP",R.drawable.jets, R.drawable.oilers);
+        g10 = new Game(10, "Stanley Cup Playoffs", league2, "Edmonton Oilers", "Winnipeg Jets", "Apr 17, 2021", "Rogers Place", "TBP",R.drawable.oilers, R.drawable.jets);
 
         games.add(g1);
         games.add(g2);
