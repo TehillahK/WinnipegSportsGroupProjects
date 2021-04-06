@@ -68,6 +68,8 @@
     <string name="OT_standing">OT</string>
     <string name="Pts_standing">Pts</string>
     <string name="STK_standing">STK</string>
+    <string name="team_name_ticket">Team Name</string>
+    <string name="ticket_link_text">Link To tickets webpage</string>
 
 
 </resources>

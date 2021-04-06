@@ -20,6 +20,10 @@ import comp3350.winSport.objects.Ticket;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class BuyTicketAdapter extends RecyclerView.Adapter<BuyTicketAdapter.MyViewHolder>{
+
+    private static final int TYPE_HEADER = 0;
+    private static final int TYPE_ITEM = 1;
+
     List<Ticket> ls;
     Context c;
 
@@ -38,15 +42,24 @@ public class BuyTicketAdapter extends RecyclerView.Adapter<BuyTicketAdapter.MyVi
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull BuyTicketAdapter.MyViewHolder holder, final int position) {
-        holder.name.setText(ls.get(position).getName());
-        holder.teamLink.setText(ls.get(position).getLink());
-        holder.teamLink.setMovementMethod(LinkMovementMethod.getInstance());
-        holder.ivPic.setImageDrawable(c.getDrawable(ls.get(position).getPic()));
+
+        if (position == 0) {
+            holder.name.setText(R.string.team_name_ticket);
+            holder.teamLink.setText(R.string.ticket_link_text);
+            holder.ivPic.setImageResource(R.drawable.nhl);
+        }
+        else {
+            Ticket t = ls.get(position - 1);
+            holder.name.setText(t.getName());
+            holder.teamLink.setText(t.getLink());
+            holder.teamLink.setMovementMethod(LinkMovementMethod.getInstance());
+            holder.ivPic.setImageDrawable(c.getDrawable(t.getPic()));
+        }
     }
 
     @Override
     public int getItemCount() {
-        return ls.size();
+        return ls.size()+1;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
