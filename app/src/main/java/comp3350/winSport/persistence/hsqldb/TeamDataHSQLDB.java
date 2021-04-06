@@ -82,33 +82,27 @@ public class TeamDataHSQLDB implements ITeam {
     }
 
     @Override
-    public Team getTeamByName(String name) throws InvalidNameException {
+    public Team getTeamByName(String name)  {
 
-        if (name.matches("^[a-zA-zé]+([\\s][a-zA-Zé]+)*$")) {
+        final List<Team> teams = new ArrayList<>();
+        try (final Connection c = connection()) {
+            final Statement st = c.createStatement();
+            final ResultSet rs = st.executeQuery("SELECT * FROM TEAMS WHERE NAME='" + name + "'");
 
-            final List<Team> teams = new ArrayList<>();
-            try (final Connection c = connection()) {
-                final Statement st = c.createStatement();
-                final ResultSet rs = st.executeQuery("SELECT * FROM TEAMS WHERE NAME='" + name+"'");
-
-                while (rs.next()) {
-                    final Team team = fromResultSet(rs);
-                    teams.add(team);
-                }
-                rs.close();
-                st.close();
+            while (rs.next()) {
+                final Team team = fromResultSet(rs);
+                teams.add(team);
             }
-            catch (final SQLException e) {
-                throw new PersistenceException(e);
-            }
-
-            for (Team curr : teams) {
-                if (curr.getName().equals(name))
-                    return curr;
-            }
+            rs.close();
+            st.close();
         }
-        else {
-            throw new InvalidNameException("please pass a team name with letters only");
+        catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+
+        for (Team curr : teams) {
+            if (curr.getName().equals(name))
+                return curr;
         }
 
         return null;

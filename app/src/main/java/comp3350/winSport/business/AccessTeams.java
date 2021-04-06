@@ -40,7 +40,12 @@ public class AccessTeams {
     }
 
     public Team getTeamByName(String name) throws InvalidNameException {
-        team = tData.getTeamByName(name);
+        if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
+            team = tData.getTeamByName(name);
+        }
+        else {
+            throw new InvalidNameException("please pass a team name with letters only");
+        }
         return team;
     }
 
