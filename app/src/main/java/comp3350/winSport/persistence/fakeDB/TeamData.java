@@ -56,21 +56,16 @@ public class TeamData implements ITeam {
     }
 
     @Override
-    public Team getTeamByName(String name) throws InvalidNameException {
+    public Team getTeamByName(String name)  {
 
-        if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
-
-            for (Team curr : teams) {
-                if (curr.getName().equals(name))
-                    return curr;
-            }
-
-            //If team is not in the list...
-            return null;
+        for (Team curr : teams) {
+            if (curr.getName().equals(name))
+                return curr;
         }
-        else {
-            throw new InvalidNameException("please pass a team name with letters only");
-        }
+
+        //If team is not in the list...
+        return null;
+
     }
 
 }

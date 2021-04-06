@@ -23,7 +23,6 @@ public class PlayerDataHSQLDB implements IPlayer {
     public PlayerDataHSQLDB(final String dbPath) {
         this.dbPath = dbPath;
         this.validNames = constructNamesList();
-
     }
 
     private List<String> constructNamesList() {
@@ -78,10 +77,8 @@ public class PlayerDataHSQLDB implements IPlayer {
         return R.drawable.nhl_main;
     }
 
-    public List<Player> getPlayers(String teamName) throws InvalidNameException {
+    public List<Player> getPlayers(String teamName) {
         final List<Player> players = new ArrayList<>();
-
-        if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
 
             try (final Connection c = connection()) {
                 final PreparedStatement st = c.prepareStatement("SELECT * FROM PLAYERS WHERE teamName=?");
@@ -98,9 +95,6 @@ public class PlayerDataHSQLDB implements IPlayer {
             } catch (final SQLException e) {
                 throw new PersistenceException(e);
             }
-        } else {
-            throw new InvalidNameException("please pass a team name with letters only");
-        }
         return players;
     }
 
