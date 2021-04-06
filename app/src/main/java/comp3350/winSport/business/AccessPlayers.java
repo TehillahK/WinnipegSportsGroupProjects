@@ -33,7 +33,12 @@ public class AccessPlayers {
     }
 
     public List<Player> getPlayersByTeam(String teamName) throws InvalidNameException {
-        players = iplayer.getPlayers(teamName);
+        if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
+            players = iplayer.getPlayers(teamName);
+        }
+        else {
+            throw new InvalidNameException("please pass a team name with letters only");
+        }
         return players;
     }
 

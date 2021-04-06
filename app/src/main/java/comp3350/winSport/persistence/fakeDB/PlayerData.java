@@ -294,22 +294,15 @@ public class PlayerData implements IPlayer {
     }
 
     @Override
-    public List<Player> getPlayers(String teamName) throws InvalidNameException{
+    public List<Player> getPlayers(String teamName) {
         List<Player> result=new ArrayList<>();
         Player player;
-        if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
             for (int i = 0; i < allPlayer.size(); i++) {
                 player = allPlayer.get(i);
                 if (player.getTeam().equalsIgnoreCase(teamName)) {
                     result.add(player);
                 }
             }
-        }
-
-        else {
-            throw new InvalidNameException("please pass a team name with letters only");
-        }
-
 
         return result;
     }
@@ -319,21 +312,4 @@ public class PlayerData implements IPlayer {
         return allPlayer;
     }
 
-    List<Player> getPlayersById(int id) {
-        switch(id) {
-            case 1:
-                return players1;
-            case 2:
-                return players2;
-            case 3:
-                return players3;
-            case 4:
-                return players4;
-            case 5:
-                return players5;
-            case 6:
-                return players6;
-        }
-        return null;
-    }
 }
