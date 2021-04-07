@@ -21,6 +21,7 @@ public class AccessStanding {
     public AccessStanding(final IStanding standingInterface) {
         this.iStanding = standingInterface;
         this.standingList = null;
+        this.pc = new PictureChecker();
     }
 
     public List<Standing> getStandingInOrder() {

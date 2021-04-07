@@ -32,7 +32,7 @@ public class TeamDataHSQLDB implements ITeam {
         final int teamID;
 
         teamID = rs.getInt("teamID");
-        int pic = R.drawable.nhl;
+        int pic = 0;
         return new Team(teamName, pic, teamID);
     }
 

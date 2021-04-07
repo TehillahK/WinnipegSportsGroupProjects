@@ -52,6 +52,8 @@ public class Team {
         this.teamID = teamID;
     }
 
+    public void setTeamPic(int pic) {this.teamPic = pic;}
+
     public String toString() {
         return this.name ;
     }

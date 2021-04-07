@@ -29,6 +29,7 @@ public class AccessPlayers {
     public AccessPlayers(IPlayer playa) {
         this();
         iplayer = playa;
+        this.pc = new PictureChecker();
     }
 
     public List<Player> getAllPlayers() {
