@@ -56,4 +56,17 @@ public class Standing {
     public int getTeamPic() {
         return teamPic;
     }
+
+    public void validateObject(){
+        System.out.print("\nSTANDING OBJECT");
+        System.out.print("\nTeam ID: " + getTeamID());
+        System.out.print("\nTeam Name: " + getTeamName());
+        System.out.print("\nWins: " + getWins());
+        System.out.print("\nLosses: " + getLosses());
+        System.out.print("\nOT Losses: " + getOt_losses());
+        System.out.print("\nPoints: " + getPts());
+        System.out.print("\nWin Streak: " + getWin_streak());
+        System.out.print("\nTeam Pic: " + getTeamPic());
+
+    }
 }
