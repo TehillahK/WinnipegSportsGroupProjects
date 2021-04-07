@@ -17,13 +17,13 @@ public class Game {
     private String gameLocation;
     private String gameScore;
 
-    private int leaguePic;
-    private int gamePicID;
+    private int team1Pic;
+    private int team2Pic;
 
     public Game(String team2 , String gameScore, int gamePicID) {
         this.team2 = team2;
         this.gameScore = gameScore;
-        this.gamePicID = gamePicID;
+        this.team1Pic = gamePicID;
     }
 
     public Game() {
@@ -35,8 +35,8 @@ public class Game {
         gameDate = "Unknown";
         gameLocation = "Unknown";
         gameScore = "Unknown";
-        leaguePic = 0;
-        gamePicID = 0;
+        team1Pic = 0;
+        team2Pic = 0;
     }
 
 
@@ -49,11 +49,19 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leaguePic = R.drawable.nhl_main;
-        gamePicID = R.drawable.jets;
+        team1Pic = 0;
+        team2Pic = 0;
     }
 
-    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore,int lPic, int gPicID) {
+    public void setTeam1Pic(int team1Pic) {
+        this.team1Pic = team1Pic;
+    }
+
+    public void setTeam2Pic(int team2Pic) {
+        this.team2Pic = team2Pic;
+    }
+
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore, int lPic, int gPicID) {
         gameID = gID;
         gameName = gName;
         gameLeague = gL;
@@ -62,16 +70,16 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leaguePic = lPic;
-        gamePicID = gPicID;
+        team1Pic = lPic;
+        team2Pic = gPicID;
     }
 
-    public int getLeaguePic() {
-        return leaguePic;
+    public int getTeam1Pic() {
+        return team1Pic;
     }
 
-    public int getGamePicID() {
-        return gamePicID;
+    public int getTeam2Pic() {
+        return team2Pic;
     }
 
     public int getGameID() {

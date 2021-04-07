@@ -43,8 +43,8 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
         holder.date.setText(game.getGameDate());
         holder.leagueName.setText(game.getGameLeague());
         holder.gameScore.setText(game.getGameScore());
-        holder.team1Logo.setImageResource(game.getLeaguePic());
-        holder.team2Logo.setImageResource(game.getGamePicID());
+        holder.team1Logo.setImageResource(game.getTeam1Pic());
+        holder.team2Logo.setImageResource(game.getTeam2Pic());
     }
 
     @Override
