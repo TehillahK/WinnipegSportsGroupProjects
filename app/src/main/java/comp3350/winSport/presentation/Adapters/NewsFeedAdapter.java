@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 
 import comp3350.winSport.R;
 
@@ -142,8 +143,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 //    post.setLikes(currLikes);
 
 
-                    likeCounter.setText(String.format("%d%s", post.getLikes(), PEOPLE_LIKE_THIS));
-                    dislikeCounter.setText(String.format("%d%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
+                    likeCounter.setText(String.format(Locale.CANADA,"%d%s", post.getLikes(), PEOPLE_LIKE_THIS));
+                    dislikeCounter.setText(String.format(Locale.CANADA,"%d%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
 
                   //  likeButton.setEnabled(false);
                     if(dislikeButton.getText().equals("dislike")  && post.isDisliked())
