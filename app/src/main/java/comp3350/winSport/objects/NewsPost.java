@@ -158,15 +158,14 @@ public class NewsPost {
         return isDisliked;
     }
 
-    public void viewNewsPostObject(){
-        System.out.print("\nNewsPost OBJECT");
-        System.out.print("\npost ID: " + getPostID());
-        System.out.print("\nLeague Name: " + getTitle());
-        System.out.print("\npost ID: " + getDatePosted());
-        System.out.print("\nLeague Name: " + getCaption());
-        System.out.print("\npost ID: " + getNumLikes());
-        System.out.print("\nLeague Name: " + getImage());
-
-
+    public void validateObject(){
+        System.out.print("\nNEWSPOST OBJECT");
+        System.out.print("\nPost ID: " + getPostID());
+        System.out.print("\nTitle: " + getTitle());
+        System.out.print("\nDate Posted: " + getDatePosted());
+        System.out.print("\nCaption: " + getCaption());
+        System.out.print("\nLikes: " + getLikes());
+        System.out.print("\nDislikes: " + getDislikes());
+        System.out.print("\nImage: " + getImage());
     }
 }

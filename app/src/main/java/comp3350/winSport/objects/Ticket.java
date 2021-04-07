@@ -34,4 +34,11 @@ public class Ticket {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void viewTicketObject(){
+        System.out.print("\nTICKET OBJECT");
+        System.out.print("\nName: " + getName());
+        System.out.print("\nLink: " + getLink());
+        System.out.print("\nPic: " + getPic());
+    }
 }

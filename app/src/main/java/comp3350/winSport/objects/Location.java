@@ -62,8 +62,15 @@ public class Location {
             return -1;
     }
 
-
-
+    public void validateObject(){
+        System.out.print("\nLOCATION OBJECT");
+        System.out.print("\nLocation Name: " + getName());
+        System.out.print("\nDescription: " + getDescription());
+        System.out.print("\nAddress: " + getAddress());
+        System.out.print("\nLatitude: " + getLat());
+        System.out.print("\nLongitude: " + getLng());
+        System.out.print("\nBar: " + isBar());
+    }
 
 
 }

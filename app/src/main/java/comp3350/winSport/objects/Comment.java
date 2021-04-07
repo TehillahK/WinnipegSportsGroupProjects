@@ -50,6 +50,11 @@ public class Comment {
         this.userNickName = userNickName;
     }
 
-
+    public void validateObject(){
+        System.out.print("\nCOMMENT OBJECT");
+        System.out.print("\nPost ID: " + getPostID());
+        System.out.print("\nPost Title: " + getPostTitle());
+        System.out.print("\nComment: " + getComment());
+    }
 
 }
