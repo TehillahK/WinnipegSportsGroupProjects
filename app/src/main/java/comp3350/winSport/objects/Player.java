@@ -46,7 +46,7 @@ public class Player {
         this.shot = shot;
         this.playerPic = picID;
         this.teamName = teamName;
-        this.teamPic = picID;
+        this.teamPic = 0;
         this.playerID = playerID;
 
     }
@@ -95,9 +95,7 @@ public class Player {
         position = pos;
     }
 
-    public String toString() {
-        return "comp3350.winSport.objects.Player: [" + number + "] " + name + ", " + position;
-    }
+    public void setTeamPic(int pic) {this.teamPic = pic;}
 
     public void viewPlayerObject(){
         System.out.print("\nPLAYER OBJECT");
