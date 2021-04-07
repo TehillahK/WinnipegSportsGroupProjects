@@ -28,12 +28,12 @@ public class StandingData implements IStanding {
 
     private void initData() {
 
-        s1 = new Standing(1,"Winnipeg Jets",19,11,2,40,"W1", R.drawable.jets);
-        s2 = new Standing(2,"Toronto Maple Leafs",20,10,2,42,"W1",R.drawable.leafs);
-        s3 = new Standing(3,"Ottawa Senators",12,20,3,27,"W2",R.drawable.ottawa);
-        s4 = new Standing(4,"Edmonton Oilers",21,13,0,42,"W3",R.drawable.oilers);
-        s5 = new Standing(5,"Calgary Flames",15,16,3,33,"L3",R.drawable.flames);
-        s6 = new Standing(6,"Montreal Canadiens",14,8,9,37,"W1",R.drawable.montreal);
+        s1 = new Standing(1,"Winnipeg Jets",19,11,2,40,"W1");
+        s2 = new Standing(2,"Toronto Maple Leafs",20,10,2,42,"W1");
+        s3 = new Standing(3,"Ottawa Senators",12,20,3,27,"W2");
+        s4 = new Standing(4,"Edmonton Oilers",21,13,0,42,"W3");
+        s5 = new Standing(5,"Calgary Flames",15,16,3,33,"L3");
+        s6 = new Standing(6,"Montreal Canadiens",14,8,9,37,"W1");
 
         standings.add(s1);
         standings.add(s2);
@@ -46,7 +46,7 @@ public class StandingData implements IStanding {
     @Override
     public List<Standing> getStandingsInOrder() {
 
-        Collections.sort(standings, (o1, o2) -> (o1.getPts() - o2.getPts()));
+        Collections.sort(standings, (o1, o2) -> (o2.getPts() - o1.getPts()));
 
         return standings;
     }

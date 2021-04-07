@@ -10,10 +10,12 @@ public class AccessStanding {
 
     private IStanding iStanding;
     private List<Standing> standingList;
+    private PictureChecker pc;
 
     public AccessStanding() {
         this.iStanding = Services.getStandingPersistance();
         this.standingList = null;
+        this.pc = new PictureChecker();
     }
 
     public AccessStanding(final IStanding standingInterface) {
@@ -23,7 +25,14 @@ public class AccessStanding {
 
     public List<Standing> getStandingInOrder() {
         standingList = iStanding.getStandingsInOrder();
+        setPics();
         return standingList;
+    }
+
+    private void setPics() {
+        for (Standing curr : standingList)
+            if (curr.getTeamPic() == 0)
+                curr.setTeamPic(pc.getPic(curr.getTeamName()));
     }
 
 }
