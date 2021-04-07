@@ -68,7 +68,5 @@ public class Standing {
         System.out.print("\nOT Losses: " + getOt_losses());
         System.out.print("\nPoints: " + getPts());
         System.out.print("\nWin Streak: " + getWin_streak());
-        System.out.print("\nTeam Pic: " + getTeamPic());
-
     }
 }

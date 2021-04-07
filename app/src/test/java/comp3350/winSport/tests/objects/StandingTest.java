@@ -12,7 +12,7 @@ public class StandingTest {
 
     @Before
     public void setUp(){
-        standing = new Standing(1, "Kryptonian Polar Bears", 5,1,1,20,"Pretty Good Win Streak", 5);
+        standing = new Standing(1, "Kryptonian Polar Bears", 5,1,1,20,"Pretty Good Win Streak");
         assertNotNull(standing);
     }
 

@@ -12,7 +12,6 @@ import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
