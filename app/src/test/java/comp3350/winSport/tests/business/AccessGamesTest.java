@@ -8,9 +8,7 @@ import java.util.List;
 import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.persistence.IGame;
-
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

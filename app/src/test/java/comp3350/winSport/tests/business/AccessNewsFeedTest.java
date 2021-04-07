@@ -9,10 +9,8 @@ import java.util.List;
 import comp3350.winSport.business.AccessNewsFeed;
 import comp3350.winSport.objects.NewsPost;
 import comp3350.winSport.persistence.INewsFeed;
-import comp3350.winSport.persistence.IStanding;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
