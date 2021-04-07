@@ -17,7 +17,6 @@ public class StandingHSQLDB implements IStanding {
 
     private final String dbPath;
 
-
     public StandingHSQLDB(final String dbPath) {
         this.dbPath = dbPath;
     }

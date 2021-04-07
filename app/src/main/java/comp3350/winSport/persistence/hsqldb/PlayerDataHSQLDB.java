@@ -11,7 +11,6 @@ import java.util.List;
 import comp3350.winSport.R;
 import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 public class PlayerDataHSQLDB implements IPlayer {

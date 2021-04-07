@@ -1,4 +1,4 @@
-package comp3350.winSport.presentation;
+package comp3350.winSport.presentation.Adapters;
 
 
 
@@ -16,13 +16,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 
 import comp3350.winSport.R;
 
 import comp3350.winSport.business.AccessComments;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
-import comp3350.winSport.presentation.Adapters.CommentsAdapter;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsFeedHolder> {
@@ -143,8 +143,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                 //    post.setLikes(currLikes);
 
 
-                    likeCounter.setText(String.format("%d%s", post.getLikes(), PEOPLE_LIKE_THIS));
-                    dislikeCounter.setText(String.format("%d%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
+                    likeCounter.setText(String.format(Locale.CANADA,"%d%s", post.getLikes(), PEOPLE_LIKE_THIS));
+                    dislikeCounter.setText(String.format(Locale.CANADA,"%d%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
 
                   //  likeButton.setEnabled(false);
                     if(dislikeButton.getText().equals("dislike")  && post.isDisliked())

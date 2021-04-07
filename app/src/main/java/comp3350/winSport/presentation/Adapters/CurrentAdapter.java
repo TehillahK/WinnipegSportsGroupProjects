@@ -35,10 +35,16 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
 
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
-        holder.gameTeam.setText(games.get(position).getTeam1() + " Vs.\n" +
-                games.get(position).getTeam2());
-        holder.gameScore.setText(games.get(position).getGameScore());
-        holder.gameTeamPhoto.setImageResource(games.get(position).getGamePicID());
+//        holder.gameTeam.setText(games.get(position).getTeam1() + " Vs.\n" +
+//                games.get(position).getTeam2());
+        Game game = games.get(position);
+        holder.team1.setText(game.getTeam1());
+        holder.team2.setText(game.getTeam2());
+        holder.date.setText(game.getGameDate());
+        holder.leagueName.setText(game.getGameLeague());
+        holder.gameScore.setText(game.getGameScore());
+        holder.team1Logo.setImageResource(game.getLeaguePic());
+        holder.team2Logo.setImageResource(game.getGamePicID());
     }
 
     @Override
@@ -52,19 +58,24 @@ public class CurrentAdapter extends RecyclerView.Adapter<CurrentAdapter.GameView
     }
 
 
-
     public static class GameViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView gameTeam;
+        TextView team1, team2, leagueName;
+        TextView date;
         TextView gameScore;
-        ImageView gameTeamPhoto;
+        ImageView team1Logo, team2Logo;
 
-         GameViewHolder(@NonNull View itemView) {
+        GameViewHolder(@NonNull View itemView) {
             super(itemView);
             cv = itemView.findViewById(R.id.current_playing_card);
-            gameTeam = itemView.findViewById(R.id.team_name);
+
+            team1 = itemView.findViewById(R.id.team1);
+            team2 = itemView.findViewById(R.id.team2);
+            leagueName = itemView.findViewById(R.id.leagueName);
+            date = itemView.findViewById(R.id.date);
             gameScore = itemView.findViewById(R.id.game_score);
-            gameTeamPhoto = itemView.findViewById(R.id.team_picture);
+            team1Logo = itemView.findViewById(R.id.team1Logo);
+            team2Logo = itemView.findViewById(R.id.team2Logo);
         }
     }
 
