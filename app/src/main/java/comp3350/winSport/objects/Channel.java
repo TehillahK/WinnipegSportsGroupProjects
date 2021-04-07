@@ -26,4 +26,10 @@ public class Channel {
         this.name = name;
     }
 
+    public void validateObject(){
+        System.out.print("\nCHANNEL OBJECT");
+        System.out.print("\nChannel Name: " + getName());
+        System.out.print("\nChannel Pic: " + getPic());
+    }
+
 }
