@@ -16,7 +16,9 @@ public class PlayerData implements IPlayer {
     List<Player> players4;
     List<Player> players5;
     List<Player> players6;
+
     List<Player> allPlayer;
+    List<List<Player>> allTeam;
 
 
     public PlayerData() {
@@ -26,8 +28,9 @@ public class PlayerData implements IPlayer {
         players4 = new ArrayList<>();
         players5 = new ArrayList<>();
         players6 = new ArrayList<>();
-        allPlayer = new ArrayList<>();
 
+        allPlayer = new ArrayList<>();
+        allTeam = new ArrayList<>();
         initData();
     }
 
@@ -291,18 +294,26 @@ public class PlayerData implements IPlayer {
         allPlayer.addAll(players5);
         allPlayer.addAll(players6);
 
+        allTeam.add(players1);
+        allTeam.add(players2);
+        allTeam.add(players3);
+        allTeam.add(players4);
+        allTeam.add(players5);
+        allTeam.add(players6);
+
+        for (Player curr : allPlayer)
+            curr.setPlayerPic(R.drawable.headshot);
+
     }
 
     @Override
     public List<Player> getPlayers(String teamName) {
         List<Player> result=new ArrayList<>();
-        Player player;
-            for (int i = 0; i < allPlayer.size(); i++) {
-                player = allPlayer.get(i);
-                if (player.getTeam().equalsIgnoreCase(teamName)) {
-                    result.add(player);
-                }
-            }
+
+        for (List<Player> curr : allTeam) {
+            if (curr.get(0).getTeam().equals(teamName))
+                return curr;
+        }
 
         return result;
     }

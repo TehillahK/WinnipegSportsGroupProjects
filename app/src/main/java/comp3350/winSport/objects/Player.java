@@ -12,6 +12,11 @@ public class Player {
     private int number;
     private String position;
     private String shot;
+
+    public void setPlayerPic(int playerPic) {
+        this.playerPic = playerPic;
+    }
+
     private int playerPic;
     private String teamName;
     private int teamPic;
