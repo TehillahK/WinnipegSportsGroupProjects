@@ -24,6 +24,10 @@ public class AccessLocations {
         bars = null;
     }
 
+    public AccessLocations (ILocation iLocation){
+        this.location = iLocation;
+    }
+
     public List<Location> getVenues() {
         // no logic, can just return
 
