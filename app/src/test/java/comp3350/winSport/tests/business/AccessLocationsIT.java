@@ -11,6 +11,7 @@ import java.util.ListIterator;
 
 import comp3350.winSport.business.AccessLocations;
 import comp3350.winSport.business.AccessTeams;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Location;
 import comp3350.winSport.objects.Team;
@@ -42,7 +43,29 @@ public class AccessLocationsIT {
         System.out.print("\nTest 1: Get Venues");
         System.out.print("\n---------------------------------------");
         final List<Location> venues = accessLocations.getVenues();
+        assertNotNull(venues);
         assertEquals(4,venues.size());
+        System.out.print("\nFinished test.");
+    }
+
+    @Test
+    public void testGetBars() throws InvalidNameException {
+        System.out.print("\n------------------AccessLocations Integration Test---------------------");
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nTest 2: Get Bars");
+        System.out.print("\n---------------------------------------");
+        final List<Location> bars = accessLocations.getBars("MTS center");
+        ListIterator<Location> iterator = bars.listIterator();
+
+        System.out.print("\nIterating through list...");
+        while (iterator.hasNext()){
+            Location location = iterator.next();
+            assertNotNull(location);
+            location.validateObject();
+            System.out.print("\n");
+        }
+
+        System.out.print("\nFinished test.");
     }
 
     @After

@@ -66,6 +66,8 @@ public class AccessGamesIT {
             game.viewGameObject();
         }
 
+        System.out.print("\nFinished test.");
+
     }
 
 
