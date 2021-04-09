@@ -171,6 +171,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
 
                     commentsAdapter.notifyDataSetChanged();
                     notifyDataSetChanged();
+                    commentInput.setText("");
 
                 }
             });
