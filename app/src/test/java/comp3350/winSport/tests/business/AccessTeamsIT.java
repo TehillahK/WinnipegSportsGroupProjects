@@ -7,10 +7,8 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import java.util.ListIterator;
 
 import comp3350.winSport.business.AccessTeams;
-import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Team;
 import comp3350.winSport.persistence.ITeam;
 import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
@@ -18,11 +16,9 @@ import comp3350.winSport.tests.utils.TestUtils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 public class AccessTeamsIT {
-    //WIP - will be a dev task
 
     private AccessTeams accessTeams;
     private File tempDB;
