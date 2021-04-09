@@ -30,7 +30,7 @@ public class    Services {
 
     // ONE LINE DB SWITCH BOOLEAN.
     // Set to false to use our Fake DB.
-    private static final boolean useHSQLDB = false;
+    private static final boolean useHSQLDB = true;
 
     private static ILocation locationPersistance = null;
     private static ITeam teamPersistance = null;
