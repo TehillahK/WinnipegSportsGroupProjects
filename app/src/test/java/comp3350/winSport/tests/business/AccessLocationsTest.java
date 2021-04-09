@@ -7,11 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import comp3350.winSport.business.AccessComments;
 import comp3350.winSport.business.AccessLocations;
-import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.persistence.IComments;
 import comp3350.winSport.persistence.ILocation;
 
 import static org.junit.Assert.assertNotNull;
