@@ -167,10 +167,11 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
 
                     accessComments.addComment(addMe);
                  //   commentList.add(addMe);
-                //    commentList=accessComments.getComments(post.getPostID());
+                  //  commentList=accessComments.getComments(post.getPostID());
 
                     commentsAdapter.notifyDataSetChanged();
                     notifyDataSetChanged();
+                    commentInput.setText("");
 
                 }
             });
