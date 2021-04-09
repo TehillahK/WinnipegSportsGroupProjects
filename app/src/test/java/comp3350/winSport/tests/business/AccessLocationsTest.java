@@ -63,7 +63,7 @@ public class AccessLocationsTest {
         String input5 = "Winnipeg              Neighbour";
         String input6 = " My Neighbour    ";
 
-        System.out.print("\ngetTeamByName() should throw an exception if there are numeric characters in the string.\n");
+        System.out.print("\nShould throw an exception if there are numeric characters in the string.\n");
 
         int counter = 0;
 
