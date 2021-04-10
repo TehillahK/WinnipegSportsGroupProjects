@@ -70,6 +70,5 @@ public class CommentsHSQLDB implements IComments {
         } catch (final SQLException e) {
             throw new PersistenceException(e);
         }
-
     }
 }
