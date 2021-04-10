@@ -79,6 +79,7 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
             final PreparedStatement st = c.prepareStatement("UPDATE NEWS_FEED SET LIKES = ? WHERE POSTID = ?");
             st.setInt(1, val);
             st.setInt(2, id);
+            st.executeUpdate();
         } catch (final SQLException e) {
             throw new PersistenceException(e);
         }
@@ -90,6 +91,7 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
             final PreparedStatement st = c.prepareStatement("UPDATE NEWS_FEED SET DISLIKES = ? WHERE POSTID = ?");
             st.setInt(1, val);
             st.setInt(2, id);
+            st.executeUpdate();
         } catch (final SQLException e) {
             throw new PersistenceException(e);
         }

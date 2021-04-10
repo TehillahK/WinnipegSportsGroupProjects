@@ -24,14 +24,14 @@ public class AccessNewsFeed {
         return newsPosts;
     }
 
-    public void updateLike(NewsPost post, int val) {
-        if (post.getLikes() > 0 || val != -1)
-            iNewsFeed.updateLike(post.getPostID(),post.getLikes() + val);
+    public void updateLike(NewsPost post) {
+        if (post.getLikes() != 0)
+            iNewsFeed.updateLike(post.getPostID(),post.getLikes());
     }
 
-    public void updateDislike(NewsPost post, int val) {
-        if(post.getDislikes() > 0 || val != -1)
-            iNewsFeed.updateDislike(post.getPostID(),post.getDislikes() + val);
+    public void updateDislike(NewsPost post) {
+        if (post.getDislikes() != 0)
+            iNewsFeed.updateDislike(post.getPostID(),post.getDislikes());
     }
 
 
