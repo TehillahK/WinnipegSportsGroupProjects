@@ -26,7 +26,7 @@ public class AccessStandingTest {
     }
 
     @Test
-    public void testStandingsInOrder(){
+    public void testGetStandingsInOrder(){
         System.out.print("\n------------------AccessStanding Test---------------------");
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Get Standings in Order");

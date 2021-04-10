@@ -10,21 +10,14 @@ import java.util.List;
 import java.util.ListIterator;
 
 import comp3350.winSport.business.AccessLocations;
-import comp3350.winSport.business.AccessTeams;
 import comp3350.winSport.exceptions.InvalidNameException;
-import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Location;
-import comp3350.winSport.objects.Team;
 import comp3350.winSport.persistence.ILocation;
-import comp3350.winSport.persistence.ITeam;
 import comp3350.winSport.persistence.hsqldb.LocationDataHSQLDB;
-import comp3350.winSport.persistence.hsqldb.TeamDataHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 public class AccessLocationsIT {
     private AccessLocations accessLocations;
@@ -45,6 +38,27 @@ public class AccessLocationsIT {
         final List<Location> venues = accessLocations.getVenues();
         assertNotNull(venues);
         assertEquals(4,venues.size());
+
+        System.out.print("\nFinished test.");
+    }
+
+    @Test
+    public void testGetValuesData(){
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nTest 2: Check Get Venues Data");
+        System.out.print("\n---------------------------------------");
+        final List<Location> venues = accessLocations.getVenues();
+        assertNotNull(venues);
+        assertEquals(4,venues.size());
+
+        System.out.print("\nIterating through list...");
+        ListIterator<Location> iterator = venues.listIterator();
+        while(iterator.hasNext()){
+            Location location = iterator.next();
+            location.validateObject();
+            System.out.print("\n");
+        }
+
         System.out.print("\nFinished test.");
     }
 
@@ -52,7 +66,7 @@ public class AccessLocationsIT {
     public void testGetBars() throws InvalidNameException {
         System.out.print("\n------------------AccessLocations Integration Test---------------------");
         System.out.print("\n---------------------------------------");
-        System.out.print("\nTest 2: Get Bars");
+        System.out.print("\nTest 3: Get Bars");
         System.out.print("\n---------------------------------------");
         final List<Location> bars = accessLocations.getBars("MTS center");
         ListIterator<Location> iterator = bars.listIterator();
