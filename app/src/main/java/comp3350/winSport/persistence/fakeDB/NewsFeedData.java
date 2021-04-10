@@ -34,4 +34,18 @@ public class NewsFeedData implements INewsFeed {
     public List<NewsPost> getNewsPosts() {
         return newsPosts;
     }
+
+    @Override
+    public void updateLike(int id,int val) {
+        for(NewsPost curr : newsPosts)
+            if (curr.getPostID() == id)
+                curr.setLikes(val);
+    }
+
+    @Override
+    public void updateDislike(int id,int val) {
+        for(NewsPost curr : newsPosts)
+            if (curr.getPostID() == id)
+                curr.setDislikes(val);
+    }
 }
