@@ -9,14 +9,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ListIterator;
 
-import comp3350.winSport.business.AccessLocations;
 import comp3350.winSport.business.AccessStanding;
-import comp3350.winSport.exceptions.InvalidNameException;
-import comp3350.winSport.objects.Location;
 import comp3350.winSport.objects.Standing;
-import comp3350.winSport.persistence.ILocation;
 import comp3350.winSport.persistence.IStanding;
-import comp3350.winSport.persistence.hsqldb.LocationDataHSQLDB;
 import comp3350.winSport.persistence.hsqldb.StandingHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
 

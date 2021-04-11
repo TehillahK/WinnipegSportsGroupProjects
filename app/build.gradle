@@ -46,4 +46,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     // REQUIRED FOR TESTING
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.+'
+    androidTestImplementation ('com.android.support.test:rules:1.0.2')
 }

@@ -151,3 +151,4 @@ INSERT INTO LOCATIONS VALUES('Pony Corral Restaurant & Bar (Grant Park)','Ordere
 INSERT INTO LOCATIONS VALUES('Garbonzos Sports Pub Polo Park','Nice place, awesome pizza, go after 9 on friday for discounts','1320 Ellice Ave', 49.89366513586186, -97.1943179253556, TRUE)
 INSERT INTO LOCATIONS VALUES('Bleachers Sports Bar','Established watering hole featuring sports on TV, beer & pub grub like burgers & poutine.','308 Fort St', 49.894407294902294, -97.13971328616466, TRUE)
 INSERT INTO LOCATIONS VALUES('Tavern United - Bell MTS Place','Pub fare, pints & cocktails in a comfortable sports-bar setting with pool tables & plenty of TVs.','345 Hargrave Street at, Graham Ave', 49.891897403178525, -97.14438570160327, TRUE)
+INSERT INTO COMMENTS VALUES(1,'What a game!', 'It had my attention the whole time.')
