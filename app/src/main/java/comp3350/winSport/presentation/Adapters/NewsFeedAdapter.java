@@ -21,6 +21,7 @@ import java.util.Locale;
 import comp3350.winSport.R;
 
 import comp3350.winSport.business.AccessComments;
+import comp3350.winSport.business.AccessNewsFeed;
 import comp3350.winSport.objects.Comment;
 import comp3350.winSport.objects.NewsPost;
 import comp3350.winSport.presentation.interfaces.RecyclerViewEventListener;
@@ -30,6 +31,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
     List<NewsPost> newsPosts;
     List<Comment> commentList;
     AccessComments accessComments;
+    AccessNewsFeed accessNewsFeed;
     CommentsAdapter commentsAdapter;
     final String PEOPLE_LIKE_THIS=" people like this";
     final String PEOPLE_DISLIKE_LIKE_THIS=" people dislike this";
@@ -40,6 +42,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
         this.newsPosts=newsPosts;
         this.listener=listener;
         accessComments=new AccessComments();
+        accessNewsFeed = new AccessNewsFeed();
     }
     @NonNull
     @Override
@@ -116,6 +119,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     //    post.setLikes(currLikes);
 
                     post.likePost(true);
+                    accessNewsFeed.updateLike(post);
+                    accessNewsFeed.updateDislike(post);
 
                     dislikeCounter.setText(String.format("%s%s", post.getDislikes(), PEOPLE_DISLIKE_LIKE_THIS));
                     likeCounter.setText(String.format("%s%s", post.getLikes(), PEOPLE_LIKE_THIS));
@@ -139,6 +144,8 @@ public class NewsFeedAdapter extends RecyclerView.Adapter <NewsFeedAdapter.NewsF
                     int currLikes;
                     post= newsPosts.get(getAdapterPosition());
                     post.likePost(false);
+                    accessNewsFeed.updateLike(post);
+                    accessNewsFeed.updateDislike(post);
                   //  currLikes=post.getLikes()+1;
                 //    post.setLikes(currLikes);
 

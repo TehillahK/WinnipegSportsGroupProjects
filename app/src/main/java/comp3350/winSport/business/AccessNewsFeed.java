@@ -16,7 +16,6 @@ public class AccessNewsFeed {
     }
     public AccessNewsFeed(INewsFeed iNewsFeed)
     {
-
         this.iNewsFeed=iNewsFeed;
     }
 
@@ -24,5 +23,16 @@ public class AccessNewsFeed {
         newsPosts=iNewsFeed.getNewsPosts();
         return newsPosts;
     }
+
+    public void updateLike(NewsPost post) {
+        if (post.getLikes() != 0)
+            iNewsFeed.updateLike(post.getPostID(),post.getLikes());
+    }
+
+    public void updateDislike(NewsPost post) {
+        if (post.getDislikes() != 0)
+            iNewsFeed.updateDislike(post.getPostID(),post.getDislikes());
+    }
+
 
 }

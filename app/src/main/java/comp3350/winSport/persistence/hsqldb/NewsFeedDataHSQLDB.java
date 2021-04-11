@@ -2,6 +2,7 @@ package comp3350.winSport.persistence.hsqldb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -70,5 +71,29 @@ public class NewsFeedDataHSQLDB implements INewsFeed {
         }
         return newsPosts;
    //  return null;
+    }
+
+    @Override
+    public void updateLike(int id,int val) {
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("UPDATE NEWS_FEED SET LIKES = ? WHERE POSTID = ?");
+            st.setInt(1, val);
+            st.setInt(2, id);
+            st.executeUpdate();
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
+    }
+
+    @Override
+    public void updateDislike(int id,int val) {
+        try (final Connection c = connection()) {
+            final PreparedStatement st = c.prepareStatement("UPDATE NEWS_FEED SET DISLIKES = ? WHERE POSTID = ?");
+            st.setInt(1, val);
+            st.setInt(2, id);
+            st.executeUpdate();
+        } catch (final SQLException e) {
+            throw new PersistenceException(e);
+        }
     }
 }
