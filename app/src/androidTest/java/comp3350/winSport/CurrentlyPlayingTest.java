@@ -21,29 +21,24 @@ import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 
 @RunWith(AndroidJUnit4.class)
-//@LargeTest
 public class CurrentlyPlayingTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mainRule = new ActivityTestRule<>(MainActivity.class);
 
-    //@Rule
-    //public ActivityTestRule<CurrentlyPlayingActivity> activityRule = new ActivityTestRule<>(CurrentlyPlayingActivity.class);
-
     @Before
-    public void setupDatabase(){
-
-        //IGame iGame = Services.getGamePersistance();
+    public void setup(){
         mainRule.getActivity();
-        //activityRule.getActivity();
     }
 
     @Test
     public void viewCurrentGames(){
         onView(withId(R.id.currentlyPlayingMenu)).perform(click());
+        onView(withId(R.id.rv)).perform(swipeUp());
     }
 }
