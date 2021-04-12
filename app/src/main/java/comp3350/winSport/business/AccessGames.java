@@ -51,8 +51,6 @@ public class AccessGames {
             game.setTeam2Pic(pc.getPic(game.getTeam2()));
         }
 
-        games = initGamesPictures(games);
-
         return game;
     }
 
