@@ -45,6 +45,5 @@ public class CurrentlyPlayingTest {
     @Test
     public void viewCurrentGames(){
         onView(withId(R.id.currentlyPlayingMenu)).perform(click());
-        //onView(ViewMatchers.withId(R.layout.activity_currently_playing)).perform(ViewActions.swipeUp());
     }
 }
