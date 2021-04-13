@@ -17,6 +17,10 @@ import comp3350.winSport.persistence.ITeam;
 
 public class TeamDataHSQLDB implements ITeam {
 
+    /*
+        Simple HSQLDB class, only has getter methods.
+     */
+
     private final String dbPath;
 
     public TeamDataHSQLDB(final String dbPath) {
@@ -37,7 +41,7 @@ public class TeamDataHSQLDB implements ITeam {
     }
 
     @Override
-    public List<Team> getTeams() {
+    public List<Team> getTeams() { // RETURNS ALL TEAMS EVER
 
         final List<Team> teams = new ArrayList<>();
         try (final Connection c = connection()) {
@@ -60,7 +64,7 @@ public class TeamDataHSQLDB implements ITeam {
     }
 
     @Override
-    public Team getSingleTeam() {
+    public Team getSingleTeam() { // RETURNS FIRST TEAM
         try (final Connection c = connection()) {
             final PreparedStatement st = c.prepareStatement("SELECT TOP 1 * FROM PUBLIC.TEAMS");
             final ResultSet rs = st.executeQuery();
@@ -82,7 +86,7 @@ public class TeamDataHSQLDB implements ITeam {
     }
 
     @Override
-    public Team getTeamByName(String name)  {
+    public Team getTeamByName(String name)  { // RETURNS TEAM, GETS SPECIFIC NAME
 
         final List<Team> teams = new ArrayList<>();
         try (final Connection c = connection()) {

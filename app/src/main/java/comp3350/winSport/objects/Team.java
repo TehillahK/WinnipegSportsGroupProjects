@@ -1,12 +1,11 @@
 package comp3350.winSport.objects;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
 
     /*
-        Team DSO specifically used for our Roster and Player Stats features.
+        Team DSO specifically used for our Roster and schedule features.
     */
 
     private String name;

@@ -1,7 +1,5 @@
 package comp3350.winSport.objects;
 
-import comp3350.winSport.R;
-
 public class Game {
 
     /*
@@ -39,7 +37,6 @@ public class Game {
         team2Pic = 0;
     }
 
-
     public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore) {
         gameID = gID;
         gameName = gName;
@@ -53,14 +50,6 @@ public class Game {
         team2Pic = 0;
     }
 
-    public void setTeam1Pic(int team1Pic) {
-        this.team1Pic = team1Pic;
-    }
-
-    public void setTeam2Pic(int team2Pic) {
-        this.team2Pic = team2Pic;
-    }
-
     public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore, int lPic, int gPicID) {
         gameID = gID;
         gameName = gName;
@@ -72,6 +61,14 @@ public class Game {
         gameScore = gScore;
         team1Pic = lPic;
         team2Pic = gPicID;
+    }
+
+    public void setTeam1Pic(int team1Pic) {
+        this.team1Pic = team1Pic;
+    }
+
+    public void setTeam2Pic(int team2Pic) {
+        this.team2Pic = team2Pic;
     }
 
     public int getTeam1Pic() {

@@ -10,6 +10,10 @@ import comp3350.winSport.persistence.ITeam;
 
 public class TeamData implements ITeam {
 
+    /*
+        Simple Fake DB with hardcoded team data.
+     */
+
     List<Team> teams;
 
     Team t1;
@@ -44,6 +48,7 @@ public class TeamData implements ITeam {
     }
 
 
+    // Return all teams
     @Override
     public List<Team> getTeams() {
         return teams;
@@ -55,6 +60,7 @@ public class TeamData implements ITeam {
         return t1;
     }
 
+    // Return team by name
     @Override
     public Team getTeamByName(String name)  {
 
@@ -63,9 +69,7 @@ public class TeamData implements ITeam {
                 return curr;
         }
 
-        //If team is not in the list...
+        //If team is not in the list.
         return null;
-
     }
-
 }

@@ -32,18 +32,22 @@ public class AccessTeams {
         pc = new PictureChecker();
     }
 
+    // Getter for all Team Objects, Sets Team logos if not already set.
     public List<Team> getTeams() {
         teams = tData.getTeams();
         checkAllPics();
         return (teams);
     }
 
+    // Returnss a single team.
     public Team getSingleTeam() {
         team = tData.getSingleTeam();
         checkTeamPic();
         return team;
     }
 
+
+    // Returns a specific team, throws InvalidNameException on error.
     public Team getTeamByName(String name) throws InvalidNameException {
         if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
             team = tData.getTeamByName(name);
@@ -55,12 +59,14 @@ public class AccessTeams {
         return team;
     }
 
+    // usuage of PictureChecker to assign the global list teams pictures when necessary.
     private void checkAllPics() {
         for (Team curr : teams)
             if (curr.getTeamPic() == 0)
                 curr.setTeamPic(pc.getPic(curr.getName()));
     }
 
+    // usuage of Picture checker to assign team picture objects if necessary.
     private void checkTeamPic() {
         if (team.getTeamPic() == 0)
             team.setTeamPic(pc.getPic(team.getName()));

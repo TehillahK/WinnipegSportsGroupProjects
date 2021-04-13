@@ -26,28 +26,29 @@ import comp3350.winSport.objects.Team;
 
 public class ScheduleActivity extends AppCompatActivity {
 
-    AccessTeams accessTeams = new AccessTeams();
-    List<Team> teams;
+    /*
+        Method to initialize a layout of teams that lead to the teams schedules.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        teams = accessTeams.getTeams();
+
+        AccessTeams accessTeams = new AccessTeams();
+        List<Team> teams = accessTeams.getTeams();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Schedule");
 
-        CustomListViewAdapter adapter = new CustomListViewAdapter(this,R.layout.team_item,teams);
-        //ArrayAdapter adapter = new ArrayAdapter<>(this,R.layout.team_item,teams);
+        CustomListViewAdapter adapter = new CustomListViewAdapter(this, R.layout.team_item, teams);
 
         ListView listView = findViewById(R.id.team_items_schedule);
 
         listView.setOnItemClickListener((new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Team o = (Team)listView.getItemAtPosition(position);
-                String val = o.getName();
                 Intent myIntent = new Intent(ScheduleActivity.this,TeamScheduleActivity.class);
                 myIntent.putExtra("TeamName", o.getName()); //Optional parameters
                 ScheduleActivity.this.startActivity(myIntent);
@@ -57,7 +58,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
     }
 
-    public class CustomListViewAdapter extends ArrayAdapter<Team> {
+    public static class CustomListViewAdapter extends ArrayAdapter<Team> {
         Context context;
 
         public CustomListViewAdapter(Context context, int resourceId,List<Team> items) {
@@ -66,7 +67,7 @@ public class ScheduleActivity extends AppCompatActivity {
         }
 
         /*private view holder class*/
-        private class ViewHolder {
+        private static class ViewHolder {
             ImageView imageView;
             TextView txtTitle;
         }
@@ -79,7 +80,7 @@ public class ScheduleActivity extends AppCompatActivity {
                     .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
                 convertView = mInflater.inflate(R.layout.team_item, null);
-                holder = new ScheduleActivity.CustomListViewAdapter.ViewHolder();
+                holder = new ViewHolder();
                 holder.txtTitle =  convertView.findViewById(R.id.teamName);
                 holder.imageView =  convertView.findViewById(R.id.imageView);
                 convertView.setTag(holder);

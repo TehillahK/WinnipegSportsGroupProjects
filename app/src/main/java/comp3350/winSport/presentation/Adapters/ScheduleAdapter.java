@@ -16,7 +16,7 @@ import comp3350.winSport.objects.Game;
 
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>{
 
-    private String teamName;
+    private String teamName; // team name, allows us to differenciate which team is opponent
     private List<Game> games; // declare games List
 
     public ScheduleAdapter(List<Game> g, String t) {
@@ -35,6 +35,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     public void onBindViewHolder(@NonNull ScheduleViewHolder holder, int position) {
         Game game = games.get(position);
         holder.gameDate.setText(game.getGameDate());
+        // Opponent name set to the team not equal to the global teamName.
         if (this.teamName.equals(game.getTeam2()))
             holder.gameOpponent.setText(game.getTeam1());
         else
