@@ -8,6 +8,12 @@ import comp3350.winSport.persistence.IStanding;
 
 public class AccessStanding {
 
+    /*
+        Business class standing object.
+        Not too much logic goes on here.
+        The standing objects are returend in order, then assigned a logo if they don't have one.
+     */
+
     private IStanding iStanding;
     private List<Standing> standingList;
     private PictureChecker pc;

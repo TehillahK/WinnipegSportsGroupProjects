@@ -11,12 +11,14 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Standing;
 
 public class StandingAdapter extends RecyclerView.Adapter<StandingAdapter.StandingViewHolder>{
 
+    // constants that allow implementation of Header.
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
 
@@ -35,6 +37,7 @@ public class StandingAdapter extends RecyclerView.Adapter<StandingAdapter.Standi
     @Override
     public void onBindViewHolder(@NonNull StandingViewHolder holder, int position) {
 
+        // If first element of list, Load our header values
         if (position == 0) {
             holder.teamPic.setImageResource(R.drawable.nhl);
             holder.teamName.setText(R.string.Teams_Standing);
@@ -44,30 +47,25 @@ public class StandingAdapter extends RecyclerView.Adapter<StandingAdapter.Standi
             holder.points.setText(R.string.Pts_standing);
             holder.win_streak.setText(R.string.STK_standing);
         }
+        // Otherwise, load values from List of standings.
         else {
             Standing s = standings.get(position-1);
 
             holder.teamPic.setImageResource(s.getTeamPic());
             holder.teamName.setText(s.getTeamName());
             holder.wins.setText(String.valueOf(s.getWins()));
-            holder.losses.setText(String.format("%02d", s.getLosses()));
+            holder.losses.setText(String.format(Locale.CANADA,"%02d", s.getLosses()));
             holder.ot_losses.setText(String.valueOf(s.getOt_losses()));
             holder.points.setText(String.format("  %s", s.getPts()));
             holder.win_streak.setText(String.format("  %s", s.getWin_streak()));
         }
     }
 
+
+    // Increment list by 1 to account for header.
     @Override
     public int getItemCount() {
         return standings.size()+1;
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        if (position == 0)
-            return TYPE_HEADER;
-        else
-            return TYPE_ITEM;
     }
 
     public static class StandingViewHolder extends RecyclerView.ViewHolder {

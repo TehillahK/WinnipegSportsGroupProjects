@@ -2,6 +2,12 @@ package comp3350.winSport.objects;
 
 public class Standing {
 
+    /*
+        Standing object contains a myriad of stats about a specific team.
+        Initialized with either Fake DB or HSQLDB data.
+     */
+
+    // Unique identifier for standing object.
     private int teamID;
 
     private String teamName;
@@ -10,7 +16,6 @@ public class Standing {
     private int ot_losses;
     private int pts;
     private String win_streak;
-
     private int teamPic;
 
 

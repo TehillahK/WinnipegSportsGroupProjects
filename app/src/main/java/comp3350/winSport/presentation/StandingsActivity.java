@@ -12,13 +12,16 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessStanding;
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.Standing;
 import comp3350.winSport.presentation.Adapters.RosterAdapter;
 import comp3350.winSport.presentation.Adapters.StandingAdapter;
 
 public class StandingsActivity extends AppCompatActivity {
 
+    // declare our Access variable.
     private AccessStanding accessStanding;
+    // declare list of Standing Objects to pass to adapter.
     private List<Standing> standingList;
 
     @Override
@@ -29,9 +32,15 @@ public class StandingsActivity extends AppCompatActivity {
         accessStanding = new AccessStanding();
 
         // try catch for persistance exception
-        standingList = accessStanding.getStandingInOrder();
+        try {
+            standingList = accessStanding.getStandingInOrder();
+        }
+        catch (PersistenceException e) {
+            e.printStackTrace();
+        }
 
 
+        // Initialze toolbar, check for Null if disabled.
         try {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
@@ -40,8 +49,10 @@ public class StandingsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
         RecyclerView rv = findViewById(R.id.standins_rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
+
 
         if (standingList != null) {
             rv.setLayoutManager(llm);

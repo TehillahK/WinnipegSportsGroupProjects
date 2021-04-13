@@ -15,6 +15,11 @@ import comp3350.winSport.persistence.IStanding;
 
 public class StandingHSQLDB implements IStanding {
 
+    /*
+        As basic as it gets HSQLDB class, only thing of note is specific SQL query to
+        return table in order.
+    */
+
     private final String dbPath;
 
     public StandingHSQLDB(final String dbPath) {

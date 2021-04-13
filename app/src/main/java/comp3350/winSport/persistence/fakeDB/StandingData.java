@@ -12,6 +12,10 @@ import comp3350.winSport.persistence.IStanding;
 
 public class StandingData implements IStanding {
 
+    /*
+        Simple fake method, returns sorted standings array sorted by points.
+     */
+
     private List<Standing> standings;
 
     private Standing s1;
