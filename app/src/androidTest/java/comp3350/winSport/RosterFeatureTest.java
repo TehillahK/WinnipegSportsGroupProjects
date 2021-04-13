@@ -30,6 +30,5 @@ public class RosterFeatureTest {
     public void viewTeamRoster() {
         onView(withId(R.id.teamRostersMenu)).perform(click());
         onView(withId(R.id.list_view)).perform(click());
-        //onView(withId(R.id.player_rv)).perform(swipeUp());
     }
 }
