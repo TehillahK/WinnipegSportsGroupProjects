@@ -47,4 +47,10 @@ dependencies {
     // REQUIRED FOR TESTING
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.+'
     androidTestImplementation ('com.android.support.test:rules:1.0.2')
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.0'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.0'
+
 }
