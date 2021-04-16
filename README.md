@@ -11,7 +11,7 @@ Winnipeg Sports is a all in one Android sports app providing NHL information whi
 
 To build Winnipeg Sports app:
 1. Make sure you are on the [master branch](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/tree/master) of the repository.
-2. Either download the ZIP or clone the repository on our [gitlab](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6), make sure you download the master branch.
+2. Either download the ZIP or clone the repository on our [GitLab](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6), make sure you download the master branch.
     - If you wish to know how to clone a repository, [refer to this guide](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
 3. Once downloaded, open up Android Studio and import the project, navigating to where you saved your downloaded file.
 4. Build the project from our gradle file through `Build > Make Project`
