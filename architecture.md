@@ -109,7 +109,7 @@ Presentation Layer     |               |                   |                    
         * `ScheduleAdapter` 
         * `TeamScheduleActivity` 
         * `BarActivity` **(new)**
-        * `NewsFeedActivity **(new)**
+        * `NewsFeedActivity` **(new)**
         * `StandingsActivity` **(new)**
         * `TicketsActivity` **(new)**
         * `BuyTicketAdapter` **(new)**
