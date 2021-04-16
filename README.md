@@ -15,7 +15,7 @@ To build Winnipeg Sports app:
     - If you wish to know how to clone a repository, [refer to this guide](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
 3. Once downloaded, open up Android Studio and import the project, navigating to where you saved your downloaded file.
 4. Build the project from our gradle file through `Build > Make Project`
-5. In order to run the project you will need an Android emulator running with a minimum sdk of Android 23, up to a SDK of 30.
+5. In order to run the project you will need an Android emulator running with a minimum SDK of Android 23, up to a SDK of 30.
     - The app is tested and guaranteed to run on a Nexus 7 API 30
 6. Run the project.
 
@@ -24,6 +24,7 @@ To build Winnipeg Sports app:
 * [VISION.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/VISION.md)
 * [RETROSPECTIVE.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/retrospective.md)
 * [Quick link to the Iteration 3 worksheet](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/iteration_3_worksheet.md)
+* [Winnipeg Sports App Website](https://tehillahk.github.io/group6-winnipeg-sports/#home)
 
 ## Our Team
 - Kehinde Elukanle (@Kehinde)
