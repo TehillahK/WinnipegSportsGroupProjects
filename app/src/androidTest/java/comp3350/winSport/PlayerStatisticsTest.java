@@ -39,19 +39,27 @@ public class PlayerStatisticsTest {
     public void viewPlayerStatistic(){
         onView(withId(R.id.player_stat_layout)).perform(click());
         onView(ViewMatchers.withId(R.id.player_rv_stats)).perform(RecyclerViewActions.actionOnItemAtPosition(1,click()));
+        //verify a player profile is displayed
+        onView(allOf(withId(R.id.playerProfile))).check(matches(isDisplayed()));
     }
 
     @Test
     public void viewMultiplePlayerStatistic(){
         onView(withId(R.id.player_stat_layout)).perform(click());
         onView(ViewMatchers.withId(R.id.player_rv_stats)).perform(RecyclerViewActions.actionOnItemAtPosition(1,click()));
+        //verify a player profile is displayed
+        onView(allOf(withId(R.id.playerProfile))).check(matches(isDisplayed()));
         pressBack();
         onView(ViewMatchers.withId(R.id.player_rv_stats)).perform(RecyclerViewActions.actionOnItemAtPosition(7,click()));
+        //verify a player profile is displayed
+        onView(allOf(withId(R.id.playerProfile))).check(matches(isDisplayed()));
     }
 
     @Test
     public void scrollPlayerList(){
         onView(withId(R.id.player_stat_layout)).perform(click());
+        //verify players are displayed
+        onView(allOf(withId(R.id.player_rv_stats))).check(matches(isDisplayed()));
         onView(withId(R.id.player_rv_stats)).perform(swipeUp());
     }
 
