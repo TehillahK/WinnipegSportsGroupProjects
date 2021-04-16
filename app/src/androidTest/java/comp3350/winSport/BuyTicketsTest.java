@@ -13,10 +13,13 @@ import comp3350.winSport.presentation.MainActivity;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.swipeUp;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static org.hamcrest.Matchers.allOf;
 
 @RunWith(AndroidJUnit4.class)
-public class CurrentlyPlayingTest {
+public class BuyTicketsTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mainRule = new ActivityTestRule<>(MainActivity.class);
@@ -27,8 +30,11 @@ public class CurrentlyPlayingTest {
     }
 
     @Test
-    public void viewCurrentGames(){
-        onView(withId(R.id.currentlyPlayingMenu)).perform(click());
+    public void viewBuyTickets(){
+        onView(withId(R.id.buy_tickets_menu)).perform((click()));
         onView(withId(R.id.rv)).perform(swipeUp());
+        //verify ticket links are displayed
+        onView(allOf(withId(R.id.rv))).check(matches(isDisplayed()));
     }
+
 }

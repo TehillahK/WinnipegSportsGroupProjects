@@ -120,7 +120,7 @@ INSERT INTO GAMES VALUES(24, 'Stanley Cup Playoffs','NHL', 'Ottawa Senators', 'E
 INSERT INTO GAMES VALUES(25, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Montreal Canadiens', 'May 17, 2021', 'Rogers other Place', 'TBP')
 INSERT INTO GAMES VALUES(26, 'Stanley Cup Playoffs','NHL', 'Winnipeg Jets', 'Edmonton Oilers', 'Jun 10, 2021', 'Rogers human Place', 'TBP')
 INSERT INTO GAMES VALUES(27, 'Stanley Cup Playoffs','NHL', 'Edmonton Oilers', 'Ottawa Senators', 'Jun 19, 2021', 'Rogers non-human Place', 'TBP')
-INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',0,0,0)
+INSERT INTO NEWS_FEED VALUES(0, 'Jets Trade deadline', '22/03/21', 'Is cheveldayoff willing to spend on big target',1,1,0)
 INSERT INTO NEWS_FEED VALUES(1,'Jets top guns fire blanks','20/03/21','Jets lose to Edmonton Oliers',30,5,0)
 INSERT INTO NEWS_FEED VALUES(2,'Its awards season for Cole Caufield','21/03/21','Caufied become the first unanimous winner of big the ten player of the years award',20,90,0)
 INSERT INTO STANDINGS VALUES(1,'Winnipeg Jets',19,11,2,40,'W1')
