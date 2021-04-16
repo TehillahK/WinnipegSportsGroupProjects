@@ -6,10 +6,13 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Locale;
+
 import comp3350.winSport.R;
 import comp3350.winSport.business.AccessPlayerStats;
 import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 
 public class PlayerStatsActivity extends AppCompatActivity {
     private AccessPlayerStats playerStats;
@@ -78,18 +81,18 @@ public class PlayerStatsActivity extends AppCompatActivity {
 
     private void setStatsData()
     {
-        playerGamesPlayedTxt.setText(playerStatistic.getGamesPlayed()+"");
-        playerTeamNameTxt.setText(playerStatistic.getTeam()+"");
-        playerLeagueTxt.setText(playerStatistic.getLeague()+"");
-        playerPositionTxt.setText(playerStatistic.getPosition()+"");
-        playerSeasonTxt.setText(playerStatistic.getSeason()+"");
-        playerGoalsTxt.setText(playerStatistic.getGoals()+"");
-        playerAssistsTxt.setText(playerStatistic.getAssists()+"");
-        playerPointsTxt.setText(playerStatistic.getPoints()+"");
-        playerGoalsPerGameTxt.setText(playerStatistic.getGoalsPerGame()+"");
-        playerAssistsPerGameTxt.setText(playerStatistic.getAssistsPerGame()+"");
-        playerShotsPerGameTxt.setText(playerStatistic.getShotsPerGame()+"");
-        playerAgeTxt.setText(playerStatistic.getAge()+"");
+        playerGamesPlayedTxt.setText(String.format(Locale.CANADA,"%d", playerStatistic.getGamesPlayed()));
+        playerTeamNameTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getTeam()));
+        playerLeagueTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getLeague()));
+        playerPositionTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getPosition()));
+        playerSeasonTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getSeason()));
+        playerGoalsTxt.setText(String.format(Locale.CANADA,"%d", playerStatistic.getGoals()));
+        playerAssistsTxt.setText(String.format(Locale.CANADA,"%d", playerStatistic.getAssists()));
+        playerPointsTxt.setText(String.format(Locale.CANADA,"%d", playerStatistic.getPoints()));
+        playerGoalsPerGameTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getGoalsPerGame()));
+        playerAssistsPerGameTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getAssistsPerGame()));
+        playerShotsPerGameTxt.setText(String.format(Locale.CANADA,"%s", playerStatistic.getShotsPerGame()));
+        playerAgeTxt.setText(String.format(Locale.CANADA,"%d", playerStatistic.getAge()));
         playerProfile.setImageResource(R.drawable.headshot);
     }
 }

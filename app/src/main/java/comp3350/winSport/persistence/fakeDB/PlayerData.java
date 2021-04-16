@@ -5,9 +5,9 @@ import java.util.List;
 
 import comp3350.winSport.R;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
-import comp3350.winSport.persistence.hsqldb.PersistenceException;
+
 public class PlayerData implements IPlayer {
 
     List<Player> players1;
@@ -16,7 +16,9 @@ public class PlayerData implements IPlayer {
     List<Player> players4;
     List<Player> players5;
     List<Player> players6;
+
     List<Player> allPlayer;
+    List<List<Player>> allTeam;
 
 
     public PlayerData() {
@@ -26,8 +28,9 @@ public class PlayerData implements IPlayer {
         players4 = new ArrayList<>();
         players5 = new ArrayList<>();
         players6 = new ArrayList<>();
-        allPlayer = new ArrayList<>();
 
+        allPlayer = new ArrayList<>();
+        allTeam = new ArrayList<>();
         initData();
     }
 
@@ -291,44 +294,33 @@ public class PlayerData implements IPlayer {
         allPlayer.addAll(players5);
         allPlayer.addAll(players6);
 
+        allTeam.add(players1);
+        allTeam.add(players2);
+        allTeam.add(players3);
+        allTeam.add(players4);
+        allTeam.add(players5);
+        allTeam.add(players6);
+
+        for (Player curr : allPlayer)
+            curr.setPlayerPic(R.drawable.headshot);
+
     }
 
     @Override
-    public List<Player> getPlayers(String teamName) throws InvalidNameException{
-        List<Player> result=null;
-        Player player;
-            if(teamName.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$") ) {
-                    for (int i = 0; i < allPlayer.size(); i++) {
-                        player = allPlayer.get(i);
-                        if (player.getTeam().equalsIgnoreCase(teamName)) {
-                            result.add(player);
-                        }
-                    }
-                }
+    public List<Player> getPlayers(String teamName) {
+        List<Player> result=new ArrayList<>();
 
-            else {
-                throw new InvalidNameException("please pass a team name with letters only");
-            }
-
+        for (List<Player> curr : allTeam) {
+            if (curr.get(0).getTeam().equals(teamName))
+                return curr;
+        }
 
         return result;
     }
 
-    List<Player> getPlayersById(int id) {
-        switch(id) {
-            case 1:
-                return players1;
-            case 2:
-                return players2;
-            case 3:
-                return players3;
-            case 4:
-                return players4;
-            case 5:
-                return players5;
-            case 6:
-                return players6;
-        }
-        return null;
+    @Override
+    public List<Player> getAllPlayers() {
+        return allPlayer;
     }
+
 }

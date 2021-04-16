@@ -36,7 +36,7 @@ public class AccessGamesIT {
         System.out.print("\nTest 1: Get Games");
         System.out.print("\n---------------------------------------");
         final List<Game> games = accessGames.getGames();
-        assertEquals(20,games.size());
+        assertEquals(27,games.size());
     }
 
     @Test
@@ -65,6 +65,8 @@ public class AccessGamesIT {
             assertNotNull(game);
             game.viewGameObject();
         }
+
+        System.out.print("\nFinished test.");
 
     }
 

@@ -12,7 +12,7 @@ import java.util.ListIterator;
 import comp3350.winSport.business.AccessPlayers;
 
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 import comp3350.winSport.persistence.hsqldb.PlayerDataHSQLDB;
 import comp3350.winSport.tests.utils.TestUtils;
@@ -32,11 +32,11 @@ public class AccessPlayersIT {
     }
 
     @Test
-    public void testGetPlayers() throws InvalidNameException {
+    public void testGetPlayersByTeam() throws InvalidNameException {
         System.out.print("\n---------------------------------------");
         System.out.print("\nTest 1: Get Players of a Team");
         System.out.print("\n---------------------------------------");
-        List<Player> players = accessPlayers.getPlayers("Winnipeg Jets");
+        List<Player> players = accessPlayers.getPlayersByTeam("Winnipeg Jets");
         assertNotNull(players);
         ListIterator<Player> iterator = players.listIterator();
 

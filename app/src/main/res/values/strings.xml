@@ -32,11 +32,44 @@
     <string name="otw_4_3">OTW 4-3</string>
 
     <string name="CBCSports"><a href="https://www.cbc.ca/sports">CBCSports</a></string>
-    <string name="Sportsnet" ><a href="https://www.sportsnet.ca">Sportsnet</a></string>
-    <string name="TSN"       ><a href="https://www.tsn.ca">TSN</a></string>
+    <string name="Sportsnet"><a href="https://www.sportsnet.ca">Sportsnet</a></string>
+    <string name="TSN"><a href="https://www.tsn.ca">TSN</a></string>
+
+    <string name="CalgaryFlames"><a href="https://www.nhl.com/flames/tickets/">https://www.nhl.com/flames/tickets/</a></string>
+    <string name="EdmontonOilers"><a href="https://www.ticketmaster.ca/Edmonton-Oilers-tickets/">https://www.ticketmaster.ca/Edmonton-Oilers-tickets/</a></string>
+    <string name="MontréalCanadiens"><a href="https://www.nhl.com/canadiens/tickets">https://www.nhl.com/canadiens/tickets</a></string>
+    <string name="OttawaSenators"><a href="https://www.nhl.com/senators/tickets">https://www.nhl.com/senators/tickets</a></string>
+    <string name="TorontoMapleLeafs"><a href="https://www.nhl.com/mapleleafs/tickets/">https://www.nhl.com/mapleleafs/tickets/</a></string>
+    <string name="VancouverCanucks"><a href="https://tickets.canucks.com/">https://tickets.canucks.com/</a></string>
+    <string name="WinnipegJets"><a href="https://www.nhl.com/jets/tickets/single-game-tickets">https://www.nhl.com/jets/tickets/single-game-tickets</a></string>
+
+
     <string name="player_stats_main">PLAYER STATS</string>
     <string name="schedules_main">SCHEDULES</string>
     <string name="channels_main">CHANNELS</string>
     <string name="track_live_game_main">TRACK LIVE GAME</string>
+    <string name="news_item">News Item</string>
+    <string name="date_posted">Date posted</string>
+    <string name="relevant_news_image">relevant news image</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetuer_adipiscing_elit_aenean_commodo_ligula_eget_dolor_aenean_massa_cum_sociis_natoque_penatibus_et">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</string>
+    <string name="like">Like</string>
+    <string name="_0_likes">0 Likes</string>
+    <string name="dislike">dislike</string>
+    <string name="_0_dislikes">0 Dislikes</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="standings">Standings</string>
+    <string name="news_feed">News Feed</string>
+    <string name="find_nearby_bars">Find Nearby Bars</string>
+    <string name="teampicture">TeamPicture</string>
+    <string name="teamname">TeamName</string>
+    <string name="_32">32</string>
+    <string name="w1">W1</string>
+    <string name="Teams_Standing">Teams</string>
+    <string name="OT_standing">OT</string>
+    <string name="Pts_standing">Pts</string>
+    <string name="STK_standing">STK</string>
+    <string name="team_name_ticket">Team Name</string>
+    <string name="ticket_link_text">Link To tickets webpage</string>
+
 
 </resources>

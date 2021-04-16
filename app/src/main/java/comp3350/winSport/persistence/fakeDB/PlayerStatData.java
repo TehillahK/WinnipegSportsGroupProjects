@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comp3350.winSport.objects.PlayerStatistic;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayerStats;
 
 public class PlayerStatData implements IPlayerStats {
@@ -58,20 +58,15 @@ public class PlayerStatData implements IPlayerStats {
     }
 
     @Override
-    public PlayerStatistic getPlayerByName(String name) throws InvalidNameException {
+    public PlayerStatistic getPlayerByName(String name)  {
 
-        if (name.matches("^[a-zA-z]+([\\s][a-zA-Z]+)*$")) {
-
-            for (PlayerStatistic curr : playerStats) {
-                if (curr.getName().equals(name))
-                    return curr;
-            }
-
-            return null;
+        for (PlayerStatistic curr : playerStats) {
+            if (curr.getName().equals(name))
+                return curr;
         }
-        else {
-            throw new InvalidNameException("please pass a team name with letters only");
-        }
+
+        return null;
+
 
     }
 

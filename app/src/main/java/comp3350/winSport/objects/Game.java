@@ -1,7 +1,5 @@
 package comp3350.winSport.objects;
 
-import comp3350.winSport.R;
-
 public class Game {
 
     /*
@@ -17,8 +15,14 @@ public class Game {
     private String gameLocation;
     private String gameScore;
 
-    private int leaguePic;
-    private int gamePicID;
+    private int team1Pic;
+    private int team2Pic;
+
+    public Game(String team2 , String gameScore, int gamePicID) {
+        this.team2 = team2;
+        this.gameScore = gameScore;
+        this.team1Pic = gamePicID;
+    }
 
     public Game() {
         gameID = 0;
@@ -29,10 +33,9 @@ public class Game {
         gameDate = "Unknown";
         gameLocation = "Unknown";
         gameScore = "Unknown";
-        leaguePic = 0;
-        gamePicID = 0;
+        team1Pic = 0;
+        team2Pic = 0;
     }
-
 
     public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore) {
         gameID = gID;
@@ -43,16 +46,37 @@ public class Game {
         gameDate = gDate;
         gameLocation = gLocation;
         gameScore = gScore;
-        leaguePic = R.drawable.nhl;
-        gamePicID = R.drawable.jets;
+        team1Pic = 0;
+        team2Pic = 0;
     }
 
-    public int getLeaguePic() {
-        return leaguePic;
+    public Game(int gID, String gName, String gL, String t1, String t2, String gDate, String gLocation, String gScore, int lPic, int gPicID) {
+        gameID = gID;
+        gameName = gName;
+        gameLeague = gL;
+        team1 = t1;
+        team2 = t2;
+        gameDate = gDate;
+        gameLocation = gLocation;
+        gameScore = gScore;
+        team1Pic = lPic;
+        team2Pic = gPicID;
     }
 
-    public int getGamePicID() {
-        return gamePicID;
+    public void setTeam1Pic(int team1Pic) {
+        this.team1Pic = team1Pic;
+    }
+
+    public void setTeam2Pic(int team2Pic) {
+        this.team2Pic = team2Pic;
+    }
+
+    public int getTeam1Pic() {
+        return team1Pic;
+    }
+
+    public int getTeam2Pic() {
+        return team2Pic;
     }
 
     public int getGameID() {
@@ -87,39 +111,8 @@ public class Game {
         return gameScore;
     }
 
-    public void setGameID(int n) {
-        gameID = n;
-    }
-
-    public void setGameName(String s) {
-        gameName = s;
-    }
-
     public void setLeague(String name) {
         gameLeague = name;
-    }
-
-    public void setGameDate(String date) {
-        gameDate = date;
-    }
-
-    public void setGameLocation(String location) {
-        gameLocation = location;
-    }
-
-    public void setGameScore(String sc) {
-        gameScore = sc;
-    }
-
-    public String toString() {
-        String per = "";
-
-        String res = "\n------------------------------------\ncomp3350.winSport.objects.Game #" + gameID + " " + gameName + "\n" + gameLeague.toString() + "\n"
-                + "comp3350.winSport.objects.Game date: " + gameDate + "\n"
-                + "comp3350.winSport.objects.Game location: " + gameLocation + "\ncomp3350.winSport.objects.Game score: " + gameScore + "\n------------------------------------\n"
-                + "comp3350.winSport.objects.Team 1: " + team1.toString() + "\ncomp3350.winSport.objects.Team 2: " + team2.toString() + "\n------------------------------------\n"
-                + per + "\n------------------------------------\n";
-        return res;
     }
 
     //-------------------------------

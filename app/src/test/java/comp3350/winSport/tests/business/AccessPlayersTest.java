@@ -6,16 +6,12 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import comp3350.winSport.business.AccessGames;
 import comp3350.winSport.business.AccessPlayers;
-import comp3350.winSport.objects.Game;
 import comp3350.winSport.objects.Player;
-import comp3350.winSport.objects.exceptions.InvalidNameException;
-import comp3350.winSport.persistence.IGame;
+import comp3350.winSport.exceptions.InvalidNameException;
 import comp3350.winSport.persistence.IPlayer;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -47,7 +43,7 @@ public class AccessPlayersTest {
 
         when(iPlayer.getPlayers("Winnipeg Jets")).thenReturn(samplePlayers);
 
-        dummyList = accessPlayers.getPlayers("Winnipeg Jets");
+        dummyList = accessPlayers.getPlayersByTeam("Winnipeg Jets");
         assertNotNull(dummyList);
 
         verify(iPlayer).getPlayers("Winnipeg Jets");
@@ -74,7 +70,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input1);
-            accessPlayersNoMock.getPlayers(input1);
+            accessPlayersNoMock.getPlayersByTeam(input1);
             fail("\nMethod did not throw an exception.\n");
         }
         catch (Exception e){
@@ -84,7 +80,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input2);
-            accessPlayersNoMock.getPlayers(input2);
+            accessPlayersNoMock.getPlayersByTeam(input2);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -94,7 +90,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: (empty)");
-            accessPlayersNoMock.getPlayers(input3);
+            accessPlayersNoMock.getPlayersByTeam(input3);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -104,7 +100,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: (whitespace)");
-            accessPlayersNoMock.getPlayers(input4);
+            accessPlayersNoMock.getPlayersByTeam(input4);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -114,7 +110,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input5);
-            accessPlayersNoMock.getPlayers(input5);
+            accessPlayersNoMock.getPlayersByTeam(input5);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -124,7 +120,7 @@ public class AccessPlayersTest {
 
         try{
             System.out.print("\nInput: " + input6);
-            accessPlayersNoMock.getPlayers(input6);
+            accessPlayersNoMock.getPlayersByTeam(input6);
             fail("\nMethod did not throw an exception\n");
         }
         catch (Exception e){
@@ -138,4 +134,18 @@ public class AccessPlayersTest {
         System.out.print("\n---------------------------------------");
 
     }
+
+    @Test
+    public void testGetAllPlayers(){
+        System.out.print("\n---------------------------------------");
+        System.out.print("\nTest 3: Get All Players");
+        System.out.print("\n---------------------------------------");
+
+        final List<Player> players = accessPlayers.getAllPlayers();
+        assertNotNull(players);
+
+        verify(iPlayer).getAllPlayers();
+        System.out.print("\nFinished test.");
+    }
+
 }

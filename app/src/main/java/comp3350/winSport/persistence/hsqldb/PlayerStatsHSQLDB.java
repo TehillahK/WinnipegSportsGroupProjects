@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import comp3350.winSport.objects.Player;
+import comp3350.winSport.exceptions.PersistenceException;
 import comp3350.winSport.objects.PlayerStatistic;
 import comp3350.winSport.persistence.IPlayerStats;
 
