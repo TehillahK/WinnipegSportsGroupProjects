@@ -8,6 +8,8 @@
     * [Group Worksheet 1](#group-worksheet-1)
 * [Iteration 2](#iteration-2)
 	* [Group Worksheet 2](#group-worksheet-2)
+* [Iteration 3](#iteration-3)
+    * [Group Worksheet 3](#group-worksheet-3)
 * [Architecture](#architecture)
 * [Our Team](#our-team)
 
@@ -51,6 +53,12 @@ Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3
 ### Group Worksheet 2
 
 Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/iteration_2_worksheet.md).
+
+## Iteration 3
+
+### Group Worksheet 3
+
+Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/iteration_3_worksheet.md).
 
 ## Architecture
 
