@@ -52,6 +52,12 @@ Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3
 
 Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/iteration_2_worksheet.md).
 
+## Iteration 3
+
+### Group Worksheet 3
+
+Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/iteration_3_worksheet.md).
+
 ## Architecture
 
 Our `architecture.md` file [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md).
