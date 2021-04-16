@@ -37,7 +37,7 @@ public class AccessLocations {
         return venues;
     }
 
-    private Location getLocationByName(String name) {
+    public Location getLocationByName(String name) {
         return location.getLocationByName(name);
     }
 

@@ -67,7 +67,7 @@ public class AccessGames {
         return teamGames;
     }
 
-    List<Game> initGamesPictures(List<Game> gs) {
+    public List<Game> initGamesPictures(List<Game> gs) {
         for (Game curr : gs) {
             if (curr.getTeam1Pic() == 0 | curr.getTeam2Pic() == 0) {
                 curr.setTeam1Pic(pc.getPic(curr.getTeam1()));

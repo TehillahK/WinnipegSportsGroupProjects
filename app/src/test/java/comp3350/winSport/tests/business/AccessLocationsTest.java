@@ -129,4 +129,13 @@ public class AccessLocationsTest {
         System.out.print("\nExceptions thrown: " + counter);
         System.out.print("\n---------------------------------------");
     }
+
+    @Test
+    public void testGetLocation(){
+        String input = "A Cool Location";
+        Location location = new Location("Cool Location","A very cool place to hangout.", "#22 Cool Ave",120.0,120.0,false);
+        when(iLocation.getLocationByName(input)).thenReturn(location);
+        accessLocations.getLocationByName(input);
+        verify(iLocation).getLocationByName(input);
+    }
 }
