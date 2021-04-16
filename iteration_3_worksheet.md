@@ -16,9 +16,7 @@ Given the features we chose to implement for our app, we are displaying a lot of
 ## Discuss a feature or user story that was cut/re-prioritized
 **When did you change the priority of a feature or user story? Why was it re-prioritized? Provide a link to the feature or user story. This can be from any iteration.**
 
-We changed the priority of the Track live game feature at the end of iteration 1, from high priority to medium priority. It was re-prioritized because we had not done enough research to integrate the live data into our application by using an API in iteration 1, thus we re-prioritized and move the feature to the subsequent iteration.
-
-- [See Issue #5](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/issues/5)
+We changed the priority of the [Track Live Game feature](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/issues/5) at the end of iteration 1, from high priority to medium priority. It was re-prioritized because we had not done enough research to integrate the live data into our application by using an API in iteration 1, thus we re-prioritized and move the feature to the subsequent iteration.
 
 ## Acceptance test/end-to-end
 **Write a discussion about an end-to-end test that you wrote. What did you test, how did you set up the test so it was not flaky? Provide a link to that test.**
@@ -32,7 +30,7 @@ ChannelsTest tests our [channel feature](https://code.cs.umanitoba.ca/3350-winte
 ## Acceptance test, untestable
 **What challenges did you face when creating acceptance tests? What was difficult or impossible to test?**
 
-Because of how we implemented certain features, it was difficult to fully test certain functionalities. For example, in [NewsFeedTest](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/app/src/androidTest/java/comp3350/winSport/NewsFeedTest.java), the comment buttons all have the same id, which leads to a AmbiguousViewMatcherException error. While the adding comments in the app definitely works, implementing the acceptance test is difficult to test and was ultimately ommitted from testing. Maybe, given more time and experience with Espresso, there is a solution to this. But for now, the testing for commenting will remain shallow. 
+Because of how we implemented certain features, it was difficult to fully test certain functionalities. For example, in [NewsFeedTest](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/app/src/androidTest/java/comp3350/winSport/NewsFeedTest.java), the comment buttons all have the same id, which leads to a `AmbiguousViewMatcherException` error. While the adding comments in the app definitely works, implementing the acceptance test is difficult to test and was ultimately ommitted from testing. Maybe, given more time and experience with Espresso, there is a solution to this. But for now, the testing for commenting will remain shallow. 
 
 
 ## Velocity/teamwork
