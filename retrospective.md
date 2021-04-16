@@ -1,4 +1,4 @@
-# RETROSPECTIVE FOR ITERATION 3
+# Retrospective
 
 **Discuss a part of your project that has not been as successful as you would have liked**
 
@@ -8,7 +8,7 @@ The currently playing feature shows the user the teams that are currently playin
 
 The information of each player in our player statistics feature is static because their information is hardcoded into the database. Let’s consider score data, there is a high probability that it changes as a player plays, this change is currently not showing automatically in our player statistics feature. If API integration was successful, a change in player score data will be updated in our player statistics feature as well.
 
-The news feed feature displays some hardcoded news in the database. In this feature, the user is able to like and add a comment. The comments posted by a user are local to our application, it’s not on the internet. If API integration was successful, our news feed feature would be live on the internet and a google search related to news feed hockey on google might display results that include our application.
+The Newsfeed feature displays some hardcoded news in the database. In this feature, the user is able to like and add a comment. The comments posted by a user are local to our application, it’s not on the internet. If API integration was successful, our newsfeed would be live on the internet and a google search related to hockey games may display results that include our application.
 
 Ultimately, successful API integration would have given the user a true App experience instead of a simulated experience.
 
@@ -23,8 +23,8 @@ This strategy is considered a success based on these criteria:
 - a new team member who is currently not in our team can read and understand our codebase, implement a feature with little or no technical debt interest to pay for implementing a new feature.
 - There is a 50% percent increase in the number of users in the first year of our successful API integration.
 
-If any one of the criteria shows a significant improvement, without a statistically        significant reduction in the other criteria mentioned in our vision statement, the application improvement strategy will be considered a success
+If any one of the criteria shows a significant improvement, without a statistically significant reduction in the other criteria mentioned in our vision statement, the application improvement strategy will be considered a success
 
 **Include a change (as an image) showing the 2 data points of project velocity from the last two iterations**
 
-![project_velocity_retro](https://github.com/KeshavModun/COMP-3350/blob/main/project_velocity_retro.png?raw=true)
+![project_velocity_retro](https://i.imgur.com/s89TIdb.png)
