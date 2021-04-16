@@ -89,6 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/commentsRV"
+            android:background="#3498db"
+            android:outlineAmbientShadowColor="@color/black"
             android:layout_below="@+id/numLikes"
             />
         <EditText
@@ -96,7 +98,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/commentTxt"
             android:layout_below="@id/commentsRV"
-
             android:hint="Comment here"
             />
         <Button
