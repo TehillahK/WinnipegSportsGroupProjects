@@ -63,10 +63,3 @@ Our filled-in group worksheet [can be found here](https://code.cs.umanitoba.ca/3
 ## Architecture
 
 Our `architecture.md` file [can be found here](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md).
-
-## Our Team
-- Kehinde Elukanle (@Kehinde)
-- Tehillah Kangamba (@Tehillah)
-- Keshav Modun (@KeshavModun)
-- Colin Waugh (@ColinWaugh)
-- Charina Duenas (@duenasc)
