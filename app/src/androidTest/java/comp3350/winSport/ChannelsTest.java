@@ -18,10 +18,12 @@ import comp3350.winSport.presentation.MainActivity;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.intent.Intents.intended;
 import static androidx.test.espresso.intent.Intents.intending;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasData;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -45,6 +47,8 @@ public class ChannelsTest {
         //the one in hasData
         Matcher<Intent> expectedIntent = allOf(hasAction(Intent.ACTION_VIEW), hasData("https://www.cbc.ca/sports"));
         onView(withId(R.id.channel_layout)).perform(click());
+        //verify the channels are displayed
+        onView(allOf(withId(R.id.rv))).check(matches(isDisplayed()));
         intending(expectedIntent).respondWith(new Instrumentation.ActivityResult(0, null));
         onView(allOf(withId(R.id.name), withText("CBCSports"))).perform(click()); //click on CBCSports link
         intended(expectedIntent);
@@ -53,6 +57,8 @@ public class ChannelsTest {
     @Test
     public void viewChannel(){
         onView(withId(R.id.channel_layout)).perform(click());
+        //verify the channels are displayed
+        onView(allOf(withId(R.id.rv))).check(matches(isDisplayed()));
         onView(allOf(withId(R.id.name), withText("CBCSports"))).perform(click()); //click on CBCSports link
     }
 
