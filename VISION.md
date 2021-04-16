@@ -11,7 +11,6 @@
 * [Iteration 3](#iteration-3)
     * [Group Worksheet 3](#group-worksheet-3)
 * [Architecture](#architecture)
-* [Our Team](#our-team)
 
 ---
 
