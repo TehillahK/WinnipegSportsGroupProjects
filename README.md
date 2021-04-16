@@ -20,8 +20,9 @@ To build Winnipeg Sports app:
 6. Run the project.
 
 ## Links
-* [architecture.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md)
+* [ARCHITECTURE.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/master/architecture.md)
 * [VISION.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/VISION.md)
+* [RETROSPECTIVE.md](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/retrospective.md)
 * [Quick link to the Iteration 3 worksheet](https://code.cs.umanitoba.ca/3350-winter-2021-a03/winnipeg-sports-app-a03-group-6/-/blob/Develop/iteration_3_worksheet.md)
 
 ## Our Team
