@@ -8,6 +8,8 @@
     * [Group Worksheet 1](#group-worksheet-1)
 * [Iteration 2](#iteration-2)
 	* [Group Worksheet 2](#group-worksheet-2)
+* [Iteration 3](#iteration-3)
+    * [Group Worksheet 3](#group-worksheet-3)
 * [Architecture](#architecture)
 * [Our Team](#our-team)
 
